@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.dc.scene.builder.editors.FxmlEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="fxml"
+            icon="icons/sample.png"
+            id="de.dc.scene.builder.editors.FxmlEditor"
+            name="Fxml Editor">
+      </editor>
+   </extension>
+
+</plugin>
