@@ -41,8 +41,11 @@ import de.dc.javafx.mm.MmPackage;
 import de.dc.javafx.mm.Skinnable;
 import de.dc.javafx.mm.Styleable;
 
+import javafx.geometry.Pos;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -309,6 +312,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	private EClass eBorderPaneEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType ePosEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -520,6 +530,76 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getENode_Margin() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MaxHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MinHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_PrefHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MaxWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MinWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_PrefWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEParent() {
 		return eParentEClass;
 	}
@@ -550,68 +630,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getERegion_MaxHeight() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getERegion_MinHeight() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getERegion_PrefHeight() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getERegion_MaxWidth() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getERegion_MinWidth() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getERegion_PrefWidth() {
-		return (EAttribute) eRegionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getERegion_Padding() {
-		return (EReference) eRegionEClass.getEStructuralFeatures().get(6);
+		return (EReference) eRegionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -910,6 +930,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getEPane_Pos() {
+		return (EAttribute) ePaneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEStackPane() {
 		return eStackPaneEClass;
 	}
@@ -1060,7 +1090,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEBorderPane_Margin() {
+	public EReference getEBorderPane_Left() {
 		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1070,7 +1100,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEBorderPane_Left() {
+	public EReference getEBorderPane_Right() {
 		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1080,7 +1110,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEBorderPane_Right() {
+	public EReference getEBorderPane_Top() {
 		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1090,7 +1120,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEBorderPane_Top() {
+	public EReference getEBorderPane_Bottom() {
 		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1100,8 +1130,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEBorderPane_Bottom() {
-		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(4);
+	public EDataType getEPos() {
+		return ePosEDataType;
 	}
 
 	/**
@@ -1151,17 +1181,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eNodeEClass, ENODE__STYLE_CLASS);
 		createEAttribute(eNodeEClass, ENODE__VISIBLE);
 		createEAttribute(eNodeEClass, ENODE__DISABLE);
+		createEReference(eNodeEClass, ENODE__MARGIN);
+		createEAttribute(eNodeEClass, ENODE__MAX_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__MIN_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__PREF_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__MAX_WIDTH);
+		createEAttribute(eNodeEClass, ENODE__MIN_WIDTH);
+		createEAttribute(eNodeEClass, ENODE__PREF_WIDTH);
 
 		eParentEClass = createEClass(EPARENT);
 		createEReference(eParentEClass, EPARENT__CHILDREN);
 
 		eRegionEClass = createEClass(EREGION);
-		createEAttribute(eRegionEClass, EREGION__MAX_HEIGHT);
-		createEAttribute(eRegionEClass, EREGION__MIN_HEIGHT);
-		createEAttribute(eRegionEClass, EREGION__PREF_HEIGHT);
-		createEAttribute(eRegionEClass, EREGION__MAX_WIDTH);
-		createEAttribute(eRegionEClass, EREGION__MIN_WIDTH);
-		createEAttribute(eRegionEClass, EREGION__PREF_WIDTH);
 		createEReference(eRegionEClass, EREGION__PADDING);
 
 		eInsetsEClass = createEClass(EINSETS);
@@ -1213,6 +1244,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		exyChartEClass = createEClass(EXY_CHART);
 
 		ePaneEClass = createEClass(EPANE);
+		createEAttribute(ePaneEClass, EPANE__POS);
 
 		eStackPaneEClass = createEClass(ESTACK_PANE);
 
@@ -1237,11 +1269,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eAnchorPaneEClass = createEClass(EANCHOR_PANE);
 
 		eBorderPaneEClass = createEClass(EBORDER_PANE);
-		createEReference(eBorderPaneEClass, EBORDER_PANE__MARGIN);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__LEFT);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__RIGHT);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__TOP);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__BOTTOM);
+
+		// Create data types
+		ePosEDataType = createEDataType(EPOS);
 	}
 
 	/**
@@ -1350,6 +1384,27 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getENode_Disable(), theEcorePackage.getEBoolean(), "disable", null, 0, 1, ENode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getENode_Margin(), this.getEInsets(), null, "margin", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MinHeight(), theEcorePackage.getEDouble(), "minHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_PrefHeight(), theEcorePackage.getEDouble(), "prefHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MaxWidth(), theEcorePackage.getEDouble(), "maxWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MinWidth(), theEcorePackage.getEDouble(), "minWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(eParentEClass, EParent.class, "EParent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEParent_Children(), this.getENode(), null, "children", null, 0, -1, EParent.class,
@@ -1357,24 +1412,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eRegionEClass, ERegion.class, "ERegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getERegion_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getERegion_MinHeight(), theEcorePackage.getEDouble(), "minHeight", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getERegion_PrefHeight(), theEcorePackage.getEDouble(), "prefHeight", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getERegion_MaxWidth(), theEcorePackage.getEDouble(), "maxWidth", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getERegion_MinWidth(), theEcorePackage.getEDouble(), "minWidth", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getERegion_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEReference(getERegion_Padding(), this.getEInsets(), null, "padding", null, 0, 1, ERegion.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1455,6 +1492,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(ePaneEClass, EPane.class, "EPane", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEPane_Pos(), this.getEPos(), "pos", null, 0, 1, EPane.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eStackPaneEClass, EStackPane.class, "EStackPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1498,9 +1537,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		initEClass(eBorderPaneEClass, EBorderPane.class, "EBorderPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEBorderPane_Margin(), this.getEInsets(), null, "margin", null, 0, 1, EBorderPane.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEBorderPane_Left(), this.getENode(), null, "left", null, 0, 1, EBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1513,6 +1549,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getEBorderPane_Bottom(), this.getENode(), null, "bottom", null, 0, 1, EBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize data types
+		initEDataType(ePosEDataType, Pos.class, "EPos", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -287,7 +287,9 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == MmPackage.Literals.EPARENT__CHILDREN
+		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
+				|| childFeature == MmPackage.Literals.EREGION__PADDING
+				|| childFeature == MmPackage.Literals.EPARENT__CHILDREN
 				|| childFeature == MmPackage.Literals.EDIALOG_PANE__CONTENT;
 
 		if (qualify) {

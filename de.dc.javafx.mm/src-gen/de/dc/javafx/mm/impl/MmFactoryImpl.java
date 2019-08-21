@@ -4,7 +4,10 @@ package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.*;
 
+import javafx.geometry.Pos;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -115,6 +118,36 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEBorderPane();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case MmPackage.EPOS:
+			return createEPosFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case MmPackage.EPOS:
+			return convertEPosToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -435,6 +468,52 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EBorderPane createEBorderPane() {
 		EBorderPaneImpl eBorderPane = new EBorderPaneImpl();
 		return eBorderPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Pos createEPos(final String it) {
+		Pos _xifexpression = null;
+		if ((it != null)) {
+			_xifexpression = Pos.valueOf(it);
+		}
+		return _xifexpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pos createEPosFromString(EDataType eDataType, String initialValue) {
+		return createEPos(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertEPos(final Pos it) {
+		String _xifexpression = null;
+		if ((it != null)) {
+			_xifexpression = it.name();
+		}
+		return _xifexpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEPosToString(EDataType eDataType, Object instanceValue) {
+		return convertEPos((Pos) instanceValue);
 	}
 
 	/**

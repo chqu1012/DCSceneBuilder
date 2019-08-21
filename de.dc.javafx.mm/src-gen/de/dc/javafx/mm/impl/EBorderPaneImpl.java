@@ -3,7 +3,6 @@
 package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EBorderPane;
-import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.MmPackage;
 
@@ -23,7 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getMargin <em>Margin</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getRight <em>Right</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getTop <em>Top</em>}</li>
@@ -33,16 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
-	/**
-	 * The cached value of the '{@link #getMargin() <em>Margin</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMargin()
-	 * @generated
-	 * @ordered
-	 */
-	protected EInsets margin;
-
 	/**
 	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -100,58 +88,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	protected EClass eStaticClass() {
 		return MmPackage.Literals.EBORDER_PANE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EInsets getMargin() {
-		return margin;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetMargin(EInsets newMargin, NotificationChain msgs) {
-		EInsets oldMargin = margin;
-		margin = newMargin;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					MmPackage.EBORDER_PANE__MARGIN, oldMargin, newMargin);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMargin(EInsets newMargin) {
-		if (newMargin != margin) {
-			NotificationChain msgs = null;
-			if (margin != null)
-				msgs = ((InternalEObject) margin).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - MmPackage.EBORDER_PANE__MARGIN, null, msgs);
-			if (newMargin != null)
-				msgs = ((InternalEObject) newMargin).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - MmPackage.EBORDER_PANE__MARGIN, null, msgs);
-			msgs = basicSetMargin(newMargin, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EBORDER_PANE__MARGIN, newMargin,
-					newMargin));
 	}
 
 	/**
@@ -367,8 +303,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MmPackage.EBORDER_PANE__MARGIN:
-			return basicSetMargin(null, msgs);
 		case MmPackage.EBORDER_PANE__LEFT:
 			return basicSetLeft(null, msgs);
 		case MmPackage.EBORDER_PANE__RIGHT:
@@ -389,8 +323,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MmPackage.EBORDER_PANE__MARGIN:
-			return getMargin();
 		case MmPackage.EBORDER_PANE__LEFT:
 			return getLeft();
 		case MmPackage.EBORDER_PANE__RIGHT:
@@ -411,9 +343,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MmPackage.EBORDER_PANE__MARGIN:
-			setMargin((EInsets) newValue);
-			return;
 		case MmPackage.EBORDER_PANE__LEFT:
 			setLeft((ENode) newValue);
 			return;
@@ -438,9 +367,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MmPackage.EBORDER_PANE__MARGIN:
-			setMargin((EInsets) null);
-			return;
 		case MmPackage.EBORDER_PANE__LEFT:
 			setLeft((ENode) null);
 			return;
@@ -465,8 +391,6 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MmPackage.EBORDER_PANE__MARGIN:
-			return margin != null;
 		case MmPackage.EBORDER_PANE__LEFT:
 			return left != null;
 		case MmPackage.EBORDER_PANE__RIGHT:

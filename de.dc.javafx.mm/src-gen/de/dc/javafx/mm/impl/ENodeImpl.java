@@ -2,16 +2,19 @@
  */
 package de.dc.javafx.mm.impl;
 
+import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.MmPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -32,6 +35,13 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#isDisable <em>Disable</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMargin <em>Margin</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMaxHeight <em>Max Height</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMinHeight <em>Min Height</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPrefHeight <em>Pref Height</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMaxWidth <em>Max Width</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMinWidth <em>Min Width</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPrefWidth <em>Pref Width</em>}</li>
  * </ul>
  *
  * @generated
@@ -166,6 +176,136 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @ordered
 	 */
 	protected boolean disable = DISABLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getMargin() <em>Margin</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMargin()
+	 * @generated
+	 * @ordered
+	 */
+	protected EInsets margin;
+
+	/**
+	 * The default value of the '{@link #getMaxHeight() <em>Max Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MAX_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMaxHeight() <em>Max Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double maxHeight = MAX_HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMinHeight() <em>Min Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MIN_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMinHeight() <em>Min Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double minHeight = MIN_HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrefHeight() <em>Pref Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double PREF_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getPrefHeight() <em>Pref Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double prefHeight = PREF_HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxWidth() <em>Max Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MAX_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMaxWidth() <em>Max Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double maxWidth = MAX_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMinWidth() <em>Min Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MIN_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMinWidth() <em>Min Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double minWidth = MIN_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrefWidth() <em>Pref Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double PREF_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getPrefWidth() <em>Pref Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double prefWidth = PREF_WIDTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,6 +483,213 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
+	public EInsets getMargin() {
+		return margin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMargin(EInsets newMargin, NotificationChain msgs) {
+		EInsets oldMargin = margin;
+		margin = newMargin;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MARGIN,
+					oldMargin, newMargin);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMargin(EInsets newMargin) {
+		if (newMargin != margin) {
+			NotificationChain msgs = null;
+			if (margin != null)
+				msgs = ((InternalEObject) margin).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__MARGIN,
+						null, msgs);
+			if (newMargin != null)
+				msgs = ((InternalEObject) newMargin).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__MARGIN,
+						null, msgs);
+			msgs = basicSetMargin(newMargin, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MARGIN, newMargin, newMargin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMaxHeight() {
+		return maxHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMaxHeight(double newMaxHeight) {
+		double oldMaxHeight = maxHeight;
+		maxHeight = newMaxHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MAX_HEIGHT, oldMaxHeight,
+					maxHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMinHeight() {
+		return minHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMinHeight(double newMinHeight) {
+		double oldMinHeight = minHeight;
+		minHeight = newMinHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MIN_HEIGHT, oldMinHeight,
+					minHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getPrefHeight() {
+		return prefHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPrefHeight(double newPrefHeight) {
+		double oldPrefHeight = prefHeight;
+		prefHeight = newPrefHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__PREF_HEIGHT, oldPrefHeight,
+					prefHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMaxWidth() {
+		return maxWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMaxWidth(double newMaxWidth) {
+		double oldMaxWidth = maxWidth;
+		maxWidth = newMaxWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MAX_WIDTH, oldMaxWidth, maxWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMinWidth() {
+		return minWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMinWidth(double newMinWidth) {
+		double oldMinWidth = minWidth;
+		minWidth = newMinWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MIN_WIDTH, oldMinWidth, minWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getPrefWidth() {
+		return prefWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPrefWidth(double newPrefWidth) {
+		double oldPrefWidth = prefWidth;
+		prefWidth = newPrefWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__PREF_WIDTH, oldPrefWidth,
+					prefWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case MmPackage.ENODE__MARGIN:
+			return basicSetMargin(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MmPackage.ENODE__LAYOUT_X:
@@ -359,6 +706,20 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return isVisible();
 		case MmPackage.ENODE__DISABLE:
 			return isDisable();
+		case MmPackage.ENODE__MARGIN:
+			return getMargin();
+		case MmPackage.ENODE__MAX_HEIGHT:
+			return getMaxHeight();
+		case MmPackage.ENODE__MIN_HEIGHT:
+			return getMinHeight();
+		case MmPackage.ENODE__PREF_HEIGHT:
+			return getPrefHeight();
+		case MmPackage.ENODE__MAX_WIDTH:
+			return getMaxWidth();
+		case MmPackage.ENODE__MIN_WIDTH:
+			return getMinWidth();
+		case MmPackage.ENODE__PREF_WIDTH:
+			return getPrefWidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -394,6 +755,27 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__DISABLE:
 			setDisable((Boolean) newValue);
 			return;
+		case MmPackage.ENODE__MARGIN:
+			setMargin((EInsets) newValue);
+			return;
+		case MmPackage.ENODE__MAX_HEIGHT:
+			setMaxHeight((Double) newValue);
+			return;
+		case MmPackage.ENODE__MIN_HEIGHT:
+			setMinHeight((Double) newValue);
+			return;
+		case MmPackage.ENODE__PREF_HEIGHT:
+			setPrefHeight((Double) newValue);
+			return;
+		case MmPackage.ENODE__MAX_WIDTH:
+			setMaxWidth((Double) newValue);
+			return;
+		case MmPackage.ENODE__MIN_WIDTH:
+			setMinWidth((Double) newValue);
+			return;
+		case MmPackage.ENODE__PREF_WIDTH:
+			setPrefWidth((Double) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -427,6 +809,27 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__DISABLE:
 			setDisable(DISABLE_EDEFAULT);
 			return;
+		case MmPackage.ENODE__MARGIN:
+			setMargin((EInsets) null);
+			return;
+		case MmPackage.ENODE__MAX_HEIGHT:
+			setMaxHeight(MAX_HEIGHT_EDEFAULT);
+			return;
+		case MmPackage.ENODE__MIN_HEIGHT:
+			setMinHeight(MIN_HEIGHT_EDEFAULT);
+			return;
+		case MmPackage.ENODE__PREF_HEIGHT:
+			setPrefHeight(PREF_HEIGHT_EDEFAULT);
+			return;
+		case MmPackage.ENODE__MAX_WIDTH:
+			setMaxWidth(MAX_WIDTH_EDEFAULT);
+			return;
+		case MmPackage.ENODE__MIN_WIDTH:
+			setMinWidth(MIN_WIDTH_EDEFAULT);
+			return;
+		case MmPackage.ENODE__PREF_WIDTH:
+			setPrefWidth(PREF_WIDTH_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -453,6 +856,20 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return visible != VISIBLE_EDEFAULT;
 		case MmPackage.ENODE__DISABLE:
 			return disable != DISABLE_EDEFAULT;
+		case MmPackage.ENODE__MARGIN:
+			return margin != null;
+		case MmPackage.ENODE__MAX_HEIGHT:
+			return maxHeight != MAX_HEIGHT_EDEFAULT;
+		case MmPackage.ENODE__MIN_HEIGHT:
+			return minHeight != MIN_HEIGHT_EDEFAULT;
+		case MmPackage.ENODE__PREF_HEIGHT:
+			return prefHeight != PREF_HEIGHT_EDEFAULT;
+		case MmPackage.ENODE__MAX_WIDTH:
+			return maxWidth != MAX_WIDTH_EDEFAULT;
+		case MmPackage.ENODE__MIN_WIDTH:
+			return minWidth != MIN_WIDTH_EDEFAULT;
+		case MmPackage.ENODE__PREF_WIDTH:
+			return prefWidth != PREF_WIDTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -482,6 +899,18 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		result.append(visible);
 		result.append(", disable: ");
 		result.append(disable);
+		result.append(", maxHeight: ");
+		result.append(maxHeight);
+		result.append(", minHeight: ");
+		result.append(minHeight);
+		result.append(", prefHeight: ");
+		result.append(prefHeight);
+		result.append(", maxWidth: ");
+		result.append(maxWidth);
+		result.append(", minWidth: ");
+		result.append(minWidth);
+		result.append(", prefWidth: ");
+		result.append(prefWidth);
 		result.append(')');
 		return result.toString();
 	}

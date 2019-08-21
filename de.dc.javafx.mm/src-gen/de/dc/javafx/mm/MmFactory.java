@@ -2,6 +2,8 @@
  */
 package de.dc.javafx.mm;
 
+import javafx.geometry.Pos;
+
 import org.eclipse.emf.ecore.EFactory;
 
 /**
@@ -281,6 +283,26 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	EBorderPane createEBorderPane();
+
+	/**
+	 * Returns an instance of data type '<em>EPos</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	Pos createEPos(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>EPos</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertEPos(Pos instanceValue);
 
 	/**
 	 * Returns the package supported by this factory.

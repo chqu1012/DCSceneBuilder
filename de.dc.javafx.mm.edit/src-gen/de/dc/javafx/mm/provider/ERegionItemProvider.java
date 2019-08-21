@@ -13,10 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -47,110 +44,8 @@ public class ERegionItemProvider extends EParentItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addMaxHeightPropertyDescriptor(object);
-			addMinHeightPropertyDescriptor(object);
-			addPrefHeightPropertyDescriptor(object);
-			addMaxWidthPropertyDescriptor(object);
-			addMinWidthPropertyDescriptor(object);
-			addPrefWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Max Height feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMaxHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_maxHeight_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_maxHeight_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__MAX_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Min Height feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMinHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_minHeight_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_minHeight_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__MIN_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Pref Height feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrefHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_prefHeight_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_prefHeight_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__PREF_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Max Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMaxWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_maxWidth_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_maxWidth_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__MAX_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Min Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMinWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_minWidth_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_minWidth_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__MIN_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Pref Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrefWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ERegion_prefWidth_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ERegion_prefWidth_feature",
-								"_UI_ERegion_type"),
-						MmPackage.Literals.EREGION__PREF_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -228,14 +123,6 @@ public class ERegionItemProvider extends EParentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ERegion.class)) {
-		case MmPackage.EREGION__MAX_HEIGHT:
-		case MmPackage.EREGION__MIN_HEIGHT:
-		case MmPackage.EREGION__PREF_HEIGHT:
-		case MmPackage.EREGION__MAX_WIDTH:
-		case MmPackage.EREGION__MIN_WIDTH:
-		case MmPackage.EREGION__PREF_WIDTH:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
 		case MmPackage.EREGION__PADDING:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -256,6 +143,27 @@ public class ERegionItemProvider extends EParentItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EREGION__PADDING, MmFactory.eINSTANCE.createEInsets()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
+				|| childFeature == MmPackage.Literals.EREGION__PADDING;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

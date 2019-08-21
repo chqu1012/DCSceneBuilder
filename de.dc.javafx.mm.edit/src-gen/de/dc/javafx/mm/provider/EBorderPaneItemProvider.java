@@ -61,7 +61,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__MARGIN);
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__LEFT);
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__RIGHT);
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__TOP);
@@ -128,7 +127,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EBorderPane.class)) {
-		case MmPackage.EBORDER_PANE__MARGIN:
 		case MmPackage.EBORDER_PANE__LEFT:
 		case MmPackage.EBORDER_PANE__RIGHT:
 		case MmPackage.EBORDER_PANE__TOP:
@@ -149,9 +147,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__MARGIN, MmFactory.eINSTANCE.createEInsets()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createERegion()));
@@ -465,13 +460,13 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == MmPackage.Literals.EPARENT__CHILDREN
+		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
+				|| childFeature == MmPackage.Literals.EREGION__PADDING
+				|| childFeature == MmPackage.Literals.EPARENT__CHILDREN
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__LEFT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__RIGHT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__TOP
-				|| childFeature == MmPackage.Literals.EBORDER_PANE__BOTTOM
-				|| childFeature == MmPackage.Literals.EREGION__PADDING
-				|| childFeature == MmPackage.Literals.EBORDER_PANE__MARGIN;
+				|| childFeature == MmPackage.Literals.EBORDER_PANE__BOTTOM;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

@@ -11,7 +11,6 @@ package de.dc.javafx.mm;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.dc.javafx.mm.EBorderPane#getMargin <em>Margin</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getLeft <em>Left</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getRight <em>Right</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getTop <em>Top</em>}</li>
@@ -23,28 +22,6 @@ package de.dc.javafx.mm;
  * @generated
  */
 public interface EBorderPane extends EPane {
-	/**
-	 * Returns the value of the '<em><b>Margin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Margin</em>' containment reference.
-	 * @see #setMargin(EInsets)
-	 * @see de.dc.javafx.mm.MmPackage#getEBorderPane_Margin()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EInsets getMargin();
-
-	/**
-	 * Sets the value of the '{@link de.dc.javafx.mm.EBorderPane#getMargin <em>Margin</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Margin</em>' containment reference.
-	 * @see #getMargin()
-	 * @generated
-	 */
-	void setMargin(EInsets value);
-
 	/**
 	 * Returns the value of the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

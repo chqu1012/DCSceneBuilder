@@ -6,17 +6,17 @@
 package de.dc.javafx.mm
 
 // https://www.ntu.edu.sg/home/ehchua/programming/java/Javafx1_intro.html
+import javafx.geometry.Pos
+
 class EmfModel{
 	String controller
 	String[0..*] styleClass
 	contains ENode[0..*] nodes
 }
 
-class Styleable{
-}
+class Styleable{}
 
-class Skinnable{
-}
+class Skinnable{}
 
 abstract class ENode extends Styleable, Skinnable{
 	double layoutX
@@ -26,6 +26,13 @@ abstract class ENode extends Styleable, Skinnable{
 	String[0..*] styleClass
 	boolean visible
 	boolean disable
+	contains EInsets margin
+	double maxHeight
+	double minHeight
+	double prefHeight
+	double maxWidth
+	double minWidth
+	double prefWidth
 }
 
 abstract class EParent extends ENode{
@@ -33,12 +40,6 @@ abstract class EParent extends ENode{
 }
 
 class ERegion extends EParent{
-	double maxHeight
-	double minHeight
-	double prefHeight
-	double maxWidth
-	double minWidth
-	double prefWidth
 	contains EInsets padding
 }
 
@@ -49,11 +50,9 @@ class EInsets{
 	double left ='0.0'
 }
 
-class EGroup extends ENode{
-}
+class EGroup extends ENode{}
 
-class EWebView extends ENode{
-}
+class EWebView extends ENode{}
 
 abstract class EControl extends ERegion{
 }
@@ -62,14 +61,11 @@ abstract class ELabeled extends EControl{
 	String text
 }
 
-class ELabel extends ELabeled{
-}
+class ELabel extends ELabeled{}
 
-abstract class EButtonBase extends ELabeled{
-}
+abstract class EButtonBase extends ELabeled{}
 
-class EButton extends EButtonBase{
-}
+class EButton extends EButtonBase{}
 
 class ECheckBox extends EButtonBase{
 	boolean selected
@@ -79,42 +75,33 @@ class EHyperlink extends EButtonBase{
 	boolean visited
 }
 
-class EMenuButton extends EButtonBase{
-}
+class EMenuButton extends EButtonBase{}
 
-class ESplitMenuButton extends EButtonBase{
-}
+class ESplitMenuButton extends EButtonBase{}
 
 class EToogleButton extends EButtonBase{
 	boolean selected
 }
 
-class ERadioButton extends EToogleButton{
-}
+class ERadioButton extends EToogleButton{}
 
-abstract class EAxis extends ERegion{
-}
+abstract class EAxis extends ERegion{}
 
-class ECatgeoryAxis extends EAxis{
-}
+class ECatgeoryAxis extends EAxis{}
 
-class EValueAxis extends EAxis{
-}
+class EValueAxis extends EAxis{}
 
-abstract class EChart extends ERegion{
-}
+abstract class EChart extends ERegion{}
 
-class EPieChart extends EChart{
-}
+class EPieChart extends EChart{}
 
-class EXYChart extends EChart{
-}
+class EXYChart extends EChart{}
 
 class EPane extends ERegion{
+	EPos pos
 }
 
-class EStackPane extends EPane{
-}
+class EStackPane extends EPane{}
 
 class EDialogPane extends EPane{
 	String header
@@ -123,8 +110,7 @@ class EDialogPane extends EPane{
 	contains ENode content
 }
 
-class EGridPane extends EPane{
-}
+class EGridPane extends EPane{}
 
 class EHBox extends EPane{
 	double spacing ='0'
@@ -134,19 +120,17 @@ class EVBox extends EPane{
 	double spacing ='0'
 }
 
-class EFlowPane extends EPane{
-}
+class EFlowPane extends EPane{}
 
-class ETilePane extends EPane{
-}
+class ETilePane extends EPane{}
 
-class EAnchorPane extends EPane{
-}
+class EAnchorPane extends EPane{}
 
 class EBorderPane extends EPane{
-	contains EInsets margin
 	contains ENode left
 	contains ENode right
 	contains ENode top
 	contains ENode bottom
 }
+
+type EPos wraps Pos create{ if(it!==null) Pos.valueOf(it)} convert{ if(it!==null) it.name}
