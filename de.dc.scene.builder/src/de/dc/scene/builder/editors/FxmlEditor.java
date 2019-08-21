@@ -4,7 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
@@ -21,7 +22,12 @@ import org.eclipse.ui.part.FileEditorInput;
 
 import com.oracle.javafx.scenebuilder.kit.editor.EditorController;
 import com.oracle.javafx.scenebuilder.kit.fxom.FXOMDocument;
+import com.oracle.javafx.scenebuilder.kit.fxom.FXOMInstance;
 import com.oracle.javafx.scenebuilder.kit.fxom.FXOMObject;
+import com.oracle.javafx.scenebuilder.kit.fxom.FXOMProperty;
+import com.oracle.javafx.scenebuilder.kit.fxom.FXOMPropertyC;
+import com.oracle.javafx.scenebuilder.kit.fxom.FXOMPropertyT;
+import com.oracle.javafx.scenebuilder.kit.metadata.util.PropertyName;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -69,17 +75,44 @@ public class FxmlEditor extends TextEditor {
 
 				FXOMDocument fxomDocument = editorController.getFxomDocument();
 				FXOMObject root = fxomDocument.getFxomRoot();
-				System.out.println(root);
-				List<FXOMObject> childObjects = root.getChildObjects();
-				for (FXOMObject fxomObject : childObjects) {
-					System.out.println(fxomObject);
-				}
+				browseObject(root);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		});
 	}
 
+	private void browseObject(FXOMObject o) {
+		if (o instanceof FXOMInstance) {
+			FXOMInstance instance = (FXOMInstance) o;
+			Class<?> declaredClass = instance.getDeclaredClass();
+			// PrefWidth, PrefHeight, Stylesheets
+			// Here: center and left
+			Map<PropertyName, FXOMProperty> properties = instance.getProperties();			
+			System.out.println("declaredClass: "+declaredClass);
+			System.out.println("controller: "+instance.getFxController());
+			System.out.println("constant: "+instance.getFxConstant());
+			System.out.println("value: "+instance.getFxValue());
+			System.out.println("id: "+instance.getFxId());
+			for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
+				FXOMProperty property = entry.getValue();
+				String value ="";
+				if (property instanceof FXOMPropertyC) {
+					FXOMPropertyC c = (FXOMPropertyC) property;
+					value="C:"+c.getValues().toString();
+					
+				}else if (property instanceof FXOMPropertyT) {
+					FXOMPropertyT t = (FXOMPropertyT) property;
+					value="T:"+t.getValue();
+					
+				}
+				System.out.println("Key: "+entry.getKey().getName()+", value: "+value);			
+			}
+			System.out.println("************************************************************");
+		}
+		o.getChildObjects().forEach(this::browseObject);
+	}
+	
 	@Override
 	public void dispose() {
 		colorManager.dispose();
