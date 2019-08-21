@@ -10,6 +10,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.text.IDocument;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorSite;
@@ -31,7 +32,7 @@ public class FxmlEditor extends TextEditor {
 	private EditorController editorController;
 	private Text text;
 	private String fxmlText;
-	
+
 	public FxmlEditor() {
 		super();
 		colorManager = new ColorManager();
@@ -59,10 +60,13 @@ public class FxmlEditor extends TextEditor {
 				editorController = new EditorController();
 				URL fxmlLocation = location.toFile().toURI().toURL();
 				editorController.setFxmlTextAndLocation(fxmlText, fxmlLocation);
-				
+
 				IDocument document = getDocumentProvider().getDocument(editorInput);
-				document.set(fxmlText);
-				
+
+				Display.getDefault().asyncExec(() -> {
+					document.set(fxmlText);
+				});
+
 				FXOMDocument fxomDocument = editorController.getFxomDocument();
 				FXOMObject root = fxomDocument.getFxomRoot();
 				System.out.println(root);
@@ -107,13 +111,13 @@ public class FxmlEditor extends TextEditor {
 	@Override
 	public void doSave(IProgressMonitor monitor) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void doSaveAs() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -127,10 +131,9 @@ public class FxmlEditor extends TextEditor {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	@Override
 	public void setFocus() {
-		// TODO Auto-generated method stub
-		
+		text.forceFocus();
 	}
 }
