@@ -162,6 +162,21 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEBaseView(EBaseView object) {
+			return createEBaseViewAdapter();
+		}
+
+		@Override
+		public Adapter caseETableView(ETableView object) {
+			return createETableViewAdapter();
+		}
+
+		@Override
+		public Adapter caseETableColumn(ETableColumn object) {
+			return createETableColumnAdapter();
+		}
+
+		@Override
 		public Adapter caseERadioButton(ERadioButton object) {
 			return createERadioButtonAdapter();
 		}
@@ -528,6 +543,48 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEToogleButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBaseView <em>EBase View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBaseView
+	 * @generated
+	 */
+	public Adapter createEBaseViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETableView <em>ETable View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ETableView
+	 * @generated
+	 */
+	public Adapter createETableViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETableColumn <em>ETable Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ETableColumn
+	 * @generated
+	 */
+	public Adapter createETableColumnAdapter() {
 		return null;
 	}
 

@@ -162,6 +162,9 @@ public class EParentItemProvider extends ENodeItemProvider {
 				createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createEToogleButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(

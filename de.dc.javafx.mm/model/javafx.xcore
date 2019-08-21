@@ -83,6 +83,20 @@ class EToogleButton extends EButtonBase{
 	boolean selected
 }
 
+abstract class EBaseView extends EControl{
+}
+
+class ETableView extends EBaseView{
+	contains ETableColumn[0..*] columns
+}
+
+class ETableColumn{
+	String name
+	double width = '150'
+	String cellValueFactory
+	String cellFactory
+}
+
 class ERadioButton extends EToogleButton{}
 
 abstract class EAxis extends ERegion{}

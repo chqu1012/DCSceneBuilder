@@ -86,6 +86,10 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createESplitMenuButton();
 		case MmPackage.ETOOGLE_BUTTON:
 			return createEToogleButton();
+		case MmPackage.ETABLE_VIEW:
+			return createETableView();
+		case MmPackage.ETABLE_COLUMN:
+			return createETableColumn();
 		case MmPackage.ERADIO_BUTTON:
 			return createERadioButton();
 		case MmPackage.ECATGEORY_AXIS:
@@ -303,6 +307,28 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EToogleButton createEToogleButton() {
 		EToogleButtonImpl eToogleButton = new EToogleButtonImpl();
 		return eToogleButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETableView createETableView() {
+		ETableViewImpl eTableView = new ETableViewImpl();
+		return eTableView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETableColumn createETableColumn() {
+		ETableColumnImpl eTableColumn = new ETableColumnImpl();
+		return eTableColumn;
 	}
 
 	/**

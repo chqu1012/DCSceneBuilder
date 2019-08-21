@@ -150,6 +150,24 @@ public interface MmFactory extends EFactory {
 	EToogleButton createEToogleButton();
 
 	/**
+	 * Returns a new object of class '<em>ETable View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETable View</em>'.
+	 * @generated
+	 */
+	ETableView createETableView();
+
+	/**
+	 * Returns a new object of class '<em>ETable Column</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETable Column</em>'.
+	 * @generated
+	 */
+	ETableColumn createETableColumn();
+
+	/**
 	 * Returns a new object of class '<em>ERadio Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

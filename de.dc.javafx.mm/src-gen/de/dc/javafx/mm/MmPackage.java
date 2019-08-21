@@ -2859,6 +2859,423 @@ public interface MmPackage extends EPackage {
 	int ETOOGLE_BUTTON_OPERATION_COUNT = EBUTTON_BASE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBaseViewImpl <em>EBase View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBaseViewImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
+	 * @generated
+	 */
+	int EBASE_VIEW = 19;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__LAYOUT_X = ECONTROL__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__LAYOUT_Y = ECONTROL__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__OPACITY = ECONTROL__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__STYLE = ECONTROL__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__STYLE_CLASS = ECONTROL__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__VISIBLE = ECONTROL__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__DISABLE = ECONTROL__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__MARGIN = ECONTROL__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__MAX_HEIGHT = ECONTROL__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__MIN_HEIGHT = ECONTROL__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__PREF_HEIGHT = ECONTROL__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__MAX_WIDTH = ECONTROL__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__MIN_WIDTH = ECONTROL__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__PREF_WIDTH = ECONTROL__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__CHILDREN = ECONTROL__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__PADDING = ECONTROL__PADDING;
+
+	/**
+	 * The number of structural features of the '<em>EBase View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW_FEATURE_COUNT = ECONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EBase View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW_OPERATION_COUNT = ECONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETableViewImpl <em>ETable View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ETableViewImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
+	 * @generated
+	 */
+	int ETABLE_VIEW = 20;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__LAYOUT_X = EBASE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__LAYOUT_Y = EBASE_VIEW__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__OPACITY = EBASE_VIEW__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__STYLE = EBASE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__STYLE_CLASS = EBASE_VIEW__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__VISIBLE = EBASE_VIEW__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__DISABLE = EBASE_VIEW__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__MARGIN = EBASE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__MAX_HEIGHT = EBASE_VIEW__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__MIN_HEIGHT = EBASE_VIEW__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__PREF_HEIGHT = EBASE_VIEW__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__MAX_WIDTH = EBASE_VIEW__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__MIN_WIDTH = EBASE_VIEW__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__PREF_WIDTH = EBASE_VIEW__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__CHILDREN = EBASE_VIEW__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__PADDING = EBASE_VIEW__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__COLUMNS = EBASE_VIEW_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ETable View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW_FEATURE_COUNT = EBASE_VIEW_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>ETable View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW_OPERATION_COUNT = EBASE_VIEW_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETableColumnImpl <em>ETable Column</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ETableColumnImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
+	 * @generated
+	 */
+	int ETABLE_COLUMN = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__WIDTH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Cell Value Factory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__CELL_VALUE_FACTORY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Cell Factory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__CELL_FACTORY = 3;
+
+	/**
+	 * The number of structural features of the '<em>ETable Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>ETable Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ERadioButtonImpl <em>ERadio Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2866,7 +3283,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 19;
+	int ERADIO_BUTTON = 22;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3056,7 +3473,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 20;
+	int EAXIS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3228,7 +3645,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 21;
+	int ECATGEORY_AXIS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3400,7 +3817,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 22;
+	int EVALUE_AXIS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3572,7 +3989,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 23;
+	int ECHART = 26;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3744,7 +4161,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 24;
+	int EPIE_CHART = 27;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -3916,7 +4333,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 25;
+	int EXY_CHART = 28;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4088,7 +4505,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 26;
+	int EPANE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4269,7 +4686,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 27;
+	int ESTACK_PANE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4450,7 +4867,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 28;
+	int EDIALOG_PANE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4667,7 +5084,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 29;
+	int EGRID_PANE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4848,7 +5265,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 30;
+	int EH_BOX = 33;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5038,7 +5455,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 31;
+	int EV_BOX = 34;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5228,7 +5645,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 32;
+	int EFLOW_PANE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5409,7 +5826,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 33;
+	int ETILE_PANE = 36;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5590,7 +6007,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 34;
+	int EANCHOR_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5771,7 +6188,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 35;
+	int EBORDER_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5988,7 +6405,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 36;
+	int EPOS = 39;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -6476,6 +6893,91 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEToogleButton_Selected();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBaseView <em>EBase View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBase View</em>'.
+	 * @see de.dc.javafx.mm.EBaseView
+	 * @generated
+	 */
+	EClass getEBaseView();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETableView <em>ETable View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ETable View</em>'.
+	 * @see de.dc.javafx.mm.ETableView
+	 * @generated
+	 */
+	EClass getETableView();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.ETableView#getColumns <em>Columns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Columns</em>'.
+	 * @see de.dc.javafx.mm.ETableView#getColumns()
+	 * @see #getETableView()
+	 * @generated
+	 */
+	EReference getETableView_Columns();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETableColumn <em>ETable Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ETable Column</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn
+	 * @generated
+	 */
+	EClass getETableColumn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#getName()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#getWidth()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_Width();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getCellValueFactory <em>Cell Value Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cell Value Factory</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#getCellValueFactory()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_CellValueFactory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getCellFactory <em>Cell Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cell Factory</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#getCellFactory()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_CellFactory();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.ERadioButton <em>ERadio Button</em>}'.
@@ -7208,6 +7710,76 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ETOOGLE_BUTTON__SELECTED = eINSTANCE.getEToogleButton_Selected();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBaseViewImpl <em>EBase View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBaseViewImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
+		 * @generated
+		 */
+		EClass EBASE_VIEW = eINSTANCE.getEBaseView();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETableViewImpl <em>ETable View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ETableViewImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
+		 * @generated
+		 */
+		EClass ETABLE_VIEW = eINSTANCE.getETableView();
+
+		/**
+		 * The meta object literal for the '<em><b>Columns</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ETABLE_VIEW__COLUMNS = eINSTANCE.getETableView_Columns();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETableColumnImpl <em>ETable Column</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ETableColumnImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
+		 * @generated
+		 */
+		EClass ETABLE_COLUMN = eINSTANCE.getETableColumn();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__NAME = eINSTANCE.getETableColumn_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__WIDTH = eINSTANCE.getETableColumn_Width();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell Value Factory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__CELL_VALUE_FACTORY = eINSTANCE.getETableColumn_CellValueFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell Factory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__CELL_FACTORY = eINSTANCE.getETableColumn_CellFactory();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ERadioButtonImpl <em>ERadio Button</em>}' class.

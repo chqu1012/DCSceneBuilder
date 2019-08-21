@@ -375,6 +375,53 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.EBASE_VIEW: {
+			EBaseView eBaseView = (EBaseView) theEObject;
+			T result = caseEBaseView(eBaseView);
+			if (result == null)
+				result = caseEControl(eBaseView);
+			if (result == null)
+				result = caseERegion(eBaseView);
+			if (result == null)
+				result = caseEParent(eBaseView);
+			if (result == null)
+				result = caseENode(eBaseView);
+			if (result == null)
+				result = caseStyleable(eBaseView);
+			if (result == null)
+				result = caseSkinnable(eBaseView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETABLE_VIEW: {
+			ETableView eTableView = (ETableView) theEObject;
+			T result = caseETableView(eTableView);
+			if (result == null)
+				result = caseEBaseView(eTableView);
+			if (result == null)
+				result = caseEControl(eTableView);
+			if (result == null)
+				result = caseERegion(eTableView);
+			if (result == null)
+				result = caseEParent(eTableView);
+			if (result == null)
+				result = caseENode(eTableView);
+			if (result == null)
+				result = caseStyleable(eTableView);
+			if (result == null)
+				result = caseSkinnable(eTableView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETABLE_COLUMN: {
+			ETableColumn eTableColumn = (ETableColumn) theEObject;
+			T result = caseETableColumn(eTableColumn);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ERADIO_BUTTON: {
 			ERadioButton eRadioButton = (ERadioButton) theEObject;
 			T result = caseERadioButton(eRadioButton);
@@ -985,6 +1032,51 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEToogleButton(EToogleButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EBase View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EBase View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEBaseView(EBaseView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETable View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETable View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETableView(ETableView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETable Column</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETable Column</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETableColumn(ETableColumn object) {
 		return null;
 	}
 

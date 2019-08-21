@@ -4,6 +4,7 @@ package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EAnchorPane;
 import de.dc.javafx.mm.EAxis;
+import de.dc.javafx.mm.EBaseView;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.EButtonBase;
@@ -29,6 +30,8 @@ import de.dc.javafx.mm.ERadioButton;
 import de.dc.javafx.mm.ERegion;
 import de.dc.javafx.mm.ESplitMenuButton;
 import de.dc.javafx.mm.EStackPane;
+import de.dc.javafx.mm.ETableColumn;
+import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.ETilePane;
 import de.dc.javafx.mm.EToogleButton;
 import de.dc.javafx.mm.EVBox;
@@ -191,6 +194,27 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eToogleButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBaseViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTableViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTableColumnEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -850,6 +874,86 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEBaseView() {
+		return eBaseViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETableView() {
+		return eTableViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETableView_Columns() {
+		return (EReference) eTableViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETableColumn() {
+		return eTableColumnEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableColumn_Name() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableColumn_Width() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableColumn_CellValueFactory() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableColumn_CellFactory() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getERadioButton() {
 		return eRadioButtonEClass;
 	}
@@ -1229,6 +1333,17 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eToogleButtonEClass = createEClass(ETOOGLE_BUTTON);
 		createEAttribute(eToogleButtonEClass, ETOOGLE_BUTTON__SELECTED);
 
+		eBaseViewEClass = createEClass(EBASE_VIEW);
+
+		eTableViewEClass = createEClass(ETABLE_VIEW);
+		createEReference(eTableViewEClass, ETABLE_VIEW__COLUMNS);
+
+		eTableColumnEClass = createEClass(ETABLE_COLUMN);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__NAME);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__WIDTH);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_VALUE_FACTORY);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_FACTORY);
+
 		eRadioButtonEClass = createEClass(ERADIO_BUTTON);
 
 		eAxisEClass = createEClass(EAXIS);
@@ -1326,6 +1441,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eMenuButtonEClass.getESuperTypes().add(this.getEButtonBase());
 		eSplitMenuButtonEClass.getESuperTypes().add(this.getEButtonBase());
 		eToogleButtonEClass.getESuperTypes().add(this.getEButtonBase());
+		eBaseViewEClass.getESuperTypes().add(this.getEControl());
+		eTableViewEClass.getESuperTypes().add(this.getEBaseView());
 		eRadioButtonEClass.getESuperTypes().add(this.getEToogleButton());
 		eAxisEClass.getESuperTypes().add(this.getERegion());
 		eCatgeoryAxisEClass.getESuperTypes().add(this.getEAxis());
@@ -1470,6 +1587,30 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEToogleButton_Selected(), theEcorePackage.getEBoolean(), "selected", null, 0, 1,
 				EToogleButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(eBaseViewEClass, EBaseView.class, "EBaseView", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eTableViewEClass, ETableView.class, "ETableView", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getETableView_Columns(), this.getETableColumn(), null, "columns", null, 0, -1, ETableView.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eTableColumnEClass, ETableColumn.class, "ETableColumn", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getETableColumn_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ETableColumn.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getETableColumn_Width(), theEcorePackage.getEDouble(), "width", "150", 0, 1, ETableColumn.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getETableColumn_CellValueFactory(), theEcorePackage.getEString(), "cellValueFactory", null, 0, 1,
+				ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETableColumn_CellFactory(), theEcorePackage.getEString(), "cellFactory", null, 0, 1,
+				ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(eRadioButtonEClass, ERadioButton.class, "ERadioButton", !IS_ABSTRACT, !IS_INTERFACE,

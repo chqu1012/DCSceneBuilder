@@ -397,6 +397,52 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETableViewItemProvider eTableViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETableView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETableViewAdapter() {
+		if (eTableViewItemProvider == null) {
+			eTableViewItemProvider = new ETableViewItemProvider(this);
+		}
+
+		return eTableViewItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableColumn} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETableColumnItemProvider eTableColumnItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETableColumn}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETableColumnAdapter() {
+		if (eTableColumnItemProvider == null) {
+			eTableColumnItemProvider = new ETableColumnItemProvider(this);
+		}
+
+		return eTableColumnItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ERadioButton} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -874,6 +920,10 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eSplitMenuButtonItemProvider.dispose();
 		if (eToogleButtonItemProvider != null)
 			eToogleButtonItemProvider.dispose();
+		if (eTableViewItemProvider != null)
+			eTableViewItemProvider.dispose();
+		if (eTableColumnItemProvider != null)
+			eTableColumnItemProvider.dispose();
 		if (eRadioButtonItemProvider != null)
 			eRadioButtonItemProvider.dispose();
 		if (eCatgeoryAxisItemProvider != null)

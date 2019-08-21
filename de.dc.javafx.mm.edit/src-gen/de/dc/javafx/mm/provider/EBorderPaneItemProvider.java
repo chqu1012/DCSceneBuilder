@@ -179,6 +179,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEToogleButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(
@@ -252,6 +255,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
 				MmFactory.eINSTANCE.createEToogleButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createETableView()));
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createERadioButton()));
@@ -329,6 +335,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEToogleButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(
@@ -402,6 +411,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
 				MmFactory.eINSTANCE.createEToogleButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createETableView()));
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
 				MmFactory.eINSTANCE.createERadioButton()));
