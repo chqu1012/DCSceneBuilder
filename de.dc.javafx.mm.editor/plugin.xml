@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="MmEditorAdvisorApplication">
+      <!-- @generated javafx -->
+      <application>
+         <run class="de.dc.javafx.mm.presentation.MmEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated javafx -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.javafx.mm.presentation.MmEditorAdvisor$Perspective"
+            id="de.dc.javafx.mm.presentation.MmEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated javafx -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated javafx -->
+      <key
+            commandId="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated javafx -->
+      <actionSet
+            label="%_UI_MmEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="MmEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.javafx.mm.presentation.MmEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.javafx.mm.presentation.MmEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenURICommand"
+               class="de.dc.javafx.mm.presentation.MmEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenCommand"
+               class="de.dc.javafx.mm.presentation.MmEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.javafx.mm.presentation.MmEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated javafx -->
+      <actionSet
+            label="%_UI_MmModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.javafx.mm.presentation.MmActionBarContributorActionSet">
+         <action
+               label="%_UI_MmModelWizard_label"
+               class="de.dc.javafx.mm.presentation.MmActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.javafx.mm.presentation.MmActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated javafx -->
+      <editor
+            id="de.dc.javafx.mm.presentation.MmEditorID"
+            name="%_UI_MmEditor_label"
+            icon="icons/full/obj16/MmModelFile.gif"
+            extensions="javafx"
+            class="de.dc.javafx.mm.presentation.MmEditor"
+            contributorClass="de.dc.javafx.mm.presentation.MmActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
