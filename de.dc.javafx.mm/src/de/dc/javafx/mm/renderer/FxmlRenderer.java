@@ -1,5 +1,7 @@
 package de.dc.javafx.mm.renderer;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -13,6 +15,7 @@ import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EVBox;
+import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.util.MmSwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -29,6 +32,9 @@ public class FxmlRenderer extends MmSwitch<Node> {
 
 	private Map<String, Node> controlRegistry = new HashMap<>();
 	private Map<String, TableColumn<?,?>> columnsRegistry = new HashMap<>();
+	
+	private Class<?> controller;
+	private Object controllerInstance;
 
 	@SuppressWarnings("unchecked")
 	public <T extends Node> T findNodeBy(String id) {
@@ -58,6 +64,21 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		initSize(eNode, node);
 
 		node.getChildren().add(current);
+	}
+	
+	@Override
+	public Node caseEmfModel(EmfModel object) {
+		if (object.getController()!=null) {
+			try {
+				controller = Class.forName(object.getController());
+				controllerInstance = controller.newInstance();
+				Method initializeMethod = controller.getMethod("initialize");
+				initializeMethod.invoke(controllerInstance,null);
+			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException | IllegalArgumentException | InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		}
+		return doSwitch(object.getRoot());
 	}
 
 	@Override
