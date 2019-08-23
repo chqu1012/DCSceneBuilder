@@ -87,13 +87,13 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL__STYLE_CLASS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__NODES = 2;
+	int EMF_MODEL__ROOT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Emf Model</em>' class.
@@ -6755,15 +6755,15 @@ public interface MmPackage extends EPackage {
 	EAttribute getEmfModel_StyleClass();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.EmfModel#getNodes <em>Nodes</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Nodes</em>'.
-	 * @see de.dc.javafx.mm.EmfModel#getNodes()
+	 * @return the meta object for the containment reference '<em>Root</em>'.
+	 * @see de.dc.javafx.mm.EmfModel#getRoot()
 	 * @see #getEmfModel()
 	 * @generated
 	 */
-	EReference getEmfModel_Nodes();
+	EReference getEmfModel_Root();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.Styleable <em>Styleable</em>}'.
@@ -7669,12 +7669,12 @@ public interface MmPackage extends EPackage {
 		EAttribute EMF_MODEL__STYLE_CLASS = eINSTANCE.getEmfModel_StyleClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Root</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EMF_MODEL__NODES = eINSTANCE.getEmfModel_Nodes();
+		EReference EMF_MODEL__ROOT = eINSTANCE.getEmfModel_Root();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.StyleableImpl <em>Styleable</em>}' class.

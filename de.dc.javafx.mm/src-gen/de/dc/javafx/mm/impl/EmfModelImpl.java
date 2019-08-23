@@ -20,8 +20,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getController <em>Controller</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getRoot <em>Root</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,14 +68,14 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	protected EList<String> styleClass;
 
 	/**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
+	 * The cached value of the '{@link #getRoot() <em>Root</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNodes()
+	 * @see #getRoot()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ENode> nodes;
+	protected ENode root;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,11 +139,49 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	 * @generated
 	 */
 	@Override
-	public EList<ENode> getNodes() {
-		if (nodes == null) {
-			nodes = new EObjectContainmentEList<ENode>(ENode.class, this, MmPackage.EMF_MODEL__NODES);
+	public ENode getRoot() {
+		return root;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoot(ENode newRoot, NotificationChain msgs) {
+		ENode oldRoot = root;
+		root = newRoot;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.EMF_MODEL__ROOT,
+					oldRoot, newRoot);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return nodes;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRoot(ENode newRoot) {
+		if (newRoot != root) {
+			NotificationChain msgs = null;
+			if (root != null)
+				msgs = ((InternalEObject) root).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MmPackage.EMF_MODEL__ROOT,
+						null, msgs);
+			if (newRoot != null)
+				msgs = ((InternalEObject) newRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MmPackage.EMF_MODEL__ROOT,
+						null, msgs);
+			msgs = basicSetRoot(newRoot, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EMF_MODEL__ROOT, newRoot, newRoot));
 	}
 
 	/**
@@ -156,8 +192,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MmPackage.EMF_MODEL__NODES:
-			return ((InternalEList<?>) getNodes()).basicRemove(otherEnd, msgs);
+		case MmPackage.EMF_MODEL__ROOT:
+			return basicSetRoot(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -174,8 +210,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return getController();
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			return getStyleClass();
-		case MmPackage.EMF_MODEL__NODES:
-			return getNodes();
+		case MmPackage.EMF_MODEL__ROOT:
+			return getRoot();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,9 +232,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			getStyleClass().clear();
 			getStyleClass().addAll((Collection<? extends String>) newValue);
 			return;
-		case MmPackage.EMF_MODEL__NODES:
-			getNodes().clear();
-			getNodes().addAll((Collection<? extends ENode>) newValue);
+		case MmPackage.EMF_MODEL__ROOT:
+			setRoot((ENode) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,8 +253,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			getStyleClass().clear();
 			return;
-		case MmPackage.EMF_MODEL__NODES:
-			getNodes().clear();
+		case MmPackage.EMF_MODEL__ROOT:
+			setRoot((ENode) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -237,8 +272,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return CONTROLLER_EDEFAULT == null ? controller != null : !CONTROLLER_EDEFAULT.equals(controller);
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			return styleClass != null && !styleClass.isEmpty();
-		case MmPackage.EMF_MODEL__NODES:
-			return nodes != null && !nodes.isEmpty();
+		case MmPackage.EMF_MODEL__ROOT:
+			return root != null;
 		}
 		return super.eIsSet(featureID);
 	}

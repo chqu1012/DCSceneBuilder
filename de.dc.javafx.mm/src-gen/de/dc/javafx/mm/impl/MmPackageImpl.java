@@ -444,7 +444,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEmfModel_Nodes() {
+	public EReference getEmfModel_Root() {
 		return (EReference) emfModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1291,7 +1291,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		emfModelEClass = createEClass(EMF_MODEL);
 		createEAttribute(emfModelEClass, EMF_MODEL__CONTROLLER);
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
-		createEReference(emfModelEClass, EMF_MODEL__NODES);
+		createEReference(emfModelEClass, EMF_MODEL__ROOT);
 
 		styleableEClass = createEClass(STYLEABLE);
 
@@ -1492,7 +1492,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getEmfModel_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1,
 				EmfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getEmfModel_Nodes(), this.getENode(), null, "nodes", null, 0, -1, EmfModel.class, !IS_TRANSIENT,
+		initEReference(getEmfModel_Root(), this.getENode(), null, "root", null, 0, 1, EmfModel.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

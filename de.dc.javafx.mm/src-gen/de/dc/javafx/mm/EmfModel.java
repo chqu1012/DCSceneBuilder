@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getController <em>Controller</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}</li>
- *   <li>{@link de.dc.javafx.mm.EmfModel#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getEmfModel()
@@ -60,15 +60,25 @@ public interface EmfModel extends EObject {
 	EList<String> getStyleClass();
 
 	/**
-	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link de.dc.javafx.mm.ENode}.
+	 * Returns the value of the '<em><b>Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nodes</em>' containment reference list.
-	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_Nodes()
+	 * @return the value of the '<em>Root</em>' containment reference.
+	 * @see #setRoot(ENode)
+	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_Root()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ENode> getNodes();
+	ENode getRoot();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Root</em>' containment reference.
+	 * @see #getRoot()
+	 * @generated
+	 */
+	void setRoot(ENode value);
 
 } // EmfModel

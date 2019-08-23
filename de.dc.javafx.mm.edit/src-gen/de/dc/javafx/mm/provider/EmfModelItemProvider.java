@@ -108,7 +108,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__NODES);
+			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -206,7 +206,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case MmPackage.EMF_MODEL__NODES:
+		case MmPackage.EMF_MODEL__ROOT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -225,82 +225,82 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createERegion()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createERegion()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEGroup()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEWebView()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createELabel()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEButton()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEButton()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createECheckBox()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createECheckBox()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEHyperlink()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEHyperlink()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEMenuButton()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEMenuButton()));
-
-		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES,
-				MmFactory.eINSTANCE.createESplitMenuButton()));
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createESplitMenuButton()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEToogleButton()));
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEToogleButton()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createETableView()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createETableView()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createERadioButton()));
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createECatgeoryAxis()));
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createECatgeoryAxis()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEValueAxis()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEValueAxis()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEPieChart()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEPieChart()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEXYChart()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEXYChart()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEPane()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEStackPane()));
-
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEDialogPane()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEStackPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEGridPane()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEDialogPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEHBox()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEGridPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEVBox()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEHBox()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEFlowPane()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEVBox()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createETilePane()));
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEFlowPane()));
 
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEAnchorPane()));
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createETilePane()));
 
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EMF_MODEL__NODES, MmFactory.eINSTANCE.createEBorderPane()));
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEAnchorPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEBorderPane()));
 	}
 
 	/**

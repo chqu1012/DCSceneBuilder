@@ -4,6 +4,7 @@ import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EVBox;
+import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -20,6 +21,8 @@ public class FxmlRendererApplication extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		FxmlRenderer renderer = new FxmlRenderer();
 
+		EmfModel model = MmFactory.eINSTANCE.createEmfModel();
+		
 		EBorderPane eRoot = MmFactory.eINSTANCE.createEBorderPane();
 		eRoot.setLeft(createVBox());
 		eRoot.setRight(createButton("Right Button"));
@@ -30,6 +33,8 @@ public class FxmlRendererApplication extends Application {
 			eRoot.getChildren().add(createButton("Button " + j));
 		}
 
+		model.setRoot(eRoot);
+		
 		Parent root = (Parent) renderer.doSwitch(eRoot);
 		primaryStage.setScene(new Scene(root, 1000, 700));
 		primaryStage.show();
