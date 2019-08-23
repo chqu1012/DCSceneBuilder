@@ -6380,13 +6380,22 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE__BOTTOM = EPANE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Center</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__CENTER = EPANE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>EBorder Pane</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EBORDER_PANE_FEATURE_COUNT = EPANE_FEATURE_COUNT + 4;
+	int EBORDER_PANE_FEATURE_COUNT = EPANE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>EBorder Pane</em>' class.
@@ -7271,6 +7280,17 @@ public interface MmPackage extends EPackage {
 	EReference getEBorderPane_Bottom();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.EBorderPane#getCenter <em>Center</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Center</em>'.
+	 * @see de.dc.javafx.mm.EBorderPane#getCenter()
+	 * @see #getEBorderPane()
+	 * @generated
+	 */
+	EReference getEBorderPane_Center();
+
+	/**
 	 * Returns the meta object for data type '{@link javafx.geometry.Pos <em>EPos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8038,6 +8058,14 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EBORDER_PANE__BOTTOM = eINSTANCE.getEBorderPane_Bottom();
+
+		/**
+		 * The meta object literal for the '<em><b>Center</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EBORDER_PANE__CENTER = eINSTANCE.getEBorderPane_Center();
 
 		/**
 		 * The meta object literal for the '<em>EPos</em>' data type.

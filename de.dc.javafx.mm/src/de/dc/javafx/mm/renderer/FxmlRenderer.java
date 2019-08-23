@@ -84,6 +84,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		createBorderPaneItem(object.getRight()).ifPresent(e -> node.setRight(e));
 		createBorderPaneItem(object.getTop()).ifPresent(e -> node.setTop(e));
 		createBorderPaneItem(object.getBottom()).ifPresent(e -> node.setBottom(e));
+		createBorderPaneItem(object.getCenter()).ifPresent(e -> node.setCenter(e));
 
 		object.getChildren().forEach(e -> addChild(node, e));
 		return node;

@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getRight <em>Right</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getTop <em>Top</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getBottom <em>Bottom</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EBorderPaneImpl#getCenter <em>Center</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,6 +71,16 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	 * @ordered
 	 */
 	protected ENode bottom;
+
+	/**
+	 * The cached value of the '{@link #getCenter() <em>Center</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCenter()
+	 * @generated
+	 * @ordered
+	 */
+	protected ENode center;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,6 +312,58 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 	 * @generated
 	 */
 	@Override
+	public ENode getCenter() {
+		return center;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCenter(ENode newCenter, NotificationChain msgs) {
+		ENode oldCenter = center;
+		center = newCenter;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					MmPackage.EBORDER_PANE__CENTER, oldCenter, newCenter);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCenter(ENode newCenter) {
+		if (newCenter != center) {
+			NotificationChain msgs = null;
+			if (center != null)
+				msgs = ((InternalEObject) center).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.EBORDER_PANE__CENTER, null, msgs);
+			if (newCenter != null)
+				msgs = ((InternalEObject) newCenter).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.EBORDER_PANE__CENTER, null, msgs);
+			msgs = basicSetCenter(newCenter, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EBORDER_PANE__CENTER, newCenter,
+					newCenter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case MmPackage.EBORDER_PANE__LEFT:
@@ -311,6 +374,8 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 			return basicSetTop(null, msgs);
 		case MmPackage.EBORDER_PANE__BOTTOM:
 			return basicSetBottom(null, msgs);
+		case MmPackage.EBORDER_PANE__CENTER:
+			return basicSetCenter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -331,6 +396,8 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 			return getTop();
 		case MmPackage.EBORDER_PANE__BOTTOM:
 			return getBottom();
+		case MmPackage.EBORDER_PANE__CENTER:
+			return getCenter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -354,6 +421,9 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 			return;
 		case MmPackage.EBORDER_PANE__BOTTOM:
 			setBottom((ENode) newValue);
+			return;
+		case MmPackage.EBORDER_PANE__CENTER:
+			setCenter((ENode) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -379,6 +449,9 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 		case MmPackage.EBORDER_PANE__BOTTOM:
 			setBottom((ENode) null);
 			return;
+		case MmPackage.EBORDER_PANE__CENTER:
+			setCenter((ENode) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -399,6 +472,8 @@ public class EBorderPaneImpl extends EPaneImpl implements EBorderPane {
 			return top != null;
 		case MmPackage.EBORDER_PANE__BOTTOM:
 			return bottom != null;
+		case MmPackage.EBORDER_PANE__CENTER:
+			return center != null;
 		}
 		return super.eIsSet(featureID);
 	}

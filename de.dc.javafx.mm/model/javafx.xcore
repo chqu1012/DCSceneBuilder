@@ -145,6 +145,7 @@ class EBorderPane extends EPane{
 	contains ENode right
 	contains ENode top
 	contains ENode bottom
+	contains ENode center
 }
 
 type EPos wraps Pos create{ if(it!==null) Pos.valueOf(it)} convert{ if(it!==null) it.name}

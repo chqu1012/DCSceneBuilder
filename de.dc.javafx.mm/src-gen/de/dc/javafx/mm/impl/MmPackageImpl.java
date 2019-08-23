@@ -1234,6 +1234,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getEBorderPane_Center() {
+		return (EReference) eBorderPaneEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getEPos() {
 		return ePosEDataType;
 	}
@@ -1388,6 +1398,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEReference(eBorderPaneEClass, EBORDER_PANE__RIGHT);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__TOP);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__BOTTOM);
+		createEReference(eBorderPaneEClass, EBORDER_PANE__CENTER);
 
 		// Create data types
 		ePosEDataType = createEDataType(EPOS);
@@ -1688,6 +1699,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEReference(getEBorderPane_Bottom(), this.getENode(), null, "bottom", null, 0, 1, EBorderPane.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEBorderPane_Center(), this.getENode(), null, "center", null, 0, 1, EBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

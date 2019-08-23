@@ -15,6 +15,7 @@ package de.dc.javafx.mm;
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getRight <em>Right</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getTop <em>Top</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EBorderPane#getBottom <em>Bottom</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EBorderPane#getCenter <em>Center</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getEBorderPane()
@@ -109,5 +110,27 @@ public interface EBorderPane extends EPane {
 	 * @generated
 	 */
 	void setBottom(ENode value);
+
+	/**
+	 * Returns the value of the '<em><b>Center</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Center</em>' containment reference.
+	 * @see #setCenter(ENode)
+	 * @see de.dc.javafx.mm.MmPackage#getEBorderPane_Center()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ENode getCenter();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EBorderPane#getCenter <em>Center</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Center</em>' containment reference.
+	 * @see #getCenter()
+	 * @generated
+	 */
+	void setCenter(ENode value);
 
 } // EBorderPane

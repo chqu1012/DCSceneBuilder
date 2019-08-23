@@ -65,6 +65,7 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__RIGHT);
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__TOP);
 			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__BOTTOM);
+			childrenFeatures.add(MmPackage.Literals.EBORDER_PANE__CENTER);
 		}
 		return childrenFeatures;
 	}
@@ -131,6 +132,7 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		case MmPackage.EBORDER_PANE__RIGHT:
 		case MmPackage.EBORDER_PANE__TOP:
 		case MmPackage.EBORDER_PANE__BOTTOM:
+		case MmPackage.EBORDER_PANE__CENTER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -459,6 +461,84 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createERegion()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEGroup()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createELabel()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createECheckBox()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEHyperlink()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEMenuButton()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createESplitMenuButton()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEToogleButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createERadioButton()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createECatgeoryAxis()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEValueAxis()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEPieChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEXYChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEStackPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEDialogPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEGridPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEHBox()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEVBox()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEFlowPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createETilePane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEAnchorPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEBorderPane()));
 	}
 
 	/**
@@ -478,7 +558,8 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__LEFT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__RIGHT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__TOP
-				|| childFeature == MmPackage.Literals.EBORDER_PANE__BOTTOM;
+				|| childFeature == MmPackage.Literals.EBORDER_PANE__BOTTOM
+				|| childFeature == MmPackage.Literals.EBORDER_PANE__CENTER;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",
