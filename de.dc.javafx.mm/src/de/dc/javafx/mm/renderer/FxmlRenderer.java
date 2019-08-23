@@ -1,9 +1,9 @@
 package de.dc.javafx.mm.renderer;
 
-import java.util.Objects;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import de.dc.javafx.mm.EBorderPane;
@@ -27,6 +27,18 @@ import javafx.util.Callback;
 
 public class FxmlRenderer extends MmSwitch<Node> {
 
+	private Map<String, Node> controlRegistry = new HashMap<>();
+	private Map<String, TableColumn<?,?>> columnsRegistry = new HashMap<>();
+
+	@SuppressWarnings("unchecked")
+	public <T extends Node> T findNodeBy(String id) {
+		return (T) controlRegistry.get(id);
+	}
+
+	public TableColumn<?,?> findColumnBy(String id) {
+		return columnsRegistry.get(id);
+	}
+	
 	private Optional<Node> createBorderPaneItem(ENode mNode) {
 		Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
 		BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
