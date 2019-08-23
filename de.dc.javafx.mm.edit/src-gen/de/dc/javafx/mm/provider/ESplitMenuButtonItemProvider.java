@@ -74,8 +74,9 @@ public class ESplitMenuButtonItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ESplitMenuButton eSplitMenuButton = (ESplitMenuButton) object;
-		return getString("_UI_ESplitMenuButton_type") + " " + eSplitMenuButton.getLayoutX();
+		String label = ((ESplitMenuButton) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ESplitMenuButton_type")
+				: getString("_UI_ESplitMenuButton_type") + " " + label;
 	}
 
 	/**

@@ -73,8 +73,9 @@ public class EStackPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EStackPane eStackPane = (EStackPane) object;
-		return getString("_UI_EStackPane_type") + " " + eStackPane.getLayoutX();
+		String label = ((EStackPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EStackPane_type")
+				: getString("_UI_EStackPane_type") + " " + label;
 	}
 
 	/**

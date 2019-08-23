@@ -94,8 +94,9 @@ public class ECheckBoxItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ECheckBox eCheckBox = (ECheckBox) object;
-		return getString("_UI_ECheckBox_type") + " " + eCheckBox.getLayoutX();
+		String label = ((ECheckBox) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ECheckBox_type")
+				: getString("_UI_ECheckBox_type") + " " + label;
 	}
 
 	/**

@@ -63,8 +63,9 @@ public class EBaseViewItemProvider extends EControlItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EBaseView eBaseView = (EBaseView) object;
-		return getString("_UI_EBaseView_type") + " " + eBaseView.getLayoutX();
+		String label = ((EBaseView) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EBaseView_type")
+				: getString("_UI_EBaseView_type") + " " + label;
 	}
 
 	/**

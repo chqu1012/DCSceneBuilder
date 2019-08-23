@@ -73,8 +73,9 @@ public class EGroupItemProvider extends ENodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EGroup eGroup = (EGroup) object;
-		return getString("_UI_EGroup_type") + " " + eGroup.getLayoutX();
+		String label = ((EGroup) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EGroup_type")
+				: getString("_UI_EGroup_type") + " " + label;
 	}
 
 	/**

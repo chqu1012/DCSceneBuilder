@@ -74,8 +74,9 @@ public class ERadioButtonItemProvider extends EToogleButtonItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ERadioButton eRadioButton = (ERadioButton) object;
-		return getString("_UI_ERadioButton_type") + " " + eRadioButton.getLayoutX();
+		String label = ((ERadioButton) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ERadioButton_type")
+				: getString("_UI_ERadioButton_type") + " " + label;
 	}
 
 	/**

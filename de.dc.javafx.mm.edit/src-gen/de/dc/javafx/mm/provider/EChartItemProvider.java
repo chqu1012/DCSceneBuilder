@@ -63,8 +63,9 @@ public class EChartItemProvider extends ERegionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EChart eChart = (EChart) object;
-		return getString("_UI_EChart_type") + " " + eChart.getLayoutX();
+		String label = ((EChart) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EChart_type")
+				: getString("_UI_EChart_type") + " " + label;
 	}
 
 	/**

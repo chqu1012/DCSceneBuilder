@@ -94,8 +94,9 @@ public class EHyperlinkItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EHyperlink eHyperlink = (EHyperlink) object;
-		return getString("_UI_EHyperlink_type") + " " + eHyperlink.getLayoutX();
+		String label = ((EHyperlink) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EHyperlink_type")
+				: getString("_UI_EHyperlink_type") + " " + label;
 	}
 
 	/**

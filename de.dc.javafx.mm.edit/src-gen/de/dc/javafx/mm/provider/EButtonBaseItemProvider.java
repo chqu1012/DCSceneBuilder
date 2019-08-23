@@ -63,8 +63,9 @@ public class EButtonBaseItemProvider extends ELabeledItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EButtonBase eButtonBase = (EButtonBase) object;
-		return getString("_UI_EButtonBase_type") + " " + eButtonBase.getLayoutX();
+		String label = ((EButtonBase) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EButtonBase_type")
+				: getString("_UI_EButtonBase_type") + " " + label;
 	}
 
 	/**

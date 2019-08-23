@@ -63,8 +63,9 @@ public class EAxisItemProvider extends ERegionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EAxis eAxis = (EAxis) object;
-		return getString("_UI_EAxis_type") + " " + eAxis.getLayoutX();
+		String label = ((EAxis) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EAxis_type")
+				: getString("_UI_EAxis_type") + " " + label;
 	}
 
 	/**

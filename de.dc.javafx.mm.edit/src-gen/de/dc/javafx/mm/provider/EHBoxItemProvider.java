@@ -93,8 +93,9 @@ public class EHBoxItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EHBox ehBox = (EHBox) object;
-		return getString("_UI_EHBox_type") + " " + ehBox.getLayoutX();
+		String label = ((EHBox) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EHBox_type")
+				: getString("_UI_EHBox_type") + " " + label;
 	}
 
 	/**

@@ -107,8 +107,9 @@ public class ERegionItemProvider extends EParentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ERegion eRegion = (ERegion) object;
-		return getString("_UI_ERegion_type") + " " + eRegion.getLayoutX();
+		String label = ((ERegion) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ERegion_type")
+				: getString("_UI_ERegion_type") + " " + label;
 	}
 
 	/**

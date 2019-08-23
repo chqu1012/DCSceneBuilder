@@ -93,8 +93,9 @@ public class EVBoxItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EVBox evBox = (EVBox) object;
-		return getString("_UI_EVBox_type") + " " + evBox.getLayoutX();
+		String label = ((EVBox) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EVBox_type")
+				: getString("_UI_EVBox_type") + " " + label;
 	}
 
 	/**

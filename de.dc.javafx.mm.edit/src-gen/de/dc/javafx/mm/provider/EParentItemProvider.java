@@ -97,8 +97,9 @@ public class EParentItemProvider extends ENodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EParent eParent = (EParent) object;
-		return getString("_UI_EParent_type") + " " + eParent.getLayoutX();
+		String label = ((EParent) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EParent_type")
+				: getString("_UI_EParent_type") + " " + label;
 	}
 
 	/**

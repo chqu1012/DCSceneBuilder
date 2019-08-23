@@ -74,8 +74,9 @@ public class EXYChartItemProvider extends EChartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EXYChart exyChart = (EXYChart) object;
-		return getString("_UI_EXYChart_type") + " " + exyChart.getLayoutX();
+		String label = ((EXYChart) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EXYChart_type")
+				: getString("_UI_EXYChart_type") + " " + label;
 	}
 
 	/**

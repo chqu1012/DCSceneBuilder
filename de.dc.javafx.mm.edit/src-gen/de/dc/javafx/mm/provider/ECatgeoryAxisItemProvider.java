@@ -74,8 +74,9 @@ public class ECatgeoryAxisItemProvider extends EAxisItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ECatgeoryAxis eCatgeoryAxis = (ECatgeoryAxis) object;
-		return getString("_UI_ECatgeoryAxis_type") + " " + eCatgeoryAxis.getLayoutX();
+		String label = ((ECatgeoryAxis) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ECatgeoryAxis_type")
+				: getString("_UI_ECatgeoryAxis_type") + " " + label;
 	}
 
 	/**

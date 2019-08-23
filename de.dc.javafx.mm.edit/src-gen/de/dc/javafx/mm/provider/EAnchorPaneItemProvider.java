@@ -73,8 +73,9 @@ public class EAnchorPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EAnchorPane eAnchorPane = (EAnchorPane) object;
-		return getString("_UI_EAnchorPane_type") + " " + eAnchorPane.getLayoutX();
+		String label = ((EAnchorPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EAnchorPane_type")
+				: getString("_UI_EAnchorPane_type") + " " + label;
 	}
 
 	/**

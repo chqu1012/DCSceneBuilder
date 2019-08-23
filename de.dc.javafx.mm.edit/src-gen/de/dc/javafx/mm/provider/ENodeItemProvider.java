@@ -46,6 +46,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
 			addLayoutXPropertyDescriptor(object);
 			addLayoutYPropertyDescriptor(object);
 			addOpacityPropertyDescriptor(object);
@@ -61,6 +62,21 @@ public class ENodeItemProvider extends StyleableItemProvider {
 			addPrefWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ENode_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ENode_id_feature", "_UI_ENode_type"),
+						MmPackage.Literals.ENODE__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -311,8 +327,9 @@ public class ENodeItemProvider extends StyleableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ENode eNode = (ENode) object;
-		return getString("_UI_ENode_type") + " " + eNode.getLayoutX();
+		String label = ((ENode) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ENode_type")
+				: getString("_UI_ENode_type") + " " + label;
 	}
 
 	/**
@@ -327,6 +344,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ENode.class)) {
+		case MmPackage.ENODE__ID:
 		case MmPackage.ENODE__LAYOUT_X:
 		case MmPackage.ENODE__LAYOUT_Y:
 		case MmPackage.ENODE__OPACITY:

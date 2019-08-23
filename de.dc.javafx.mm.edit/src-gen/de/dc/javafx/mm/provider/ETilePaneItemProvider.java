@@ -73,8 +73,9 @@ public class ETilePaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ETilePane eTilePane = (ETilePane) object;
-		return getString("_UI_ETilePane_type") + " " + eTilePane.getLayoutX();
+		String label = ((ETilePane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ETilePane_type")
+				: getString("_UI_ETilePane_type") + " " + label;
 	}
 
 	/**

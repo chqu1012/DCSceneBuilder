@@ -73,8 +73,9 @@ public class EWebViewItemProvider extends ENodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EWebView eWebView = (EWebView) object;
-		return getString("_UI_EWebView_type") + " " + eWebView.getLayoutX();
+		String label = ((EWebView) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EWebView_type")
+				: getString("_UI_EWebView_type") + " " + label;
 	}
 
 	/**

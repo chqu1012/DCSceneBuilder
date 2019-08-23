@@ -74,8 +74,9 @@ public class EValueAxisItemProvider extends EAxisItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EValueAxis eValueAxis = (EValueAxis) object;
-		return getString("_UI_EValueAxis_type") + " " + eValueAxis.getLayoutX();
+		String label = ((EValueAxis) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EValueAxis_type")
+				: getString("_UI_EValueAxis_type") + " " + label;
 	}
 
 	/**

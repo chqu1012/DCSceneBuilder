@@ -83,8 +83,9 @@ public class ELabeledItemProvider extends EControlItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ELabeled eLabeled = (ELabeled) object;
-		return getString("_UI_ELabeled_type") + " " + eLabeled.getLayoutX();
+		String label = ((ELabeled) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ELabeled_type")
+				: getString("_UI_ELabeled_type") + " " + label;
 	}
 
 	/**

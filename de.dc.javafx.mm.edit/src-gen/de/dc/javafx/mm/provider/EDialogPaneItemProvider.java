@@ -161,8 +161,9 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EDialogPane eDialogPane = (EDialogPane) object;
-		return getString("_UI_EDialogPane_type") + " " + eDialogPane.getLayoutX();
+		String label = ((EDialogPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EDialogPane_type")
+				: getString("_UI_EDialogPane_type") + " " + label;
 	}
 
 	/**

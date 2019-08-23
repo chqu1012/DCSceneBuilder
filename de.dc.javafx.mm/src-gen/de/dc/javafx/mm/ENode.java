@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.ENode#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getLayoutX <em>Layout X</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getOpacity <em>Opacity</em>}</li>
@@ -34,6 +35,28 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ENode extends Styleable, Skinnable {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see de.dc.javafx.mm.MmPackage#getENode_Id()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ENode#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->

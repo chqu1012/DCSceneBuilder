@@ -73,8 +73,9 @@ public class EFlowPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EFlowPane eFlowPane = (EFlowPane) object;
-		return getString("_UI_EFlowPane_type") + " " + eFlowPane.getLayoutX();
+		String label = ((EFlowPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EFlowPane_type")
+				: getString("_UI_EFlowPane_type") + " " + label;
 	}
 
 	/**

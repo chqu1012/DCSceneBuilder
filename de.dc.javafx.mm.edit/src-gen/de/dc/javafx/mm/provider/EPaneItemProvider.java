@@ -91,8 +91,9 @@ public class EPaneItemProvider extends ERegionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EPane ePane = (EPane) object;
-		return getString("_UI_EPane_type") + " " + ePane.getLayoutX();
+		String label = ((EPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EPane_type")
+				: getString("_UI_EPane_type") + " " + label;
 	}
 
 	/**

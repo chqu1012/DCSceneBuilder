@@ -61,8 +61,9 @@ public class EControlItemProvider extends ERegionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EControl eControl = (EControl) object;
-		return getString("_UI_EControl_type") + " " + eControl.getLayoutX();
+		String label = ((EControl) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EControl_type")
+				: getString("_UI_EControl_type") + " " + label;
 	}
 
 	/**

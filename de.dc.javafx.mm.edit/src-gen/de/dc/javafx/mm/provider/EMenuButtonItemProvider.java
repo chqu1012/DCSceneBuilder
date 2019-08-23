@@ -74,8 +74,9 @@ public class EMenuButtonItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EMenuButton eMenuButton = (EMenuButton) object;
-		return getString("_UI_EMenuButton_type") + " " + eMenuButton.getLayoutX();
+		String label = ((EMenuButton) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EMenuButton_type")
+				: getString("_UI_EMenuButton_type") + " " + label;
 	}
 
 	/**

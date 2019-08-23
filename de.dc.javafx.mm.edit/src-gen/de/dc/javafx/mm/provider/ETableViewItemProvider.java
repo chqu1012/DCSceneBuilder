@@ -108,8 +108,9 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ETableView eTableView = (ETableView) object;
-		return getString("_UI_ETableView_type") + " " + eTableView.getLayoutX();
+		String label = ((ETableView) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ETableView_type")
+				: getString("_UI_ETableView_type") + " " + label;
 	}
 
 	/**

@@ -74,8 +74,9 @@ public class ELabelItemProvider extends ELabeledItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ELabel eLabel = (ELabel) object;
-		return getString("_UI_ELabel_type") + " " + eLabel.getLayoutX();
+		String label = ((ELabel) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_ELabel_type")
+				: getString("_UI_ELabel_type") + " " + label;
 	}
 
 	/**

@@ -112,8 +112,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EBorderPane eBorderPane = (EBorderPane) object;
-		return getString("_UI_EBorderPane_type") + " " + eBorderPane.getLayoutX();
+		String label = ((EBorderPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EBorderPane_type")
+				: getString("_UI_EBorderPane_type") + " " + label;
 	}
 
 	/**

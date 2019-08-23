@@ -73,8 +73,9 @@ public class EGridPaneItemProvider extends EPaneItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EGridPane eGridPane = (EGridPane) object;
-		return getString("_UI_EGridPane_type") + " " + eGridPane.getLayoutX();
+		String label = ((EGridPane) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EGridPane_type")
+				: getString("_UI_EGridPane_type") + " " + label;
 	}
 
 	/**

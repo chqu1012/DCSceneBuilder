@@ -74,8 +74,9 @@ public class EButtonItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EButton eButton = (EButton) object;
-		return getString("_UI_EButton_type") + " " + eButton.getLayoutX();
+		String label = ((EButton) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EButton_type")
+				: getString("_UI_EButton_type") + " " + label;
 	}
 
 	/**

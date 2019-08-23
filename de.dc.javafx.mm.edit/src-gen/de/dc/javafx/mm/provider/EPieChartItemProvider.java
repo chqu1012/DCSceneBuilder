@@ -74,8 +74,9 @@ public class EPieChartItemProvider extends EChartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EPieChart ePieChart = (EPieChart) object;
-		return getString("_UI_EPieChart_type") + " " + ePieChart.getLayoutX();
+		String label = ((EPieChart) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EPieChart_type")
+				: getString("_UI_EPieChart_type") + " " + label;
 	}
 
 	/**

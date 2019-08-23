@@ -484,7 +484,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_LayoutX() {
+	public EAttribute getENode_Id() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -494,7 +494,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_LayoutY() {
+	public EAttribute getENode_LayoutX() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -504,7 +504,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_Opacity() {
+	public EAttribute getENode_LayoutY() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -514,7 +514,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_Style() {
+	public EAttribute getENode_Opacity() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -524,7 +524,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_StyleClass() {
+	public EAttribute getENode_Style() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -534,7 +534,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_Visible() {
+	public EAttribute getENode_StyleClass() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -544,7 +544,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_Disable() {
+	public EAttribute getENode_Visible() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -554,8 +554,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getENode_Disable() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getENode_Margin() {
-		return (EReference) eNodeEClass.getEStructuralFeatures().get(7);
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -565,16 +575,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 */
 	@Override
 	public EAttribute getENode_MaxHeight() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_MinHeight() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -584,7 +584,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_PrefHeight() {
+	public EAttribute getENode_MinHeight() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -594,7 +594,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_MaxWidth() {
+	public EAttribute getENode_PrefHeight() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -604,7 +604,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_MinWidth() {
+	public EAttribute getENode_MaxWidth() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -614,8 +614,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getENode_PrefWidth() {
+	public EAttribute getENode_MinWidth() {
 		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_PrefWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1288,6 +1298,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		skinnableEClass = createEClass(SKINNABLE);
 
 		eNodeEClass = createEClass(ENODE);
+		createEAttribute(eNodeEClass, ENODE__ID);
 		createEAttribute(eNodeEClass, ENODE__LAYOUT_X);
 		createEAttribute(eNodeEClass, ENODE__LAYOUT_Y);
 		createEAttribute(eNodeEClass, ENODE__OPACITY);
@@ -1492,6 +1503,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eNodeEClass, ENode.class, "ENode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getENode_Id(), theEcorePackage.getEString(), "id", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getENode_LayoutX(), theEcorePackage.getEDouble(), "layoutX", null, 0, 1, ENode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);

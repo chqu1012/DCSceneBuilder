@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutX <em>Layout X</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getOpacity <em>Opacity</em>}</li>
@@ -47,6 +48,26 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * @generated
  */
 public abstract class ENodeImpl extends StyleableImpl implements ENode {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -324,6 +345,29 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	protected EClass eStaticClass() {
 		return MmPackage.Literals.ENODE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__ID, oldId, id));
 	}
 
 	/**
@@ -692,6 +736,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case MmPackage.ENODE__ID:
+			return getId();
 		case MmPackage.ENODE__LAYOUT_X:
 			return getLayoutX();
 		case MmPackage.ENODE__LAYOUT_Y:
@@ -733,6 +779,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case MmPackage.ENODE__ID:
+			setId((String) newValue);
+			return;
 		case MmPackage.ENODE__LAYOUT_X:
 			setLayoutX((Double) newValue);
 			return;
@@ -788,6 +837,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case MmPackage.ENODE__ID:
+			setId(ID_EDEFAULT);
+			return;
 		case MmPackage.ENODE__LAYOUT_X:
 			setLayoutX(LAYOUT_X_EDEFAULT);
 			return;
@@ -842,6 +894,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case MmPackage.ENODE__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case MmPackage.ENODE__LAYOUT_X:
 			return layoutX != LAYOUT_X_EDEFAULT;
 		case MmPackage.ENODE__LAYOUT_Y:
@@ -885,7 +939,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (layoutX: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", layoutX: ");
 		result.append(layoutX);
 		result.append(", layoutY: ");
 		result.append(layoutY);

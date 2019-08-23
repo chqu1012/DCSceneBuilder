@@ -94,8 +94,9 @@ public class EToogleButtonItemProvider extends EButtonBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		EToogleButton eToogleButton = (EToogleButton) object;
-		return getString("_UI_EToogleButton_type") + " " + eToogleButton.getLayoutX();
+		String label = ((EToogleButton) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_EToogleButton_type")
+				: getString("_UI_EToogleButton_type") + " " + label;
 	}
 
 	/**

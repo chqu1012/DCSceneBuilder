@@ -19,6 +19,7 @@ class Styleable{}
 class Skinnable{}
 
 abstract class ENode extends Styleable, Skinnable{
+	String ^id
 	double layoutX
 	double layoutY
 	double opacity
