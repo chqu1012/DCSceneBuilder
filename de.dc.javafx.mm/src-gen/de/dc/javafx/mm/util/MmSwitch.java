@@ -73,6 +73,13 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.EEVENTS: {
+			EEvents eEvents = (EEvents) theEObject;
+			T result = caseEEvents(eEvents);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.STYLEABLE: {
 			Styleable styleable = (Styleable) theEObject;
 			T result = caseStyleable(styleable);
@@ -95,6 +102,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eNode);
 			if (result == null)
+				result = caseEEvents(eNode);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -107,6 +116,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eParent);
 			if (result == null)
 				result = caseSkinnable(eParent);
+			if (result == null)
+				result = caseEEvents(eParent);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -122,6 +133,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eRegion);
 			if (result == null)
 				result = caseSkinnable(eRegion);
+			if (result == null)
+				result = caseEEvents(eRegion);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -143,6 +156,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eGroup);
 			if (result == null)
+				result = caseEEvents(eGroup);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -155,6 +170,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eWebView);
 			if (result == null)
 				result = caseSkinnable(eWebView);
+			if (result == null)
+				result = caseEEvents(eWebView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -172,6 +189,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eControl);
 			if (result == null)
 				result = caseSkinnable(eControl);
+			if (result == null)
+				result = caseEEvents(eControl);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -191,6 +210,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eLabeled);
 			if (result == null)
 				result = caseSkinnable(eLabeled);
+			if (result == null)
+				result = caseEEvents(eLabeled);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -213,6 +234,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eLabel);
 			if (result == null)
+				result = caseEEvents(eLabel);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -233,6 +256,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eButtonBase);
 			if (result == null)
 				result = caseSkinnable(eButtonBase);
+			if (result == null)
+				result = caseEEvents(eButtonBase);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -257,6 +282,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eButton);
 			if (result == null)
+				result = caseEEvents(eButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -279,6 +306,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eCheckBox);
 			if (result == null)
 				result = caseSkinnable(eCheckBox);
+			if (result == null)
+				result = caseEEvents(eCheckBox);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -303,6 +332,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eHyperlink);
 			if (result == null)
+				result = caseEEvents(eHyperlink);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -325,6 +356,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eMenuButton);
 			if (result == null)
 				result = caseSkinnable(eMenuButton);
+			if (result == null)
+				result = caseEEvents(eMenuButton);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -349,6 +382,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eSplitMenuButton);
 			if (result == null)
+				result = caseEEvents(eSplitMenuButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -372,6 +407,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eToogleButton);
 			if (result == null)
+				result = caseEEvents(eToogleButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -390,6 +427,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eBaseView);
 			if (result == null)
 				result = caseSkinnable(eBaseView);
+			if (result == null)
+				result = caseEEvents(eBaseView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -411,6 +450,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eTableView);
 			if (result == null)
 				result = caseSkinnable(eTableView);
+			if (result == null)
+				result = caseEEvents(eTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -444,6 +485,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eRadioButton);
 			if (result == null)
+				result = caseEEvents(eRadioButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -460,6 +503,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eAxis);
 			if (result == null)
 				result = caseSkinnable(eAxis);
+			if (result == null)
+				result = caseEEvents(eAxis);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -480,6 +525,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eCatgeoryAxis);
 			if (result == null)
+				result = caseEEvents(eCatgeoryAxis);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -499,6 +546,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eValueAxis);
 			if (result == null)
+				result = caseEEvents(eValueAxis);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -515,6 +564,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eChart);
 			if (result == null)
 				result = caseSkinnable(eChart);
+			if (result == null)
+				result = caseEEvents(eChart);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -535,6 +586,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(ePieChart);
 			if (result == null)
+				result = caseEEvents(ePieChart);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -554,6 +607,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(exyChart);
 			if (result == null)
+				result = caseEEvents(exyChart);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -570,6 +625,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(ePane);
 			if (result == null)
 				result = caseSkinnable(ePane);
+			if (result == null)
+				result = caseEEvents(ePane);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -590,6 +647,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eStackPane);
 			if (result == null)
+				result = caseEEvents(eStackPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -608,6 +667,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eDialogPane);
 			if (result == null)
 				result = caseSkinnable(eDialogPane);
+			if (result == null)
+				result = caseEEvents(eDialogPane);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -628,6 +689,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eGridPane);
 			if (result == null)
+				result = caseEEvents(eGridPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -646,6 +709,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(ehBox);
 			if (result == null)
 				result = caseSkinnable(ehBox);
+			if (result == null)
+				result = caseEEvents(ehBox);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -666,6 +731,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(evBox);
 			if (result == null)
+				result = caseEEvents(evBox);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -684,6 +751,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eFlowPane);
 			if (result == null)
 				result = caseSkinnable(eFlowPane);
+			if (result == null)
+				result = caseEEvents(eFlowPane);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -704,6 +773,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eTilePane);
 			if (result == null)
+				result = caseEEvents(eTilePane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -723,6 +794,8 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseSkinnable(eAnchorPane);
 			if (result == null)
+				result = caseEEvents(eAnchorPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -741,6 +814,8 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseStyleable(eBorderPane);
 			if (result == null)
 				result = caseSkinnable(eBorderPane);
+			if (result == null)
+				result = caseEEvents(eBorderPane);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -762,6 +837,21 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEmfModel(EmfModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EEvents</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EEvents</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEEvents(EEvents object) {
 		return null;
 	}
 

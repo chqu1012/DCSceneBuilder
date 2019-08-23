@@ -72,6 +72,11 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEEvents(EEvents object) {
+			return createEEventsAdapter();
+		}
+
+		@Override
 		public Adapter caseStyleable(Styleable object) {
 			return createStyleableAdapter();
 		}
@@ -291,6 +296,20 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmfModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EEvents
+	 * @generated
+	 */
+	public Adapter createEEventsAdapter() {
 		return null;
 	}
 

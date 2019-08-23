@@ -14,11 +14,15 @@ class EmfModel{
 	contains ENode[0..1] root
 }
 
+class EEvents{
+	String onAction
+}
+
 class Styleable{}
 
 class Skinnable{}
 
-abstract class ENode extends Styleable, Skinnable{
+abstract class ENode extends Styleable, Skinnable, EEvents{
 	String ^id
 	double layoutX
 	double layoutY

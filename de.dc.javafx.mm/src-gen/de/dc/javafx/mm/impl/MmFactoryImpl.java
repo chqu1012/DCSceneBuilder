@@ -60,6 +60,8 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 		switch (eClass.getClassifierID()) {
 		case MmPackage.EMF_MODEL:
 			return createEmfModel();
+		case MmPackage.EEVENTS:
+			return createEEvents();
 		case MmPackage.STYLEABLE:
 			return createStyleable();
 		case MmPackage.SKINNABLE:
@@ -164,6 +166,17 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EmfModel createEmfModel() {
 		EmfModelImpl emfModel = new EmfModelImpl();
 		return emfModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEvents createEEvents() {
+		EEventsImpl eEvents = new EEventsImpl();
+		return eEvents;
 	}
 
 	/**

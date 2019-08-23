@@ -114,6 +114,43 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EEventsImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
+	 * @generated
+	 */
+	int EEVENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS__ON_ACTION = 0;
+
+	/**
+	 * The number of structural features of the '<em>EEvents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>EEvents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.StyleableImpl <em>Styleable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,7 +158,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getStyleable()
 	 * @generated
 	 */
-	int STYLEABLE = 1;
+	int STYLEABLE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Styleable</em>' class.
@@ -149,7 +186,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getSkinnable()
 	 * @generated
 	 */
-	int SKINNABLE = 2;
+	int SKINNABLE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Skinnable</em>' class.
@@ -177,7 +214,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getENode()
 	 * @generated
 	 */
-	int ENODE = 3;
+	int ENODE = 4;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__ON_ACTION = STYLEABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -186,7 +232,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__ID = STYLEABLE_FEATURE_COUNT + 0;
+	int ENODE__ID = STYLEABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -195,7 +241,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__LAYOUT_X = STYLEABLE_FEATURE_COUNT + 1;
+	int ENODE__LAYOUT_X = STYLEABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -204,7 +250,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__LAYOUT_Y = STYLEABLE_FEATURE_COUNT + 2;
+	int ENODE__LAYOUT_Y = STYLEABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -213,7 +259,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__OPACITY = STYLEABLE_FEATURE_COUNT + 3;
+	int ENODE__OPACITY = STYLEABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -222,7 +268,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__STYLE = STYLEABLE_FEATURE_COUNT + 4;
+	int ENODE__STYLE = STYLEABLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -231,7 +277,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__STYLE_CLASS = STYLEABLE_FEATURE_COUNT + 5;
+	int ENODE__STYLE_CLASS = STYLEABLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -240,7 +286,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__VISIBLE = STYLEABLE_FEATURE_COUNT + 6;
+	int ENODE__VISIBLE = STYLEABLE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -249,7 +295,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__DISABLE = STYLEABLE_FEATURE_COUNT + 7;
+	int ENODE__DISABLE = STYLEABLE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -258,7 +304,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MARGIN = STYLEABLE_FEATURE_COUNT + 8;
+	int ENODE__MARGIN = STYLEABLE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -267,7 +313,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MAX_HEIGHT = STYLEABLE_FEATURE_COUNT + 9;
+	int ENODE__MAX_HEIGHT = STYLEABLE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -276,7 +322,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MIN_HEIGHT = STYLEABLE_FEATURE_COUNT + 10;
+	int ENODE__MIN_HEIGHT = STYLEABLE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -285,7 +331,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__PREF_HEIGHT = STYLEABLE_FEATURE_COUNT + 11;
+	int ENODE__PREF_HEIGHT = STYLEABLE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -294,7 +340,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MAX_WIDTH = STYLEABLE_FEATURE_COUNT + 12;
+	int ENODE__MAX_WIDTH = STYLEABLE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -303,7 +349,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MIN_WIDTH = STYLEABLE_FEATURE_COUNT + 13;
+	int ENODE__MIN_WIDTH = STYLEABLE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -312,7 +358,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__PREF_WIDTH = STYLEABLE_FEATURE_COUNT + 14;
+	int ENODE__PREF_WIDTH = STYLEABLE_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>ENode</em>' class.
@@ -321,7 +367,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 15;
+	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>ENode</em>' class.
@@ -340,7 +386,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEParent()
 	 * @generated
 	 */
-	int EPARENT = 4;
+	int EPARENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPARENT__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -512,7 +567,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERegion()
 	 * @generated
 	 */
-	int EREGION = 5;
+	int EREGION = 6;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EREGION__ON_ACTION = EPARENT__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -693,7 +757,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEInsets()
 	 * @generated
 	 */
-	int EINSETS = 6;
+	int EINSETS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -757,7 +821,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGroup()
 	 * @generated
 	 */
-	int EGROUP = 7;
+	int EGROUP = 8;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -920,7 +993,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
 	 * @generated
 	 */
-	int EWEB_VIEW = 8;
+	int EWEB_VIEW = 9;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1083,7 +1165,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControl()
 	 * @generated
 	 */
-	int ECONTROL = 9;
+	int ECONTROL = 10;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__ON_ACTION = EREGION__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1264,7 +1355,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabeled()
 	 * @generated
 	 */
-	int ELABELED = 10;
+	int ELABELED = 11;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__ON_ACTION = ECONTROL__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1454,7 +1554,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabel()
 	 * @generated
 	 */
-	int ELABEL = 11;
+	int ELABEL = 12;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__ON_ACTION = ELABELED__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1644,7 +1753,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButtonBase()
 	 * @generated
 	 */
-	int EBUTTON_BASE = 12;
+	int EBUTTON_BASE = 13;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__ON_ACTION = ELABELED__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1834,7 +1952,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 13;
+	int EBUTTON = 14;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2024,7 +2151,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECheckBox()
 	 * @generated
 	 */
-	int ECHECK_BOX = 14;
+	int ECHECK_BOX = 15;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2223,7 +2359,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHyperlink()
 	 * @generated
 	 */
-	int EHYPERLINK = 15;
+	int EHYPERLINK = 16;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2422,7 +2567,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEMenuButton()
 	 * @generated
 	 */
-	int EMENU_BUTTON = 16;
+	int EMENU_BUTTON = 17;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2612,7 +2766,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitMenuButton()
 	 * @generated
 	 */
-	int ESPLIT_MENU_BUTTON = 17;
+	int ESPLIT_MENU_BUTTON = 18;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2802,7 +2965,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEToogleButton()
 	 * @generated
 	 */
-	int ETOOGLE_BUTTON = 18;
+	int ETOOGLE_BUTTON = 19;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__ON_ACTION = EBUTTON_BASE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3001,7 +3173,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
 	 * @generated
 	 */
-	int EBASE_VIEW = 19;
+	int EBASE_VIEW = 20;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__ON_ACTION = ECONTROL__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3182,7 +3363,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 20;
+	int ETABLE_VIEW = 21;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__ON_ACTION = EBASE_VIEW__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3372,7 +3562,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 21;
+	int ETABLE_COLUMN = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3436,7 +3626,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 22;
+	int ERADIO_BUTTON = 23;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__ON_ACTION = ETOOGLE_BUTTON__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3635,7 +3834,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 23;
+	int EAXIS = 24;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__ON_ACTION = EREGION__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3816,7 +4024,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 24;
+	int ECATGEORY_AXIS = 25;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__ON_ACTION = EAXIS__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3997,7 +4214,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 25;
+	int EVALUE_AXIS = 26;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__ON_ACTION = EAXIS__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4178,7 +4404,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 26;
+	int ECHART = 27;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__ON_ACTION = EREGION__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4359,7 +4594,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 27;
+	int EPIE_CHART = 28;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__ON_ACTION = ECHART__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4540,7 +4784,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 28;
+	int EXY_CHART = 29;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__ON_ACTION = ECHART__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4721,7 +4974,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 29;
+	int EPANE = 30;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__ON_ACTION = EREGION__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4911,7 +5173,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 30;
+	int ESTACK_PANE = 31;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5101,7 +5372,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 31;
+	int EDIALOG_PANE = 32;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5327,7 +5607,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 32;
+	int EGRID_PANE = 33;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5517,7 +5806,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 33;
+	int EH_BOX = 34;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5716,7 +6014,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 34;
+	int EV_BOX = 35;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5915,7 +6222,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 35;
+	int EFLOW_PANE = 36;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6105,7 +6421,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 36;
+	int ETILE_PANE = 37;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6295,7 +6620,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 37;
+	int EANCHOR_PANE = 38;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6485,7 +6819,16 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 38;
+	int EBORDER_PANE = 39;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__ON_ACTION = EPANE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6720,7 +7063,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 39;
+	int EPOS = 40;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -6764,6 +7107,27 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEmfModel_Root();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EEvents</em>'.
+	 * @see de.dc.javafx.mm.EEvents
+	 * @generated
+	 */
+	EClass getEEvents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EEvents#getOnAction <em>On Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>On Action</em>'.
+	 * @see de.dc.javafx.mm.EEvents#getOnAction()
+	 * @see #getEEvents()
+	 * @generated
+	 */
+	EAttribute getEEvents_OnAction();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.Styleable <em>Styleable</em>}'.
@@ -7675,6 +8039,24 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EMF_MODEL__ROOT = eINSTANCE.getEmfModel_Root();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EEventsImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
+		 * @generated
+		 */
+		EClass EEVENTS = eINSTANCE.getEEvents();
+
+		/**
+		 * The meta object literal for the '<em><b>On Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EEVENTS__ON_ACTION = eINSTANCE.getEEvents_OnAction();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.StyleableImpl <em>Styleable</em>}' class.

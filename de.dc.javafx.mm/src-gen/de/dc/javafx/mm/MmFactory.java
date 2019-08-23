@@ -33,6 +33,15 @@ public interface MmFactory extends EFactory {
 	EmfModel createEmfModel();
 
 	/**
+	 * Returns a new object of class '<em>EEvents</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EEvents</em>'.
+	 * @generated
+	 */
+	EEvents createEEvents();
+
+	/**
 	 * Returns a new object of class '<em>Styleable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

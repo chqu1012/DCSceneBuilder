@@ -2,9 +2,11 @@
  */
 package de.dc.javafx.mm.impl;
 
+import de.dc.javafx.mm.EEvents;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.MmPackage;
+import de.dc.javafx.mm.Skinnable;
 
 import java.util.Collection;
 
@@ -28,6 +30,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getOnAction <em>On Action</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutX <em>Layout X</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutY <em>Layout Y</em>}</li>
@@ -48,6 +51,26 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * @generated
  */
 public abstract class ENodeImpl extends StyleableImpl implements ENode {
+	/**
+	 * The default value of the '{@link #getOnAction() <em>On Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOnAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ON_ACTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOnAction() <em>On Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOnAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String onAction = ON_ACTION_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -345,6 +368,29 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	protected EClass eStaticClass() {
 		return MmPackage.Literals.ENODE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getOnAction() {
+		return onAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOnAction(String newOnAction) {
+		String oldOnAction = onAction;
+		onAction = newOnAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__ON_ACTION, oldOnAction, onAction));
 	}
 
 	/**
@@ -736,6 +782,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case MmPackage.ENODE__ON_ACTION:
+			return getOnAction();
 		case MmPackage.ENODE__ID:
 			return getId();
 		case MmPackage.ENODE__LAYOUT_X:
@@ -779,6 +827,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case MmPackage.ENODE__ON_ACTION:
+			setOnAction((String) newValue);
+			return;
 		case MmPackage.ENODE__ID:
 			setId((String) newValue);
 			return;
@@ -837,6 +888,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case MmPackage.ENODE__ON_ACTION:
+			setOnAction(ON_ACTION_EDEFAULT);
+			return;
 		case MmPackage.ENODE__ID:
 			setId(ID_EDEFAULT);
 			return;
@@ -894,6 +948,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case MmPackage.ENODE__ON_ACTION:
+			return ON_ACTION_EDEFAULT == null ? onAction != null : !ON_ACTION_EDEFAULT.equals(onAction);
 		case MmPackage.ENODE__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case MmPackage.ENODE__LAYOUT_X:
@@ -934,12 +990,62 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Skinnable.class) {
+			switch (derivedFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == EEvents.class) {
+			switch (derivedFeatureID) {
+			case MmPackage.ENODE__ON_ACTION:
+				return MmPackage.EEVENTS__ON_ACTION;
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Skinnable.class) {
+			switch (baseFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == EEvents.class) {
+			switch (baseFeatureID) {
+			case MmPackage.EEVENTS__ON_ACTION:
+				return MmPackage.ENODE__ON_ACTION;
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy())
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
+		result.append(" (onAction: ");
+		result.append(onAction);
+		result.append(", id: ");
 		result.append(id);
 		result.append(", layoutX: ");
 		result.append(layoutX);

@@ -13,6 +13,7 @@ import de.dc.javafx.mm.EChart;
 import de.dc.javafx.mm.ECheckBox;
 import de.dc.javafx.mm.EControl;
 import de.dc.javafx.mm.EDialogPane;
+import de.dc.javafx.mm.EEvents;
 import de.dc.javafx.mm.EFlowPane;
 import de.dc.javafx.mm.EGridPane;
 import de.dc.javafx.mm.EGroup;
@@ -68,6 +69,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass emfModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eEventsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -446,6 +454,26 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EReference getEmfModel_Root() {
 		return (EReference) emfModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEEvents() {
+		return eEventsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEEvents_OnAction() {
+		return (EAttribute) eEventsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1293,6 +1321,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
 		createEReference(emfModelEClass, EMF_MODEL__ROOT);
 
+		eEventsEClass = createEClass(EEVENTS);
+		createEAttribute(eEventsEClass, EEVENTS__ON_ACTION);
+
 		styleableEClass = createEClass(STYLEABLE);
 
 		skinnableEClass = createEClass(SKINNABLE);
@@ -1449,6 +1480,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		// Add supertypes to classes
 		eNodeEClass.getESuperTypes().add(this.getStyleable());
 		eNodeEClass.getESuperTypes().add(this.getSkinnable());
+		eNodeEClass.getESuperTypes().add(this.getEEvents());
 		eParentEClass.getESuperTypes().add(this.getENode());
 		eRegionEClass.getESuperTypes().add(this.getEParent());
 		eGroupEClass.getESuperTypes().add(this.getENode());
@@ -1494,6 +1526,11 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getEmfModel_Root(), this.getENode(), null, "root", null, 0, 1, EmfModel.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eEventsEClass, EEvents.class, "EEvents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEEvents_OnAction(), theEcorePackage.getEString(), "onAction", null, 0, 1, EEvents.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(styleableEClass, Styleable.class, "Styleable", !IS_ABSTRACT, !IS_INTERFACE,

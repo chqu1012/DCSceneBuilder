@@ -34,7 +34,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface ENode extends Styleable, Skinnable {
+public interface ENode extends Styleable, Skinnable, EEvents {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

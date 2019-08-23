@@ -46,6 +46,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addOnActionPropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
 			addLayoutXPropertyDescriptor(object);
 			addLayoutYPropertyDescriptor(object);
@@ -62,6 +63,22 @@ public class ENodeItemProvider extends StyleableItemProvider {
 			addPrefWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the On Action feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOnActionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EEvents_onAction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EEvents_onAction_feature",
+								"_UI_EEvents_type"),
+						MmPackage.Literals.EEVENTS__ON_ACTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -344,6 +361,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ENode.class)) {
+		case MmPackage.ENODE__ON_ACTION:
 		case MmPackage.ENODE__ID:
 		case MmPackage.ENODE__LAYOUT_X:
 		case MmPackage.ENODE__LAYOUT_Y:

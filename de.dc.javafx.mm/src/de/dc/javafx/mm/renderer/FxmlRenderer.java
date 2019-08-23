@@ -1,5 +1,7 @@
 package de.dc.javafx.mm.renderer;
 
+import static org.apache.commons.lang3.StringUtils.isNotBlank;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -10,6 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
+import de.dc.javafx.mm.EEvents;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableColumn;
@@ -17,6 +20,8 @@ import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.util.MmSwitch;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -64,6 +69,53 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		initSize(eNode, node);
 
 		node.getChildren().add(current);
+	}
+
+	private void invokeMethod(String name) {
+		Method initializeMethod;
+		try {
+			initializeMethod = controller.getMethod(name);
+			initializeMethod.invoke(controllerInstance,null);
+		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public Node caseEButton(EButton object) {
+		Button node = new Button();
+		node.setText(object.getText());
+		
+		for (Method method : EEvents.class.getDeclaredMethods()) {
+			if (method.getName().startsWith("get")) {
+				try {
+					Object o =method.invoke(object, null);
+					if (o!=null) {
+						Method controllerMethod = controller.getMethod(String.valueOf(o), null);
+						if (controllerMethod!=null) {
+							Method eventMethod = node.getClass().getMethod(method.getName().replaceFirst("get", "set"));
+							eventMethod.invoke(node,  (EventHandler<Event>) event -> {
+								try {
+									controllerMethod.invoke(controllerInstance, null);
+								} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+									e.printStackTrace();
+								}
+							});
+						}
+					}
+				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		if (isNotBlank(object.getOnAction())) {
+			node.setOnAction(e->invokeMethod(object.getOnAction()));
+		}
+		
+		initSize(object, node);
+		controlRegistry.put(object.getId(), node);
+		return node;
 	}
 	
 	@Override
@@ -145,15 +197,5 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		if (object.getPrefWidth() > 0) {
 			node.setPrefWidth(object.getPrefWidth());
 		}
-	}
-
-	@Override
-	public Node caseEButton(EButton object) {
-		Button node = new Button();
-		node.setText(object.getText());
-
-		initSize(object, node);
-
-		return node;
 	}
 }

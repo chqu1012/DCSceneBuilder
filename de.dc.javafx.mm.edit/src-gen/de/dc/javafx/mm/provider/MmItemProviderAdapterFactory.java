@@ -98,6 +98,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EEvents} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EEventsItemProvider eEventsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EEvents}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEEventsAdapter() {
+		if (eEventsItemProvider == null) {
+			eEventsItemProvider = new EEventsItemProvider(this);
+		}
+
+		return eEventsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.Styleable} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -894,6 +917,8 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	public void dispose() {
 		if (emfModelItemProvider != null)
 			emfModelItemProvider.dispose();
+		if (eEventsItemProvider != null)
+			eEventsItemProvider.dispose();
 		if (styleableItemProvider != null)
 			styleableItemProvider.dispose();
 		if (skinnableItemProvider != null)
