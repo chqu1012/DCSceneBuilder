@@ -15,5 +15,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- org.apache.commons.lang3;bundle-version="3.1.0"
+ org.apache.commons.lang3;bundle-version="3.1.0",
+ com.google.inject;bundle-version="3.0.0"
 Bundle-ActivationPolicy: lazy

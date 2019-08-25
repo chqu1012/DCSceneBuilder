@@ -8,6 +8,7 @@ import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
+import de.dc.javafx.mm.renderer.di.DIPlatform;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +22,9 @@ public class FxmlRendererApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		FxmlRenderer renderer = new FxmlRenderer();
+		DIPlatform.init();
+		
+		FxmlRenderer renderer = DIPlatform.getInstance(FxmlRenderer.class);
 
 		EmfModel model = MmFactory.eINSTANCE.createEmfModel();
 		model.setController("de.dc.javafx.mm.renderer.controller.PersonController");
@@ -34,7 +37,8 @@ public class FxmlRendererApplication extends Application {
 		eRoot.setCenter(creatTable());
 
 		for (int j = 0; j < 10; j++) {
-			eRoot.getChildren().add(createButton("Button " + j));
+			EButton button = createButton("Button " + j);
+			eRoot.getChildren().add(button);
 		}
 
 		model.setRoot(eRoot);
