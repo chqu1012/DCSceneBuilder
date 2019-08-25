@@ -51,9 +51,12 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	}
 	
 	private Optional<Node> createBorderPaneItem(ENode mNode) {
-		Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
-		BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
-		return node;
+		if (mNode!=null) {
+			Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
+			BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
+			return node;
+		}
+		return Optional.empty();
 	}
 
 	private Insets createInsets(EInsets mMargin) {

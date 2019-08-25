@@ -5,15 +5,12 @@ package de.dc.javafx.mm.provider;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.MmFactory;
 import de.dc.javafx.mm.MmPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 

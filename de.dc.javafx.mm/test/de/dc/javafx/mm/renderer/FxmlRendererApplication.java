@@ -3,6 +3,8 @@ package de.dc.javafx.mm.renderer;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.ENode;
+import de.dc.javafx.mm.ETableColumn;
+import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
@@ -22,12 +24,14 @@ public class FxmlRendererApplication extends Application {
 		FxmlRenderer renderer = new FxmlRenderer();
 
 		EmfModel model = MmFactory.eINSTANCE.createEmfModel();
+		model.setController("de.dc.javafx.mm.renderer.controller.PersonController");
 		
 		EBorderPane eRoot = MmFactory.eINSTANCE.createEBorderPane();
 		eRoot.setLeft(createVBox());
 		eRoot.setRight(createButton("Right Button"));
 		eRoot.setTop(createButton("Top Button"));
 		eRoot.setBottom(createButton("Bottom Button"));
+		eRoot.setCenter(creatTable());
 
 		for (int j = 0; j < 10; j++) {
 			eRoot.getChildren().add(createButton("Button " + j));
@@ -35,9 +39,24 @@ public class FxmlRendererApplication extends Application {
 
 		model.setRoot(eRoot);
 		
-		Parent root = (Parent) renderer.doSwitch(eRoot);
+		Parent root = (Parent) renderer.doSwitch(model);
 		primaryStage.setScene(new Scene(root, 1000, 700));
 		primaryStage.show();
+	}
+
+	private ENode creatTable() {
+		ETableView tableView = MmFactory.eINSTANCE.createETableView();
+		
+		ETableColumn nameCol = MmFactory.eINSTANCE.createETableColumn();
+		nameCol.setName("Name");
+
+		ETableColumn lastnameCol = MmFactory.eINSTANCE.createETableColumn();
+		lastnameCol.setName("Lastname");
+		
+		tableView.getColumns().add(nameCol);
+		tableView.getColumns().add(lastnameCol);
+		
+		return tableView;
 	}
 
 	private ENode createVBox() {
