@@ -10,13 +10,18 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.sun.xml.internal.ws.api.pipe.NextAction;
+
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.EEvents;
+import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.EInsets;
+import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
+import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.util.MmSwitch;
@@ -25,12 +30,16 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 public class FxmlRenderer extends MmSwitch<Node> {
@@ -92,6 +101,29 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Override
+	public Node caseEText(EText object) {
+		TextField node = new TextField();
+		node.setPromptText(object.getPromtText());
+		initSize(object, node);
+		return node;
+	}
+	
+	@Override
+	public Node caseELabel(ELabel object) {
+		Label node = new Label(object.getText());
+		initSize(object, node);
+		return node;
+	}
+	
+	@Override
+	public Node caseEHBox(EHBox object) {
+		HBox node = new HBox(object.getSpacing());
+		object.getChildren().forEach(e->node.getChildren().add(doSwitch(e)));
+		initSize(object, node);
+		return node;
 	}
 	
 	@Override
