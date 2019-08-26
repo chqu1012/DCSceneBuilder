@@ -84,6 +84,16 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		}
 	}
 	
+	private void invokeMethod(String name, Event event) {
+		Method initializeMethod;
+		try {
+			initializeMethod = controller.getMethod(name,event.getClass());
+			initializeMethod.invoke(controllerInstance, event);
+		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
 	public Node caseEButton(EButton object) {
 		Button node = new Button();
