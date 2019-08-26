@@ -70,6 +70,8 @@ public class FxmlRendererApplication extends Application {
 		vbox.setMaxWidth(Double.MAX_VALUE);
 		for (int i = 0; i < 10; i++) {
 			EButton button = MmFactory.eINSTANCE.createEButton();
+			button.setId("BUTTON"+i);
+			button.setOnAction("onButtonClicked");
 			button.setText("Button " + i);
 			vbox.getChildren().add(button);
 		}
