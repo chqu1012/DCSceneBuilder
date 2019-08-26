@@ -8,6 +8,7 @@ import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
+import de.dc.javafx.mm.file.FxmlFile;
 import de.dc.javafx.mm.renderer.di.DIPlatform;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -26,23 +27,25 @@ public class FxmlRendererApplication extends Application {
 		
 		FxmlRenderer renderer = DIPlatform.getInstance(FxmlRenderer.class);
 
-		EmfModel model = MmFactory.eINSTANCE.createEmfModel();
-		model.setController("de.dc.javafx.mm.renderer.controller.PersonController");
+//		EmfModel model = MmFactory.eINSTANCE.createEmfModel();
+//		model.setController("de.dc.javafx.mm.renderer.controller.PersonController");
+//		
+//		EBorderPane eRoot = MmFactory.eINSTANCE.createEBorderPane();
+//		eRoot.setLeft(createVBox());
+//		eRoot.setRight(createButton("Right Button"));
+//		eRoot.setTop(createButton("Top Button"));
+//		eRoot.setBottom(createButton("Bottom Button"));
+//		eRoot.setCenter(creatTable());
+//
+//		for (int j = 0; j < 10; j++) {
+//			EButton button = createButton("Button " + j);
+//			eRoot.getChildren().add(button);
+//		}
+//
+//		model.setRoot(eRoot);
 		
-		EBorderPane eRoot = MmFactory.eINSTANCE.createEBorderPane();
-		eRoot.setLeft(createVBox());
-		eRoot.setRight(createButton("Right Button"));
-		eRoot.setTop(createButton("Top Button"));
-		eRoot.setBottom(createButton("Bottom Button"));
-		eRoot.setCenter(creatTable());
-
-		for (int j = 0; j < 10; j++) {
-			EButton button = createButton("Button " + j);
-			eRoot.getChildren().add(button);
-		}
-
-		model.setRoot(eRoot);
-		
+		FxmlFile file = new FxmlFile();
+		EmfModel model = file.load(FxmlRendererApplication.class.getResource("/de/dc/javafx/mm/renderer/FxmlRendererApplication.javafx").getFile());
 		Parent root = (Parent) renderer.doSwitch(model);
 		primaryStage.setScene(new Scene(root, 1000, 700));
 		primaryStage.show();

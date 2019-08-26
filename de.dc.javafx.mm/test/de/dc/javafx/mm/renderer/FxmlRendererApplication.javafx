@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx">
+  <root xsi:type="mm:EBorderPane" id="RootPane">
+    <left xsi:type="mm:EButton" id="LeftButton" text="Hello Left Button"/>
+    <right xsi:type="mm:EButton" id="RightButton" text="Right Button"/>
+    <center xsi:type="mm:ETableView" id="TableView">
+      <columns name="Name"/>
+      <columns name="Lastname"/>
+      <columns name="Email" width="300.0"/>
+    </center>
+  </root>
+</mm:EmfModel>
