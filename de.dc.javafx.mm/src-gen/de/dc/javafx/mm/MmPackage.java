@@ -1547,6 +1547,214 @@ public interface MmPackage extends EPackage {
 	int ELABELED_OPERATION_COUNT = ECONTROL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETextImpl <em>EText</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ETextImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEText()
+	 * @generated
+	 */
+	int ETEXT = 12;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__ON_ACTION = ELABELED__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__ID = ELABELED__ID;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__LAYOUT_X = ELABELED__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__LAYOUT_Y = ELABELED__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__OPACITY = ELABELED__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__STYLE = ELABELED__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__STYLE_CLASS = ELABELED__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__VISIBLE = ELABELED__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__DISABLE = ELABELED__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__MARGIN = ELABELED__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__MAX_HEIGHT = ELABELED__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__MIN_HEIGHT = ELABELED__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__PREF_HEIGHT = ELABELED__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__MAX_WIDTH = ELABELED__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__MIN_WIDTH = ELABELED__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__PREF_WIDTH = ELABELED__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__CHILDREN = ELABELED__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__PADDING = ELABELED__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__TEXT = ELABELED__TEXT;
+
+	/**
+	 * The feature id for the '<em><b>Promt Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__PROMT_TEXT = ELABELED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>EText</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT_FEATURE_COUNT = ELABELED_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>EText</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT_OPERATION_COUNT = ELABELED_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ELabelImpl <em>ELabel</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1554,7 +1762,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabel()
 	 * @generated
 	 */
-	int ELABEL = 12;
+	int ELABEL = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1753,7 +1961,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButtonBase()
 	 * @generated
 	 */
-	int EBUTTON_BASE = 13;
+	int EBUTTON_BASE = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1952,7 +2160,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 14;
+	int EBUTTON = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2151,7 +2359,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECheckBox()
 	 * @generated
 	 */
-	int ECHECK_BOX = 15;
+	int ECHECK_BOX = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2359,7 +2567,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHyperlink()
 	 * @generated
 	 */
-	int EHYPERLINK = 16;
+	int EHYPERLINK = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2567,7 +2775,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEMenuButton()
 	 * @generated
 	 */
-	int EMENU_BUTTON = 17;
+	int EMENU_BUTTON = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2766,7 +2974,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitMenuButton()
 	 * @generated
 	 */
-	int ESPLIT_MENU_BUTTON = 18;
+	int ESPLIT_MENU_BUTTON = 19;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2965,7 +3173,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEToogleButton()
 	 * @generated
 	 */
-	int ETOOGLE_BUTTON = 19;
+	int ETOOGLE_BUTTON = 20;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3173,7 +3381,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
 	 * @generated
 	 */
-	int EBASE_VIEW = 20;
+	int EBASE_VIEW = 21;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3363,7 +3571,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 21;
+	int ETABLE_VIEW = 22;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3562,7 +3770,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 22;
+	int ETABLE_COLUMN = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3626,7 +3834,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 23;
+	int ERADIO_BUTTON = 24;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3834,7 +4042,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 24;
+	int EAXIS = 25;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4024,7 +4232,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 25;
+	int ECATGEORY_AXIS = 26;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4214,7 +4422,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 26;
+	int EVALUE_AXIS = 27;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4404,7 +4612,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 27;
+	int ECHART = 28;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4594,7 +4802,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 28;
+	int EPIE_CHART = 29;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4784,7 +4992,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 29;
+	int EXY_CHART = 30;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4974,7 +5182,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 30;
+	int EPANE = 31;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5173,7 +5381,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 31;
+	int ESTACK_PANE = 32;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5372,7 +5580,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 32;
+	int EDIALOG_PANE = 33;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5607,7 +5815,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 33;
+	int EGRID_PANE = 34;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5806,7 +6014,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 34;
+	int EH_BOX = 35;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6014,7 +6222,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 35;
+	int EV_BOX = 36;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6222,7 +6430,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 36;
+	int EFLOW_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6421,7 +6629,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 37;
+	int ETILE_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6620,7 +6828,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 38;
+	int EANCHOR_PANE = 39;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6819,7 +7027,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 39;
+	int EBORDER_PANE = 40;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7063,7 +7271,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 40;
+	int EPOS = 41;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -7470,6 +7678,27 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getELabeled_Text();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EText <em>EText</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EText</em>'.
+	 * @see de.dc.javafx.mm.EText
+	 * @generated
+	 */
+	EClass getEText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EText#getPromtText <em>Promt Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Promt Text</em>'.
+	 * @see de.dc.javafx.mm.EText#getPromtText()
+	 * @see #getEText()
+	 * @generated
+	 */
+	EAttribute getEText_PromtText();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.ELabel <em>ELabel</em>}'.
@@ -8333,6 +8562,24 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ELABELED__TEXT = eINSTANCE.getELabeled_Text();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETextImpl <em>EText</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ETextImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEText()
+		 * @generated
+		 */
+		EClass ETEXT = eINSTANCE.getEText();
+
+		/**
+		 * The meta object literal for the '<em><b>Promt Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETEXT__PROMT_TEXT = eINSTANCE.getEText_PromtText();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ELabelImpl <em>ELabel</em>}' class.

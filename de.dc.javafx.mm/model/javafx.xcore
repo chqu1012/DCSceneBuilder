@@ -66,6 +66,10 @@ abstract class ELabeled extends EControl{
 	String text
 }
 
+class EText extends ELabeled{
+	String promtText
+}
+
 class ELabel extends ELabeled{}
 
 abstract class EButtonBase extends ELabeled{}

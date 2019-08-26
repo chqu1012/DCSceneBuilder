@@ -161,6 +161,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors
@@ -237,6 +240,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEText()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createELabel()));
@@ -317,6 +323,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors
@@ -395,6 +404,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors.add(
@@ -471,6 +483,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEText()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createELabel()));

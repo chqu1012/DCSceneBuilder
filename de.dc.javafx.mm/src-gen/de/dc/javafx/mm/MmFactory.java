@@ -96,6 +96,15 @@ public interface MmFactory extends EFactory {
 	EWebView createEWebView();
 
 	/**
+	 * Returns a new object of class '<em>EText</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EText</em>'.
+	 * @generated
+	 */
+	EText createEText();
+
+	/**
 	 * Returns a new object of class '<em>ELabel</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

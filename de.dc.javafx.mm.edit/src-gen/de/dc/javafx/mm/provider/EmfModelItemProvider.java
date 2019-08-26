@@ -234,6 +234,9 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors

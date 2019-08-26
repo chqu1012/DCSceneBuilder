@@ -259,6 +259,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EText} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETextItemProvider eTextItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EText}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETextAdapter() {
+		if (eTextItemProvider == null) {
+			eTextItemProvider = new ETextItemProvider(this);
+		}
+
+		return eTextItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ELabel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -931,6 +954,8 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eGroupItemProvider.dispose();
 		if (eWebViewItemProvider != null)
 			eWebViewItemProvider.dispose();
+		if (eTextItemProvider != null)
+			eTextItemProvider.dispose();
 		if (eLabelItemProvider != null)
 			eLabelItemProvider.dispose();
 		if (eButtonItemProvider != null)

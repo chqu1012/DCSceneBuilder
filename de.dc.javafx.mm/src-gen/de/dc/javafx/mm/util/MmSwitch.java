@@ -216,6 +216,29 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.ETEXT: {
+			EText eText = (EText) theEObject;
+			T result = caseEText(eText);
+			if (result == null)
+				result = caseELabeled(eText);
+			if (result == null)
+				result = caseEControl(eText);
+			if (result == null)
+				result = caseERegion(eText);
+			if (result == null)
+				result = caseEParent(eText);
+			if (result == null)
+				result = caseENode(eText);
+			if (result == null)
+				result = caseStyleable(eText);
+			if (result == null)
+				result = caseSkinnable(eText);
+			if (result == null)
+				result = caseEEvents(eText);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ELABEL: {
 			ELabel eLabel = (ELabel) theEObject;
 			T result = caseELabel(eLabel);
@@ -1002,6 +1025,21 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseELabeled(ELabeled object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EText</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EText</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEText(EText object) {
 		return null;
 	}
 

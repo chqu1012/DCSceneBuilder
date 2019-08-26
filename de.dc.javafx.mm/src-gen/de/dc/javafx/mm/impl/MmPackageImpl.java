@@ -33,6 +33,7 @@ import de.dc.javafx.mm.ESplitMenuButton;
 import de.dc.javafx.mm.EStackPane;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
+import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.ETilePane;
 import de.dc.javafx.mm.EToogleButton;
 import de.dc.javafx.mm.EVBox;
@@ -146,6 +147,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eLabeledEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -802,6 +810,26 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEText() {
+		return eTextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEText_PromtText() {
+		return (EAttribute) eTextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getELabel() {
 		return eLabelEClass;
 	}
@@ -1366,6 +1394,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eLabeledEClass = createEClass(ELABELED);
 		createEAttribute(eLabeledEClass, ELABELED__TEXT);
 
+		eTextEClass = createEClass(ETEXT);
+		createEAttribute(eTextEClass, ETEXT__PROMT_TEXT);
+
 		eLabelEClass = createEClass(ELABEL);
 
 		eButtonBaseEClass = createEClass(EBUTTON_BASE);
@@ -1487,6 +1518,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eWebViewEClass.getESuperTypes().add(this.getENode());
 		eControlEClass.getESuperTypes().add(this.getERegion());
 		eLabeledEClass.getESuperTypes().add(this.getEControl());
+		eTextEClass.getESuperTypes().add(this.getELabeled());
 		eLabelEClass.getESuperTypes().add(this.getELabeled());
 		eButtonBaseEClass.getESuperTypes().add(this.getELabeled());
 		eButtonEClass.getESuperTypes().add(this.getEButtonBase());
@@ -1616,6 +1648,11 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		initEClass(eLabeledEClass, ELabeled.class, "ELabeled", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getELabeled_Text(), theEcorePackage.getEString(), "text", null, 0, 1, ELabeled.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eTextEClass, EText.class, "EText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEText_PromtText(), theEcorePackage.getEString(), "promtText", null, 0, 1, EText.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

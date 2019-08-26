@@ -74,6 +74,8 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEGroup();
 		case MmPackage.EWEB_VIEW:
 			return createEWebView();
+		case MmPackage.ETEXT:
+			return createEText();
 		case MmPackage.ELABEL:
 			return createELabel();
 		case MmPackage.EBUTTON:
@@ -243,6 +245,17 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EWebView createEWebView() {
 		EWebViewImpl eWebView = new EWebViewImpl();
 		return eWebView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EText createEText() {
+		ETextImpl eText = new ETextImpl();
+		return eText;
 	}
 
 	/**

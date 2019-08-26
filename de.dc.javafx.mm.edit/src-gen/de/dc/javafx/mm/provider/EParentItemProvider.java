@@ -142,6 +142,9 @@ public class EParentItemProvider extends ENodeItemProvider {
 				.add(createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EPARENT__CHILDREN, MmFactory.eINSTANCE.createELabel()));
 
 		newChildDescriptors

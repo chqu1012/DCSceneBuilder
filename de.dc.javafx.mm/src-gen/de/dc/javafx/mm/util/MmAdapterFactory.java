@@ -127,6 +127,11 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEText(EText object) {
+			return createETextAdapter();
+		}
+
+		@Override
 		public Adapter caseELabel(ELabel object) {
 			return createELabelAdapter();
 		}
@@ -450,6 +455,20 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createELabeledAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EText <em>EText</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EText
+	 * @generated
+	 */
+	public Adapter createETextAdapter() {
 		return null;
 	}
 
