@@ -142,6 +142,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	
 	@Override
 	public Node caseEmfModel(EmfModel object) {
+		Node root = doSwitch(object.getRoot());
 		if (object.getController()!=null) {
 			try {
 				controller = Class.forName(object.getController());
@@ -152,13 +153,14 @@ public class FxmlRenderer extends MmSwitch<Node> {
 				e.printStackTrace();
 			}
 		}
-		return doSwitch(object.getRoot());
+		return root;
 	}
 
 	@Override
 	public Node caseETableView(ETableView object) {
 		TableView<Object> tableView = new TableView<>();
 		object.getColumns().forEach(e -> addColumn(tableView, e));
+		controlRegistry.put(object.getId(), tableView);
 		return tableView;
 	}
 

@@ -12,6 +12,18 @@
         <children xsi:type="mm:ELabel" minWidth="100.0" text="Lastname:"/>
         <children xsi:type="mm:EText" id="LastnameText" minWidth="200.0" promtText="Lastname"/>
       </children>
+      <children xsi:type="mm:EHBox" spacing="5.0">
+        <children xsi:type="mm:ELabel" minWidth="100.0" text="Lastname:"/>
+        <children xsi:type="mm:EText" id="LastnameText" minWidth="200.0" promtText="Lastname"/>
+      </children>
+      <children xsi:type="mm:EHBox" spacing="5.0">
+        <children xsi:type="mm:ELabel" minWidth="100.0" text="Lastname:"/>
+        <children xsi:type="mm:EText" id="LastnameText" minWidth="200.0" promtText="Lastname"/>
+      </children>
+      <children xsi:type="mm:EHBox" spacing="5.0">
+        <children xsi:type="mm:ELabel" minWidth="100.0" text=""/>
+        <children xsi:type="mm:EButton" onAction="onButtonClicked" id="buttonCreate" prefWidth="200.0" text="Create"/>
+      </children>
     </bottom>
     <center xsi:type="mm:ETableView" id="TableView">
       <columns name="Name"/>
