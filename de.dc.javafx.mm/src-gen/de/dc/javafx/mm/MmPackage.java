@@ -3773,13 +3773,22 @@ public interface MmPackage extends EPackage {
 	int ETABLE_COLUMN = 23;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__ID = 0;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN__NAME = 0;
+	int ETABLE_COLUMN__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -3788,7 +3797,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN__WIDTH = 1;
+	int ETABLE_COLUMN__WIDTH = 2;
 
 	/**
 	 * The feature id for the '<em><b>Cell Value Factory</b></em>' attribute.
@@ -3797,7 +3806,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN__CELL_VALUE_FACTORY = 2;
+	int ETABLE_COLUMN__CELL_VALUE_FACTORY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Cell Factory</b></em>' attribute.
@@ -3806,7 +3815,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN__CELL_FACTORY = 3;
+	int ETABLE_COLUMN__CELL_FACTORY = 4;
 
 	/**
 	 * The number of structural features of the '<em>ETable Column</em>' class.
@@ -3815,7 +3824,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN_FEATURE_COUNT = 4;
+	int ETABLE_COLUMN_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>ETable Column</em>' class.
@@ -7855,6 +7864,17 @@ public interface MmPackage extends EPackage {
 	EClass getETableColumn();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#getId()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_Id();
+
+	/**
 	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8722,6 +8742,14 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ETABLE_COLUMN = eINSTANCE.getETableColumn();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__ID = eINSTANCE.getETableColumn_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

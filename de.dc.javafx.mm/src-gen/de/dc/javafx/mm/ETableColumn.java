@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.ETableColumn#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getCellValueFactory <em>Cell Value Factory</em>}</li>
@@ -24,6 +25,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ETableColumn extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see de.dc.javafx.mm.MmPackage#getETableColumn_Id()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ETableColumn#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

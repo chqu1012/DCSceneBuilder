@@ -45,7 +45,7 @@ import javafx.util.Callback;
 public class FxmlRenderer extends MmSwitch<Node> {
 
 	private Map<String, Node> controlRegistry = new HashMap<>();
-	private Map<String, TableColumn<?,?>> columnsRegistry = new HashMap<>();
+	private Map<String, TableColumn> columnsRegistry = new HashMap<>();
 	
 	private Class<?> controller;
 	private Object controllerInstance;
@@ -55,7 +55,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		return (T) controlRegistry.get(id);
 	}
 
-	public TableColumn<?,?> findColumnBy(String id) {
+	public TableColumn findColumnBy(String id) {
 		return columnsRegistry.get(id);
 	}
 	
@@ -165,7 +165,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	}
 
 	private void addColumn(TableView<Object> view, ETableColumn e) {
-		TableColumn<Object, Object> column = new TableColumn<>(e.getName());
+		TableColumn column = new TableColumn(e.getName());
 		if (StringUtils.isNotBlank(e.getCellFactory())) {
 			try {
 				Class<?> c = Class.forName(e.getCellFactory());
@@ -178,6 +178,10 @@ public class FxmlRenderer extends MmSwitch<Node> {
 				e1.printStackTrace();
 			}
 		}
+		
+		String id = e.getId() == null? e.getName() : e.getId();
+		columnsRegistry.put(id , column);
+		
 		view.getColumns().add(column);
 	}
 

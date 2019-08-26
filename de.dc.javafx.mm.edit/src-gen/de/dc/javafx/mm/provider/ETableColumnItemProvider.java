@@ -55,12 +55,29 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addWidthPropertyDescriptor(object);
 			addCellValueFactoryPropertyDescriptor(object);
 			addCellFactoryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ETableColumn_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ETableColumn_id_feature",
+								"_UI_ETableColumn_type"),
+						MmPackage.Literals.ETABLE_COLUMN__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -203,6 +220,7 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ETableColumn.class)) {
+		case MmPackage.ETABLE_COLUMN__ID:
 		case MmPackage.ETABLE_COLUMN__NAME:
 		case MmPackage.ETABLE_COLUMN__WIDTH:
 		case MmPackage.ETABLE_COLUMN__CELL_VALUE_FACTORY:

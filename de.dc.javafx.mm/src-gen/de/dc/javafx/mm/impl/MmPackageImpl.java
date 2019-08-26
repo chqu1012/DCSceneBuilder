@@ -980,7 +980,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getETableColumn_Name() {
+	public EAttribute getETableColumn_Id() {
 		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -990,7 +990,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getETableColumn_Width() {
+	public EAttribute getETableColumn_Name() {
 		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1000,7 +1000,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getETableColumn_CellValueFactory() {
+	public EAttribute getETableColumn_Width() {
 		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1010,8 +1010,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getETableColumn_CellFactory() {
+	public EAttribute getETableColumn_CellValueFactory() {
 		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableColumn_CellFactory() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1422,6 +1432,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEReference(eTableViewEClass, ETABLE_VIEW__COLUMNS);
 
 		eTableColumnEClass = createEClass(ETABLE_COLUMN);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__ID);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__NAME);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__WIDTH);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_VALUE_FACTORY);
@@ -1698,6 +1709,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		initEClass(eTableColumnEClass, ETableColumn.class, "ETableColumn", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getETableColumn_Id(), theEcorePackage.getEString(), "id", null, 0, 1, ETableColumn.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 		initEAttribute(getETableColumn_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ETableColumn.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);

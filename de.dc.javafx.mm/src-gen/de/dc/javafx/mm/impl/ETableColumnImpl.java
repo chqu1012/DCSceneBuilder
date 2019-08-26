@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getCellValueFactory <em>Cell Value Factory</em>}</li>
@@ -29,6 +30,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ETableColumn {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -134,6 +155,29 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 */
 	@Override
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_COLUMN__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -230,6 +274,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case MmPackage.ETABLE_COLUMN__ID:
+			return getId();
 		case MmPackage.ETABLE_COLUMN__NAME:
 			return getName();
 		case MmPackage.ETABLE_COLUMN__WIDTH:
@@ -250,6 +296,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case MmPackage.ETABLE_COLUMN__ID:
+			setId((String) newValue);
+			return;
 		case MmPackage.ETABLE_COLUMN__NAME:
 			setName((String) newValue);
 			return;
@@ -274,6 +323,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case MmPackage.ETABLE_COLUMN__ID:
+			setId(ID_EDEFAULT);
+			return;
 		case MmPackage.ETABLE_COLUMN__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -298,6 +350,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case MmPackage.ETABLE_COLUMN__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case MmPackage.ETABLE_COLUMN__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case MmPackage.ETABLE_COLUMN__WIDTH:
@@ -322,7 +376,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
 		result.append(name);
 		result.append(", width: ");
 		result.append(width);
