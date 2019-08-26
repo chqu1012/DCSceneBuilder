@@ -99,31 +99,8 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		Button node = new Button();
 		node.setText(object.getText());
 		
-		for (Method method : EEvents.class.getDeclaredMethods()) {
-			if (method.getName().startsWith("get")) {
-				try {
-					Object o =method.invoke(object, null);
-					if (o!=null) {
-						Method controllerMethod = controller.getMethod(String.valueOf(o), null);
-						if (controllerMethod!=null) {
-							Method eventMethod = node.getClass().getMethod(method.getName().replaceFirst("get", "set"));
-							eventMethod.invoke(node,  (EventHandler<Event>) event -> {
-								try {
-									controllerMethod.invoke(controllerInstance, null);
-								} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-									e.printStackTrace();
-								}
-							});
-						}
-					}
-				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		
 		if (isNotBlank(object.getOnAction())) {
-			node.setOnAction(e->invokeMethod(object.getOnAction()));
+			node.setOnAction(e->invokeMethod(object.getOnAction(),e));
 		}
 		
 		initSize(object, node);
