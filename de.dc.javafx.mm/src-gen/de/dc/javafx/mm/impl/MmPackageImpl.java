@@ -460,7 +460,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmfModel_StyleClass() {
+	public EAttribute getEmfModel_Name() {
 		return (EAttribute) emfModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -470,8 +470,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getEmfModel_StyleClass() {
+		return (EAttribute) emfModelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getEmfModel_Root() {
-		return (EReference) emfModelEClass.getEStructuralFeatures().get(3);
+		return (EReference) emfModelEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1367,6 +1377,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		emfModelEClass = createEClass(EMF_MODEL);
 		createEAttribute(emfModelEClass, EMF_MODEL__BASE_PACKAGE);
 		createEAttribute(emfModelEClass, EMF_MODEL__CONTROLLER);
+		createEAttribute(emfModelEClass, EMF_MODEL__NAME);
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
 		createEReference(emfModelEClass, EMF_MODEL__ROOT);
 
@@ -1576,6 +1587,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				EmfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEmfModel_Controller(), theEcorePackage.getEString(), "controller", null, 0, 1, EmfModel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEmfModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EmfModel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getEmfModel_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1,

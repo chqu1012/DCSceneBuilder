@@ -9,7 +9,14 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.dc.javafx.mm,
+ de.dc.javafx.mm.file,
  de.dc.javafx.mm.impl,
+ de.dc.javafx.mm.renderer,
+ de.dc.javafx.mm.renderer.controller,
+ de.dc.javafx.mm.renderer.controller.cell,
+ de.dc.javafx.mm.renderer.di,
+ de.dc.javafx.mm.renderer.model,
+ de.dc.javafx.mm.service,
  de.dc.javafx.mm.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,

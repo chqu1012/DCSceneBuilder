@@ -87,13 +87,22 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL__CONTROLLER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMF_MODEL__NAME = 2;
+
+	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__STYLE_CLASS = 2;
+	int EMF_MODEL__STYLE_CLASS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
@@ -102,7 +111,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__ROOT = 3;
+	int EMF_MODEL__ROOT = 4;
 
 	/**
 	 * The number of structural features of the '<em>Emf Model</em>' class.
@@ -111,7 +120,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL_FEATURE_COUNT = 4;
+	int EMF_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Emf Model</em>' class.
@@ -7324,6 +7333,17 @@ public interface MmPackage extends EPackage {
 	EAttribute getEmfModel_Controller();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EmfModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.javafx.mm.EmfModel#getName()
+	 * @see #getEmfModel()
+	 * @generated
+	 */
+	EAttribute getEmfModel_Name();
+
+	/**
 	 * Returns the meta object for the attribute list '{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8300,6 +8320,14 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EMF_MODEL__CONTROLLER = eINSTANCE.getEmfModel_Controller();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMF_MODEL__NAME = eINSTANCE.getEmfModel_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute list feature.

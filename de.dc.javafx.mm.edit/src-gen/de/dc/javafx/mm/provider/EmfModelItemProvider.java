@@ -60,6 +60,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 
 			addBasePackagePropertyDescriptor(object);
 			addControllerPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -94,6 +95,22 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_EmfModel_controller_feature",
 								"_UI_EmfModel_type"),
 						MmPackage.Literals.EMF_MODEL__CONTROLLER, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EmfModel_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EmfModel_name_feature",
+								"_UI_EmfModel_type"),
+						MmPackage.Literals.EMF_MODEL__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -187,7 +204,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EmfModel) object).getBasePackage();
+		String label = ((EmfModel) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_EmfModel_type")
 				: getString("_UI_EmfModel_type") + " " + label;
 	}
@@ -221,6 +238,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		switch (notification.getFeatureID(EmfModel.class)) {
 		case MmPackage.EMF_MODEL__BASE_PACKAGE:
 		case MmPackage.EMF_MODEL__CONTROLLER:
+		case MmPackage.EMF_MODEL__NAME:
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

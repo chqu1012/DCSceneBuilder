@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getController <em>Controller</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EmfModel#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}</li>
  * </ul>
@@ -69,6 +70,28 @@ public interface EmfModel extends EObject {
 	 * @generated
 	 */
 	void setController(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_Name()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EmfModel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Style Class</b></em>' attribute list.

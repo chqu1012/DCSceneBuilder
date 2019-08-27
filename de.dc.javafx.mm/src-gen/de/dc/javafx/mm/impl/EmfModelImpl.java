@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getController <em>Controller</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getRoot <em>Root</em>}</li>
  * </ul>
@@ -77,6 +78,26 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	 * @ordered
 	 */
 	protected String controller = CONTROLLER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
@@ -171,6 +192,29 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EMF_MODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<String> getStyleClass() {
 		if (styleClass == null) {
 			styleClass = new EDataTypeEList<String>(String.class, this, MmPackage.EMF_MODEL__STYLE_CLASS);
@@ -255,6 +299,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return getBasePackage();
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			return getController();
+		case MmPackage.EMF_MODEL__NAME:
+			return getName();
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			return getStyleClass();
 		case MmPackage.EMF_MODEL__ROOT:
@@ -277,6 +323,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return;
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			setController((String) newValue);
+			return;
+		case MmPackage.EMF_MODEL__NAME:
+			setName((String) newValue);
 			return;
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			getStyleClass().clear();
@@ -303,6 +352,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			setController(CONTROLLER_EDEFAULT);
 			return;
+		case MmPackage.EMF_MODEL__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			getStyleClass().clear();
 			return;
@@ -325,6 +377,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return BASE_PACKAGE_EDEFAULT == null ? basePackage != null : !BASE_PACKAGE_EDEFAULT.equals(basePackage);
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			return CONTROLLER_EDEFAULT == null ? controller != null : !CONTROLLER_EDEFAULT.equals(controller);
+		case MmPackage.EMF_MODEL__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			return styleClass != null && !styleClass.isEmpty();
 		case MmPackage.EMF_MODEL__ROOT:
@@ -348,6 +402,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 		result.append(basePackage);
 		result.append(", controller: ");
 		result.append(controller);
+		result.append(", name: ");
+		result.append(name);
 		result.append(", styleClass: ");
 		result.append(styleClass);
 		result.append(')');
