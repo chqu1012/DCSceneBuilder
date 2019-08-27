@@ -69,13 +69,22 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Base Package</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMF_MODEL__BASE_PACKAGE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Controller</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__CONTROLLER = 0;
+	int EMF_MODEL__CONTROLLER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -84,7 +93,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__STYLE_CLASS = 1;
+	int EMF_MODEL__STYLE_CLASS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
@@ -93,7 +102,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__ROOT = 2;
+	int EMF_MODEL__ROOT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Emf Model</em>' class.
@@ -102,7 +111,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL_FEATURE_COUNT = 3;
+	int EMF_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Emf Model</em>' class.
@@ -7293,6 +7302,17 @@ public interface MmPackage extends EPackage {
 	EClass getEmfModel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EmfModel#getBasePackage <em>Base Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Package</em>'.
+	 * @see de.dc.javafx.mm.EmfModel#getBasePackage()
+	 * @see #getEmfModel()
+	 * @generated
+	 */
+	EAttribute getEmfModel_BasePackage();
+
+	/**
 	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EmfModel#getController <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8264,6 +8284,14 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMF_MODEL = eINSTANCE.getEmfModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Package</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMF_MODEL__BASE_PACKAGE = eINSTANCE.getEmfModel_BasePackage();
 
 		/**
 		 * The meta object literal for the '<em><b>Controller</b></em>' attribute feature.

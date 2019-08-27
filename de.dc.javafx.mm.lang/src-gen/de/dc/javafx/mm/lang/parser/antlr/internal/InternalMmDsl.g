@@ -92,16 +92,41 @@ ruleEmfModel returns [EObject current=null]
 			newLeafNode(otherlv_2, grammarAccess.getEmfModelAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
-			otherlv_3='controller'
+			otherlv_3='package'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getEmfModelAccess().getControllerKeyword_3_0());
+				newLeafNode(otherlv_3, grammarAccess.getEmfModelAccess().getPackageKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEmfModelAccess().getControllerEStringParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getEmfModelAccess().getBasePackageEStringParserRuleCall_3_1_0());
 					}
-					lv_controller_4_0=ruleEString
+					lv_basePackage_4_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEmfModelRule());
+						}
+						set(
+							$current,
+							"basePackage",
+							lv_basePackage_4_0,
+							"de.dc.javafx.mm.lang.MmDsl.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_5='controller'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getEmfModelAccess().getControllerKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getEmfModelAccess().getControllerEStringParserRuleCall_4_1_0());
+					}
+					lv_controller_6_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEmfModelRule());
@@ -109,7 +134,7 @@ ruleEmfModel returns [EObject current=null]
 						set(
 							$current,
 							"controller",
-							lv_controller_4_0,
+							lv_controller_6_0,
 							"de.dc.javafx.mm.lang.MmDsl.EString");
 						afterParserOrEnumRuleCall();
 					}
@@ -117,20 +142,20 @@ ruleEmfModel returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_5='styleClass'
+			otherlv_7='styleClass'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getEmfModelAccess().getStyleClassKeyword_4_0());
+				newLeafNode(otherlv_7, grammarAccess.getEmfModelAccess().getStyleClassKeyword_5_0());
 			}
-			otherlv_6='{'
+			otherlv_8='{'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getEmfModelAccess().getLeftCurlyBracketKeyword_4_1());
+				newLeafNode(otherlv_8, grammarAccess.getEmfModelAccess().getLeftCurlyBracketKeyword_5_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEmfModelAccess().getStyleClassEStringParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getEmfModelAccess().getStyleClassEStringParserRuleCall_5_2_0());
 					}
-					lv_styleClass_7_0=ruleEString
+					lv_styleClass_9_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEmfModelRule());
@@ -138,23 +163,23 @@ ruleEmfModel returns [EObject current=null]
 						add(
 							$current,
 							"styleClass",
-							lv_styleClass_7_0,
+							lv_styleClass_9_0,
 							"de.dc.javafx.mm.lang.MmDsl.EString");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_8=','
+				otherlv_10=','
 				{
-					newLeafNode(otherlv_8, grammarAccess.getEmfModelAccess().getCommaKeyword_4_3_0());
+					newLeafNode(otherlv_10, grammarAccess.getEmfModelAccess().getCommaKeyword_5_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getEmfModelAccess().getStyleClassEStringParserRuleCall_4_3_1_0());
+							newCompositeNode(grammarAccess.getEmfModelAccess().getStyleClassEStringParserRuleCall_5_3_1_0());
 						}
-						lv_styleClass_9_0=ruleEString
+						lv_styleClass_11_0=ruleEString
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getEmfModelRule());
@@ -162,29 +187,29 @@ ruleEmfModel returns [EObject current=null]
 							add(
 								$current,
 								"styleClass",
-								lv_styleClass_9_0,
+								lv_styleClass_11_0,
 								"de.dc.javafx.mm.lang.MmDsl.EString");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_10='}'
+			otherlv_12='}'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getEmfModelAccess().getRightCurlyBracketKeyword_4_4());
+				newLeafNode(otherlv_12, grammarAccess.getEmfModelAccess().getRightCurlyBracketKeyword_5_4());
 			}
 		)?
 		(
-			otherlv_11='root'
+			otherlv_13='root'
 			{
-				newLeafNode(otherlv_11, grammarAccess.getEmfModelAccess().getRootKeyword_5_0());
+				newLeafNode(otherlv_13, grammarAccess.getEmfModelAccess().getRootKeyword_6_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEmfModelAccess().getRootENodeParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getEmfModelAccess().getRootENodeParserRuleCall_6_1_0());
 					}
-					lv_root_12_0=ruleENode
+					lv_root_14_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEmfModelRule());
@@ -192,16 +217,16 @@ ruleEmfModel returns [EObject current=null]
 						set(
 							$current,
 							"root",
-							lv_root_12_0,
+							lv_root_14_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_13='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getEmfModelAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_15, grammarAccess.getEmfModelAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;

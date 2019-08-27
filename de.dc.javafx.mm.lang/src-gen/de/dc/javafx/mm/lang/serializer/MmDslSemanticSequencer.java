@@ -1079,7 +1079,7 @@ public class MmDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     EmfModel returns EmfModel
 	 *
 	 * Constraint:
-	 *     (controller=EString? (styleClass+=EString styleClass+=EString*)? root=ENode?)
+	 *     (basePackage=EString? controller=EString? (styleClass+=EString styleClass+=EString*)? root=ENode?)
 	 */
 	protected void sequence_EmfModel(ISerializationContext context, EmfModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

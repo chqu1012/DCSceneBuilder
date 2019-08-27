@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.EmfModel#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getController <em>Controller</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}</li>
@@ -25,6 +26,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface EmfModel extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Base Package</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Package</em>' attribute.
+	 * @see #setBasePackage(String)
+	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_BasePackage()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getBasePackage();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EmfModel#getBasePackage <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Package</em>' attribute.
+	 * @see #getBasePackage()
+	 * @generated
+	 */
+	void setBasePackage(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Controller</b></em>' attribute.
 	 * <!-- begin-user-doc -->

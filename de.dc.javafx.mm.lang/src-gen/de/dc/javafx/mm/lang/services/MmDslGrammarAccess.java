@@ -30,35 +30,39 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEmfModelKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cControllerKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cControllerAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cControllerEStringParserRuleCall_3_1_0 = (RuleCall)cControllerAssignment_3_1.eContents().get(0);
+		private final Keyword cPackageKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cBasePackageAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cBasePackageEStringParserRuleCall_3_1_0 = (RuleCall)cBasePackageAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cStyleClassKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cStyleClassAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cStyleClassEStringParserRuleCall_4_2_0 = (RuleCall)cStyleClassAssignment_4_2.eContents().get(0);
-		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
-		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cStyleClassAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final RuleCall cStyleClassEStringParserRuleCall_4_3_1_0 = (RuleCall)cStyleClassAssignment_4_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
+		private final Keyword cControllerKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cControllerAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cControllerEStringParserRuleCall_4_1_0 = (RuleCall)cControllerAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cRootKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cRootAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cRootENodeParserRuleCall_5_1_0 = (RuleCall)cRootAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cStyleClassKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cStyleClassAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cStyleClassEStringParserRuleCall_5_2_0 = (RuleCall)cStyleClassAssignment_5_2.eContents().get(0);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cStyleClassAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final RuleCall cStyleClassEStringParserRuleCall_5_3_1_0 = (RuleCall)cStyleClassAssignment_5_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cRootKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cRootAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cRootENodeParserRuleCall_6_1_0 = (RuleCall)cRootAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//EmfModel:
 		//	{EmfModel}
 		//	'EmfModel'
-		//	'{' ('controller' controller=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('root'
-		//	root=ENode)?
+		//	'{' ('package' basePackage=EString)? ('controller' controller=EString)? ('styleClass' '{' styleClass+=EString (","
+		//	styleClass+=EString)* '}')? ('root' root=ENode)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{EmfModel} 'EmfModel' '{' ('controller' controller=EString)? ('styleClass' '{' styleClass+=EString (","
-		//styleClass+=EString)* '}')? ('root' root=ENode)? '}'
+		//{EmfModel} 'EmfModel' '{' ('package' basePackage=EString)? ('controller' controller=EString)? ('styleClass' '{'
+		//styleClass+=EString ("," styleClass+=EString)* '}')? ('root' root=ENode)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EmfModel}
@@ -70,62 +74,74 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('controller' controller=EString)?
+		//('package' basePackage=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'controller'
-		public Keyword getControllerKeyword_3_0() { return cControllerKeyword_3_0; }
+		//'package'
+		public Keyword getPackageKeyword_3_0() { return cPackageKeyword_3_0; }
 		
-		//controller=EString
-		public Assignment getControllerAssignment_3_1() { return cControllerAssignment_3_1; }
+		//basePackage=EString
+		public Assignment getBasePackageAssignment_3_1() { return cBasePackageAssignment_3_1; }
 		
 		//EString
-		public RuleCall getControllerEStringParserRuleCall_3_1_0() { return cControllerEStringParserRuleCall_3_1_0; }
+		public RuleCall getBasePackageEStringParserRuleCall_3_1_0() { return cBasePackageEStringParserRuleCall_3_1_0; }
 		
-		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')?
+		//('controller' controller=EString)?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'styleClass'
-		public Keyword getStyleClassKeyword_4_0() { return cStyleClassKeyword_4_0; }
+		//'controller'
+		public Keyword getControllerKeyword_4_0() { return cControllerKeyword_4_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
-		
-		//styleClass+=EString
-		public Assignment getStyleClassAssignment_4_2() { return cStyleClassAssignment_4_2; }
+		//controller=EString
+		public Assignment getControllerAssignment_4_1() { return cControllerAssignment_4_1; }
 		
 		//EString
-		public RuleCall getStyleClassEStringParserRuleCall_4_2_0() { return cStyleClassEStringParserRuleCall_4_2_0; }
+		public RuleCall getControllerEStringParserRuleCall_4_1_0() { return cControllerEStringParserRuleCall_4_1_0; }
 		
-		//("," styleClass+=EString)*
-		public Group getGroup_4_3() { return cGroup_4_3; }
-		
-		//","
-		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
-		
-		//styleClass+=EString
-		public Assignment getStyleClassAssignment_4_3_1() { return cStyleClassAssignment_4_3_1; }
-		
-		//EString
-		public RuleCall getStyleClassEStringParserRuleCall_4_3_1_0() { return cStyleClassEStringParserRuleCall_4_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
-		
-		//('root' root=ENode)?
+		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')?
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'root'
-		public Keyword getRootKeyword_5_0() { return cRootKeyword_5_0; }
+		//'styleClass'
+		public Keyword getStyleClassKeyword_5_0() { return cStyleClassKeyword_5_0; }
 		
-		//root=ENode
-		public Assignment getRootAssignment_5_1() { return cRootAssignment_5_1; }
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
 		
-		//ENode
-		public RuleCall getRootENodeParserRuleCall_5_1_0() { return cRootENodeParserRuleCall_5_1_0; }
+		//styleClass+=EString
+		public Assignment getStyleClassAssignment_5_2() { return cStyleClassAssignment_5_2; }
+		
+		//EString
+		public RuleCall getStyleClassEStringParserRuleCall_5_2_0() { return cStyleClassEStringParserRuleCall_5_2_0; }
+		
+		//("," styleClass+=EString)*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+		
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+		
+		//styleClass+=EString
+		public Assignment getStyleClassAssignment_5_3_1() { return cStyleClassAssignment_5_3_1; }
+		
+		//EString
+		public RuleCall getStyleClassEStringParserRuleCall_5_3_1_0() { return cStyleClassEStringParserRuleCall_5_3_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
+		
+		//('root' root=ENode)?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'root'
+		public Keyword getRootKeyword_6_0() { return cRootKeyword_6_0; }
+		
+		//root=ENode
+		public Assignment getRootAssignment_6_1() { return cRootAssignment_6_1; }
+		
+		//ENode
+		public RuleCall getRootENodeParserRuleCall_6_1_0() { return cRootENodeParserRuleCall_6_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class ENodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.dc.javafx.mm.lang.MmDsl.ENode");
@@ -10866,8 +10882,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//EmfModel:
 	//	{EmfModel}
 	//	'EmfModel'
-	//	'{' ('controller' controller=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('root'
-	//	root=ENode)?
+	//	'{' ('package' basePackage=EString)? ('controller' controller=EString)? ('styleClass' '{' styleClass+=EString (","
+	//	styleClass+=EString)* '}')? ('root' root=ENode)?
 	//	'}';
 	public EmfModelElements getEmfModelAccess() {
 		return pEmfModel;

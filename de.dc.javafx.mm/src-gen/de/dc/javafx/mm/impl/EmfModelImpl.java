@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getController <em>Controller</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getRoot <em>Root</em>}</li>
@@ -37,6 +38,26 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * @generated
  */
 public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfModel {
+	/**
+	 * The default value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASE_PACKAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String basePackage = BASE_PACKAGE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getController() <em>Controller</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,6 +115,30 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	protected EClass eStaticClass() {
 		return MmPackage.Literals.EMF_MODEL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getBasePackage() {
+		return basePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBasePackage(String newBasePackage) {
+		String oldBasePackage = basePackage;
+		basePackage = newBasePackage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EMF_MODEL__BASE_PACKAGE, oldBasePackage,
+					basePackage));
 	}
 
 	/**
@@ -206,6 +251,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case MmPackage.EMF_MODEL__BASE_PACKAGE:
+			return getBasePackage();
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			return getController();
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
@@ -225,6 +272,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case MmPackage.EMF_MODEL__BASE_PACKAGE:
+			setBasePackage((String) newValue);
+			return;
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			setController((String) newValue);
 			return;
@@ -247,6 +297,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case MmPackage.EMF_MODEL__BASE_PACKAGE:
+			setBasePackage(BASE_PACKAGE_EDEFAULT);
+			return;
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			setController(CONTROLLER_EDEFAULT);
 			return;
@@ -268,6 +321,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case MmPackage.EMF_MODEL__BASE_PACKAGE:
+			return BASE_PACKAGE_EDEFAULT == null ? basePackage != null : !BASE_PACKAGE_EDEFAULT.equals(basePackage);
 		case MmPackage.EMF_MODEL__CONTROLLER:
 			return CONTROLLER_EDEFAULT == null ? controller != null : !CONTROLLER_EDEFAULT.equals(controller);
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
@@ -289,7 +344,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (controller: ");
+		result.append(" (basePackage: ");
+		result.append(basePackage);
+		result.append(", controller: ");
 		result.append(controller);
 		result.append(", styleClass: ");
 		result.append(styleClass);

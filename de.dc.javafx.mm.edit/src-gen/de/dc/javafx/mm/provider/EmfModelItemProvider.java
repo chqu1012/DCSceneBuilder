@@ -58,10 +58,27 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBasePackagePropertyDescriptor(object);
 			addControllerPropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Base Package feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBasePackagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EmfModel_basePackage_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EmfModel_basePackage_feature",
+								"_UI_EmfModel_type"),
+						MmPackage.Literals.EMF_MODEL__BASE_PACKAGE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -170,7 +187,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EmfModel) object).getController();
+		String label = ((EmfModel) object).getBasePackage();
 		return label == null || label.length() == 0 ? getString("_UI_EmfModel_type")
 				: getString("_UI_EmfModel_type") + " " + label;
 	}
@@ -202,6 +219,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EmfModel.class)) {
+		case MmPackage.EMF_MODEL__BASE_PACKAGE:
 		case MmPackage.EMF_MODEL__CONTROLLER:
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

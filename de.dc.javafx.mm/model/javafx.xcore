@@ -9,6 +9,7 @@ package de.dc.javafx.mm
 import javafx.geometry.Pos
 
 class EmfModel{
+	String basePackage
 	String controller
 	String[0..*] styleClass
 	contains ENode[0..1] root

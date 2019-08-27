@@ -440,7 +440,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmfModel_Controller() {
+	public EAttribute getEmfModel_BasePackage() {
 		return (EAttribute) emfModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -450,7 +450,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmfModel_StyleClass() {
+	public EAttribute getEmfModel_Controller() {
 		return (EAttribute) emfModelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -460,8 +460,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getEmfModel_StyleClass() {
+		return (EAttribute) emfModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getEmfModel_Root() {
-		return (EReference) emfModelEClass.getEStructuralFeatures().get(2);
+		return (EReference) emfModelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1355,6 +1365,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		// Create classes and their features
 		emfModelEClass = createEClass(EMF_MODEL);
+		createEAttribute(emfModelEClass, EMF_MODEL__BASE_PACKAGE);
 		createEAttribute(emfModelEClass, EMF_MODEL__CONTROLLER);
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
 		createEReference(emfModelEClass, EMF_MODEL__ROOT);
@@ -1561,6 +1572,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(emfModelEClass, EmfModel.class, "EmfModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmfModel_BasePackage(), theEcorePackage.getEString(), "basePackage", null, 0, 1,
+				EmfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEmfModel_Controller(), theEcorePackage.getEString(), "controller", null, 0, 1, EmfModel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);

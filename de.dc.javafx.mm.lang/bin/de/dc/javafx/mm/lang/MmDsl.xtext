@@ -8,6 +8,7 @@ EmfModel returns EmfModel:
 	{EmfModel}
 	'EmfModel'
 	'{'
+		('package' basePackage=EString)?
 		('controller' controller=EString)?
 		('styleClass' '{' styleClass+=EString ( "," styleClass+=EString)* '}' )?
 		('root' root=ENode)?

@@ -38,8 +38,9 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEmfModelAccess().getGroup(), "rule__EmfModel__Group__0");
 			builder.put(grammarAccess.getEmfModelAccess().getGroup_3(), "rule__EmfModel__Group_3__0");
 			builder.put(grammarAccess.getEmfModelAccess().getGroup_4(), "rule__EmfModel__Group_4__0");
-			builder.put(grammarAccess.getEmfModelAccess().getGroup_4_3(), "rule__EmfModel__Group_4_3__0");
 			builder.put(grammarAccess.getEmfModelAccess().getGroup_5(), "rule__EmfModel__Group_5__0");
+			builder.put(grammarAccess.getEmfModelAccess().getGroup_5_3(), "rule__EmfModel__Group_5_3__0");
+			builder.put(grammarAccess.getEmfModelAccess().getGroup_6(), "rule__EmfModel__Group_6__0");
 			builder.put(grammarAccess.getEDoubleAccess().getGroup(), "rule__EDouble__Group__0");
 			builder.put(grammarAccess.getEDoubleAccess().getGroup_4(), "rule__EDouble__Group_4__0");
 			builder.put(grammarAccess.getEInsetsAccess().getGroup(), "rule__EInsets__Group__0");
@@ -592,10 +593,11 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETableColumnAccess().getGroup_5(), "rule__ETableColumn__Group_5__0");
 			builder.put(grammarAccess.getETableColumnAccess().getGroup_6(), "rule__ETableColumn__Group_6__0");
 			builder.put(grammarAccess.getETableColumnAccess().getGroup_7(), "rule__ETableColumn__Group_7__0");
-			builder.put(grammarAccess.getEmfModelAccess().getControllerAssignment_3_1(), "rule__EmfModel__ControllerAssignment_3_1");
-			builder.put(grammarAccess.getEmfModelAccess().getStyleClassAssignment_4_2(), "rule__EmfModel__StyleClassAssignment_4_2");
-			builder.put(grammarAccess.getEmfModelAccess().getStyleClassAssignment_4_3_1(), "rule__EmfModel__StyleClassAssignment_4_3_1");
-			builder.put(grammarAccess.getEmfModelAccess().getRootAssignment_5_1(), "rule__EmfModel__RootAssignment_5_1");
+			builder.put(grammarAccess.getEmfModelAccess().getBasePackageAssignment_3_1(), "rule__EmfModel__BasePackageAssignment_3_1");
+			builder.put(grammarAccess.getEmfModelAccess().getControllerAssignment_4_1(), "rule__EmfModel__ControllerAssignment_4_1");
+			builder.put(grammarAccess.getEmfModelAccess().getStyleClassAssignment_5_2(), "rule__EmfModel__StyleClassAssignment_5_2");
+			builder.put(grammarAccess.getEmfModelAccess().getStyleClassAssignment_5_3_1(), "rule__EmfModel__StyleClassAssignment_5_3_1");
+			builder.put(grammarAccess.getEmfModelAccess().getRootAssignment_6_1(), "rule__EmfModel__RootAssignment_6_1");
 			builder.put(grammarAccess.getEInsetsAccess().getTopAssignment_3_1(), "rule__EInsets__TopAssignment_3_1");
 			builder.put(grammarAccess.getEInsetsAccess().getBottomAssignment_4_1(), "rule__EInsets__BottomAssignment_4_1");
 			builder.put(grammarAccess.getEInsetsAccess().getRightAssignment_5_1(), "rule__EInsets__RightAssignment_5_1");
