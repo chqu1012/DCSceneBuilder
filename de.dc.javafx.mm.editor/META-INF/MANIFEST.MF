@@ -13,5 +13,21 @@ Export-Package: de.dc.javafx.mm.presentation
 Require-Bundle: org.eclipse.core.runtime,
  de.dc.javafx.mm.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.eclipse.emf.edit.ui;visibility:=reexport
+ org.eclipse.emf.edit.ui;visibility:=reexport,
+ de.dc.javafx.mm.lang;bundle-version="1.0.0",
+ de.dc.javafx.mm.lang.ide;bundle-version="1.0.0",
+ de.dc.javafx.mm.lang.ui;bundle-version="1.0.0",
+ org.eclipse.jdt;bundle-version="3.17.0",
+ org.eclipse.jdt.annotation;bundle-version="2.2.200",
+ org.eclipse.jdt.annotation;bundle-version="1.1.400",
+ org.eclipse.jdt.apt.core;bundle-version="3.6.300",
+ org.eclipse.jdt.apt.pluggable.core;bundle-version="1.2.300",
+ org.eclipse.jdt.apt.ui;bundle-version="3.6.200",
+ org.eclipse.jdt.core;bundle-version="3.17.0",
+ org.eclipse.jdt.core.manipulation;bundle-version="1.11.100",
+ org.eclipse.jdt.debug;bundle-version="3.12.200",
+ org.eclipse.jdt.debug.ui;bundle-version="3.10.200",
+ org.eclipse.jdt.launching;bundle-version="3.13.0",
+ org.eclipse.jdt.ui;bundle-version="3.17.0",
+ org.eclipse.ui.themes;bundle-version="1.2.400"
 Bundle-ActivationPolicy: lazy
