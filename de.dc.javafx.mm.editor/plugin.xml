@@ -151,6 +151,34 @@
             </visibleWhen>
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               label="DC JavaFX">
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.convertToXMI"
+                  label="Convert to XMI"
+                  style="push">
+            </command>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="javafxl">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
@@ -173,6 +201,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.GenerateAllHandler"
             id="de.dc.javafx.mm.editor.command.generateAll"
             name="Generate All">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.ConvertToXmiHandler"
+            id="de.dc.javafx.mm.editor.command.convertToXMI"
+            name="Convert To XMI">
       </command>
    </extension>
 
