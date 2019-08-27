@@ -102,4 +102,63 @@
       </editor>
    </extension>
 
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               label="DC JavaFX">
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  label="Generate Model"
+                  style="push">
+            </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  label="Generate Controller"
+                  style="push">
+            </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  label="Generate Binding"
+                  style="push">
+            </command>
+            <separator
+                  name="de.dc.javafx.mm.editor.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  label="Generate All"
+                  style="push">
+            </command>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="javafx">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateModelClassHandler"
+            id="de.dc.javafx.mm.editor.command.generateModelClass"
+            name="Generate Model Class">
+      </command>
+   </extension>
+
 </plugin>
