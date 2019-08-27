@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.dc.javafx.mm.lang.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: de.dc.javafx.mm.lang.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.dc.javafx.mm.lang.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.dc.javafx.mm.lang,
+ de.dc.javafx.mm,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
