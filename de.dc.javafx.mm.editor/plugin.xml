@@ -115,12 +115,12 @@
                   style="push">
             </command>
             <command
-                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  commandId="de.dc.javafx.mm.editor.command.generateControllerClass"
                   label="Generate Controller"
                   style="push">
             </command>
             <command
-                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  commandId="de.dc.javafx.mm.editor.command.generateBindingClass"
                   label="Generate Binding"
                   style="push">
             </command>
@@ -129,7 +129,7 @@
                   visible="true">
             </separator>
             <command
-                  commandId="de.dc.javafx.mm.editor.command.generateModelClass"
+                  commandId="de.dc.javafx.mm.editor.command.generateAll"
                   label="Generate All"
                   style="push">
             </command>
@@ -158,6 +158,21 @@
             defaultHandler="de.dc.javafx.mm.editor.command.GenerateModelClassHandler"
             id="de.dc.javafx.mm.editor.command.generateModelClass"
             name="Generate Model Class">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerHandler"
+            id="de.dc.javafx.mm.editor.command.generateControllerClass"
+            name="Generate Controller Class">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateBindingHandler"
+            id="de.dc.javafx.mm.editor.command.generateBindingClass"
+            name="Generate Binding Class">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateAllHandler"
+            id="de.dc.javafx.mm.editor.command.generateAll"
+            name="Generate All">
       </command>
    </extension>
 
