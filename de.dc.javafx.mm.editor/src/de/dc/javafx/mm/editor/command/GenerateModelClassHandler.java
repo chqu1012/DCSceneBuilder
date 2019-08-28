@@ -38,36 +38,26 @@ public class GenerateModelClassHandler extends AbstractHandler {
 			if (firstElement instanceof IFile) {
 				IFile model = (IFile) firstElement;
 				IFolder parent = (IFolder) model.getParent();
-				
+
 				FxmlFile fxmlFile = new FxmlFile();
 				EObject root = fxmlFile.load(model.getRawLocation().toPortableString());
 				if (root instanceof EmfModel) {
 					EmfModel emfModel = (EmfModel) root;
-					
+
 					IProject project = parent.getProject();
 					IFolder srcFolder = project.getFolder("src");
-					IFolder genFolder = getFolder(srcFolder, emfModel.getBasePackage().split("\\."));
-					System.out.println(genFolder.getRawLocation().toPortableString());
+					IFolder genFolder = getFolder(srcFolder, emfModel.getBasePackage().split("\\.")).getFolder("model");
 
-					String genPath = genFolder.getRawLocation().toPortableString();
-//					InputStream inputStream= new java.io.StringBufferInputStream("");
-//					file.create(inputStream, true, null);
-//					IWorkspace workspace = ResourcesPlugin.getWorkspace();
-//					IWorkspaceRoot rootWorkspace = workspace.getRoot();
-//					IResource resource = rootWorkspace.findMember(new Path(genPath+"/"+emfModel.getName()+"Model.java"));
-					
 					try {
-						System.out.println(genPath+"/"+emfModel.getName()+"Model.java");
-						IFile ifile = genFolder.getFile(emfModel.getName()+"Model.java");
+						if (!genFolder.exists()) {
+							genFolder.create(true, true, null);
+						}
+						IFile ifile = genFolder.getFile(emfModel.getName() + ".java");
 						ifile.create(new ByteArrayInputStream("Hello World".getBytes()), IResource.NONE, null);
-						ICompilationUnit cu = JavaCore.createCompilationUnitFrom(ifile);
-						Document document = new Document("");
-						cu.getBuffer().setContents(document.get());
-					    cu.save(null, false);
 					} catch (CoreException e1) {
 						e1.printStackTrace();
 					}
-					
+
 					try {
 						parent.refreshLocal(IResource.DEPTH_INFINITE, null);
 					} catch (CoreException e) {
@@ -78,16 +68,16 @@ public class GenerateModelClassHandler extends AbstractHandler {
 		}
 		return null;
 	}
-	
+
 	public IFolder getFolder(IFolder folder, String[] basePackage) {
 		IFolder currentFolder = null;
 		for (String pack : basePackage) {
-			if (currentFolder!=null) {
+			if (currentFolder != null) {
 				currentFolder = currentFolder.getFolder(pack);
-			}else {
+			} else {
 				currentFolder = folder.getFolder(pack);
 			}
-		}		
+		}
 		return currentFolder;
 	}
 
