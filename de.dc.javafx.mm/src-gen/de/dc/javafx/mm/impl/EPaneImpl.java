@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EPaneImpl extends ERegionImpl implements EPane {
+public class EPaneImpl extends ENodeImpl implements EPane {
 	/**
 	 * The default value of the '{@link #getPos() <em>Pos</em>}' attribute.
 	 * <!-- begin-user-doc -->

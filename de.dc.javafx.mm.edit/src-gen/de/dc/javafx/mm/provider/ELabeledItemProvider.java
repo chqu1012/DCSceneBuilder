@@ -131,7 +131,7 @@ public class ELabeledItemProvider extends EControlItemProvider {
 		Object childObject = child;
 
 		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
-				|| childFeature == MmPackage.Literals.EREGION__PADDING;
+				|| childFeature == MmPackage.Literals.ENODE__PADDING;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

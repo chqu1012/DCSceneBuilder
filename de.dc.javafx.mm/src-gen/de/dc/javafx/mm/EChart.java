@@ -12,5 +12,5 @@ package de.dc.javafx.mm;
  * @model abstract="true"
  * @generated
  */
-public interface EChart extends ERegion {
+public interface EChart extends ENode {
 } // EChart

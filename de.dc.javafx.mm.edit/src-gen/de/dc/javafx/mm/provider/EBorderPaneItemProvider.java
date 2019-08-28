@@ -152,9 +152,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createERegion()));
-
-		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
@@ -231,9 +228,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEBorderPane()));
-
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createERegion()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEGroup()));
@@ -314,9 +308,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEBorderPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createERegion()));
-
-		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
@@ -393,9 +384,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEBorderPane()));
-
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createERegion()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEGroup()));
@@ -474,9 +462,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEBorderPane()));
-
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createERegion()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEGroup()));
@@ -569,8 +554,8 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		Object childObject = child;
 
 		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
-				|| childFeature == MmPackage.Literals.EREGION__PADDING
-				|| childFeature == MmPackage.Literals.EPARENT__CHILDREN
+				|| childFeature == MmPackage.Literals.ENODE__PADDING
+				|| childFeature == MmPackage.Literals.ENODE__CHILDREN
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__LEFT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__RIGHT
 				|| childFeature == MmPackage.Literals.EBORDER_PANE__TOP

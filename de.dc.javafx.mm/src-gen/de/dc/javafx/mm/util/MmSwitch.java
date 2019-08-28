@@ -107,38 +107,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MmPackage.EPARENT: {
-			EParent eParent = (EParent) theEObject;
-			T result = caseEParent(eParent);
-			if (result == null)
-				result = caseENode(eParent);
-			if (result == null)
-				result = caseStyleable(eParent);
-			if (result == null)
-				result = caseSkinnable(eParent);
-			if (result == null)
-				result = caseEEvents(eParent);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MmPackage.EREGION: {
-			ERegion eRegion = (ERegion) theEObject;
-			T result = caseERegion(eRegion);
-			if (result == null)
-				result = caseEParent(eRegion);
-			if (result == null)
-				result = caseENode(eRegion);
-			if (result == null)
-				result = caseStyleable(eRegion);
-			if (result == null)
-				result = caseSkinnable(eRegion);
-			if (result == null)
-				result = caseEEvents(eRegion);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case MmPackage.EINSETS: {
 			EInsets eInsets = (EInsets) theEObject;
 			T result = caseEInsets(eInsets);
@@ -180,10 +148,6 @@ public class MmSwitch<T> extends Switch<T> {
 			EControl eControl = (EControl) theEObject;
 			T result = caseEControl(eControl);
 			if (result == null)
-				result = caseERegion(eControl);
-			if (result == null)
-				result = caseEParent(eControl);
-			if (result == null)
 				result = caseENode(eControl);
 			if (result == null)
 				result = caseStyleable(eControl);
@@ -200,10 +164,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseELabeled(eLabeled);
 			if (result == null)
 				result = caseEControl(eLabeled);
-			if (result == null)
-				result = caseERegion(eLabeled);
-			if (result == null)
-				result = caseEParent(eLabeled);
 			if (result == null)
 				result = caseENode(eLabeled);
 			if (result == null)
@@ -224,10 +184,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eText);
 			if (result == null)
-				result = caseERegion(eText);
-			if (result == null)
-				result = caseEParent(eText);
-			if (result == null)
 				result = caseENode(eText);
 			if (result == null)
 				result = caseStyleable(eText);
@@ -247,10 +203,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eLabel);
 			if (result == null)
-				result = caseERegion(eLabel);
-			if (result == null)
-				result = caseEParent(eLabel);
-			if (result == null)
 				result = caseENode(eLabel);
 			if (result == null)
 				result = caseStyleable(eLabel);
@@ -269,10 +221,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseELabeled(eButtonBase);
 			if (result == null)
 				result = caseEControl(eButtonBase);
-			if (result == null)
-				result = caseERegion(eButtonBase);
-			if (result == null)
-				result = caseEParent(eButtonBase);
 			if (result == null)
 				result = caseENode(eButtonBase);
 			if (result == null)
@@ -295,10 +243,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eButton);
 			if (result == null)
-				result = caseERegion(eButton);
-			if (result == null)
-				result = caseEParent(eButton);
-			if (result == null)
 				result = caseENode(eButton);
 			if (result == null)
 				result = caseStyleable(eButton);
@@ -319,10 +263,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseELabeled(eCheckBox);
 			if (result == null)
 				result = caseEControl(eCheckBox);
-			if (result == null)
-				result = caseERegion(eCheckBox);
-			if (result == null)
-				result = caseEParent(eCheckBox);
 			if (result == null)
 				result = caseENode(eCheckBox);
 			if (result == null)
@@ -345,10 +285,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eHyperlink);
 			if (result == null)
-				result = caseERegion(eHyperlink);
-			if (result == null)
-				result = caseEParent(eHyperlink);
-			if (result == null)
 				result = caseENode(eHyperlink);
 			if (result == null)
 				result = caseStyleable(eHyperlink);
@@ -369,10 +305,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseELabeled(eMenuButton);
 			if (result == null)
 				result = caseEControl(eMenuButton);
-			if (result == null)
-				result = caseERegion(eMenuButton);
-			if (result == null)
-				result = caseEParent(eMenuButton);
 			if (result == null)
 				result = caseENode(eMenuButton);
 			if (result == null)
@@ -395,10 +327,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eSplitMenuButton);
 			if (result == null)
-				result = caseERegion(eSplitMenuButton);
-			if (result == null)
-				result = caseEParent(eSplitMenuButton);
-			if (result == null)
 				result = caseENode(eSplitMenuButton);
 			if (result == null)
 				result = caseStyleable(eSplitMenuButton);
@@ -420,10 +348,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eToogleButton);
 			if (result == null)
-				result = caseERegion(eToogleButton);
-			if (result == null)
-				result = caseEParent(eToogleButton);
-			if (result == null)
 				result = caseENode(eToogleButton);
 			if (result == null)
 				result = caseStyleable(eToogleButton);
@@ -440,10 +364,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseEBaseView(eBaseView);
 			if (result == null)
 				result = caseEControl(eBaseView);
-			if (result == null)
-				result = caseERegion(eBaseView);
-			if (result == null)
-				result = caseEParent(eBaseView);
 			if (result == null)
 				result = caseENode(eBaseView);
 			if (result == null)
@@ -463,10 +383,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseEBaseView(eTableView);
 			if (result == null)
 				result = caseEControl(eTableView);
-			if (result == null)
-				result = caseERegion(eTableView);
-			if (result == null)
-				result = caseEParent(eTableView);
 			if (result == null)
 				result = caseENode(eTableView);
 			if (result == null)
@@ -498,10 +414,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEControl(eRadioButton);
 			if (result == null)
-				result = caseERegion(eRadioButton);
-			if (result == null)
-				result = caseEParent(eRadioButton);
-			if (result == null)
 				result = caseENode(eRadioButton);
 			if (result == null)
 				result = caseStyleable(eRadioButton);
@@ -516,10 +428,6 @@ public class MmSwitch<T> extends Switch<T> {
 		case MmPackage.EAXIS: {
 			EAxis eAxis = (EAxis) theEObject;
 			T result = caseEAxis(eAxis);
-			if (result == null)
-				result = caseERegion(eAxis);
-			if (result == null)
-				result = caseEParent(eAxis);
 			if (result == null)
 				result = caseENode(eAxis);
 			if (result == null)
@@ -538,10 +446,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEAxis(eCatgeoryAxis);
 			if (result == null)
-				result = caseERegion(eCatgeoryAxis);
-			if (result == null)
-				result = caseEParent(eCatgeoryAxis);
-			if (result == null)
 				result = caseENode(eCatgeoryAxis);
 			if (result == null)
 				result = caseStyleable(eCatgeoryAxis);
@@ -559,10 +463,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEAxis(eValueAxis);
 			if (result == null)
-				result = caseERegion(eValueAxis);
-			if (result == null)
-				result = caseEParent(eValueAxis);
-			if (result == null)
 				result = caseENode(eValueAxis);
 			if (result == null)
 				result = caseStyleable(eValueAxis);
@@ -577,10 +477,6 @@ public class MmSwitch<T> extends Switch<T> {
 		case MmPackage.ECHART: {
 			EChart eChart = (EChart) theEObject;
 			T result = caseEChart(eChart);
-			if (result == null)
-				result = caseERegion(eChart);
-			if (result == null)
-				result = caseEParent(eChart);
 			if (result == null)
 				result = caseENode(eChart);
 			if (result == null)
@@ -599,10 +495,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEChart(ePieChart);
 			if (result == null)
-				result = caseERegion(ePieChart);
-			if (result == null)
-				result = caseEParent(ePieChart);
-			if (result == null)
 				result = caseENode(ePieChart);
 			if (result == null)
 				result = caseStyleable(ePieChart);
@@ -620,10 +512,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEChart(exyChart);
 			if (result == null)
-				result = caseERegion(exyChart);
-			if (result == null)
-				result = caseEParent(exyChart);
-			if (result == null)
 				result = caseENode(exyChart);
 			if (result == null)
 				result = caseStyleable(exyChart);
@@ -638,10 +526,6 @@ public class MmSwitch<T> extends Switch<T> {
 		case MmPackage.EPANE: {
 			EPane ePane = (EPane) theEObject;
 			T result = caseEPane(ePane);
-			if (result == null)
-				result = caseERegion(ePane);
-			if (result == null)
-				result = caseEParent(ePane);
 			if (result == null)
 				result = caseENode(ePane);
 			if (result == null)
@@ -660,10 +544,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEPane(eStackPane);
 			if (result == null)
-				result = caseERegion(eStackPane);
-			if (result == null)
-				result = caseEParent(eStackPane);
-			if (result == null)
 				result = caseENode(eStackPane);
 			if (result == null)
 				result = caseStyleable(eStackPane);
@@ -680,10 +560,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseEDialogPane(eDialogPane);
 			if (result == null)
 				result = caseEPane(eDialogPane);
-			if (result == null)
-				result = caseERegion(eDialogPane);
-			if (result == null)
-				result = caseEParent(eDialogPane);
 			if (result == null)
 				result = caseENode(eDialogPane);
 			if (result == null)
@@ -702,10 +578,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEPane(eGridPane);
 			if (result == null)
-				result = caseERegion(eGridPane);
-			if (result == null)
-				result = caseEParent(eGridPane);
-			if (result == null)
 				result = caseENode(eGridPane);
 			if (result == null)
 				result = caseStyleable(eGridPane);
@@ -722,10 +594,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseEHBox(ehBox);
 			if (result == null)
 				result = caseEPane(ehBox);
-			if (result == null)
-				result = caseERegion(ehBox);
-			if (result == null)
-				result = caseEParent(ehBox);
 			if (result == null)
 				result = caseENode(ehBox);
 			if (result == null)
@@ -744,10 +612,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEPane(evBox);
 			if (result == null)
-				result = caseERegion(evBox);
-			if (result == null)
-				result = caseEParent(evBox);
-			if (result == null)
 				result = caseENode(evBox);
 			if (result == null)
 				result = caseStyleable(evBox);
@@ -764,10 +628,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseEFlowPane(eFlowPane);
 			if (result == null)
 				result = caseEPane(eFlowPane);
-			if (result == null)
-				result = caseERegion(eFlowPane);
-			if (result == null)
-				result = caseEParent(eFlowPane);
 			if (result == null)
 				result = caseENode(eFlowPane);
 			if (result == null)
@@ -786,10 +646,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEPane(eTilePane);
 			if (result == null)
-				result = caseERegion(eTilePane);
-			if (result == null)
-				result = caseEParent(eTilePane);
-			if (result == null)
 				result = caseENode(eTilePane);
 			if (result == null)
 				result = caseStyleable(eTilePane);
@@ -807,10 +663,6 @@ public class MmSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseEPane(eAnchorPane);
 			if (result == null)
-				result = caseERegion(eAnchorPane);
-			if (result == null)
-				result = caseEParent(eAnchorPane);
-			if (result == null)
 				result = caseENode(eAnchorPane);
 			if (result == null)
 				result = caseStyleable(eAnchorPane);
@@ -827,10 +679,6 @@ public class MmSwitch<T> extends Switch<T> {
 			T result = caseEBorderPane(eBorderPane);
 			if (result == null)
 				result = caseEPane(eBorderPane);
-			if (result == null)
-				result = caseERegion(eBorderPane);
-			if (result == null)
-				result = caseEParent(eBorderPane);
 			if (result == null)
 				result = caseENode(eBorderPane);
 			if (result == null)
@@ -920,36 +768,6 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseENode(ENode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EParent</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EParent</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEParent(EParent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ERegion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ERegion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseERegion(ERegion object) {
 		return null;
 	}
 

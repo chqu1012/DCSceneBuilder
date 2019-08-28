@@ -5,16 +5,17 @@ package de.dc.javafx.mm.lang.validation;
 
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.xtext.ui.validation.AbstractValidatorConfigurationBlock;
+import org.eclipse.xtext.xbase.ui.validation.XbaseValidationConfigurationBlock;
 
 @SuppressWarnings("restriction")
-public class MmDslValidatorConfigurationBlock extends AbstractValidatorConfigurationBlock {
+public class MmDslValidatorConfigurationBlock extends XbaseValidationConfigurationBlock {
 
 	protected static final String SETTINGS_SECTION_NAME = "MmDsl";
 
 	@Override
 	protected void fillSettingsPage(Composite composite, int nColumns, int defaultIndent) {
 		addComboBox(MmDslConfigurableIssueCodesProvider.DEPRECATED_MODEL_PART, "Deprecated Model Part", composite, defaultIndent);
+		super.fillSettingsPage(composite, nColumns, defaultIndent);
 	}
 
 	@Override

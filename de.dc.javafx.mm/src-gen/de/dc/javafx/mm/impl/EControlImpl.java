@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class EControlImpl extends ERegionImpl implements EControl {
+public abstract class EControlImpl extends ENodeImpl implements EControl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

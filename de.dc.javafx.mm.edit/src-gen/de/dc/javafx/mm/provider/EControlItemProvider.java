@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EControlItemProvider extends ERegionItemProvider {
+public class EControlItemProvider extends ENodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -103,7 +103,7 @@ public class EControlItemProvider extends ERegionItemProvider {
 		Object childObject = child;
 
 		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
-				|| childFeature == MmPackage.Literals.EREGION__PADDING;
+				|| childFeature == MmPackage.Literals.ENODE__PADDING;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

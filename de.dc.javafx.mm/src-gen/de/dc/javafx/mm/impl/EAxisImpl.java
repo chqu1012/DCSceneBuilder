@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class EAxisImpl extends ERegionImpl implements EAxis {
+public abstract class EAxisImpl extends ENodeImpl implements EAxis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

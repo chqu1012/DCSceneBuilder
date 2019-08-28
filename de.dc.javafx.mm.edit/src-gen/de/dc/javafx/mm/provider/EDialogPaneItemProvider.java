@@ -202,9 +202,6 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createERegion()));
-
-		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors.add(
@@ -295,8 +292,8 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 		Object childObject = child;
 
 		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
-				|| childFeature == MmPackage.Literals.EREGION__PADDING
-				|| childFeature == MmPackage.Literals.EPARENT__CHILDREN
+				|| childFeature == MmPackage.Literals.ENODE__PADDING
+				|| childFeature == MmPackage.Literals.ENODE__CHILDREN
 				|| childFeature == MmPackage.Literals.EDIALOG_PANE__CONTENT;
 
 		if (qualify) {

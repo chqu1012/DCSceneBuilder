@@ -379,13 +379,31 @@ public interface MmPackage extends EPackage {
 	int ENODE__PREF_WIDTH = STYLEABLE_FEATURE_COUNT + 15;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__PADDING = STYLEABLE_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__CHILDREN = STYLEABLE_FEATURE_COUNT + 17;
+
+	/**
 	 * The number of structural features of the '<em>ENode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 16;
+	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>ENode</em>' class.
@@ -397,377 +415,6 @@ public interface MmPackage extends EPackage {
 	int ENODE_OPERATION_COUNT = STYLEABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EParentImpl <em>EParent</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.dc.javafx.mm.impl.EParentImpl
-	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEParent()
-	 * @generated
-	 */
-	int EPARENT = 5;
-
-	/**
-	 * The feature id for the '<em><b>On Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__ON_ACTION = ENODE__ON_ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__ID = ENODE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__STYLE_CLASS = ENODE__STYLE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__VISIBLE = ENODE__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__DISABLE = ENODE__DISABLE;
-
-	/**
-	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__MARGIN = ENODE__MARGIN;
-
-	/**
-	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__MAX_HEIGHT = ENODE__MAX_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__MIN_HEIGHT = ENODE__MIN_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__PREF_HEIGHT = ENODE__PREF_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__MAX_WIDTH = ENODE__MAX_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__MIN_WIDTH = ENODE__MIN_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__PREF_WIDTH = ENODE__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT__CHILDREN = ENODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>EParent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT_FEATURE_COUNT = ENODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>EParent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPARENT_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ERegionImpl <em>ERegion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.dc.javafx.mm.impl.ERegionImpl
-	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERegion()
-	 * @generated
-	 */
-	int EREGION = 6;
-
-	/**
-	 * The feature id for the '<em><b>On Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__ON_ACTION = EPARENT__ON_ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__ID = EPARENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__LAYOUT_X = EPARENT__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__LAYOUT_Y = EPARENT__LAYOUT_Y;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__OPACITY = EPARENT__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__STYLE = EPARENT__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__STYLE_CLASS = EPARENT__STYLE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__VISIBLE = EPARENT__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__DISABLE = EPARENT__DISABLE;
-
-	/**
-	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__MARGIN = EPARENT__MARGIN;
-
-	/**
-	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__MAX_HEIGHT = EPARENT__MAX_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__MIN_HEIGHT = EPARENT__MIN_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__PREF_HEIGHT = EPARENT__PREF_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__MAX_WIDTH = EPARENT__MAX_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__MIN_WIDTH = EPARENT__MIN_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__PREF_WIDTH = EPARENT__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__CHILDREN = EPARENT__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION__PADDING = EPARENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>ERegion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION_FEATURE_COUNT = EPARENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>ERegion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREGION_OPERATION_COUNT = EPARENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EInsetsImpl <em>EInsets</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -775,7 +422,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEInsets()
 	 * @generated
 	 */
-	int EINSETS = 7;
+	int EINSETS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -839,7 +486,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGroup()
 	 * @generated
 	 */
-	int EGROUP = 8;
+	int EGROUP = 6;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -986,6 +633,24 @@ public interface MmPackage extends EPackage {
 	int EGROUP__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__CHILDREN = ENODE__CHILDREN;
+
+	/**
 	 * The number of structural features of the '<em>EGroup</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1011,7 +676,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
 	 * @generated
 	 */
-	int EWEB_VIEW = 9;
+	int EWEB_VIEW = 7;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1158,6 +823,24 @@ public interface MmPackage extends EPackage {
 	int EWEB_VIEW__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__CHILDREN = ENODE__CHILDREN;
+
+	/**
 	 * The number of structural features of the '<em>EWeb View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1183,7 +866,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControl()
 	 * @generated
 	 */
-	int ECONTROL = 10;
+	int ECONTROL = 8;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1192,7 +875,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__ON_ACTION = EREGION__ON_ACTION;
+	int ECONTROL__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1201,7 +884,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__ID = EREGION__ID;
+	int ECONTROL__ID = ENODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -1210,7 +893,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__LAYOUT_X = EREGION__LAYOUT_X;
+	int ECONTROL__LAYOUT_X = ENODE__LAYOUT_X;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -1219,7 +902,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__LAYOUT_Y = EREGION__LAYOUT_Y;
+	int ECONTROL__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -1228,7 +911,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__OPACITY = EREGION__OPACITY;
+	int ECONTROL__OPACITY = ENODE__OPACITY;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1237,7 +920,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__STYLE = EREGION__STYLE;
+	int ECONTROL__STYLE = ENODE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -1246,7 +929,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__STYLE_CLASS = EREGION__STYLE_CLASS;
+	int ECONTROL__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1255,7 +938,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__VISIBLE = EREGION__VISIBLE;
+	int ECONTROL__VISIBLE = ENODE__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -1264,7 +947,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__DISABLE = EREGION__DISABLE;
+	int ECONTROL__DISABLE = ENODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -1273,7 +956,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__MARGIN = EREGION__MARGIN;
+	int ECONTROL__MARGIN = ENODE__MARGIN;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -1282,7 +965,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__MAX_HEIGHT = EREGION__MAX_HEIGHT;
+	int ECONTROL__MAX_HEIGHT = ENODE__MAX_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -1291,7 +974,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__MIN_HEIGHT = EREGION__MIN_HEIGHT;
+	int ECONTROL__MIN_HEIGHT = ENODE__MIN_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -1300,7 +983,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__PREF_HEIGHT = EREGION__PREF_HEIGHT;
+	int ECONTROL__PREF_HEIGHT = ENODE__PREF_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -1309,7 +992,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__MAX_WIDTH = EREGION__MAX_WIDTH;
+	int ECONTROL__MAX_WIDTH = ENODE__MAX_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -1318,7 +1001,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__MIN_WIDTH = EREGION__MIN_WIDTH;
+	int ECONTROL__MIN_WIDTH = ENODE__MIN_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1327,16 +1010,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__PREF_WIDTH = EREGION__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECONTROL__CHILDREN = EREGION__CHILDREN;
+	int ECONTROL__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -1345,7 +1019,16 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL__PADDING = EREGION__PADDING;
+	int ECONTROL__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__CHILDREN = ENODE__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EControl</em>' class.
@@ -1354,7 +1037,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL_FEATURE_COUNT = EREGION_FEATURE_COUNT + 0;
+	int ECONTROL_FEATURE_COUNT = ENODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>EControl</em>' class.
@@ -1363,7 +1046,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONTROL_OPERATION_COUNT = EREGION_OPERATION_COUNT + 0;
+	int ECONTROL_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ELabeledImpl <em>ELabeled</em>}' class.
@@ -1373,7 +1056,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabeled()
 	 * @generated
 	 */
-	int ELABELED = 11;
+	int ELABELED = 9;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1520,15 +1203,6 @@ public interface MmPackage extends EPackage {
 	int ELABELED__PREF_WIDTH = ECONTROL__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABELED__CHILDREN = ECONTROL__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1536,6 +1210,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABELED__PADDING = ECONTROL__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__CHILDREN = ECONTROL__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1572,7 +1255,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEText()
 	 * @generated
 	 */
-	int ETEXT = 12;
+	int ETEXT = 10;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1719,15 +1402,6 @@ public interface MmPackage extends EPackage {
 	int ETEXT__PREF_WIDTH = ELABELED__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETEXT__CHILDREN = ELABELED__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1735,6 +1409,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETEXT__PADDING = ELABELED__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__CHILDREN = ELABELED__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1780,7 +1463,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabel()
 	 * @generated
 	 */
-	int ELABEL = 13;
+	int ELABEL = 11;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1927,15 +1610,6 @@ public interface MmPackage extends EPackage {
 	int ELABEL__PREF_WIDTH = ELABELED__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABEL__CHILDREN = ELABELED__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1943,6 +1617,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABEL__PADDING = ELABELED__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__CHILDREN = ELABELED__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1979,7 +1662,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButtonBase()
 	 * @generated
 	 */
-	int EBUTTON_BASE = 14;
+	int EBUTTON_BASE = 12;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2126,15 +1809,6 @@ public interface MmPackage extends EPackage {
 	int EBUTTON_BASE__PREF_WIDTH = ELABELED__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON_BASE__CHILDREN = ELABELED__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2142,6 +1816,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON_BASE__PADDING = ELABELED__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__CHILDREN = ELABELED__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2178,7 +1861,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 15;
+	int EBUTTON = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2325,15 +2008,6 @@ public interface MmPackage extends EPackage {
 	int EBUTTON__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2341,6 +2015,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2377,7 +2060,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECheckBox()
 	 * @generated
 	 */
-	int ECHECK_BOX = 16;
+	int ECHECK_BOX = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2524,15 +2207,6 @@ public interface MmPackage extends EPackage {
 	int ECHECK_BOX__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHECK_BOX__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2540,6 +2214,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHECK_BOX__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2585,7 +2268,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHyperlink()
 	 * @generated
 	 */
-	int EHYPERLINK = 17;
+	int EHYPERLINK = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2732,15 +2415,6 @@ public interface MmPackage extends EPackage {
 	int EHYPERLINK__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EHYPERLINK__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2748,6 +2422,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EHYPERLINK__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2793,7 +2476,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEMenuButton()
 	 * @generated
 	 */
-	int EMENU_BUTTON = 18;
+	int EMENU_BUTTON = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2940,15 +2623,6 @@ public interface MmPackage extends EPackage {
 	int EMENU_BUTTON__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2956,6 +2630,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMENU_BUTTON__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2992,7 +2675,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitMenuButton()
 	 * @generated
 	 */
-	int ESPLIT_MENU_BUTTON = 19;
+	int ESPLIT_MENU_BUTTON = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3139,15 +2822,6 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_MENU_BUTTON__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_MENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3155,6 +2829,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_MENU_BUTTON__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -3191,7 +2874,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEToogleButton()
 	 * @generated
 	 */
-	int ETOOGLE_BUTTON = 20;
+	int ETOOGLE_BUTTON = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3338,15 +3021,6 @@ public interface MmPackage extends EPackage {
 	int ETOOGLE_BUTTON__PREF_WIDTH = EBUTTON_BASE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETOOGLE_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3354,6 +3028,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETOOGLE_BUTTON__PADDING = EBUTTON_BASE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -3399,7 +3082,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
 	 * @generated
 	 */
-	int EBASE_VIEW = 21;
+	int EBASE_VIEW = 19;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3546,15 +3229,6 @@ public interface MmPackage extends EPackage {
 	int EBASE_VIEW__PREF_WIDTH = ECONTROL__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBASE_VIEW__CHILDREN = ECONTROL__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3562,6 +3236,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBASE_VIEW__PADDING = ECONTROL__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__CHILDREN = ECONTROL__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EBase View</em>' class.
@@ -3589,7 +3272,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 22;
+	int ETABLE_VIEW = 20;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3736,15 +3419,6 @@ public interface MmPackage extends EPackage {
 	int ETABLE_VIEW__PREF_WIDTH = EBASE_VIEW__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETABLE_VIEW__CHILDREN = EBASE_VIEW__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3752,6 +3426,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETABLE_VIEW__PADDING = EBASE_VIEW__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__CHILDREN = EBASE_VIEW__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
@@ -3788,7 +3471,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 23;
+	int ETABLE_COLUMN = 21;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3861,7 +3544,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 24;
+	int ERADIO_BUTTON = 22;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4008,15 +3691,6 @@ public interface MmPackage extends EPackage {
 	int ERADIO_BUTTON__PREF_WIDTH = ETOOGLE_BUTTON__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERADIO_BUTTON__CHILDREN = ETOOGLE_BUTTON__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4024,6 +3698,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ERADIO_BUTTON__PADDING = ETOOGLE_BUTTON__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__CHILDREN = ETOOGLE_BUTTON__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -4069,7 +3752,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 25;
+	int EAXIS = 23;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4078,7 +3761,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__ON_ACTION = EREGION__ON_ACTION;
+	int EAXIS__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4087,7 +3770,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__ID = EREGION__ID;
+	int EAXIS__ID = ENODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4096,7 +3779,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__LAYOUT_X = EREGION__LAYOUT_X;
+	int EAXIS__LAYOUT_X = ENODE__LAYOUT_X;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -4105,7 +3788,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__LAYOUT_Y = EREGION__LAYOUT_Y;
+	int EAXIS__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -4114,7 +3797,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__OPACITY = EREGION__OPACITY;
+	int EAXIS__OPACITY = ENODE__OPACITY;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4123,7 +3806,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__STYLE = EREGION__STYLE;
+	int EAXIS__STYLE = ENODE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -4132,7 +3815,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__STYLE_CLASS = EREGION__STYLE_CLASS;
+	int EAXIS__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4141,7 +3824,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__VISIBLE = EREGION__VISIBLE;
+	int EAXIS__VISIBLE = ENODE__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -4150,7 +3833,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__DISABLE = EREGION__DISABLE;
+	int EAXIS__DISABLE = ENODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -4159,7 +3842,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__MARGIN = EREGION__MARGIN;
+	int EAXIS__MARGIN = ENODE__MARGIN;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4168,7 +3851,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__MAX_HEIGHT = EREGION__MAX_HEIGHT;
+	int EAXIS__MAX_HEIGHT = ENODE__MAX_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -4177,7 +3860,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__MIN_HEIGHT = EREGION__MIN_HEIGHT;
+	int EAXIS__MIN_HEIGHT = ENODE__MIN_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -4186,7 +3869,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__PREF_HEIGHT = EREGION__PREF_HEIGHT;
+	int EAXIS__PREF_HEIGHT = ENODE__PREF_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -4195,7 +3878,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__MAX_WIDTH = EREGION__MAX_WIDTH;
+	int EAXIS__MAX_WIDTH = ENODE__MAX_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -4204,7 +3887,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__MIN_WIDTH = EREGION__MIN_WIDTH;
+	int EAXIS__MIN_WIDTH = ENODE__MIN_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -4213,16 +3896,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__PREF_WIDTH = EREGION__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAXIS__CHILDREN = EREGION__CHILDREN;
+	int EAXIS__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -4231,7 +3905,16 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS__PADDING = EREGION__PADDING;
+	int EAXIS__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__CHILDREN = ENODE__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EAxis</em>' class.
@@ -4240,7 +3923,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS_FEATURE_COUNT = EREGION_FEATURE_COUNT + 0;
+	int EAXIS_FEATURE_COUNT = ENODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>EAxis</em>' class.
@@ -4249,7 +3932,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAXIS_OPERATION_COUNT = EREGION_OPERATION_COUNT + 0;
+	int EAXIS_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ECatgeoryAxisImpl <em>ECatgeory Axis</em>}' class.
@@ -4259,7 +3942,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 26;
+	int ECATGEORY_AXIS = 24;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4406,15 +4089,6 @@ public interface MmPackage extends EPackage {
 	int ECATGEORY_AXIS__PREF_WIDTH = EAXIS__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECATGEORY_AXIS__CHILDREN = EAXIS__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4422,6 +4096,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECATGEORY_AXIS__PADDING = EAXIS__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__CHILDREN = EAXIS__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>ECatgeory Axis</em>' class.
@@ -4449,7 +4132,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 27;
+	int EVALUE_AXIS = 25;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4596,15 +4279,6 @@ public interface MmPackage extends EPackage {
 	int EVALUE_AXIS__PREF_WIDTH = EAXIS__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVALUE_AXIS__CHILDREN = EAXIS__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4612,6 +4286,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVALUE_AXIS__PADDING = EAXIS__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__CHILDREN = EAXIS__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EValue Axis</em>' class.
@@ -4639,7 +4322,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 28;
+	int ECHART = 26;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4648,7 +4331,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__ON_ACTION = EREGION__ON_ACTION;
+	int ECHART__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4657,7 +4340,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__ID = EREGION__ID;
+	int ECHART__ID = ENODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -4666,7 +4349,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__LAYOUT_X = EREGION__LAYOUT_X;
+	int ECHART__LAYOUT_X = ENODE__LAYOUT_X;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -4675,7 +4358,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__LAYOUT_Y = EREGION__LAYOUT_Y;
+	int ECHART__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -4684,7 +4367,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__OPACITY = EREGION__OPACITY;
+	int ECHART__OPACITY = ENODE__OPACITY;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4693,7 +4376,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__STYLE = EREGION__STYLE;
+	int ECHART__STYLE = ENODE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -4702,7 +4385,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__STYLE_CLASS = EREGION__STYLE_CLASS;
+	int ECHART__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4711,7 +4394,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__VISIBLE = EREGION__VISIBLE;
+	int ECHART__VISIBLE = ENODE__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -4720,7 +4403,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__DISABLE = EREGION__DISABLE;
+	int ECHART__DISABLE = ENODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -4729,7 +4412,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__MARGIN = EREGION__MARGIN;
+	int ECHART__MARGIN = ENODE__MARGIN;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4738,7 +4421,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__MAX_HEIGHT = EREGION__MAX_HEIGHT;
+	int ECHART__MAX_HEIGHT = ENODE__MAX_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -4747,7 +4430,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__MIN_HEIGHT = EREGION__MIN_HEIGHT;
+	int ECHART__MIN_HEIGHT = ENODE__MIN_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -4756,7 +4439,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__PREF_HEIGHT = EREGION__PREF_HEIGHT;
+	int ECHART__PREF_HEIGHT = ENODE__PREF_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -4765,7 +4448,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__MAX_WIDTH = EREGION__MAX_WIDTH;
+	int ECHART__MAX_WIDTH = ENODE__MAX_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -4774,7 +4457,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__MIN_WIDTH = EREGION__MIN_WIDTH;
+	int ECHART__MIN_WIDTH = ENODE__MIN_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -4783,16 +4466,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__PREF_WIDTH = EREGION__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHART__CHILDREN = EREGION__CHILDREN;
+	int ECHART__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -4801,7 +4475,16 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART__PADDING = EREGION__PADDING;
+	int ECHART__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__CHILDREN = ENODE__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EChart</em>' class.
@@ -4810,7 +4493,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART_FEATURE_COUNT = EREGION_FEATURE_COUNT + 0;
+	int ECHART_FEATURE_COUNT = ENODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>EChart</em>' class.
@@ -4819,7 +4502,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART_OPERATION_COUNT = EREGION_OPERATION_COUNT + 0;
+	int ECHART_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EPieChartImpl <em>EPie Chart</em>}' class.
@@ -4829,7 +4512,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 29;
+	int EPIE_CHART = 27;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4976,15 +4659,6 @@ public interface MmPackage extends EPackage {
 	int EPIE_CHART__PREF_WIDTH = ECHART__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPIE_CHART__CHILDREN = ECHART__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4992,6 +4666,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPIE_CHART__PADDING = ECHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EPie Chart</em>' class.
@@ -5019,7 +4702,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 30;
+	int EXY_CHART = 28;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5166,15 +4849,6 @@ public interface MmPackage extends EPackage {
 	int EXY_CHART__PREF_WIDTH = ECHART__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXY_CHART__CHILDREN = ECHART__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5182,6 +4856,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXY_CHART__PADDING = ECHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>EXY Chart</em>' class.
@@ -5209,7 +4892,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 31;
+	int EPANE = 29;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5218,7 +4901,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__ON_ACTION = EREGION__ON_ACTION;
+	int EPANE__ON_ACTION = ENODE__ON_ACTION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5227,7 +4910,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__ID = EREGION__ID;
+	int EPANE__ID = ENODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -5236,7 +4919,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__LAYOUT_X = EREGION__LAYOUT_X;
+	int EPANE__LAYOUT_X = ENODE__LAYOUT_X;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -5245,7 +4928,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__LAYOUT_Y = EREGION__LAYOUT_Y;
+	int EPANE__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -5254,7 +4937,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__OPACITY = EREGION__OPACITY;
+	int EPANE__OPACITY = ENODE__OPACITY;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5263,7 +4946,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__STYLE = EREGION__STYLE;
+	int EPANE__STYLE = ENODE__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -5272,7 +4955,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__STYLE_CLASS = EREGION__STYLE_CLASS;
+	int EPANE__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5281,7 +4964,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__VISIBLE = EREGION__VISIBLE;
+	int EPANE__VISIBLE = ENODE__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -5290,7 +4973,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__DISABLE = EREGION__DISABLE;
+	int EPANE__DISABLE = ENODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -5299,7 +4982,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__MARGIN = EREGION__MARGIN;
+	int EPANE__MARGIN = ENODE__MARGIN;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5308,7 +4991,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__MAX_HEIGHT = EREGION__MAX_HEIGHT;
+	int EPANE__MAX_HEIGHT = ENODE__MAX_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -5317,7 +5000,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__MIN_HEIGHT = EREGION__MIN_HEIGHT;
+	int EPANE__MIN_HEIGHT = ENODE__MIN_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -5326,7 +5009,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__PREF_HEIGHT = EREGION__PREF_HEIGHT;
+	int EPANE__PREF_HEIGHT = ENODE__PREF_HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -5335,7 +5018,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__MAX_WIDTH = EREGION__MAX_WIDTH;
+	int EPANE__MAX_WIDTH = ENODE__MAX_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -5344,7 +5027,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__MIN_WIDTH = EREGION__MIN_WIDTH;
+	int EPANE__MIN_WIDTH = ENODE__MIN_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -5353,16 +5036,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__PREF_WIDTH = EREGION__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPANE__CHILDREN = EREGION__CHILDREN;
+	int EPANE__PREF_WIDTH = ENODE__PREF_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -5371,7 +5045,16 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__PADDING = EREGION__PADDING;
+	int EPANE__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__CHILDREN = ENODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -5380,7 +5063,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE__POS = EREGION_FEATURE_COUNT + 0;
+	int EPANE__POS = ENODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>EPane</em>' class.
@@ -5389,7 +5072,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE_FEATURE_COUNT = EREGION_FEATURE_COUNT + 1;
+	int EPANE_FEATURE_COUNT = ENODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>EPane</em>' class.
@@ -5398,7 +5081,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPANE_OPERATION_COUNT = EREGION_OPERATION_COUNT + 0;
+	int EPANE_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EStackPaneImpl <em>EStack Pane</em>}' class.
@@ -5408,7 +5091,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 32;
+	int ESTACK_PANE = 30;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5555,15 +5238,6 @@ public interface MmPackage extends EPackage {
 	int ESTACK_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTACK_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5571,6 +5245,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESTACK_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -5607,7 +5290,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 33;
+	int EDIALOG_PANE = 31;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5754,15 +5437,6 @@ public interface MmPackage extends EPackage {
 	int EDIALOG_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIALOG_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5770,6 +5444,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIALOG_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -5842,7 +5525,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 34;
+	int EGRID_PANE = 32;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5989,15 +5672,6 @@ public interface MmPackage extends EPackage {
 	int EGRID_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGRID_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6005,6 +5679,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGRID_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6041,7 +5724,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 35;
+	int EH_BOX = 33;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6188,15 +5871,6 @@ public interface MmPackage extends EPackage {
 	int EH_BOX__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EH_BOX__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6204,6 +5878,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EH_BOX__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6249,7 +5932,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 36;
+	int EV_BOX = 34;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6396,15 +6079,6 @@ public interface MmPackage extends EPackage {
 	int EV_BOX__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EV_BOX__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6412,6 +6086,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EV_BOX__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6457,7 +6140,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 37;
+	int EFLOW_PANE = 35;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6604,15 +6287,6 @@ public interface MmPackage extends EPackage {
 	int EFLOW_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFLOW_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6620,6 +6294,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EFLOW_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6656,7 +6339,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 38;
+	int ETILE_PANE = 36;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6803,15 +6486,6 @@ public interface MmPackage extends EPackage {
 	int ETILE_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETILE_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6819,6 +6493,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETILE_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6855,7 +6538,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 39;
+	int EANCHOR_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7002,15 +6685,6 @@ public interface MmPackage extends EPackage {
 	int EANCHOR_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EANCHOR_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7018,6 +6692,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EANCHOR_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -7054,7 +6737,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 40;
+	int EBORDER_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7201,15 +6884,6 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBORDER_PANE__CHILDREN = EPANE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7217,6 +6891,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBORDER_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -7298,7 +6981,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 41;
+	int EPOS = 39;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -7582,46 +7265,26 @@ public interface MmPackage extends EPackage {
 	EAttribute getENode_PrefWidth();
 
 	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.EParent <em>EParent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EParent</em>'.
-	 * @see de.dc.javafx.mm.EParent
-	 * @generated
-	 */
-	EClass getEParent();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.EParent#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see de.dc.javafx.mm.EParent#getChildren()
-	 * @see #getEParent()
-	 * @generated
-	 */
-	EReference getEParent_Children();
-
-	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.ERegion <em>ERegion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ERegion</em>'.
-	 * @see de.dc.javafx.mm.ERegion
-	 * @generated
-	 */
-	EClass getERegion();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ERegion#getPadding <em>Padding</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Padding</em>'.
-	 * @see de.dc.javafx.mm.ERegion#getPadding()
-	 * @see #getERegion()
+	 * @see de.dc.javafx.mm.ENode#getPadding()
+	 * @see #getENode()
 	 * @generated
 	 */
-	EReference getERegion_Padding();
+	EReference getENode_Padding();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.ENode#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see de.dc.javafx.mm.ENode#getChildren()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EReference getENode_Children();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EInsets <em>EInsets</em>}'.
@@ -8514,14 +8177,12 @@ public interface MmPackage extends EPackage {
 		EAttribute ENODE__PREF_WIDTH = eINSTANCE.getENode_PrefWidth();
 
 		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EParentImpl <em>EParent</em>}' class.
+		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.EParentImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEParent()
 		 * @generated
 		 */
-		EClass EPARENT = eINSTANCE.getEParent();
+		EReference ENODE__PADDING = eINSTANCE.getENode_Padding();
 
 		/**
 		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
@@ -8529,25 +8190,7 @@ public interface MmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EPARENT__CHILDREN = eINSTANCE.getEParent_Children();
-
-		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ERegionImpl <em>ERegion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.ERegionImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERegion()
-		 * @generated
-		 */
-		EClass EREGION = eINSTANCE.getERegion();
-
-		/**
-		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EREGION__PADDING = eINSTANCE.getERegion_Padding();
+		EReference ENODE__CHILDREN = eINSTANCE.getENode_Children();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EInsetsImpl <em>EInsets</em>}' class.

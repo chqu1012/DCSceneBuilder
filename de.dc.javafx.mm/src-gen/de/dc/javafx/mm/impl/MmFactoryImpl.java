@@ -66,8 +66,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createStyleable();
 		case MmPackage.SKINNABLE:
 			return createSkinnable();
-		case MmPackage.EREGION:
-			return createERegion();
 		case MmPackage.EINSETS:
 			return createEInsets();
 		case MmPackage.EGROUP:
@@ -201,17 +199,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public Skinnable createSkinnable() {
 		SkinnableImpl skinnable = new SkinnableImpl();
 		return skinnable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ERegion createERegion() {
-		ERegionImpl eRegion = new ERegionImpl();
-		return eRegion;
 	}
 
 	/**

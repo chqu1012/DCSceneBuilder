@@ -309,6 +309,8 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MmPackage.Literals.ENODE__MARGIN);
+			childrenFeatures.add(MmPackage.Literals.ENODE__PADDING);
+			childrenFeatures.add(MmPackage.Literals.ENODE__CHILDREN);
 		}
 		return childrenFeatures;
 	}
@@ -379,6 +381,8 @@ public class ENodeItemProvider extends StyleableItemProvider {
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case MmPackage.ENODE__MARGIN:
+		case MmPackage.ENODE__PADDING:
+		case MmPackage.ENODE__CHILDREN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -398,6 +402,108 @@ public class ENodeItemProvider extends StyleableItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__MARGIN, MmFactory.eINSTANCE.createEInsets()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__PADDING, MmFactory.eINSTANCE.createEInsets()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEGroup()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEText()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createELabel()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEButton()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createECheckBox()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEHyperlink()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEMenuButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createESplitMenuButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEToogleButton()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createERadioButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createECatgeoryAxis()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEValueAxis()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEPieChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEXYChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEStackPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEDialogPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEGridPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEHBox()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEVBox()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEFlowPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createETilePane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEAnchorPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEBorderPane()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == MmPackage.Literals.ENODE__MARGIN
+				|| childFeature == MmPackage.Literals.ENODE__PADDING;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

@@ -4,11 +4,11 @@
 package de.dc.javafx.mm.lang.formatting2
 
 import com.google.inject.Inject
-import de.dc.javafx.mm.ERegion
+import de.dc.javafx.mm.ENode
 import de.dc.javafx.mm.EmfModel
-import de.dc.javafx.mm.lang.services.MmDslGrammarAccess
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
+import de.dc.javafx.mm.lang.services.MmDslGrammarAccess
 
 class MmDslFormatter extends AbstractFormatter2 {
 	
@@ -19,7 +19,7 @@ class MmDslFormatter extends AbstractFormatter2 {
 		emfModel.root.format
 	}
 
-	def dispatch void format(ERegion eRegion, extension IFormattableDocument document) {
+	def dispatch void format(ENode eRegion, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
 		eRegion.margin.format
 		for (eNode : eRegion.children) {

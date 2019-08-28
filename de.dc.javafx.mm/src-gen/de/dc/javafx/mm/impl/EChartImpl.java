@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class EChartImpl extends ERegionImpl implements EChart {
+public abstract class EChartImpl extends ENodeImpl implements EChart {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

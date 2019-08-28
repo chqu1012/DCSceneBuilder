@@ -25,10 +25,8 @@ import de.dc.javafx.mm.ELabeled;
 import de.dc.javafx.mm.EMenuButton;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EPane;
-import de.dc.javafx.mm.EParent;
 import de.dc.javafx.mm.EPieChart;
 import de.dc.javafx.mm.ERadioButton;
-import de.dc.javafx.mm.ERegion;
 import de.dc.javafx.mm.ESplitMenuButton;
 import de.dc.javafx.mm.EStackPane;
 import de.dc.javafx.mm.ETableColumn;
@@ -98,20 +96,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass eParentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass eRegionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -690,8 +674,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getEParent() {
-		return eParentEClass;
+	public EReference getENode_Padding() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -700,28 +684,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEParent_Children() {
-		return (EReference) eParentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getERegion() {
-		return eRegionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getERegion_Padding() {
-		return (EReference) eRegionEClass.getEStructuralFeatures().get(0);
+	public EReference getENode_Children() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -1404,12 +1368,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eNodeEClass, ENODE__MAX_WIDTH);
 		createEAttribute(eNodeEClass, ENODE__MIN_WIDTH);
 		createEAttribute(eNodeEClass, ENODE__PREF_WIDTH);
-
-		eParentEClass = createEClass(EPARENT);
-		createEReference(eParentEClass, EPARENT__CHILDREN);
-
-		eRegionEClass = createEClass(EREGION);
-		createEReference(eRegionEClass, EREGION__PADDING);
+		createEReference(eNodeEClass, ENODE__PADDING);
+		createEReference(eNodeEClass, ENODE__CHILDREN);
 
 		eInsetsEClass = createEClass(EINSETS);
 		createEAttribute(eInsetsEClass, EINSETS__TOP);
@@ -1545,11 +1505,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eNodeEClass.getESuperTypes().add(this.getStyleable());
 		eNodeEClass.getESuperTypes().add(this.getSkinnable());
 		eNodeEClass.getESuperTypes().add(this.getEEvents());
-		eParentEClass.getESuperTypes().add(this.getENode());
-		eRegionEClass.getESuperTypes().add(this.getEParent());
 		eGroupEClass.getESuperTypes().add(this.getENode());
 		eWebViewEClass.getESuperTypes().add(this.getENode());
-		eControlEClass.getESuperTypes().add(this.getERegion());
+		eControlEClass.getESuperTypes().add(this.getENode());
 		eLabeledEClass.getESuperTypes().add(this.getEControl());
 		eTextEClass.getESuperTypes().add(this.getELabeled());
 		eLabelEClass.getESuperTypes().add(this.getELabeled());
@@ -1563,13 +1521,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eBaseViewEClass.getESuperTypes().add(this.getEControl());
 		eTableViewEClass.getESuperTypes().add(this.getEBaseView());
 		eRadioButtonEClass.getESuperTypes().add(this.getEToogleButton());
-		eAxisEClass.getESuperTypes().add(this.getERegion());
+		eAxisEClass.getESuperTypes().add(this.getENode());
 		eCatgeoryAxisEClass.getESuperTypes().add(this.getEAxis());
 		eValueAxisEClass.getESuperTypes().add(this.getEAxis());
-		eChartEClass.getESuperTypes().add(this.getERegion());
+		eChartEClass.getESuperTypes().add(this.getENode());
 		ePieChartEClass.getESuperTypes().add(this.getEChart());
 		exyChartEClass.getESuperTypes().add(this.getEChart());
-		ePaneEClass.getESuperTypes().add(this.getERegion());
+		ePaneEClass.getESuperTypes().add(this.getENode());
 		eStackPaneEClass.getESuperTypes().add(this.getEPane());
 		eDialogPaneEClass.getESuperTypes().add(this.getEPane());
 		eGridPaneEClass.getESuperTypes().add(this.getEPane());
@@ -1654,16 +1612,12 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getENode_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, ENode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
-		initEClass(eParentEClass, EParent.class, "EParent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEParent_Children(), this.getENode(), null, "children", null, 0, -1, EParent.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(eRegionEClass, ERegion.class, "ERegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getERegion_Padding(), this.getEInsets(), null, "padding", null, 0, 1, ERegion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getENode_Padding(), this.getEInsets(), null, "padding", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getENode_Children(), this.getENode(), null, "children", null, 0, -1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(eInsetsEClass, EInsets.class, "EInsets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEInsets_Top(), theEcorePackage.getEDouble(), "top", "0.0", 0, 1, EInsets.class, !IS_TRANSIENT,

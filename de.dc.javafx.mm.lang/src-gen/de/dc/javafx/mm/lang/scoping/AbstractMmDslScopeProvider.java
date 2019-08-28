@@ -3,7 +3,7 @@
  */
 package de.dc.javafx.mm.lang.scoping;
 
-import org.eclipse.xtext.scoping.impl.DelegatingScopeProvider;
+import org.eclipse.xtext.xbase.scoping.batch.XbaseBatchScopeProvider;
 
-public abstract class AbstractMmDslScopeProvider extends DelegatingScopeProvider {
+public abstract class AbstractMmDslScopeProvider extends XbaseBatchScopeProvider {
 }

@@ -20,7 +20,7 @@ import javafx.geometry.Pos;
  * @model
  * @generated
  */
-public interface EPane extends ERegion {
+public interface EPane extends ENode {
 	/**
 	 * Returns the value of the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->

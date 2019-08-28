@@ -12,5 +12,5 @@ package de.dc.javafx.mm;
  * @model abstract="true"
  * @generated
  */
-public interface EControl extends ERegion {
+public interface EControl extends ENode {
 } // EControl

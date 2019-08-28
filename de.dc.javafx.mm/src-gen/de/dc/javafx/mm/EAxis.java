@@ -12,5 +12,5 @@ package de.dc.javafx.mm;
  * @model abstract="true"
  * @generated
  */
-public interface EAxis extends ERegion {
+public interface EAxis extends ENode {
 } // EAxis

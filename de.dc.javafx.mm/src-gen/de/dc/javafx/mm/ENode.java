@@ -28,6 +28,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.dc.javafx.mm.ENode#getMaxWidth <em>Max Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getMinWidth <em>Min Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getPrefWidth <em>Pref Width</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ENode#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getENode()
@@ -354,5 +356,39 @@ public interface ENode extends Styleable, Skinnable, EEvents {
 	 * @generated
 	 */
 	void setPrefWidth(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Padding</em>' containment reference.
+	 * @see #setPadding(EInsets)
+	 * @see de.dc.javafx.mm.MmPackage#getENode_Padding()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EInsets getPadding();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Padding</em>' containment reference.
+	 * @see #getPadding()
+	 * @generated
+	 */
+	void setPadding(EInsets value);
+
+	/**
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
+	 * The list contents are of type {@link de.dc.javafx.mm.ENode}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Children</em>' containment reference list.
+	 * @see de.dc.javafx.mm.MmPackage#getENode_Children()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ENode> getChildren();
 
 } // ENode

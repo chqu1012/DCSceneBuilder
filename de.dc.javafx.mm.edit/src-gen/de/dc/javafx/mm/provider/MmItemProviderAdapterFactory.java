@@ -167,29 +167,6 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ERegion} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ERegionItemProvider eRegionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.dc.javafx.mm.ERegion}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createERegionAdapter() {
-		if (eRegionItemProvider == null) {
-			eRegionItemProvider = new ERegionItemProvider(this);
-		}
-
-		return eRegionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EInsets} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -946,8 +923,6 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			styleableItemProvider.dispose();
 		if (skinnableItemProvider != null)
 			skinnableItemProvider.dispose();
-		if (eRegionItemProvider != null)
-			eRegionItemProvider.dispose();
 		if (eInsetsItemProvider != null)
 			eInsetsItemProvider.dispose();
 		if (eGroupItemProvider != null)

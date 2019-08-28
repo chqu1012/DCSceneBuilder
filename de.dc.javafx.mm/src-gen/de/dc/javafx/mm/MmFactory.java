@@ -60,15 +60,6 @@ public interface MmFactory extends EFactory {
 	Skinnable createSkinnable();
 
 	/**
-	 * Returns a new object of class '<em>ERegion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ERegion</em>'.
-	 * @generated
-	 */
-	ERegion createERegion();
-
-	/**
 	 * Returns a new object of class '<em>EInsets</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -16,7 +16,7 @@ EmfModel returns EmfModel:
 	'}';
 
 ENode returns ENode:
-	ERegion_Impl | EGroup | EWebView | EText | ELabel | EButton | ECheckBox | EHyperlink | EMenuButton | ESplitMenuButton | EToogleButton_Impl | ETableView | ERadioButton | ECatgeoryAxis | EValueAxis | EPieChart | EXYChart | EPane_Impl | EStackPane | EDialogPane | EGridPane | EHBox | EVBox | EFlowPane | ETilePane | EAnchorPane | EBorderPane;
+	EGroup | EWebView | EText | ELabel | EButton | ECheckBox | EHyperlink | EMenuButton | ESplitMenuButton | EToogleButton_Impl | ETableView | ERadioButton | ECatgeoryAxis | EValueAxis | EPieChart | EXYChart | EPane_Impl | EStackPane | EDialogPane | EGridPane | EHBox | EVBox | EFlowPane | ETilePane | EAnchorPane | EBorderPane;
 
 
 
@@ -37,30 +37,6 @@ EInsets returns EInsets:
 		('bottom' bottom=EDouble)?
 		('right' right=EDouble)?
 		('left' left=EDouble)?
-	'}';
-
-ERegion_Impl returns ERegion:
-	{ERegion}
-	(visible?='visible')?
-	(disable?='disable')?
-	'ERegion'
-	'{'
-		('onAction' onAction=EString)?
-		('id' id=EString)?
-		('layoutX' layoutX=EDouble)?
-		('layoutY' layoutY=EDouble)?
-		('opacity' opacity=EDouble)?
-		('style' style=EString)?
-		('styleClass' '{' styleClass+=EString ( "," styleClass+=EString)* '}' )?
-		('maxHeight' maxHeight=EDouble)?
-		('minHeight' minHeight=EDouble)?
-		('prefHeight' prefHeight=EDouble)?
-		('maxWidth' maxWidth=EDouble)?
-		('minWidth' minWidth=EDouble)?
-		('prefWidth' prefWidth=EDouble)?
-		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
-		('padding' padding=EInsets)?
 	'}';
 
 EGroup returns EGroup:

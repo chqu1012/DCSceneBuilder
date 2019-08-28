@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,6 +48,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMaxWidth <em>Max Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMinWidth <em>Min Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPrefWidth <em>Pref Width</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPadding <em>Padding</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @generated
@@ -350,6 +354,26 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @ordered
 	 */
 	protected double prefWidth = PREF_WIDTH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPadding() <em>Padding</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPadding()
+	 * @generated
+	 * @ordered
+	 */
+	protected EInsets padding;
+
+	/**
+	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChildren()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ENode> children;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -766,10 +790,78 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
+	public EInsets getPadding() {
+		return padding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPadding(EInsets newPadding, NotificationChain msgs) {
+		EInsets oldPadding = padding;
+		padding = newPadding;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__PADDING,
+					oldPadding, newPadding);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPadding(EInsets newPadding) {
+		if (newPadding != padding) {
+			NotificationChain msgs = null;
+			if (padding != null)
+				msgs = ((InternalEObject) padding).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__PADDING, null, msgs);
+			if (newPadding != null)
+				msgs = ((InternalEObject) newPadding).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__PADDING, null, msgs);
+			msgs = basicSetPadding(newPadding, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__PADDING, newPadding, newPadding));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ENode> getChildren() {
+		if (children == null) {
+			children = new EObjectContainmentEList<ENode>(ENode.class, this, MmPackage.ENODE__CHILDREN);
+		}
+		return children;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case MmPackage.ENODE__MARGIN:
 			return basicSetMargin(null, msgs);
+		case MmPackage.ENODE__PADDING:
+			return basicSetPadding(null, msgs);
+		case MmPackage.ENODE__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -814,6 +906,10 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return getMinWidth();
 		case MmPackage.ENODE__PREF_WIDTH:
 			return getPrefWidth();
+		case MmPackage.ENODE__PADDING:
+			return getPadding();
+		case MmPackage.ENODE__CHILDREN:
+			return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -876,6 +972,13 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__PREF_WIDTH:
 			setPrefWidth((Double) newValue);
 			return;
+		case MmPackage.ENODE__PADDING:
+			setPadding((EInsets) newValue);
+			return;
+		case MmPackage.ENODE__CHILDREN:
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends ENode>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -936,6 +1039,12 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__PREF_WIDTH:
 			setPrefWidth(PREF_WIDTH_EDEFAULT);
 			return;
+		case MmPackage.ENODE__PADDING:
+			setPadding((EInsets) null);
+			return;
+		case MmPackage.ENODE__CHILDREN:
+			getChildren().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -980,6 +1089,10 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return minWidth != MIN_WIDTH_EDEFAULT;
 		case MmPackage.ENODE__PREF_WIDTH:
 			return prefWidth != PREF_WIDTH_EDEFAULT;
+		case MmPackage.ENODE__PADDING:
+			return padding != null;
+		case MmPackage.ENODE__CHILDREN:
+			return children != null && !children.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

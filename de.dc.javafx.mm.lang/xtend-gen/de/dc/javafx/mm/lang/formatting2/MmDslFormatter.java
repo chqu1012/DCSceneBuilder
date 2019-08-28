@@ -6,7 +6,6 @@ package de.dc.javafx.mm.lang.formatting2;
 import com.google.inject.Inject;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ENode;
-import de.dc.javafx.mm.ERegion;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.lang.services.MmDslGrammarAccess;
 import java.util.Arrays;
@@ -27,7 +26,7 @@ public class MmDslFormatter extends AbstractFormatter2 {
     document.<ENode>format(emfModel.getRoot());
   }
   
-  protected void _format(final ERegion eRegion, @Extension final IFormattableDocument document) {
+  protected void _format(final ENode eRegion, @Extension final IFormattableDocument document) {
     document.<EInsets>format(eRegion.getMargin());
     EList<ENode> _children = eRegion.getChildren();
     for (final ENode eNode : _children) {
@@ -37,11 +36,11 @@ public class MmDslFormatter extends AbstractFormatter2 {
   }
   
   public void format(final Object eRegion, final IFormattableDocument document) {
-    if (eRegion instanceof ERegion) {
-      _format((ERegion)eRegion, document);
-      return;
-    } else if (eRegion instanceof XtextResource) {
+    if (eRegion instanceof XtextResource) {
       _format((XtextResource)eRegion, document);
+      return;
+    } else if (eRegion instanceof ENode) {
+      _format((ENode)eRegion, document);
       return;
     } else if (eRegion instanceof EmfModel) {
       _format((EmfModel)eRegion, document);

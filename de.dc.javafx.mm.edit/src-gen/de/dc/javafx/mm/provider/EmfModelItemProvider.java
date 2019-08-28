@@ -261,9 +261,6 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createERegion()));
-
-		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors

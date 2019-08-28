@@ -92,16 +92,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEParent(EParent object) {
-			return createEParentAdapter();
-		}
-
-		@Override
-		public Adapter caseERegion(ERegion object) {
-			return createERegionAdapter();
-		}
-
-		@Override
 		public Adapter caseEInsets(EInsets object) {
 			return createEInsetsAdapter();
 		}
@@ -357,34 +347,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createENodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EParent <em>EParent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EParent
-	 * @generated
-	 */
-	public Adapter createEParentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ERegion <em>ERegion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.ERegion
-	 * @generated
-	 */
-	public Adapter createERegionAdapter() {
 		return null;
 	}
 

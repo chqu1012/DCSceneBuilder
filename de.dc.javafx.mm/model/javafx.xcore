@@ -40,15 +40,11 @@ abstract class ENode extends Styleable, Skinnable, EEvents{
 	double maxWidth
 	double minWidth
 	double prefWidth
-}
 
-abstract class EParent extends ENode{
+	contains EInsets padding
 	contains ENode[0..*] children
 }
 
-class ERegion extends EParent{
-	contains EInsets padding
-}
 
 class EInsets{
 	double top ='0.0'
@@ -61,7 +57,7 @@ class EGroup extends ENode{}
 
 class EWebView extends ENode{}
 
-abstract class EControl extends ERegion{
+abstract class EControl extends ENode{
 }
 
 abstract class ELabeled extends EControl{
@@ -111,19 +107,19 @@ class ETableColumn{
 
 class ERadioButton extends EToogleButton{}
 
-abstract class EAxis extends ERegion{}
+abstract class EAxis extends ENode{}
 
 class ECatgeoryAxis extends EAxis{}
 
 class EValueAxis extends EAxis{}
 
-abstract class EChart extends ERegion{}
+abstract class EChart extends ENode{}
 
 class EPieChart extends EChart{}
 
 class EXYChart extends EChart{}
 
-class EPane extends ERegion{
+class EPane extends ENode{
 	EPos pos
 }
 
