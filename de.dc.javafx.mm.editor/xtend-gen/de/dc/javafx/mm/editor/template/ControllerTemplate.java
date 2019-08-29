@@ -4,6 +4,7 @@ import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.template.ControllerFieldInitializer;
+import de.dc.javafx.mm.editor.template.ControllerGenType;
 import de.dc.javafx.mm.editor.template.IGenerator;
 import java.util.function.Consumer;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -11,9 +12,13 @@ import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class ControllerTemplate implements IGenerator<EmfModel> {
-  private StringBuffer sb = new StringBuffer();
+  private StringBuffer fieldBuffer = new StringBuffer();
   
-  private ControllerFieldInitializer fieldInitializer = new ControllerFieldInitializer();
+  private StringBuffer onActionBuffer = new StringBuffer();
+  
+  private ControllerFieldInitializer fieldInitializer = new ControllerFieldInitializer(ControllerGenType.FIELD);
+  
+  private ControllerFieldInitializer onActionInitializer = new ControllerFieldInitializer(ControllerGenType.ON_ACTION);
   
   @Override
   public String gen(final EmfModel t) {
@@ -23,6 +28,13 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
     _builder.append(_basePackage);
     _builder.append(".controller;");
     _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("import javafx.event.*;");
+    _builder.newLine();
+    _builder.append("import javafx.fxml.*;");
+    _builder.newLine();
+    _builder.append("import javafx.scene.control.*;");
+    _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
     String _firstUpper = StringExtensions.toFirstUpper(t.getName());
@@ -38,8 +50,14 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
     _builder.newLine();
     _builder.append("\t");
     this.getInitField(t.getRoot());
-    String _string = this.sb.toString();
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    String _string = this.fieldBuffer.toString();
     _builder.append(_string, "\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    String _string_1 = this.onActionBuffer.toString();
+    _builder.append(_string_1, "\t");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
@@ -54,7 +72,11 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
         StringConcatenation _builder = new StringConcatenation();
         String _doSwitch = this.fieldInitializer.doSwitch(node);
         _builder.append(_doSwitch);
-        this.sb.append(_builder);
+        this.fieldBuffer.append(_builder);
+        StringConcatenation _builder_1 = new StringConcatenation();
+        String _doSwitch_1 = this.onActionInitializer.doSwitch(node);
+        _builder_1.append(_doSwitch_1);
+        this.onActionBuffer.append(_builder_1);
       }
       if ((node instanceof EBorderPane)) {
         this.getInitField(((EBorderPane)node).getLeft());

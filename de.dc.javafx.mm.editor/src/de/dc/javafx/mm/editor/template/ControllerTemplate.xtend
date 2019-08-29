@@ -6,24 +6,34 @@ import de.dc.javafx.mm.EBorderPane
 
 class ControllerTemplate implements IGenerator<EmfModel> {
 
-	StringBuffer sb = new StringBuffer
-	ControllerFieldInitializer fieldInitializer = new ControllerFieldInitializer
+	StringBuffer fieldBuffer = new StringBuffer
+	StringBuffer onActionBuffer = new StringBuffer
 
+	ControllerFieldInitializer fieldInitializer = new ControllerFieldInitializer(ControllerGenType.FIELD)
+	ControllerFieldInitializer onActionInitializer = new ControllerFieldInitializer(ControllerGenType.ON_ACTION)
+	
 	override gen(EmfModel t) '''
-package «t.basePackage».controller;
-
-public class «t.name.toFirstUpper»Controller{
+	package «t.basePackage».controller;
 	
-	public void initialize(){}
+	import javafx.event.*;
+	import javafx.fxml.*;
+	import javafx.scene.control.*;
 	
-	«t.root.initField»«sb.toString»
-}
-'''
+	public class «t.name.toFirstUpper»Controller{
+		
+		public void initialize(){}
+		
+		«t.root.initField»
+		«fieldBuffer.toString»
+		«onActionBuffer.toString»
+	}
+	'''
 
 	def void getInitField(ENode node) {
 		if (node !== null) {
 			if (!node.id.isNullOrEmpty) {
-				sb.append = '''«fieldInitializer.doSwitch(node)»'''
+				fieldBuffer.append = '''«fieldInitializer.doSwitch(node)»'''
+				onActionBuffer.append = '''«onActionInitializer.doSwitch(node)»'''
 			}
 			if (node instanceof EBorderPane) {
 				node.left.initField

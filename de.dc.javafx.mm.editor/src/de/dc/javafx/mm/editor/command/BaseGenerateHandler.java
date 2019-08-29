@@ -46,6 +46,9 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 							genFolder.create(true, true, null);
 						}
 						IFile ifile = genFolder.getFile(getGeneratedFileName(emfModel));
+						if (ifile.exists()) {
+							ifile.delete(true, null);
+						}
 						ifile.create(new ByteArrayInputStream(getGeneratedContent(emfModel).getBytes()), IResource.NONE,
 								null);
 					} catch (CoreException e1) {
