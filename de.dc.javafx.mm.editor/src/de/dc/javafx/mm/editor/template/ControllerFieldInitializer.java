@@ -11,6 +11,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 
 	private static final String FIELD_INIT = "@FXML\nprotected %s %s;\n\n";
 	private static final String ON_ACTION_INIT = "@FXML\npublic abstract void %s(ActionEvent event);\n\n";
+	private static final String ON_ACTION_IMPL_INIT = "@Override\npublic void %s(ActionEvent event) {}\n\n";
 	
 	private ControllerGenType type;
 	
@@ -29,11 +30,18 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 			return initField(object);
 		case ON_ACTION:
 			return initOnAction(object);
+		case ON_ACTION_IMPL:
+			return initOnActionImpl(object);
 		default:
 			return "";
 		}
 	}
 	
+	private String initOnActionImpl(ENode node) {
+		if (node.getOnAction()==null) return "";
+		return String.format(ON_ACTION_INIT, node.getOnAction());
+	}
+
 	private String initOnAction(ENode node) {
 		return initOnAction(node, node.getOnAction());
 	}
