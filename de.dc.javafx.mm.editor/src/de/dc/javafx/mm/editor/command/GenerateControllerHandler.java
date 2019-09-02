@@ -12,7 +12,7 @@ public class GenerateControllerHandler extends BaseGenerateHandler {
 
 	@Override
 	protected String getGeneratedFileName(EmfModel model) {
-		return model.getName()+"Controller.java";
+		return "Base"+model.getName()+"Controller.java";
 	}
 
 	@Override
