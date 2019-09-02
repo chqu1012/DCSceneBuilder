@@ -184,6 +184,34 @@
             </visibleWhen>
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               label="DC JavaFX">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="fxml">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.ConvertToEmfModel"
+                  label="Convert to Emf Model"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
@@ -216,6 +244,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.ConvertToXmiHandler"
             id="de.dc.javafx.mm.editor.command.convertToXMI"
             name="Convert To XMI">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.ConvertToEmfModelHandler"
+            id="de.dc.javafx.mm.editor.command.ConvertToEmfModel"
+            name="Convert to Emf Model">
       </command>
    </extension>
 
