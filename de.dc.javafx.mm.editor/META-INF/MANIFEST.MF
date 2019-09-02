@@ -42,5 +42,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
- de.dc.scene.builder;bundle-version="1.0.0"
+ de.dc.scene.builder;bundle-version="1.0.0",
+ de.dc.javafx.mm.renderer;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
