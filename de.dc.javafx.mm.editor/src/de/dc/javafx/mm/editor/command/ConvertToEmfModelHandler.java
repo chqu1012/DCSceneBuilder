@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -58,11 +59,12 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 				try {
 					fxmlLocation = model.getLocation().toFile().toURI().toURL();
 					editorController.setFxmlTextAndLocation(fxmlText, fxmlLocation);
-					
+
 					FXOMDocument fxomDocument = editorController.getFxomDocument();
-					
+
 					browseAllControlsWithIds(fxomDocument);
-					
+					browseAllEvents(fxomDocument);
+
 					FXOMObject root = fxomDocument.getFxomRoot();
 					browseObject(root);
 				} catch (IOException e) {
@@ -73,12 +75,22 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 		return null;
 	}
 
+	private void browseAllEvents(FXOMDocument fxomDocument) {
+//		fxomDocument.getFxomRoot().collectEventHandlers().stream().map(x->x.getValue()).distinct().collect(Collectors.toList()).forEach(e->{
+//			
+//		});
+		for (FXOMPropertyT handler : fxomDocument.getFxomRoot().collectEventHandlers()) {
+			String eventTypeName = handler.getName().getName();
+			System.out.println("Handler: "+handler.getValue()+", eventType: "+eventTypeName);
+		}
+	}
+
 	private void browseAllControlsWithIds(FXOMDocument fxomDocument) {
 		Map<String, FXOMObject> fxIds = fxomDocument.collectFxIds();
 		for (Entry<String, FXOMObject> entry : fxIds.entrySet()) {
 			Object obj = entry.getValue().getSceneGraphObject();
-		    Class<?> type = obj.getClass();
-			System.out.println("Key: "+entry.getKey() +",  instance: "+type.getSimpleName());						
+			Class<?> type = obj.getClass();
+			System.out.println("Key: " + entry.getKey() + ",  instance: " + type.getSimpleName());
 		}
 	}
 
@@ -88,31 +100,31 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 			Class<?> declaredClass = instance.getDeclaredClass();
 			// PrefWidth, PrefHeight, Stylesheets
 			// Here: center and left
-			Map<PropertyName, FXOMProperty> properties = instance.getProperties();			
-			System.out.println("declaredClass: "+declaredClass);
-			System.out.println("controller: "+instance.getFxController());
-			System.out.println("constant: "+instance.getFxConstant());
-			System.out.println("value: "+instance.getFxValue());
-			System.out.println("id: "+instance.getFxId());
+			Map<PropertyName, FXOMProperty> properties = instance.getProperties();
+			System.out.println("declaredClass: " + declaredClass);
+			System.out.println("controller: " + instance.getFxController());
+			System.out.println("constant: " + instance.getFxConstant());
+			System.out.println("value: " + instance.getFxValue());
+			System.out.println("id: " + instance.getFxId());
 			for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
 				FXOMProperty property = entry.getValue();
-				String value ="";
+				String value = "";
 				if (property instanceof FXOMPropertyC) {
 					FXOMPropertyC c = (FXOMPropertyC) property;
-					value="C:"+c.getValues().toString();
-					
-				}else if (property instanceof FXOMPropertyT) {
+					value = "C:" + c.getValues().toString();
+
+				} else if (property instanceof FXOMPropertyT) {
 					FXOMPropertyT t = (FXOMPropertyT) property;
-					value="T:"+t.getValue();
-					
+					value = "T:" + t.getValue();
+
 				}
-				System.out.println("Key: "+entry.getKey().getName()+", value: "+value);			
+				System.out.println("Key: " + entry.getKey().getName() + ", value: " + value);
 			}
 			System.out.println("************************************************************");
 		}
 		o.getChildObjects().forEach(this::browseObject);
 	}
-	
+
 	public String fileToString(String path) {
 		FileInputStream fileinput = null;
 		try {
