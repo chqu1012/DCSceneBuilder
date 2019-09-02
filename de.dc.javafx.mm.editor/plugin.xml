@@ -120,6 +120,11 @@
                   style="push">
             </command>
             <command
+                  commandId="de.dc.javafx.mm.editor.command.generateControllerImplClass"
+                  label="Generate Controller Impl"
+                  style="push">
+            </command>
+            <command
                   commandId="de.dc.javafx.mm.editor.command.generateBindingClass"
                   label="Generate Binding"
                   style="push">
@@ -206,6 +211,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.ConvertToXmiHandler"
             id="de.dc.javafx.mm.editor.command.convertToXMI"
             name="Convert To XMI">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerImplHandler"
+            id="de.dc.javafx.mm.editor.command.generateControllerImplClass"
+            name="Generate Controller Impl Class">
       </command>
    </extension>
 
