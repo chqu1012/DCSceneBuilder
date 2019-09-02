@@ -10,7 +10,7 @@ import de.dc.javafx.mm.util.MmSwitch;
 public class ControllerFieldInitializer extends MmSwitch<String> {
 
 	private static final String FIELD_INIT = "@FXML\nprotected %s %s;\n\n";
-	private static final String ON_ACTION_INIT = "@FXML\nprotected void %s(ActionEvent event) {\n\n}\n\n";
+	private static final String ON_ACTION_INIT = "@FXML\npublic abstract void %s(ActionEvent event);\n\n";
 	
 	private ControllerGenType type;
 	
