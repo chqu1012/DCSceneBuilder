@@ -105,7 +105,7 @@ EText returns EText:
 		('text' text=EString)?
 		('promtText' promtText=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -130,7 +130,7 @@ ELabel returns ELabel:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -155,7 +155,7 @@ EButton returns EButton:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -181,7 +181,7 @@ ECheckBox returns ECheckBox:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -207,7 +207,7 @@ EHyperlink returns EHyperlink:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -232,7 +232,7 @@ EMenuButton returns EMenuButton:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -257,7 +257,7 @@ ESplitMenuButton returns ESplitMenuButton:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -283,7 +283,7 @@ EToogleButton_Impl returns EToogleButton:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -307,9 +307,9 @@ ETableView returns ETableView:
 		('minWidth' minWidth=EDouble)?
 		('prefWidth' prefWidth=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
-		('columns' '{' columns+=ETableColumn ( "," columns+=ETableColumn)* '}' )?
+		('columns' '{' columns+=ETableColumn (columns+=ETableColumn)* '}' )?
 	'}';
 
 ERadioButton returns ERadioButton:
@@ -334,7 +334,7 @@ ERadioButton returns ERadioButton:
 		('prefWidth' prefWidth=EDouble)?
 		('text' text=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -358,7 +358,7 @@ ECatgeoryAxis returns ECatgeoryAxis:
 		('minWidth' minWidth=EDouble)?
 		('prefWidth' prefWidth=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -382,7 +382,7 @@ EValueAxis returns EValueAxis:
 		('minWidth' minWidth=EDouble)?
 		('prefWidth' prefWidth=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -406,7 +406,7 @@ EPieChart returns EPieChart:
 		('minWidth' minWidth=EDouble)?
 		('prefWidth' prefWidth=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -430,7 +430,7 @@ EXYChart returns EXYChart:
 		('minWidth' minWidth=EDouble)?
 		('prefWidth' prefWidth=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -455,7 +455,7 @@ EPane_Impl returns EPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -480,7 +480,7 @@ EStackPane returns EStackPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -508,7 +508,7 @@ EDialogPane returns EDialogPane:
 		('headerText' headerText=EString)?
 		('contentText' contentText=EString)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 		('content' content=ENode)?
 	'}';
@@ -534,7 +534,7 @@ EGridPane returns EGridPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -560,7 +560,7 @@ EHBox returns EHBox:
 		('pos' pos=EPos)?
 		('spacing' spacing=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -586,7 +586,7 @@ EVBox returns EVBox:
 		('pos' pos=EPos)?
 		('spacing' spacing=EDouble)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -611,7 +611,7 @@ EFlowPane returns EFlowPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -636,7 +636,7 @@ ETilePane returns ETilePane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -661,7 +661,7 @@ EAnchorPane returns EAnchorPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 	'}';
 
@@ -686,7 +686,7 @@ EBorderPane returns EBorderPane:
 		('prefWidth' prefWidth=EDouble)?
 		('pos' pos=EPos)?
 		('margin' margin=EInsets)?
-		('children' '{' children+=ENode ( "," children+=ENode)* '}' )?
+		('children' '{' children+=ENode ( children+=ENode)* '}' )?
 		('padding' padding=EInsets)?
 		('left' left=ENode)?
 		('right' right=ENode)?
@@ -699,12 +699,12 @@ ETableColumn returns ETableColumn:
 	{ETableColumn}
 	'ETableColumn'
 	name=EString
-	'{'
+	'('
 		('id' id=EString)?
 		('width' width=EDouble)?
 		('cellValueFactory' cellValueFactory=EString)?
 		('cellFactory' cellFactory=EString)?
-	'}';
+	')';
 
 EPos returns EPos:
 	'EPos' /* TODO: implement this rule and an appropriate IValueConverter */;

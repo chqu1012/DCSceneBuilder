@@ -198,6 +198,11 @@
             name="Generate Controller Class">
       </command>
       <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerImplHandler"
+            id="de.dc.javafx.mm.editor.command.generateControllerImplClass"
+            name="Generate Controller Impl Class">
+      </command>
+      <command
             defaultHandler="de.dc.javafx.mm.editor.command.GenerateBindingHandler"
             id="de.dc.javafx.mm.editor.command.generateBindingClass"
             name="Generate Binding Class">
@@ -211,11 +216,6 @@
             defaultHandler="de.dc.javafx.mm.editor.command.ConvertToXmiHandler"
             id="de.dc.javafx.mm.editor.command.convertToXMI"
             name="Convert To XMI">
-      </command>
-      <command
-            defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerImplHandler"
-            id="de.dc.javafx.mm.editor.command.generateControllerImplClass"
-            name="Generate Controller Impl Class">
       </command>
    </extension>
 

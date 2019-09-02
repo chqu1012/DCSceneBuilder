@@ -2175,46 +2175,40 @@ ruleEText returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_44=','
-				{
-					newLeafNode(otherlv_44, grammarAccess.getETextAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getETextAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getETextAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_44_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getETextRule());
 						}
-						lv_children_45_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getETextRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_45_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_44_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_46='}'
+			otherlv_45='}'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getETextAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_45, grammarAccess.getETextAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_47='padding'
+			otherlv_46='padding'
 			{
-				newLeafNode(otherlv_47, grammarAccess.getETextAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_46, grammarAccess.getETextAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getETextAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_48_0=ruleEInsets
+					lv_padding_47_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getETextRule());
@@ -2222,16 +2216,16 @@ ruleEText returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_48_0,
+							lv_padding_47_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_49='}'
+		otherlv_48='}'
 		{
-			newLeafNode(otherlv_49, grammarAccess.getETextAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_48, grammarAccess.getETextAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -2732,46 +2726,40 @@ ruleELabel returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getELabelAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getELabelAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getELabelAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getELabelRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getELabelRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getELabelAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getELabelAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getELabelAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getELabelAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getELabelAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getELabelRule());
@@ -2779,16 +2767,16 @@ ruleELabel returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getELabelAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getELabelAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -3289,46 +3277,40 @@ ruleEButton returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEButtonAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEButtonAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEButtonAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEButtonRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEButtonRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEButtonAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEButtonAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEButtonAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEButtonAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEButtonAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEButtonRule());
@@ -3336,16 +3318,16 @@ ruleEButton returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEButtonAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEButtonAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -3860,46 +3842,40 @@ ruleECheckBox returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_43=','
-				{
-					newLeafNode(otherlv_43, grammarAccess.getECheckBoxAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getECheckBoxAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getECheckBoxAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_43_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getECheckBoxRule());
 						}
-						lv_children_44_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getECheckBoxRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_44_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_43_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_45='}'
+			otherlv_44='}'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getECheckBoxAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_44, grammarAccess.getECheckBoxAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_46='padding'
+			otherlv_45='padding'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getECheckBoxAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_45, grammarAccess.getECheckBoxAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getECheckBoxAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_47_0=ruleEInsets
+					lv_padding_46_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getECheckBoxRule());
@@ -3907,16 +3883,16 @@ ruleECheckBox returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_47_0,
+							lv_padding_46_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_48='}'
+		otherlv_47='}'
 		{
-			newLeafNode(otherlv_48, grammarAccess.getECheckBoxAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_47, grammarAccess.getECheckBoxAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -4431,46 +4407,40 @@ ruleEHyperlink returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_43=','
-				{
-					newLeafNode(otherlv_43, grammarAccess.getEHyperlinkAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEHyperlinkAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEHyperlinkAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_43_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEHyperlinkRule());
 						}
-						lv_children_44_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEHyperlinkRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_44_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_43_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_45='}'
+			otherlv_44='}'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEHyperlinkAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_44, grammarAccess.getEHyperlinkAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_46='padding'
+			otherlv_45='padding'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getEHyperlinkAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_45, grammarAccess.getEHyperlinkAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEHyperlinkAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_47_0=ruleEInsets
+					lv_padding_46_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEHyperlinkRule());
@@ -4478,16 +4448,16 @@ ruleEHyperlink returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_47_0,
+							lv_padding_46_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_48='}'
+		otherlv_47='}'
 		{
-			newLeafNode(otherlv_48, grammarAccess.getEHyperlinkAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_47, grammarAccess.getEHyperlinkAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -4988,46 +4958,40 @@ ruleEMenuButton returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEMenuButtonAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEMenuButtonAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEMenuButtonAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEMenuButtonRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEMenuButtonRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEMenuButtonAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEMenuButtonAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEMenuButtonAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEMenuButtonAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEMenuButtonAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEMenuButtonRule());
@@ -5035,16 +4999,16 @@ ruleEMenuButton returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEMenuButtonAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEMenuButtonAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -5545,46 +5509,40 @@ ruleESplitMenuButton returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getESplitMenuButtonAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getESplitMenuButtonAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getESplitMenuButtonAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getESplitMenuButtonRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getESplitMenuButtonRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getESplitMenuButtonAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getESplitMenuButtonAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getESplitMenuButtonAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getESplitMenuButtonAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getESplitMenuButtonAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getESplitMenuButtonRule());
@@ -5592,16 +5550,16 @@ ruleESplitMenuButton returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getESplitMenuButtonAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getESplitMenuButtonAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -6116,46 +6074,40 @@ ruleEToogleButton_Impl returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_43=','
-				{
-					newLeafNode(otherlv_43, grammarAccess.getEToogleButton_ImplAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEToogleButton_ImplAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEToogleButton_ImplAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_43_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEToogleButton_ImplRule());
 						}
-						lv_children_44_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEToogleButton_ImplRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_44_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_43_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_45='}'
+			otherlv_44='}'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEToogleButton_ImplAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_44, grammarAccess.getEToogleButton_ImplAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_46='padding'
+			otherlv_45='padding'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getEToogleButton_ImplAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_45, grammarAccess.getEToogleButton_ImplAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEToogleButton_ImplAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_47_0=ruleEInsets
+					lv_padding_46_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEToogleButton_ImplRule());
@@ -6163,16 +6115,16 @@ ruleEToogleButton_Impl returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_47_0,
+							lv_padding_46_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_48='}'
+		otherlv_47='}'
 		{
-			newLeafNode(otherlv_48, grammarAccess.getEToogleButton_ImplAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_47, grammarAccess.getEToogleButton_ImplAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -6648,46 +6600,40 @@ ruleETableView returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_40=','
-				{
-					newLeafNode(otherlv_40, grammarAccess.getETableViewAccess().getCommaKeyword_19_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getETableViewAccess().getChildrenENodeParserRuleCall_19_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getETableViewAccess().getChildrenENodeParserRuleCall_19_3_0());
+					}
+					lv_children_40_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getETableViewRule());
 						}
-						lv_children_41_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getETableViewRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_41_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_40_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_42='}'
+			otherlv_41='}'
 			{
-				newLeafNode(otherlv_42, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_19_4());
+				newLeafNode(otherlv_41, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_19_4());
 			}
 		)?
 		(
-			otherlv_43='padding'
+			otherlv_42='padding'
 			{
-				newLeafNode(otherlv_43, grammarAccess.getETableViewAccess().getPaddingKeyword_20_0());
+				newLeafNode(otherlv_42, grammarAccess.getETableViewAccess().getPaddingKeyword_20_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getETableViewAccess().getPaddingEInsetsParserRuleCall_20_1_0());
 					}
-					lv_padding_44_0=ruleEInsets
+					lv_padding_43_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getETableViewRule());
@@ -6695,7 +6641,7 @@ ruleETableView returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_44_0,
+							lv_padding_43_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
@@ -6703,18 +6649,37 @@ ruleETableView returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_45='columns'
+			otherlv_44='columns'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getETableViewAccess().getColumnsKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getETableViewAccess().getColumnsKeyword_21_0());
 			}
-			otherlv_46='{'
+			otherlv_45='{'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getETableViewAccess().getLeftCurlyBracketKeyword_21_1());
+				newLeafNode(otherlv_45, grammarAccess.getETableViewAccess().getLeftCurlyBracketKeyword_21_1());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getETableViewAccess().getColumnsETableColumnParserRuleCall_21_2_0());
+					}
+					lv_columns_46_0=ruleETableColumn
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getETableViewRule());
+						}
+						add(
+							$current,
+							"columns",
+							lv_columns_46_0,
+							"de.dc.javafx.mm.lang.MmDsl.ETableColumn");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getETableViewAccess().getColumnsETableColumnParserRuleCall_21_3_0());
 					}
 					lv_columns_47_0=ruleETableColumn
 					{
@@ -6729,40 +6694,15 @@ ruleETableView returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
-			(
-				otherlv_48=','
-				{
-					newLeafNode(otherlv_48, grammarAccess.getETableViewAccess().getCommaKeyword_21_3_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getETableViewAccess().getColumnsETableColumnParserRuleCall_21_3_1_0());
-						}
-						lv_columns_49_0=ruleETableColumn
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getETableViewRule());
-							}
-							add(
-								$current,
-								"columns",
-								lv_columns_49_0,
-								"de.dc.javafx.mm.lang.MmDsl.ETableColumn");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
 			)*
-			otherlv_50='}'
+			otherlv_48='}'
 			{
-				newLeafNode(otherlv_50, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_48, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
-		otherlv_51='}'
+		otherlv_49='}'
 		{
-			newLeafNode(otherlv_51, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_49, grammarAccess.getETableViewAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -7277,46 +7217,40 @@ ruleERadioButton returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_43=','
-				{
-					newLeafNode(otherlv_43, grammarAccess.getERadioButtonAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getERadioButtonAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getERadioButtonAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_43_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getERadioButtonRule());
 						}
-						lv_children_44_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getERadioButtonRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_44_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_43_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_45='}'
+			otherlv_44='}'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getERadioButtonAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_44, grammarAccess.getERadioButtonAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_46='padding'
+			otherlv_45='padding'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getERadioButtonAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_45, grammarAccess.getERadioButtonAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getERadioButtonAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_47_0=ruleEInsets
+					lv_padding_46_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getERadioButtonRule());
@@ -7324,16 +7258,16 @@ ruleERadioButton returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_47_0,
+							lv_padding_46_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_48='}'
+		otherlv_47='}'
 		{
-			newLeafNode(otherlv_48, grammarAccess.getERadioButtonAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_47, grammarAccess.getERadioButtonAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -7809,46 +7743,40 @@ ruleECatgeoryAxis returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_40=','
-				{
-					newLeafNode(otherlv_40, grammarAccess.getECatgeoryAxisAccess().getCommaKeyword_19_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getECatgeoryAxisAccess().getChildrenENodeParserRuleCall_19_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getECatgeoryAxisAccess().getChildrenENodeParserRuleCall_19_3_0());
+					}
+					lv_children_40_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getECatgeoryAxisRule());
 						}
-						lv_children_41_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getECatgeoryAxisRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_41_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_40_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_42='}'
+			otherlv_41='}'
 			{
-				newLeafNode(otherlv_42, grammarAccess.getECatgeoryAxisAccess().getRightCurlyBracketKeyword_19_4());
+				newLeafNode(otherlv_41, grammarAccess.getECatgeoryAxisAccess().getRightCurlyBracketKeyword_19_4());
 			}
 		)?
 		(
-			otherlv_43='padding'
+			otherlv_42='padding'
 			{
-				newLeafNode(otherlv_43, grammarAccess.getECatgeoryAxisAccess().getPaddingKeyword_20_0());
+				newLeafNode(otherlv_42, grammarAccess.getECatgeoryAxisAccess().getPaddingKeyword_20_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getECatgeoryAxisAccess().getPaddingEInsetsParserRuleCall_20_1_0());
 					}
-					lv_padding_44_0=ruleEInsets
+					lv_padding_43_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getECatgeoryAxisRule());
@@ -7856,16 +7784,16 @@ ruleECatgeoryAxis returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_44_0,
+							lv_padding_43_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_45='}'
+		otherlv_44='}'
 		{
-			newLeafNode(otherlv_45, grammarAccess.getECatgeoryAxisAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_44, grammarAccess.getECatgeoryAxisAccess().getRightCurlyBracketKeyword_21());
 		}
 	)
 ;
@@ -8341,46 +8269,40 @@ ruleEValueAxis returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_40=','
-				{
-					newLeafNode(otherlv_40, grammarAccess.getEValueAxisAccess().getCommaKeyword_19_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEValueAxisAccess().getChildrenENodeParserRuleCall_19_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEValueAxisAccess().getChildrenENodeParserRuleCall_19_3_0());
+					}
+					lv_children_40_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEValueAxisRule());
 						}
-						lv_children_41_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEValueAxisRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_41_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_40_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_42='}'
+			otherlv_41='}'
 			{
-				newLeafNode(otherlv_42, grammarAccess.getEValueAxisAccess().getRightCurlyBracketKeyword_19_4());
+				newLeafNode(otherlv_41, grammarAccess.getEValueAxisAccess().getRightCurlyBracketKeyword_19_4());
 			}
 		)?
 		(
-			otherlv_43='padding'
+			otherlv_42='padding'
 			{
-				newLeafNode(otherlv_43, grammarAccess.getEValueAxisAccess().getPaddingKeyword_20_0());
+				newLeafNode(otherlv_42, grammarAccess.getEValueAxisAccess().getPaddingKeyword_20_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEValueAxisAccess().getPaddingEInsetsParserRuleCall_20_1_0());
 					}
-					lv_padding_44_0=ruleEInsets
+					lv_padding_43_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEValueAxisRule());
@@ -8388,16 +8310,16 @@ ruleEValueAxis returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_44_0,
+							lv_padding_43_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_45='}'
+		otherlv_44='}'
 		{
-			newLeafNode(otherlv_45, grammarAccess.getEValueAxisAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_44, grammarAccess.getEValueAxisAccess().getRightCurlyBracketKeyword_21());
 		}
 	)
 ;
@@ -8873,46 +8795,40 @@ ruleEPieChart returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_40=','
-				{
-					newLeafNode(otherlv_40, grammarAccess.getEPieChartAccess().getCommaKeyword_19_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEPieChartAccess().getChildrenENodeParserRuleCall_19_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEPieChartAccess().getChildrenENodeParserRuleCall_19_3_0());
+					}
+					lv_children_40_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEPieChartRule());
 						}
-						lv_children_41_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEPieChartRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_41_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_40_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_42='}'
+			otherlv_41='}'
 			{
-				newLeafNode(otherlv_42, grammarAccess.getEPieChartAccess().getRightCurlyBracketKeyword_19_4());
+				newLeafNode(otherlv_41, grammarAccess.getEPieChartAccess().getRightCurlyBracketKeyword_19_4());
 			}
 		)?
 		(
-			otherlv_43='padding'
+			otherlv_42='padding'
 			{
-				newLeafNode(otherlv_43, grammarAccess.getEPieChartAccess().getPaddingKeyword_20_0());
+				newLeafNode(otherlv_42, grammarAccess.getEPieChartAccess().getPaddingKeyword_20_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEPieChartAccess().getPaddingEInsetsParserRuleCall_20_1_0());
 					}
-					lv_padding_44_0=ruleEInsets
+					lv_padding_43_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEPieChartRule());
@@ -8920,16 +8836,16 @@ ruleEPieChart returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_44_0,
+							lv_padding_43_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_45='}'
+		otherlv_44='}'
 		{
-			newLeafNode(otherlv_45, grammarAccess.getEPieChartAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_44, grammarAccess.getEPieChartAccess().getRightCurlyBracketKeyword_21());
 		}
 	)
 ;
@@ -9405,46 +9321,40 @@ ruleEXYChart returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_40=','
-				{
-					newLeafNode(otherlv_40, grammarAccess.getEXYChartAccess().getCommaKeyword_19_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEXYChartAccess().getChildrenENodeParserRuleCall_19_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEXYChartAccess().getChildrenENodeParserRuleCall_19_3_0());
+					}
+					lv_children_40_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEXYChartRule());
 						}
-						lv_children_41_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEXYChartRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_41_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_40_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_42='}'
+			otherlv_41='}'
 			{
-				newLeafNode(otherlv_42, grammarAccess.getEXYChartAccess().getRightCurlyBracketKeyword_19_4());
+				newLeafNode(otherlv_41, grammarAccess.getEXYChartAccess().getRightCurlyBracketKeyword_19_4());
 			}
 		)?
 		(
-			otherlv_43='padding'
+			otherlv_42='padding'
 			{
-				newLeafNode(otherlv_43, grammarAccess.getEXYChartAccess().getPaddingKeyword_20_0());
+				newLeafNode(otherlv_42, grammarAccess.getEXYChartAccess().getPaddingKeyword_20_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEXYChartAccess().getPaddingEInsetsParserRuleCall_20_1_0());
 					}
-					lv_padding_44_0=ruleEInsets
+					lv_padding_43_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEXYChartRule());
@@ -9452,16 +9362,16 @@ ruleEXYChart returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_44_0,
+							lv_padding_43_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_45='}'
+		otherlv_44='}'
 		{
-			newLeafNode(otherlv_45, grammarAccess.getEXYChartAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_44, grammarAccess.getEXYChartAccess().getRightCurlyBracketKeyword_21());
 		}
 	)
 ;
@@ -9962,46 +9872,40 @@ ruleEPane_Impl returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEPane_ImplAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEPane_ImplAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEPane_ImplAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEPane_ImplRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEPane_ImplRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEPane_ImplAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEPane_ImplAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEPane_ImplAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEPane_ImplAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEPane_ImplAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEPane_ImplRule());
@@ -10009,16 +9913,16 @@ ruleEPane_Impl returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEPane_ImplAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEPane_ImplAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -10519,46 +10423,40 @@ ruleEStackPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEStackPaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEStackPaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEStackPaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEStackPaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEStackPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEStackPaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEStackPaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEStackPaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEStackPaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEStackPaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEStackPaneRule());
@@ -10566,16 +10464,16 @@ ruleEStackPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEStackPaneAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEStackPaneAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -11151,46 +11049,40 @@ ruleEDialogPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_48=','
-				{
-					newLeafNode(otherlv_48, grammarAccess.getEDialogPaneAccess().getCommaKeyword_23_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEDialogPaneAccess().getChildrenENodeParserRuleCall_23_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEDialogPaneAccess().getChildrenENodeParserRuleCall_23_3_0());
+					}
+					lv_children_48_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEDialogPaneRule());
 						}
-						lv_children_49_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEDialogPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_49_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_48_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_50='}'
+			otherlv_49='}'
 			{
-				newLeafNode(otherlv_50, grammarAccess.getEDialogPaneAccess().getRightCurlyBracketKeyword_23_4());
+				newLeafNode(otherlv_49, grammarAccess.getEDialogPaneAccess().getRightCurlyBracketKeyword_23_4());
 			}
 		)?
 		(
-			otherlv_51='padding'
+			otherlv_50='padding'
 			{
-				newLeafNode(otherlv_51, grammarAccess.getEDialogPaneAccess().getPaddingKeyword_24_0());
+				newLeafNode(otherlv_50, grammarAccess.getEDialogPaneAccess().getPaddingKeyword_24_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEDialogPaneAccess().getPaddingEInsetsParserRuleCall_24_1_0());
 					}
-					lv_padding_52_0=ruleEInsets
+					lv_padding_51_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEDialogPaneRule());
@@ -11198,7 +11090,7 @@ ruleEDialogPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_52_0,
+							lv_padding_51_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
@@ -11206,16 +11098,16 @@ ruleEDialogPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_53='content'
+			otherlv_52='content'
 			{
-				newLeafNode(otherlv_53, grammarAccess.getEDialogPaneAccess().getContentKeyword_25_0());
+				newLeafNode(otherlv_52, grammarAccess.getEDialogPaneAccess().getContentKeyword_25_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEDialogPaneAccess().getContentENodeParserRuleCall_25_1_0());
 					}
-					lv_content_54_0=ruleENode
+					lv_content_53_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEDialogPaneRule());
@@ -11223,16 +11115,16 @@ ruleEDialogPane returns [EObject current=null]
 						set(
 							$current,
 							"content",
-							lv_content_54_0,
+							lv_content_53_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_55='}'
+		otherlv_54='}'
 		{
-			newLeafNode(otherlv_55, grammarAccess.getEDialogPaneAccess().getRightCurlyBracketKeyword_26());
+			newLeafNode(otherlv_54, grammarAccess.getEDialogPaneAccess().getRightCurlyBracketKeyword_26());
 		}
 	)
 ;
@@ -11733,46 +11625,40 @@ ruleEGridPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEGridPaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEGridPaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEGridPaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEGridPaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEGridPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEGridPaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEGridPaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEGridPaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEGridPaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEGridPaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEGridPaneRule());
@@ -11780,16 +11666,16 @@ ruleEGridPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEGridPaneAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEGridPaneAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -12315,46 +12201,40 @@ ruleEHBox returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_44=','
-				{
-					newLeafNode(otherlv_44, grammarAccess.getEHBoxAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEHBoxAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEHBoxAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_44_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEHBoxRule());
 						}
-						lv_children_45_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEHBoxRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_45_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_44_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_46='}'
+			otherlv_45='}'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getEHBoxAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_45, grammarAccess.getEHBoxAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_47='padding'
+			otherlv_46='padding'
 			{
-				newLeafNode(otherlv_47, grammarAccess.getEHBoxAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_46, grammarAccess.getEHBoxAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEHBoxAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_48_0=ruleEInsets
+					lv_padding_47_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEHBoxRule());
@@ -12362,16 +12242,16 @@ ruleEHBox returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_48_0,
+							lv_padding_47_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_49='}'
+		otherlv_48='}'
 		{
-			newLeafNode(otherlv_49, grammarAccess.getEHBoxAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_48, grammarAccess.getEHBoxAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -12897,46 +12777,40 @@ ruleEVBox returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_44=','
-				{
-					newLeafNode(otherlv_44, grammarAccess.getEVBoxAccess().getCommaKeyword_21_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEVBoxAccess().getChildrenENodeParserRuleCall_21_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEVBoxAccess().getChildrenENodeParserRuleCall_21_3_0());
+					}
+					lv_children_44_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEVBoxRule());
 						}
-						lv_children_45_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEVBoxRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_45_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_44_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_46='}'
+			otherlv_45='}'
 			{
-				newLeafNode(otherlv_46, grammarAccess.getEVBoxAccess().getRightCurlyBracketKeyword_21_4());
+				newLeafNode(otherlv_45, grammarAccess.getEVBoxAccess().getRightCurlyBracketKeyword_21_4());
 			}
 		)?
 		(
-			otherlv_47='padding'
+			otherlv_46='padding'
 			{
-				newLeafNode(otherlv_47, grammarAccess.getEVBoxAccess().getPaddingKeyword_22_0());
+				newLeafNode(otherlv_46, grammarAccess.getEVBoxAccess().getPaddingKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEVBoxAccess().getPaddingEInsetsParserRuleCall_22_1_0());
 					}
-					lv_padding_48_0=ruleEInsets
+					lv_padding_47_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEVBoxRule());
@@ -12944,16 +12818,16 @@ ruleEVBox returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_48_0,
+							lv_padding_47_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_49='}'
+		otherlv_48='}'
 		{
-			newLeafNode(otherlv_49, grammarAccess.getEVBoxAccess().getRightCurlyBracketKeyword_23());
+			newLeafNode(otherlv_48, grammarAccess.getEVBoxAccess().getRightCurlyBracketKeyword_23());
 		}
 	)
 ;
@@ -13454,46 +13328,40 @@ ruleEFlowPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEFlowPaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEFlowPaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEFlowPaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEFlowPaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEFlowPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEFlowPaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEFlowPaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEFlowPaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEFlowPaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEFlowPaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEFlowPaneRule());
@@ -13501,16 +13369,16 @@ ruleEFlowPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEFlowPaneAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEFlowPaneAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -14011,46 +13879,40 @@ ruleETilePane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getETilePaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getETilePaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getETilePaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getETilePaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getETilePaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getETilePaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getETilePaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getETilePaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getETilePaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getETilePaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getETilePaneRule());
@@ -14058,16 +13920,16 @@ ruleETilePane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getETilePaneAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getETilePaneAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -14568,46 +14430,40 @@ ruleEAnchorPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEAnchorPaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEAnchorPaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEAnchorPaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEAnchorPaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEAnchorPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEAnchorPaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEAnchorPaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEAnchorPaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEAnchorPaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEAnchorPaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEAnchorPaneRule());
@@ -14615,16 +14471,16 @@ ruleEAnchorPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_47='}'
+		otherlv_46='}'
 		{
-			newLeafNode(otherlv_47, grammarAccess.getEAnchorPaneAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_46, grammarAccess.getEAnchorPaneAccess().getRightCurlyBracketKeyword_22());
 		}
 	)
 ;
@@ -15125,46 +14981,40 @@ ruleEBorderPane returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_42=','
-				{
-					newLeafNode(otherlv_42, grammarAccess.getEBorderPaneAccess().getCommaKeyword_20_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getEBorderPaneAccess().getChildrenENodeParserRuleCall_20_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getEBorderPaneAccess().getChildrenENodeParserRuleCall_20_3_0());
+					}
+					lv_children_42_0=ruleENode
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
 						}
-						lv_children_43_0=ruleENode
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
-							}
-							add(
-								$current,
-								"children",
-								lv_children_43_0,
-								"de.dc.javafx.mm.lang.MmDsl.ENode");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"children",
+							lv_children_42_0,
+							"de.dc.javafx.mm.lang.MmDsl.ENode");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_44='}'
+			otherlv_43='}'
 			{
-				newLeafNode(otherlv_44, grammarAccess.getEBorderPaneAccess().getRightCurlyBracketKeyword_20_4());
+				newLeafNode(otherlv_43, grammarAccess.getEBorderPaneAccess().getRightCurlyBracketKeyword_20_4());
 			}
 		)?
 		(
-			otherlv_45='padding'
+			otherlv_44='padding'
 			{
-				newLeafNode(otherlv_45, grammarAccess.getEBorderPaneAccess().getPaddingKeyword_21_0());
+				newLeafNode(otherlv_44, grammarAccess.getEBorderPaneAccess().getPaddingKeyword_21_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getPaddingEInsetsParserRuleCall_21_1_0());
 					}
-					lv_padding_46_0=ruleEInsets
+					lv_padding_45_0=ruleEInsets
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15172,7 +15022,7 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"padding",
-							lv_padding_46_0,
+							lv_padding_45_0,
 							"de.dc.javafx.mm.lang.MmDsl.EInsets");
 						afterParserOrEnumRuleCall();
 					}
@@ -15180,16 +15030,16 @@ ruleEBorderPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_47='left'
+			otherlv_46='left'
 			{
-				newLeafNode(otherlv_47, grammarAccess.getEBorderPaneAccess().getLeftKeyword_22_0());
+				newLeafNode(otherlv_46, grammarAccess.getEBorderPaneAccess().getLeftKeyword_22_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getLeftENodeParserRuleCall_22_1_0());
 					}
-					lv_left_48_0=ruleENode
+					lv_left_47_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15197,7 +15047,7 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"left",
-							lv_left_48_0,
+							lv_left_47_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
@@ -15205,16 +15055,16 @@ ruleEBorderPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_49='right'
+			otherlv_48='right'
 			{
-				newLeafNode(otherlv_49, grammarAccess.getEBorderPaneAccess().getRightKeyword_23_0());
+				newLeafNode(otherlv_48, grammarAccess.getEBorderPaneAccess().getRightKeyword_23_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getRightENodeParserRuleCall_23_1_0());
 					}
-					lv_right_50_0=ruleENode
+					lv_right_49_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15222,7 +15072,7 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"right",
-							lv_right_50_0,
+							lv_right_49_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
@@ -15230,16 +15080,16 @@ ruleEBorderPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_51='top'
+			otherlv_50='top'
 			{
-				newLeafNode(otherlv_51, grammarAccess.getEBorderPaneAccess().getTopKeyword_24_0());
+				newLeafNode(otherlv_50, grammarAccess.getEBorderPaneAccess().getTopKeyword_24_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getTopENodeParserRuleCall_24_1_0());
 					}
-					lv_top_52_0=ruleENode
+					lv_top_51_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15247,7 +15097,7 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"top",
-							lv_top_52_0,
+							lv_top_51_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
@@ -15255,16 +15105,16 @@ ruleEBorderPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_53='bottom'
+			otherlv_52='bottom'
 			{
-				newLeafNode(otherlv_53, grammarAccess.getEBorderPaneAccess().getBottomKeyword_25_0());
+				newLeafNode(otherlv_52, grammarAccess.getEBorderPaneAccess().getBottomKeyword_25_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getBottomENodeParserRuleCall_25_1_0());
 					}
-					lv_bottom_54_0=ruleENode
+					lv_bottom_53_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15272,7 +15122,7 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"bottom",
-							lv_bottom_54_0,
+							lv_bottom_53_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
@@ -15280,16 +15130,16 @@ ruleEBorderPane returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_55='center'
+			otherlv_54='center'
 			{
-				newLeafNode(otherlv_55, grammarAccess.getEBorderPaneAccess().getCenterKeyword_26_0());
+				newLeafNode(otherlv_54, grammarAccess.getEBorderPaneAccess().getCenterKeyword_26_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getEBorderPaneAccess().getCenterENodeParserRuleCall_26_1_0());
 					}
-					lv_center_56_0=ruleENode
+					lv_center_55_0=ruleENode
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEBorderPaneRule());
@@ -15297,16 +15147,16 @@ ruleEBorderPane returns [EObject current=null]
 						set(
 							$current,
 							"center",
-							lv_center_56_0,
+							lv_center_55_0,
 							"de.dc.javafx.mm.lang.MmDsl.ENode");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_57='}'
+		otherlv_56='}'
 		{
-			newLeafNode(otherlv_57, grammarAccess.getEBorderPaneAccess().getRightCurlyBracketKeyword_27());
+			newLeafNode(otherlv_56, grammarAccess.getEBorderPaneAccess().getRightCurlyBracketKeyword_27());
 		}
 	)
 ;
@@ -15357,9 +15207,9 @@ ruleETableColumn returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='{'
+		otherlv_3='('
 		{
-			newLeafNode(otherlv_3, grammarAccess.getETableColumnAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getETableColumnAccess().getLeftParenthesisKeyword_3());
 		}
 		(
 			otherlv_4='id'
@@ -15461,9 +15311,9 @@ ruleETableColumn returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_12='}'
+		otherlv_12=')'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getETableColumnAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_12, grammarAccess.getETableColumnAccess().getRightParenthesisKeyword_8());
 		}
 	)
 ;

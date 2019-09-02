@@ -139,7 +139,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETextAccess().getGroup_19(), "rule__EText__Group_19__0");
 			builder.put(grammarAccess.getETextAccess().getGroup_20(), "rule__EText__Group_20__0");
 			builder.put(grammarAccess.getETextAccess().getGroup_21(), "rule__EText__Group_21__0");
-			builder.put(grammarAccess.getETextAccess().getGroup_21_3(), "rule__EText__Group_21_3__0");
 			builder.put(grammarAccess.getETextAccess().getGroup_22(), "rule__EText__Group_22__0");
 			builder.put(grammarAccess.getELabelAccess().getGroup(), "rule__ELabel__Group__0");
 			builder.put(grammarAccess.getELabelAccess().getGroup_5(), "rule__ELabel__Group_5__0");
@@ -159,7 +158,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getELabelAccess().getGroup_18(), "rule__ELabel__Group_18__0");
 			builder.put(grammarAccess.getELabelAccess().getGroup_19(), "rule__ELabel__Group_19__0");
 			builder.put(grammarAccess.getELabelAccess().getGroup_20(), "rule__ELabel__Group_20__0");
-			builder.put(grammarAccess.getELabelAccess().getGroup_20_3(), "rule__ELabel__Group_20_3__0");
 			builder.put(grammarAccess.getELabelAccess().getGroup_21(), "rule__ELabel__Group_21__0");
 			builder.put(grammarAccess.getEButtonAccess().getGroup(), "rule__EButton__Group__0");
 			builder.put(grammarAccess.getEButtonAccess().getGroup_5(), "rule__EButton__Group_5__0");
@@ -179,7 +177,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEButtonAccess().getGroup_18(), "rule__EButton__Group_18__0");
 			builder.put(grammarAccess.getEButtonAccess().getGroup_19(), "rule__EButton__Group_19__0");
 			builder.put(grammarAccess.getEButtonAccess().getGroup_20(), "rule__EButton__Group_20__0");
-			builder.put(grammarAccess.getEButtonAccess().getGroup_20_3(), "rule__EButton__Group_20_3__0");
 			builder.put(grammarAccess.getEButtonAccess().getGroup_21(), "rule__EButton__Group_21__0");
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup(), "rule__ECheckBox__Group__0");
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup_6(), "rule__ECheckBox__Group_6__0");
@@ -199,7 +196,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup_19(), "rule__ECheckBox__Group_19__0");
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup_20(), "rule__ECheckBox__Group_20__0");
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup_21(), "rule__ECheckBox__Group_21__0");
-			builder.put(grammarAccess.getECheckBoxAccess().getGroup_21_3(), "rule__ECheckBox__Group_21_3__0");
 			builder.put(grammarAccess.getECheckBoxAccess().getGroup_22(), "rule__ECheckBox__Group_22__0");
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup(), "rule__EHyperlink__Group__0");
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_6(), "rule__EHyperlink__Group_6__0");
@@ -219,7 +215,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_19(), "rule__EHyperlink__Group_19__0");
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_20(), "rule__EHyperlink__Group_20__0");
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_21(), "rule__EHyperlink__Group_21__0");
-			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_21_3(), "rule__EHyperlink__Group_21_3__0");
 			builder.put(grammarAccess.getEHyperlinkAccess().getGroup_22(), "rule__EHyperlink__Group_22__0");
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup(), "rule__EMenuButton__Group__0");
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_5(), "rule__EMenuButton__Group_5__0");
@@ -239,7 +234,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_18(), "rule__EMenuButton__Group_18__0");
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_19(), "rule__EMenuButton__Group_19__0");
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_20(), "rule__EMenuButton__Group_20__0");
-			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_20_3(), "rule__EMenuButton__Group_20_3__0");
 			builder.put(grammarAccess.getEMenuButtonAccess().getGroup_21(), "rule__EMenuButton__Group_21__0");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup(), "rule__ESplitMenuButton__Group__0");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_5(), "rule__ESplitMenuButton__Group_5__0");
@@ -259,7 +253,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_18(), "rule__ESplitMenuButton__Group_18__0");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_19(), "rule__ESplitMenuButton__Group_19__0");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_20(), "rule__ESplitMenuButton__Group_20__0");
-			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_20_3(), "rule__ESplitMenuButton__Group_20_3__0");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getGroup_21(), "rule__ESplitMenuButton__Group_21__0");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup(), "rule__EToogleButton_Impl__Group__0");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_6(), "rule__EToogleButton_Impl__Group_6__0");
@@ -279,7 +272,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_19(), "rule__EToogleButton_Impl__Group_19__0");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_20(), "rule__EToogleButton_Impl__Group_20__0");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_21(), "rule__EToogleButton_Impl__Group_21__0");
-			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_21_3(), "rule__EToogleButton_Impl__Group_21_3__0");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getGroup_22(), "rule__EToogleButton_Impl__Group_22__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup(), "rule__ETableView__Group__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup_5(), "rule__ETableView__Group_5__0");
@@ -298,10 +290,8 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETableViewAccess().getGroup_17(), "rule__ETableView__Group_17__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup_18(), "rule__ETableView__Group_18__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup_19(), "rule__ETableView__Group_19__0");
-			builder.put(grammarAccess.getETableViewAccess().getGroup_19_3(), "rule__ETableView__Group_19_3__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup_20(), "rule__ETableView__Group_20__0");
 			builder.put(grammarAccess.getETableViewAccess().getGroup_21(), "rule__ETableView__Group_21__0");
-			builder.put(grammarAccess.getETableViewAccess().getGroup_21_3(), "rule__ETableView__Group_21_3__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup(), "rule__ERadioButton__Group__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_6(), "rule__ERadioButton__Group_6__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_7(), "rule__ERadioButton__Group_7__0");
@@ -320,7 +310,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_19(), "rule__ERadioButton__Group_19__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_20(), "rule__ERadioButton__Group_20__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_21(), "rule__ERadioButton__Group_21__0");
-			builder.put(grammarAccess.getERadioButtonAccess().getGroup_21_3(), "rule__ERadioButton__Group_21_3__0");
 			builder.put(grammarAccess.getERadioButtonAccess().getGroup_22(), "rule__ERadioButton__Group_22__0");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup(), "rule__ECatgeoryAxis__Group__0");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_5(), "rule__ECatgeoryAxis__Group_5__0");
@@ -339,7 +328,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_17(), "rule__ECatgeoryAxis__Group_17__0");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_18(), "rule__ECatgeoryAxis__Group_18__0");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_19(), "rule__ECatgeoryAxis__Group_19__0");
-			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_19_3(), "rule__ECatgeoryAxis__Group_19_3__0");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getGroup_20(), "rule__ECatgeoryAxis__Group_20__0");
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup(), "rule__EValueAxis__Group__0");
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup_5(), "rule__EValueAxis__Group_5__0");
@@ -358,7 +346,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup_17(), "rule__EValueAxis__Group_17__0");
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup_18(), "rule__EValueAxis__Group_18__0");
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup_19(), "rule__EValueAxis__Group_19__0");
-			builder.put(grammarAccess.getEValueAxisAccess().getGroup_19_3(), "rule__EValueAxis__Group_19_3__0");
 			builder.put(grammarAccess.getEValueAxisAccess().getGroup_20(), "rule__EValueAxis__Group_20__0");
 			builder.put(grammarAccess.getEPieChartAccess().getGroup(), "rule__EPieChart__Group__0");
 			builder.put(grammarAccess.getEPieChartAccess().getGroup_5(), "rule__EPieChart__Group_5__0");
@@ -377,7 +364,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEPieChartAccess().getGroup_17(), "rule__EPieChart__Group_17__0");
 			builder.put(grammarAccess.getEPieChartAccess().getGroup_18(), "rule__EPieChart__Group_18__0");
 			builder.put(grammarAccess.getEPieChartAccess().getGroup_19(), "rule__EPieChart__Group_19__0");
-			builder.put(grammarAccess.getEPieChartAccess().getGroup_19_3(), "rule__EPieChart__Group_19_3__0");
 			builder.put(grammarAccess.getEPieChartAccess().getGroup_20(), "rule__EPieChart__Group_20__0");
 			builder.put(grammarAccess.getEXYChartAccess().getGroup(), "rule__EXYChart__Group__0");
 			builder.put(grammarAccess.getEXYChartAccess().getGroup_5(), "rule__EXYChart__Group_5__0");
@@ -396,7 +382,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEXYChartAccess().getGroup_17(), "rule__EXYChart__Group_17__0");
 			builder.put(grammarAccess.getEXYChartAccess().getGroup_18(), "rule__EXYChart__Group_18__0");
 			builder.put(grammarAccess.getEXYChartAccess().getGroup_19(), "rule__EXYChart__Group_19__0");
-			builder.put(grammarAccess.getEXYChartAccess().getGroup_19_3(), "rule__EXYChart__Group_19_3__0");
 			builder.put(grammarAccess.getEXYChartAccess().getGroup_20(), "rule__EXYChart__Group_20__0");
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup(), "rule__EPane_Impl__Group__0");
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_5(), "rule__EPane_Impl__Group_5__0");
@@ -416,7 +401,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_18(), "rule__EPane_Impl__Group_18__0");
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_19(), "rule__EPane_Impl__Group_19__0");
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_20(), "rule__EPane_Impl__Group_20__0");
-			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_20_3(), "rule__EPane_Impl__Group_20_3__0");
 			builder.put(grammarAccess.getEPane_ImplAccess().getGroup_21(), "rule__EPane_Impl__Group_21__0");
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup(), "rule__EStackPane__Group__0");
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup_5(), "rule__EStackPane__Group_5__0");
@@ -436,7 +420,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup_18(), "rule__EStackPane__Group_18__0");
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup_19(), "rule__EStackPane__Group_19__0");
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup_20(), "rule__EStackPane__Group_20__0");
-			builder.put(grammarAccess.getEStackPaneAccess().getGroup_20_3(), "rule__EStackPane__Group_20_3__0");
 			builder.put(grammarAccess.getEStackPaneAccess().getGroup_21(), "rule__EStackPane__Group_21__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup(), "rule__EDialogPane__Group__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_5(), "rule__EDialogPane__Group_5__0");
@@ -459,7 +442,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_21(), "rule__EDialogPane__Group_21__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_22(), "rule__EDialogPane__Group_22__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_23(), "rule__EDialogPane__Group_23__0");
-			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_23_3(), "rule__EDialogPane__Group_23_3__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_24(), "rule__EDialogPane__Group_24__0");
 			builder.put(grammarAccess.getEDialogPaneAccess().getGroup_25(), "rule__EDialogPane__Group_25__0");
 			builder.put(grammarAccess.getEGridPaneAccess().getGroup(), "rule__EGridPane__Group__0");
@@ -480,7 +462,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEGridPaneAccess().getGroup_18(), "rule__EGridPane__Group_18__0");
 			builder.put(grammarAccess.getEGridPaneAccess().getGroup_19(), "rule__EGridPane__Group_19__0");
 			builder.put(grammarAccess.getEGridPaneAccess().getGroup_20(), "rule__EGridPane__Group_20__0");
-			builder.put(grammarAccess.getEGridPaneAccess().getGroup_20_3(), "rule__EGridPane__Group_20_3__0");
 			builder.put(grammarAccess.getEGridPaneAccess().getGroup_21(), "rule__EGridPane__Group_21__0");
 			builder.put(grammarAccess.getEHBoxAccess().getGroup(), "rule__EHBox__Group__0");
 			builder.put(grammarAccess.getEHBoxAccess().getGroup_5(), "rule__EHBox__Group_5__0");
@@ -501,7 +482,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEHBoxAccess().getGroup_19(), "rule__EHBox__Group_19__0");
 			builder.put(grammarAccess.getEHBoxAccess().getGroup_20(), "rule__EHBox__Group_20__0");
 			builder.put(grammarAccess.getEHBoxAccess().getGroup_21(), "rule__EHBox__Group_21__0");
-			builder.put(grammarAccess.getEHBoxAccess().getGroup_21_3(), "rule__EHBox__Group_21_3__0");
 			builder.put(grammarAccess.getEHBoxAccess().getGroup_22(), "rule__EHBox__Group_22__0");
 			builder.put(grammarAccess.getEVBoxAccess().getGroup(), "rule__EVBox__Group__0");
 			builder.put(grammarAccess.getEVBoxAccess().getGroup_5(), "rule__EVBox__Group_5__0");
@@ -522,7 +502,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEVBoxAccess().getGroup_19(), "rule__EVBox__Group_19__0");
 			builder.put(grammarAccess.getEVBoxAccess().getGroup_20(), "rule__EVBox__Group_20__0");
 			builder.put(grammarAccess.getEVBoxAccess().getGroup_21(), "rule__EVBox__Group_21__0");
-			builder.put(grammarAccess.getEVBoxAccess().getGroup_21_3(), "rule__EVBox__Group_21_3__0");
 			builder.put(grammarAccess.getEVBoxAccess().getGroup_22(), "rule__EVBox__Group_22__0");
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup(), "rule__EFlowPane__Group__0");
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_5(), "rule__EFlowPane__Group_5__0");
@@ -542,7 +521,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_18(), "rule__EFlowPane__Group_18__0");
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_19(), "rule__EFlowPane__Group_19__0");
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_20(), "rule__EFlowPane__Group_20__0");
-			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_20_3(), "rule__EFlowPane__Group_20_3__0");
 			builder.put(grammarAccess.getEFlowPaneAccess().getGroup_21(), "rule__EFlowPane__Group_21__0");
 			builder.put(grammarAccess.getETilePaneAccess().getGroup(), "rule__ETilePane__Group__0");
 			builder.put(grammarAccess.getETilePaneAccess().getGroup_5(), "rule__ETilePane__Group_5__0");
@@ -562,7 +540,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETilePaneAccess().getGroup_18(), "rule__ETilePane__Group_18__0");
 			builder.put(grammarAccess.getETilePaneAccess().getGroup_19(), "rule__ETilePane__Group_19__0");
 			builder.put(grammarAccess.getETilePaneAccess().getGroup_20(), "rule__ETilePane__Group_20__0");
-			builder.put(grammarAccess.getETilePaneAccess().getGroup_20_3(), "rule__ETilePane__Group_20_3__0");
 			builder.put(grammarAccess.getETilePaneAccess().getGroup_21(), "rule__ETilePane__Group_21__0");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup(), "rule__EAnchorPane__Group__0");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_5(), "rule__EAnchorPane__Group_5__0");
@@ -582,7 +559,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_18(), "rule__EAnchorPane__Group_18__0");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_19(), "rule__EAnchorPane__Group_19__0");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_20(), "rule__EAnchorPane__Group_20__0");
-			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_20_3(), "rule__EAnchorPane__Group_20_3__0");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getGroup_21(), "rule__EAnchorPane__Group_21__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup(), "rule__EBorderPane__Group__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_5(), "rule__EBorderPane__Group_5__0");
@@ -602,7 +578,6 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_18(), "rule__EBorderPane__Group_18__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_19(), "rule__EBorderPane__Group_19__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_20(), "rule__EBorderPane__Group_20__0");
-			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_20_3(), "rule__EBorderPane__Group_20_3__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_21(), "rule__EBorderPane__Group_21__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_22(), "rule__EBorderPane__Group_22__0");
 			builder.put(grammarAccess.getEBorderPaneAccess().getGroup_23(), "rule__EBorderPane__Group_23__0");
@@ -857,7 +832,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETextAccess().getPromtTextAssignment_19_1(), "rule__EText__PromtTextAssignment_19_1");
 			builder.put(grammarAccess.getETextAccess().getMarginAssignment_20_1(), "rule__EText__MarginAssignment_20_1");
 			builder.put(grammarAccess.getETextAccess().getChildrenAssignment_21_2(), "rule__EText__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getETextAccess().getChildrenAssignment_21_3_1(), "rule__EText__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getETextAccess().getChildrenAssignment_21_3(), "rule__EText__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getETextAccess().getPaddingAssignment_22_1(), "rule__EText__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getELabelAccess().getVisibleAssignment_1(), "rule__ELabel__VisibleAssignment_1");
 			builder.put(grammarAccess.getELabelAccess().getDisableAssignment_2(), "rule__ELabel__DisableAssignment_2");
@@ -878,7 +853,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getELabelAccess().getTextAssignment_18_1(), "rule__ELabel__TextAssignment_18_1");
 			builder.put(grammarAccess.getELabelAccess().getMarginAssignment_19_1(), "rule__ELabel__MarginAssignment_19_1");
 			builder.put(grammarAccess.getELabelAccess().getChildrenAssignment_20_2(), "rule__ELabel__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getELabelAccess().getChildrenAssignment_20_3_1(), "rule__ELabel__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getELabelAccess().getChildrenAssignment_20_3(), "rule__ELabel__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getELabelAccess().getPaddingAssignment_21_1(), "rule__ELabel__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEButtonAccess().getVisibleAssignment_1(), "rule__EButton__VisibleAssignment_1");
 			builder.put(grammarAccess.getEButtonAccess().getDisableAssignment_2(), "rule__EButton__DisableAssignment_2");
@@ -899,7 +874,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEButtonAccess().getTextAssignment_18_1(), "rule__EButton__TextAssignment_18_1");
 			builder.put(grammarAccess.getEButtonAccess().getMarginAssignment_19_1(), "rule__EButton__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEButtonAccess().getChildrenAssignment_20_2(), "rule__EButton__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEButtonAccess().getChildrenAssignment_20_3_1(), "rule__EButton__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEButtonAccess().getChildrenAssignment_20_3(), "rule__EButton__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEButtonAccess().getPaddingAssignment_21_1(), "rule__EButton__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getECheckBoxAccess().getVisibleAssignment_1(), "rule__ECheckBox__VisibleAssignment_1");
 			builder.put(grammarAccess.getECheckBoxAccess().getDisableAssignment_2(), "rule__ECheckBox__DisableAssignment_2");
@@ -921,7 +896,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getECheckBoxAccess().getTextAssignment_19_1(), "rule__ECheckBox__TextAssignment_19_1");
 			builder.put(grammarAccess.getECheckBoxAccess().getMarginAssignment_20_1(), "rule__ECheckBox__MarginAssignment_20_1");
 			builder.put(grammarAccess.getECheckBoxAccess().getChildrenAssignment_21_2(), "rule__ECheckBox__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getECheckBoxAccess().getChildrenAssignment_21_3_1(), "rule__ECheckBox__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getECheckBoxAccess().getChildrenAssignment_21_3(), "rule__ECheckBox__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getECheckBoxAccess().getPaddingAssignment_22_1(), "rule__ECheckBox__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getEHyperlinkAccess().getVisibleAssignment_1(), "rule__EHyperlink__VisibleAssignment_1");
 			builder.put(grammarAccess.getEHyperlinkAccess().getDisableAssignment_2(), "rule__EHyperlink__DisableAssignment_2");
@@ -943,7 +918,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEHyperlinkAccess().getTextAssignment_19_1(), "rule__EHyperlink__TextAssignment_19_1");
 			builder.put(grammarAccess.getEHyperlinkAccess().getMarginAssignment_20_1(), "rule__EHyperlink__MarginAssignment_20_1");
 			builder.put(grammarAccess.getEHyperlinkAccess().getChildrenAssignment_21_2(), "rule__EHyperlink__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getEHyperlinkAccess().getChildrenAssignment_21_3_1(), "rule__EHyperlink__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getEHyperlinkAccess().getChildrenAssignment_21_3(), "rule__EHyperlink__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getEHyperlinkAccess().getPaddingAssignment_22_1(), "rule__EHyperlink__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getEMenuButtonAccess().getVisibleAssignment_1(), "rule__EMenuButton__VisibleAssignment_1");
 			builder.put(grammarAccess.getEMenuButtonAccess().getDisableAssignment_2(), "rule__EMenuButton__DisableAssignment_2");
@@ -964,7 +939,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEMenuButtonAccess().getTextAssignment_18_1(), "rule__EMenuButton__TextAssignment_18_1");
 			builder.put(grammarAccess.getEMenuButtonAccess().getMarginAssignment_19_1(), "rule__EMenuButton__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEMenuButtonAccess().getChildrenAssignment_20_2(), "rule__EMenuButton__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEMenuButtonAccess().getChildrenAssignment_20_3_1(), "rule__EMenuButton__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEMenuButtonAccess().getChildrenAssignment_20_3(), "rule__EMenuButton__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEMenuButtonAccess().getPaddingAssignment_21_1(), "rule__EMenuButton__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getVisibleAssignment_1(), "rule__ESplitMenuButton__VisibleAssignment_1");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getDisableAssignment_2(), "rule__ESplitMenuButton__DisableAssignment_2");
@@ -985,7 +960,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getTextAssignment_18_1(), "rule__ESplitMenuButton__TextAssignment_18_1");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getMarginAssignment_19_1(), "rule__ESplitMenuButton__MarginAssignment_19_1");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getChildrenAssignment_20_2(), "rule__ESplitMenuButton__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getESplitMenuButtonAccess().getChildrenAssignment_20_3_1(), "rule__ESplitMenuButton__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getESplitMenuButtonAccess().getChildrenAssignment_20_3(), "rule__ESplitMenuButton__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getESplitMenuButtonAccess().getPaddingAssignment_21_1(), "rule__ESplitMenuButton__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getVisibleAssignment_1(), "rule__EToogleButton_Impl__VisibleAssignment_1");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getDisableAssignment_2(), "rule__EToogleButton_Impl__DisableAssignment_2");
@@ -1007,7 +982,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getTextAssignment_19_1(), "rule__EToogleButton_Impl__TextAssignment_19_1");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getMarginAssignment_20_1(), "rule__EToogleButton_Impl__MarginAssignment_20_1");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getChildrenAssignment_21_2(), "rule__EToogleButton_Impl__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getEToogleButton_ImplAccess().getChildrenAssignment_21_3_1(), "rule__EToogleButton_Impl__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getEToogleButton_ImplAccess().getChildrenAssignment_21_3(), "rule__EToogleButton_Impl__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getEToogleButton_ImplAccess().getPaddingAssignment_22_1(), "rule__EToogleButton_Impl__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getETableViewAccess().getVisibleAssignment_1(), "rule__ETableView__VisibleAssignment_1");
 			builder.put(grammarAccess.getETableViewAccess().getDisableAssignment_2(), "rule__ETableView__DisableAssignment_2");
@@ -1027,10 +1002,10 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETableViewAccess().getPrefWidthAssignment_17_1(), "rule__ETableView__PrefWidthAssignment_17_1");
 			builder.put(grammarAccess.getETableViewAccess().getMarginAssignment_18_1(), "rule__ETableView__MarginAssignment_18_1");
 			builder.put(grammarAccess.getETableViewAccess().getChildrenAssignment_19_2(), "rule__ETableView__ChildrenAssignment_19_2");
-			builder.put(grammarAccess.getETableViewAccess().getChildrenAssignment_19_3_1(), "rule__ETableView__ChildrenAssignment_19_3_1");
+			builder.put(grammarAccess.getETableViewAccess().getChildrenAssignment_19_3(), "rule__ETableView__ChildrenAssignment_19_3");
 			builder.put(grammarAccess.getETableViewAccess().getPaddingAssignment_20_1(), "rule__ETableView__PaddingAssignment_20_1");
 			builder.put(grammarAccess.getETableViewAccess().getColumnsAssignment_21_2(), "rule__ETableView__ColumnsAssignment_21_2");
-			builder.put(grammarAccess.getETableViewAccess().getColumnsAssignment_21_3_1(), "rule__ETableView__ColumnsAssignment_21_3_1");
+			builder.put(grammarAccess.getETableViewAccess().getColumnsAssignment_21_3(), "rule__ETableView__ColumnsAssignment_21_3");
 			builder.put(grammarAccess.getERadioButtonAccess().getVisibleAssignment_1(), "rule__ERadioButton__VisibleAssignment_1");
 			builder.put(grammarAccess.getERadioButtonAccess().getDisableAssignment_2(), "rule__ERadioButton__DisableAssignment_2");
 			builder.put(grammarAccess.getERadioButtonAccess().getSelectedAssignment_3(), "rule__ERadioButton__SelectedAssignment_3");
@@ -1051,7 +1026,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getERadioButtonAccess().getTextAssignment_19_1(), "rule__ERadioButton__TextAssignment_19_1");
 			builder.put(grammarAccess.getERadioButtonAccess().getMarginAssignment_20_1(), "rule__ERadioButton__MarginAssignment_20_1");
 			builder.put(grammarAccess.getERadioButtonAccess().getChildrenAssignment_21_2(), "rule__ERadioButton__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getERadioButtonAccess().getChildrenAssignment_21_3_1(), "rule__ERadioButton__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getERadioButtonAccess().getChildrenAssignment_21_3(), "rule__ERadioButton__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getERadioButtonAccess().getPaddingAssignment_22_1(), "rule__ERadioButton__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getVisibleAssignment_1(), "rule__ECatgeoryAxis__VisibleAssignment_1");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getDisableAssignment_2(), "rule__ECatgeoryAxis__DisableAssignment_2");
@@ -1071,7 +1046,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getPrefWidthAssignment_17_1(), "rule__ECatgeoryAxis__PrefWidthAssignment_17_1");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getMarginAssignment_18_1(), "rule__ECatgeoryAxis__MarginAssignment_18_1");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getChildrenAssignment_19_2(), "rule__ECatgeoryAxis__ChildrenAssignment_19_2");
-			builder.put(grammarAccess.getECatgeoryAxisAccess().getChildrenAssignment_19_3_1(), "rule__ECatgeoryAxis__ChildrenAssignment_19_3_1");
+			builder.put(grammarAccess.getECatgeoryAxisAccess().getChildrenAssignment_19_3(), "rule__ECatgeoryAxis__ChildrenAssignment_19_3");
 			builder.put(grammarAccess.getECatgeoryAxisAccess().getPaddingAssignment_20_1(), "rule__ECatgeoryAxis__PaddingAssignment_20_1");
 			builder.put(grammarAccess.getEValueAxisAccess().getVisibleAssignment_1(), "rule__EValueAxis__VisibleAssignment_1");
 			builder.put(grammarAccess.getEValueAxisAccess().getDisableAssignment_2(), "rule__EValueAxis__DisableAssignment_2");
@@ -1091,7 +1066,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEValueAxisAccess().getPrefWidthAssignment_17_1(), "rule__EValueAxis__PrefWidthAssignment_17_1");
 			builder.put(grammarAccess.getEValueAxisAccess().getMarginAssignment_18_1(), "rule__EValueAxis__MarginAssignment_18_1");
 			builder.put(grammarAccess.getEValueAxisAccess().getChildrenAssignment_19_2(), "rule__EValueAxis__ChildrenAssignment_19_2");
-			builder.put(grammarAccess.getEValueAxisAccess().getChildrenAssignment_19_3_1(), "rule__EValueAxis__ChildrenAssignment_19_3_1");
+			builder.put(grammarAccess.getEValueAxisAccess().getChildrenAssignment_19_3(), "rule__EValueAxis__ChildrenAssignment_19_3");
 			builder.put(grammarAccess.getEValueAxisAccess().getPaddingAssignment_20_1(), "rule__EValueAxis__PaddingAssignment_20_1");
 			builder.put(grammarAccess.getEPieChartAccess().getVisibleAssignment_1(), "rule__EPieChart__VisibleAssignment_1");
 			builder.put(grammarAccess.getEPieChartAccess().getDisableAssignment_2(), "rule__EPieChart__DisableAssignment_2");
@@ -1111,7 +1086,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEPieChartAccess().getPrefWidthAssignment_17_1(), "rule__EPieChart__PrefWidthAssignment_17_1");
 			builder.put(grammarAccess.getEPieChartAccess().getMarginAssignment_18_1(), "rule__EPieChart__MarginAssignment_18_1");
 			builder.put(grammarAccess.getEPieChartAccess().getChildrenAssignment_19_2(), "rule__EPieChart__ChildrenAssignment_19_2");
-			builder.put(grammarAccess.getEPieChartAccess().getChildrenAssignment_19_3_1(), "rule__EPieChart__ChildrenAssignment_19_3_1");
+			builder.put(grammarAccess.getEPieChartAccess().getChildrenAssignment_19_3(), "rule__EPieChart__ChildrenAssignment_19_3");
 			builder.put(grammarAccess.getEPieChartAccess().getPaddingAssignment_20_1(), "rule__EPieChart__PaddingAssignment_20_1");
 			builder.put(grammarAccess.getEXYChartAccess().getVisibleAssignment_1(), "rule__EXYChart__VisibleAssignment_1");
 			builder.put(grammarAccess.getEXYChartAccess().getDisableAssignment_2(), "rule__EXYChart__DisableAssignment_2");
@@ -1131,7 +1106,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEXYChartAccess().getPrefWidthAssignment_17_1(), "rule__EXYChart__PrefWidthAssignment_17_1");
 			builder.put(grammarAccess.getEXYChartAccess().getMarginAssignment_18_1(), "rule__EXYChart__MarginAssignment_18_1");
 			builder.put(grammarAccess.getEXYChartAccess().getChildrenAssignment_19_2(), "rule__EXYChart__ChildrenAssignment_19_2");
-			builder.put(grammarAccess.getEXYChartAccess().getChildrenAssignment_19_3_1(), "rule__EXYChart__ChildrenAssignment_19_3_1");
+			builder.put(grammarAccess.getEXYChartAccess().getChildrenAssignment_19_3(), "rule__EXYChart__ChildrenAssignment_19_3");
 			builder.put(grammarAccess.getEXYChartAccess().getPaddingAssignment_20_1(), "rule__EXYChart__PaddingAssignment_20_1");
 			builder.put(grammarAccess.getEPane_ImplAccess().getVisibleAssignment_1(), "rule__EPane_Impl__VisibleAssignment_1");
 			builder.put(grammarAccess.getEPane_ImplAccess().getDisableAssignment_2(), "rule__EPane_Impl__DisableAssignment_2");
@@ -1152,7 +1127,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEPane_ImplAccess().getPosAssignment_18_1(), "rule__EPane_Impl__PosAssignment_18_1");
 			builder.put(grammarAccess.getEPane_ImplAccess().getMarginAssignment_19_1(), "rule__EPane_Impl__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEPane_ImplAccess().getChildrenAssignment_20_2(), "rule__EPane_Impl__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEPane_ImplAccess().getChildrenAssignment_20_3_1(), "rule__EPane_Impl__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEPane_ImplAccess().getChildrenAssignment_20_3(), "rule__EPane_Impl__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEPane_ImplAccess().getPaddingAssignment_21_1(), "rule__EPane_Impl__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEStackPaneAccess().getVisibleAssignment_1(), "rule__EStackPane__VisibleAssignment_1");
 			builder.put(grammarAccess.getEStackPaneAccess().getDisableAssignment_2(), "rule__EStackPane__DisableAssignment_2");
@@ -1173,7 +1148,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEStackPaneAccess().getPosAssignment_18_1(), "rule__EStackPane__PosAssignment_18_1");
 			builder.put(grammarAccess.getEStackPaneAccess().getMarginAssignment_19_1(), "rule__EStackPane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEStackPaneAccess().getChildrenAssignment_20_2(), "rule__EStackPane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEStackPaneAccess().getChildrenAssignment_20_3_1(), "rule__EStackPane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEStackPaneAccess().getChildrenAssignment_20_3(), "rule__EStackPane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEStackPaneAccess().getPaddingAssignment_21_1(), "rule__EStackPane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEDialogPaneAccess().getVisibleAssignment_1(), "rule__EDialogPane__VisibleAssignment_1");
 			builder.put(grammarAccess.getEDialogPaneAccess().getDisableAssignment_2(), "rule__EDialogPane__DisableAssignment_2");
@@ -1197,7 +1172,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEDialogPaneAccess().getContentTextAssignment_21_1(), "rule__EDialogPane__ContentTextAssignment_21_1");
 			builder.put(grammarAccess.getEDialogPaneAccess().getMarginAssignment_22_1(), "rule__EDialogPane__MarginAssignment_22_1");
 			builder.put(grammarAccess.getEDialogPaneAccess().getChildrenAssignment_23_2(), "rule__EDialogPane__ChildrenAssignment_23_2");
-			builder.put(grammarAccess.getEDialogPaneAccess().getChildrenAssignment_23_3_1(), "rule__EDialogPane__ChildrenAssignment_23_3_1");
+			builder.put(grammarAccess.getEDialogPaneAccess().getChildrenAssignment_23_3(), "rule__EDialogPane__ChildrenAssignment_23_3");
 			builder.put(grammarAccess.getEDialogPaneAccess().getPaddingAssignment_24_1(), "rule__EDialogPane__PaddingAssignment_24_1");
 			builder.put(grammarAccess.getEDialogPaneAccess().getContentAssignment_25_1(), "rule__EDialogPane__ContentAssignment_25_1");
 			builder.put(grammarAccess.getEGridPaneAccess().getVisibleAssignment_1(), "rule__EGridPane__VisibleAssignment_1");
@@ -1219,7 +1194,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEGridPaneAccess().getPosAssignment_18_1(), "rule__EGridPane__PosAssignment_18_1");
 			builder.put(grammarAccess.getEGridPaneAccess().getMarginAssignment_19_1(), "rule__EGridPane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEGridPaneAccess().getChildrenAssignment_20_2(), "rule__EGridPane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEGridPaneAccess().getChildrenAssignment_20_3_1(), "rule__EGridPane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEGridPaneAccess().getChildrenAssignment_20_3(), "rule__EGridPane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEGridPaneAccess().getPaddingAssignment_21_1(), "rule__EGridPane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEHBoxAccess().getVisibleAssignment_1(), "rule__EHBox__VisibleAssignment_1");
 			builder.put(grammarAccess.getEHBoxAccess().getDisableAssignment_2(), "rule__EHBox__DisableAssignment_2");
@@ -1241,7 +1216,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEHBoxAccess().getSpacingAssignment_19_1(), "rule__EHBox__SpacingAssignment_19_1");
 			builder.put(grammarAccess.getEHBoxAccess().getMarginAssignment_20_1(), "rule__EHBox__MarginAssignment_20_1");
 			builder.put(grammarAccess.getEHBoxAccess().getChildrenAssignment_21_2(), "rule__EHBox__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getEHBoxAccess().getChildrenAssignment_21_3_1(), "rule__EHBox__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getEHBoxAccess().getChildrenAssignment_21_3(), "rule__EHBox__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getEHBoxAccess().getPaddingAssignment_22_1(), "rule__EHBox__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getEVBoxAccess().getVisibleAssignment_1(), "rule__EVBox__VisibleAssignment_1");
 			builder.put(grammarAccess.getEVBoxAccess().getDisableAssignment_2(), "rule__EVBox__DisableAssignment_2");
@@ -1263,7 +1238,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEVBoxAccess().getSpacingAssignment_19_1(), "rule__EVBox__SpacingAssignment_19_1");
 			builder.put(grammarAccess.getEVBoxAccess().getMarginAssignment_20_1(), "rule__EVBox__MarginAssignment_20_1");
 			builder.put(grammarAccess.getEVBoxAccess().getChildrenAssignment_21_2(), "rule__EVBox__ChildrenAssignment_21_2");
-			builder.put(grammarAccess.getEVBoxAccess().getChildrenAssignment_21_3_1(), "rule__EVBox__ChildrenAssignment_21_3_1");
+			builder.put(grammarAccess.getEVBoxAccess().getChildrenAssignment_21_3(), "rule__EVBox__ChildrenAssignment_21_3");
 			builder.put(grammarAccess.getEVBoxAccess().getPaddingAssignment_22_1(), "rule__EVBox__PaddingAssignment_22_1");
 			builder.put(grammarAccess.getEFlowPaneAccess().getVisibleAssignment_1(), "rule__EFlowPane__VisibleAssignment_1");
 			builder.put(grammarAccess.getEFlowPaneAccess().getDisableAssignment_2(), "rule__EFlowPane__DisableAssignment_2");
@@ -1284,7 +1259,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEFlowPaneAccess().getPosAssignment_18_1(), "rule__EFlowPane__PosAssignment_18_1");
 			builder.put(grammarAccess.getEFlowPaneAccess().getMarginAssignment_19_1(), "rule__EFlowPane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEFlowPaneAccess().getChildrenAssignment_20_2(), "rule__EFlowPane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEFlowPaneAccess().getChildrenAssignment_20_3_1(), "rule__EFlowPane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEFlowPaneAccess().getChildrenAssignment_20_3(), "rule__EFlowPane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEFlowPaneAccess().getPaddingAssignment_21_1(), "rule__EFlowPane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getETilePaneAccess().getVisibleAssignment_1(), "rule__ETilePane__VisibleAssignment_1");
 			builder.put(grammarAccess.getETilePaneAccess().getDisableAssignment_2(), "rule__ETilePane__DisableAssignment_2");
@@ -1305,7 +1280,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getETilePaneAccess().getPosAssignment_18_1(), "rule__ETilePane__PosAssignment_18_1");
 			builder.put(grammarAccess.getETilePaneAccess().getMarginAssignment_19_1(), "rule__ETilePane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getETilePaneAccess().getChildrenAssignment_20_2(), "rule__ETilePane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getETilePaneAccess().getChildrenAssignment_20_3_1(), "rule__ETilePane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getETilePaneAccess().getChildrenAssignment_20_3(), "rule__ETilePane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getETilePaneAccess().getPaddingAssignment_21_1(), "rule__ETilePane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getVisibleAssignment_1(), "rule__EAnchorPane__VisibleAssignment_1");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getDisableAssignment_2(), "rule__EAnchorPane__DisableAssignment_2");
@@ -1326,7 +1301,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEAnchorPaneAccess().getPosAssignment_18_1(), "rule__EAnchorPane__PosAssignment_18_1");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getMarginAssignment_19_1(), "rule__EAnchorPane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getChildrenAssignment_20_2(), "rule__EAnchorPane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEAnchorPaneAccess().getChildrenAssignment_20_3_1(), "rule__EAnchorPane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEAnchorPaneAccess().getChildrenAssignment_20_3(), "rule__EAnchorPane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEAnchorPaneAccess().getPaddingAssignment_21_1(), "rule__EAnchorPane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getVisibleAssignment_1(), "rule__EBorderPane__VisibleAssignment_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getDisableAssignment_2(), "rule__EBorderPane__DisableAssignment_2");
@@ -1347,7 +1322,7 @@ public class MmDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEBorderPaneAccess().getPosAssignment_18_1(), "rule__EBorderPane__PosAssignment_18_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getMarginAssignment_19_1(), "rule__EBorderPane__MarginAssignment_19_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getChildrenAssignment_20_2(), "rule__EBorderPane__ChildrenAssignment_20_2");
-			builder.put(grammarAccess.getEBorderPaneAccess().getChildrenAssignment_20_3_1(), "rule__EBorderPane__ChildrenAssignment_20_3_1");
+			builder.put(grammarAccess.getEBorderPaneAccess().getChildrenAssignment_20_3(), "rule__EBorderPane__ChildrenAssignment_20_3");
 			builder.put(grammarAccess.getEBorderPaneAccess().getPaddingAssignment_21_1(), "rule__EBorderPane__PaddingAssignment_21_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getLeftAssignment_22_1(), "rule__EBorderPane__LeftAssignment_22_1");
 			builder.put(grammarAccess.getEBorderPaneAccess().getRightAssignment_23_1(), "rule__EBorderPane__RightAssignment_23_1");

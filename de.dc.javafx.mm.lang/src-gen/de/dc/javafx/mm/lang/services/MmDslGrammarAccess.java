@@ -1154,10 +1154,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -1174,7 +1172,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
 		//	('text' text=EString)? ('promtText' promtText=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
-		//	("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1183,7 +1181,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)?
 		//('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth'
 		//prefWidth=EDouble)? ('text' text=EString)? ('promtText' promtText=EString)? ('margin' margin=EInsets)? ('children' '{'
-		//children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EText}
@@ -1417,7 +1415,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -1432,17 +1430,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -1543,10 +1535,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -1562,8 +1552,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1572,7 +1562,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
 		//('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
-		//("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ELabel}
@@ -1794,7 +1784,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -1809,17 +1799,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -1920,10 +1904,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -1939,8 +1921,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1949,7 +1931,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
 		//('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
-		//("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EButton}
@@ -2171,7 +2153,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -2186,17 +2168,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -2299,10 +2275,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -2319,8 +2293,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2329,7 +2303,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ECheckBox}
@@ -2557,7 +2531,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -2572,17 +2546,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -2685,10 +2653,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -2705,8 +2671,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2715,7 +2681,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EHyperlink}
@@ -2943,7 +2909,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -2958,17 +2924,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -3069,10 +3029,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -3088,8 +3046,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -3098,7 +3056,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EMenuButton}
@@ -3320,7 +3278,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -3335,17 +3293,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -3446,10 +3398,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -3465,8 +3415,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -3475,7 +3425,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ESplitMenuButton}
@@ -3697,7 +3647,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -3712,17 +3662,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -3825,10 +3769,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -3845,8 +3787,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -3855,7 +3797,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')?
 		//('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth'
 		//maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin'
-		//margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EToogleButton}
@@ -4083,7 +4025,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -4098,17 +4040,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -4205,10 +4141,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cChildrenAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_19_2_0 = (RuleCall)cChildrenAssignment_19_2.eContents().get(0);
-		private final Group cGroup_19_3 = (Group)cGroup_19.eContents().get(3);
-		private final Keyword cCommaKeyword_19_3_0 = (Keyword)cGroup_19_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_19_3_1 = (Assignment)cGroup_19_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_19_3_1_0 = (RuleCall)cChildrenAssignment_19_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_19_3 = (Assignment)cGroup_19.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_19_3_0 = (RuleCall)cChildrenAssignment_19_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19_4 = (Keyword)cGroup_19.eContents().get(4);
 		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
 		private final Keyword cPaddingKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
@@ -4219,10 +4153,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cColumnsAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cColumnsETableColumnParserRuleCall_21_2_0 = (RuleCall)cColumnsAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cColumnsAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cColumnsETableColumnParserRuleCall_21_3_1_0 = (RuleCall)cColumnsAssignment_21_3_1.eContents().get(0);
+		private final Assignment cColumnsAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cColumnsETableColumnParserRuleCall_21_3_0 = (RuleCall)cColumnsAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		
@@ -4234,8 +4166,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
-		//	('columns' '{' columns+=ETableColumn ("," columns+=ETableColumn)* '}')?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
+		//	('columns' '{' columns+=ETableColumn columns+=ETableColumn* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -4243,8 +4175,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)*
-		//'}')? ('padding' padding=EInsets)? ('columns' '{' columns+=ETableColumn ("," columns+=ETableColumn)* '}')? '}'
+		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')?
+		//('padding' padding=EInsets)? ('columns' '{' columns+=ETableColumn columns+=ETableColumn* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ETableView}
@@ -4454,7 +4386,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_18_1_0() { return cMarginEInsetsParserRuleCall_18_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_19() { return cGroup_19; }
 		
 		//'children'
@@ -4469,17 +4401,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_19_2_0() { return cChildrenENodeParserRuleCall_19_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_19_3() { return cGroup_19_3; }
-		
-		//","
-		public Keyword getCommaKeyword_19_3_0() { return cCommaKeyword_19_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_19_3_1() { return cChildrenAssignment_19_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_19_3() { return cChildrenAssignment_19_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_19_3_1_0() { return cChildrenENodeParserRuleCall_19_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_19_3_0() { return cChildrenENodeParserRuleCall_19_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19_4() { return cRightCurlyBracketKeyword_19_4; }
@@ -4496,7 +4422,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getPaddingEInsetsParserRuleCall_20_1_0() { return cPaddingEInsetsParserRuleCall_20_1_0; }
 		
-		//('columns' '{' columns+=ETableColumn ("," columns+=ETableColumn)* '}')?
+		//('columns' '{' columns+=ETableColumn columns+=ETableColumn* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'columns'
@@ -4511,17 +4437,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ETableColumn
 		public RuleCall getColumnsETableColumnParserRuleCall_21_2_0() { return cColumnsETableColumnParserRuleCall_21_2_0; }
 		
-		//("," columns+=ETableColumn)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//columns+=ETableColumn
-		public Assignment getColumnsAssignment_21_3_1() { return cColumnsAssignment_21_3_1; }
+		//columns+=ETableColumn*
+		public Assignment getColumnsAssignment_21_3() { return cColumnsAssignment_21_3; }
 		
 		//ETableColumn
-		public RuleCall getColumnsETableColumnParserRuleCall_21_3_1_0() { return cColumnsETableColumnParserRuleCall_21_3_1_0; }
+		public RuleCall getColumnsETableColumnParserRuleCall_21_3_0() { return cColumnsETableColumnParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -4612,10 +4532,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -4632,8 +4550,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-		//	('padding' padding=EInsets)?
+		//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -4642,7 +4560,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')?
 		//('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth'
 		//maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('text' text=EString)? ('margin'
-		//margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ERadioButton}
@@ -4870,7 +4788,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -4885,17 +4803,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -4992,10 +4904,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cChildrenAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_19_2_0 = (RuleCall)cChildrenAssignment_19_2.eContents().get(0);
-		private final Group cGroup_19_3 = (Group)cGroup_19.eContents().get(3);
-		private final Keyword cCommaKeyword_19_3_0 = (Keyword)cGroup_19_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_19_3_1 = (Assignment)cGroup_19_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_19_3_1_0 = (RuleCall)cChildrenAssignment_19_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_19_3 = (Assignment)cGroup_19.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_19_3_0 = (RuleCall)cChildrenAssignment_19_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19_4 = (Keyword)cGroup_19.eContents().get(4);
 		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
 		private final Keyword cPaddingKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
@@ -5011,7 +4921,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -5020,7 +4930,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{'
-		//children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ECatgeoryAxis}
@@ -5230,7 +5140,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_18_1_0() { return cMarginEInsetsParserRuleCall_18_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_19() { return cGroup_19; }
 		
 		//'children'
@@ -5245,17 +5155,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_19_2_0() { return cChildrenENodeParserRuleCall_19_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_19_3() { return cGroup_19_3; }
-		
-		//","
-		public Keyword getCommaKeyword_19_3_0() { return cCommaKeyword_19_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_19_3_1() { return cChildrenAssignment_19_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_19_3() { return cChildrenAssignment_19_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_19_3_1_0() { return cChildrenENodeParserRuleCall_19_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_19_3_0() { return cChildrenENodeParserRuleCall_19_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19_4() { return cRightCurlyBracketKeyword_19_4; }
@@ -5352,10 +5256,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cChildrenAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_19_2_0 = (RuleCall)cChildrenAssignment_19_2.eContents().get(0);
-		private final Group cGroup_19_3 = (Group)cGroup_19.eContents().get(3);
-		private final Keyword cCommaKeyword_19_3_0 = (Keyword)cGroup_19_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_19_3_1 = (Assignment)cGroup_19_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_19_3_1_0 = (RuleCall)cChildrenAssignment_19_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_19_3 = (Assignment)cGroup_19.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_19_3_0 = (RuleCall)cChildrenAssignment_19_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19_4 = (Keyword)cGroup_19.eContents().get(4);
 		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
 		private final Keyword cPaddingKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
@@ -5371,7 +5273,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -5379,8 +5281,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)*
-		//'}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')?
+		//('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EValueAxis}
@@ -5590,7 +5492,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_18_1_0() { return cMarginEInsetsParserRuleCall_18_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_19() { return cGroup_19; }
 		
 		//'children'
@@ -5605,17 +5507,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_19_2_0() { return cChildrenENodeParserRuleCall_19_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_19_3() { return cGroup_19_3; }
-		
-		//","
-		public Keyword getCommaKeyword_19_3_0() { return cCommaKeyword_19_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_19_3_1() { return cChildrenAssignment_19_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_19_3() { return cChildrenAssignment_19_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_19_3_1_0() { return cChildrenENodeParserRuleCall_19_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_19_3_0() { return cChildrenENodeParserRuleCall_19_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19_4() { return cRightCurlyBracketKeyword_19_4; }
@@ -5712,10 +5608,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cChildrenAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_19_2_0 = (RuleCall)cChildrenAssignment_19_2.eContents().get(0);
-		private final Group cGroup_19_3 = (Group)cGroup_19.eContents().get(3);
-		private final Keyword cCommaKeyword_19_3_0 = (Keyword)cGroup_19_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_19_3_1 = (Assignment)cGroup_19_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_19_3_1_0 = (RuleCall)cChildrenAssignment_19_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_19_3 = (Assignment)cGroup_19.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_19_3_0 = (RuleCall)cChildrenAssignment_19_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19_4 = (Keyword)cGroup_19.eContents().get(4);
 		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
 		private final Keyword cPaddingKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
@@ -5731,7 +5625,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -5739,8 +5633,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)*
-		//'}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')?
+		//('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EPieChart}
@@ -5950,7 +5844,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_18_1_0() { return cMarginEInsetsParserRuleCall_18_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_19() { return cGroup_19; }
 		
 		//'children'
@@ -5965,17 +5859,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_19_2_0() { return cChildrenENodeParserRuleCall_19_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_19_3() { return cGroup_19_3; }
-		
-		//","
-		public Keyword getCommaKeyword_19_3_0() { return cCommaKeyword_19_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_19_3_1() { return cChildrenAssignment_19_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_19_3() { return cChildrenAssignment_19_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_19_3_1_0() { return cChildrenENodeParserRuleCall_19_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_19_3_0() { return cChildrenENodeParserRuleCall_19_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19_4() { return cRightCurlyBracketKeyword_19_4; }
@@ -6072,10 +5960,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cChildrenAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_19_2_0 = (RuleCall)cChildrenAssignment_19_2.eContents().get(0);
-		private final Group cGroup_19_3 = (Group)cGroup_19.eContents().get(3);
-		private final Keyword cCommaKeyword_19_3_0 = (Keyword)cGroup_19_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_19_3_1 = (Assignment)cGroup_19_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_19_3_1_0 = (RuleCall)cChildrenAssignment_19_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_19_3 = (Assignment)cGroup_19.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_19_3_0 = (RuleCall)cChildrenAssignment_19_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19_4 = (Keyword)cGroup_19.eContents().get(4);
 		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
 		private final Keyword cPaddingKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
@@ -6091,7 +5977,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -6099,8 +5985,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)*
-		//'}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')?
+		//('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EXYChart}
@@ -6310,7 +6196,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_18_1_0() { return cMarginEInsetsParserRuleCall_18_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_19() { return cGroup_19; }
 		
 		//'children'
@@ -6325,17 +6211,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_19_2_0() { return cChildrenENodeParserRuleCall_19_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_19_3() { return cGroup_19_3; }
-		
-		//","
-		public Keyword getCommaKeyword_19_3_0() { return cCommaKeyword_19_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_19_3_1() { return cChildrenAssignment_19_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_19_3() { return cChildrenAssignment_19_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_19_3_1_0() { return cChildrenENodeParserRuleCall_19_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_19_3_0() { return cChildrenENodeParserRuleCall_19_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19_4() { return cRightCurlyBracketKeyword_19_4; }
@@ -6436,10 +6316,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -6455,7 +6333,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -6464,8 +6342,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{'
 		//styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)?
 		//('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth'
-		//prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode*
+		//'}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EPane}
@@ -6687,7 +6565,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -6702,17 +6580,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -6813,10 +6685,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -6832,7 +6702,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -6841,8 +6711,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EStackPane}
@@ -7064,7 +6934,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -7079,17 +6949,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -7202,10 +7066,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_23_1 = (Keyword)cGroup_23.eContents().get(1);
 		private final Assignment cChildrenAssignment_23_2 = (Assignment)cGroup_23.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_23_2_0 = (RuleCall)cChildrenAssignment_23_2.eContents().get(0);
-		private final Group cGroup_23_3 = (Group)cGroup_23.eContents().get(3);
-		private final Keyword cCommaKeyword_23_3_0 = (Keyword)cGroup_23_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_23_3_1 = (Assignment)cGroup_23_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_23_3_1_0 = (RuleCall)cChildrenAssignment_23_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_23_3 = (Assignment)cGroup_23.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_23_3_0 = (RuleCall)cChildrenAssignment_23_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_23_4 = (Keyword)cGroup_23.eContents().get(4);
 		private final Group cGroup_24 = (Group)cGroup.eContents().get(24);
 		private final Keyword cPaddingKeyword_24_0 = (Keyword)cGroup_24.eContents().get(0);
@@ -7226,7 +7088,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
 		//	('pos' pos=EPos)? ('header' header=EString)? ('headerText' headerText=EString)? ('contentText' contentText=EString)?
-		//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	('content' content=ENode)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -7237,7 +7099,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('header' header=EString)?
 		//('headerText' headerText=EString)? ('contentText' contentText=EString)? ('margin' margin=EInsets)? ('children' '{'
-		//children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? ('content' content=ENode)? '}'
+		//children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? ('content' content=ENode)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EDialogPane}
@@ -7495,7 +7357,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_22_1_0() { return cMarginEInsetsParserRuleCall_22_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_23() { return cGroup_23; }
 		
 		//'children'
@@ -7510,17 +7372,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_23_2_0() { return cChildrenENodeParserRuleCall_23_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_23_3() { return cGroup_23_3; }
-		
-		//","
-		public Keyword getCommaKeyword_23_3_0() { return cCommaKeyword_23_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_23_3_1() { return cChildrenAssignment_23_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_23_3() { return cChildrenAssignment_23_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_23_3_1_0() { return cChildrenENodeParserRuleCall_23_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_23_3_0() { return cChildrenENodeParserRuleCall_23_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_23_4() { return cRightCurlyBracketKeyword_23_4; }
@@ -7633,10 +7489,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -7652,7 +7506,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -7661,8 +7515,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EGridPane}
@@ -7884,7 +7738,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -7899,17 +7753,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -8014,10 +7862,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -8033,8 +7879,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//	children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//	children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -8043,7 +7889,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)?
 		//('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth'
 		//prefWidth=EDouble)? ('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{'
-		//children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EHBox}
@@ -8277,7 +8123,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -8292,17 +8138,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -8407,10 +8247,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cChildrenAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_21_2_0 = (RuleCall)cChildrenAssignment_21_2.eContents().get(0);
-		private final Group cGroup_21_3 = (Group)cGroup_21.eContents().get(3);
-		private final Keyword cCommaKeyword_21_3_0 = (Keyword)cGroup_21_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_21_3_1 = (Assignment)cGroup_21_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_21_3_1_0 = (RuleCall)cChildrenAssignment_21_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_21_3 = (Assignment)cGroup_21.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_21_3_0 = (RuleCall)cChildrenAssignment_21_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_21_4 = (Keyword)cGroup_21.eContents().get(4);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cPaddingKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
@@ -8426,8 +8264,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//	children+=ENode)* '}')? ('padding' padding=EInsets)?
+		//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//	children+=ENode* '}')? ('padding' padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -8436,7 +8274,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)?
 		//('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth'
 		//prefWidth=EDouble)? ('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{'
-		//children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EVBox}
@@ -8670,7 +8508,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_20_1_0() { return cMarginEInsetsParserRuleCall_20_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_21() { return cGroup_21; }
 		
 		//'children'
@@ -8685,17 +8523,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_21_2_0() { return cChildrenENodeParserRuleCall_21_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_21_3() { return cGroup_21_3; }
-		
-		//","
-		public Keyword getCommaKeyword_21_3_0() { return cCommaKeyword_21_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_21_3_1() { return cChildrenAssignment_21_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_21_3() { return cChildrenAssignment_21_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_21_3_1_0() { return cChildrenENodeParserRuleCall_21_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_21_3_0() { return cChildrenENodeParserRuleCall_21_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_21_4() { return cRightCurlyBracketKeyword_21_4; }
@@ -8796,10 +8628,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -8815,7 +8645,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -8824,8 +8654,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EFlowPane}
@@ -9047,7 +8877,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -9062,17 +8892,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -9173,10 +8997,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -9192,7 +9014,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -9201,8 +9023,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//('layoutX' layoutX=EDouble)? ('layoutY' layoutY=EDouble)? ('opacity' opacity=EDouble)? ('style' style=EString)?
 		//('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight'
 		//minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)?
-		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-		//children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+		//children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ETilePane}
@@ -9424,7 +9246,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -9439,17 +9261,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -9550,10 +9366,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -9569,7 +9383,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
@@ -9579,7 +9393,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EAnchorPane}
@@ -9801,7 +9615,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -9816,17 +9630,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -9927,10 +9735,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cChildrenAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cChildrenENodeParserRuleCall_20_2_0 = (RuleCall)cChildrenAssignment_20_2.eContents().get(0);
-		private final Group cGroup_20_3 = (Group)cGroup_20.eContents().get(3);
-		private final Keyword cCommaKeyword_20_3_0 = (Keyword)cGroup_20_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_20_3_1 = (Assignment)cGroup_20_3.eContents().get(1);
-		private final RuleCall cChildrenENodeParserRuleCall_20_3_1_0 = (RuleCall)cChildrenAssignment_20_3_1.eContents().get(0);
+		private final Assignment cChildrenAssignment_20_3 = (Assignment)cGroup_20.eContents().get(3);
+		private final RuleCall cChildrenENodeParserRuleCall_20_3_0 = (RuleCall)cChildrenAssignment_20_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20_4 = (Keyword)cGroup_20.eContents().get(4);
 		private final Group cGroup_21 = (Group)cGroup.eContents().get(21);
 		private final Keyword cPaddingKeyword_21_0 = (Keyword)cGroup_21.eContents().get(0);
@@ -9966,7 +9772,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 		//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 		//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+		//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 		//	padding=EInsets)? ('left' left=ENode)? ('right' right=ENode)? ('top' top=ENode)? ('bottom' bottom=ENode)? ('center'
 		//	center=ENode)?
 		//	'}';
@@ -9977,8 +9783,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//style=EString)? ('styleClass' '{' styleClass+=EString ("," styleClass+=EString)* '}')? ('maxHeight'
 		//maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight' prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)?
 		//('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)? ('pos' pos=EPos)? ('margin' margin=EInsets)?
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)? ('left' left=ENode)?
-		//('right' right=ENode)? ('top' top=ENode)? ('bottom' bottom=ENode)? ('center' center=ENode)? '}'
+		//('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)? ('left' left=ENode)? ('right'
+		//right=ENode)? ('top' top=ENode)? ('bottom' bottom=ENode)? ('center' center=ENode)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{EBorderPane}
@@ -10200,7 +10006,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInsets
 		public RuleCall getMarginEInsetsParserRuleCall_19_1_0() { return cMarginEInsetsParserRuleCall_19_1_0; }
 		
-		//('children' '{' children+=ENode ("," children+=ENode)* '}')?
+		//('children' '{' children+=ENode children+=ENode* '}')?
 		public Group getGroup_20() { return cGroup_20; }
 		
 		//'children'
@@ -10215,17 +10021,11 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ENode
 		public RuleCall getChildrenENodeParserRuleCall_20_2_0() { return cChildrenENodeParserRuleCall_20_2_0; }
 		
-		//("," children+=ENode)*
-		public Group getGroup_20_3() { return cGroup_20_3; }
-		
-		//","
-		public Keyword getCommaKeyword_20_3_0() { return cCommaKeyword_20_3_0; }
-		
-		//children+=ENode
-		public Assignment getChildrenAssignment_20_3_1() { return cChildrenAssignment_20_3_1; }
+		//children+=ENode*
+		public Assignment getChildrenAssignment_20_3() { return cChildrenAssignment_20_3; }
 		
 		//ENode
-		public RuleCall getChildrenENodeParserRuleCall_20_3_1_0() { return cChildrenENodeParserRuleCall_20_3_1_0; }
+		public RuleCall getChildrenENodeParserRuleCall_20_3_0() { return cChildrenENodeParserRuleCall_20_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20_4() { return cRightCurlyBracketKeyword_20_4; }
@@ -10312,7 +10112,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cETableColumnKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cIdKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cIdAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
@@ -10329,19 +10129,19 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCellFactoryKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cCellFactoryAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
 		private final RuleCall cCellFactoryEStringParserRuleCall_7_1_0 = (RuleCall)cCellFactoryAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightParenthesisKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ETableColumn:
 		//	{ETableColumn}
 		//	'ETableColumn'
 		//	name=EString
-		//	'{' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory' cellValueFactory=EString)? ('cellFactory'
+		//	'(' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory' cellValueFactory=EString)? ('cellFactory'
 		//	cellFactory=EString)?
-		//	'}';
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ETableColumn} 'ETableColumn' name=EString '{' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory'
-		//cellValueFactory=EString)? ('cellFactory' cellFactory=EString)? '}'
+		//{ETableColumn} 'ETableColumn' name=EString '(' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory'
+		//cellValueFactory=EString)? ('cellFactory' cellFactory=EString)? ')'
 		public Group getGroup() { return cGroup; }
 		
 		//{ETableColumn}
@@ -10356,8 +10156,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
 		
 		//('id' id=EString)?
 		public Group getGroup_4() { return cGroup_4; }
@@ -10407,8 +10207,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getCellFactoryEStringParserRuleCall_7_1_0() { return cCellFactoryEStringParserRuleCall_7_1_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		//')'
+		public Keyword getRightParenthesisKeyword_8() { return cRightParenthesisKeyword_8; }
 	}
 	public class EPosElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.dc.javafx.mm.lang.MmDsl.EPos");
@@ -10652,7 +10452,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
 	//	('text' text=EString)? ('promtText' promtText=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
-	//	("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public ETextElements getETextAccess() {
 		return pEText;
@@ -10670,8 +10470,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public ELabelElements getELabelAccess() {
 		return pELabel;
@@ -10689,8 +10489,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public EButtonElements getEButtonAccess() {
 		return pEButton;
@@ -10709,8 +10509,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public ECheckBoxElements getECheckBoxAccess() {
 		return pECheckBox;
@@ -10729,8 +10529,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public EHyperlinkElements getEHyperlinkAccess() {
 		return pEHyperlink;
@@ -10748,8 +10548,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public EMenuButtonElements getEMenuButtonAccess() {
 		return pEMenuButton;
@@ -10767,8 +10567,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public ESplitMenuButtonElements getESplitMenuButtonAccess() {
 		return pESplitMenuButton;
@@ -10787,8 +10587,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public EToogleButton_ImplElements getEToogleButton_ImplAccess() {
 		return pEToogleButton_Impl;
@@ -10806,8 +10606,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
-	//	('columns' '{' columns+=ETableColumn ("," columns+=ETableColumn)* '}')?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
+	//	('columns' '{' columns+=ETableColumn columns+=ETableColumn* '}')?
 	//	'}';
 	public ETableViewElements getETableViewAccess() {
 		return pETableView;
@@ -10826,8 +10626,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')?
-	//	('padding' padding=EInsets)?
+	//	('text' text=EString)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
+	//	padding=EInsets)?
 	//	'}';
 	public ERadioButtonElements getERadioButtonAccess() {
 		return pERadioButton;
@@ -10845,7 +10645,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public ECatgeoryAxisElements getECatgeoryAxisAccess() {
 		return pECatgeoryAxis;
@@ -10863,7 +10663,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public EValueAxisElements getEValueAxisAccess() {
 		return pEValueAxis;
@@ -10881,7 +10681,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public EPieChartElements getEPieChartAccess() {
 		return pEPieChart;
@@ -10899,7 +10699,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public EXYChartElements getEXYChartAccess() {
 		return pEXYChart;
@@ -10917,7 +10717,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public EPane_ImplElements getEPane_ImplAccess() {
@@ -10936,7 +10736,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public EStackPaneElements getEStackPaneAccess() {
@@ -10956,7 +10756,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
 	//	('pos' pos=EPos)? ('header' header=EString)? ('headerText' headerText=EString)? ('contentText' contentText=EString)?
-	//	('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	('content' content=ENode)?
 	//	'}';
 	public EDialogPaneElements getEDialogPaneAccess() {
@@ -10975,7 +10775,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public EGridPaneElements getEGridPaneAccess() {
@@ -10994,8 +10794,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-	//	children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+	//	children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public EHBoxElements getEHBoxAccess() {
 		return pEHBox;
@@ -11013,8 +10813,8 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode (","
-	//	children+=ENode)* '}')? ('padding' padding=EInsets)?
+	//	('pos' pos=EPos)? ('spacing' spacing=EDouble)? ('margin' margin=EInsets)? ('children' '{' children+=ENode
+	//	children+=ENode* '}')? ('padding' padding=EInsets)?
 	//	'}';
 	public EVBoxElements getEVBoxAccess() {
 		return pEVBox;
@@ -11032,7 +10832,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public EFlowPaneElements getEFlowPaneAccess() {
@@ -11051,7 +10851,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public ETilePaneElements getETilePaneAccess() {
@@ -11070,7 +10870,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)?
 	//	'}';
 	public EAnchorPaneElements getEAnchorPaneAccess() {
@@ -11089,7 +10889,7 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	('opacity' opacity=EDouble)? ('style' style=EString)? ('styleClass' '{' styleClass+=EString (","
 	//	styleClass+=EString)* '}')? ('maxHeight' maxHeight=EDouble)? ('minHeight' minHeight=EDouble)? ('prefHeight'
 	//	prefHeight=EDouble)? ('maxWidth' maxWidth=EDouble)? ('minWidth' minWidth=EDouble)? ('prefWidth' prefWidth=EDouble)?
-	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode ("," children+=ENode)* '}')? ('padding'
+	//	('pos' pos=EPos)? ('margin' margin=EInsets)? ('children' '{' children+=ENode children+=ENode* '}')? ('padding'
 	//	padding=EInsets)? ('left' left=ENode)? ('right' right=ENode)? ('top' top=ENode)? ('bottom' bottom=ENode)? ('center'
 	//	center=ENode)?
 	//	'}';
@@ -11105,9 +10905,9 @@ public class MmDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	{ETableColumn}
 	//	'ETableColumn'
 	//	name=EString
-	//	'{' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory' cellValueFactory=EString)? ('cellFactory'
+	//	'(' ('id' id=EString)? ('width' width=EDouble)? ('cellValueFactory' cellValueFactory=EString)? ('cellFactory'
 	//	cellFactory=EString)?
-	//	'}';
+	//	')';
 	public ETableColumnElements getETableColumnAccess() {
 		return pETableColumn;
 	}
