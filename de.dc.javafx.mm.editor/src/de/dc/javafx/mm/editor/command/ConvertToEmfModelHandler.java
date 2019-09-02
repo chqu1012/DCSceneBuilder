@@ -60,6 +60,9 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 					editorController.setFxmlTextAndLocation(fxmlText, fxmlLocation);
 					
 					FXOMDocument fxomDocument = editorController.getFxomDocument();
+					
+					browseAllControlsWithIds(fxomDocument);
+					
 					FXOMObject root = fxomDocument.getFxomRoot();
 					browseObject(root);
 				} catch (IOException e) {
@@ -68,6 +71,15 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 			}
 		}
 		return null;
+	}
+
+	private void browseAllControlsWithIds(FXOMDocument fxomDocument) {
+		Map<String, FXOMObject> fxIds = fxomDocument.collectFxIds();
+		for (Entry<String, FXOMObject> entry : fxIds.entrySet()) {
+			Object obj = entry.getValue().getSceneGraphObject();
+		    Class<?> type = obj.getClass();
+			System.out.println("Key: "+entry.getKey() +",  instance: "+type.getSimpleName());						
+		}
 	}
 
 	private void browseObject(FXOMObject o) {
