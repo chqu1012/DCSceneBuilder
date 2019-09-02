@@ -39,9 +39,9 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 
 					IProject project = parent.getProject();
 					IFolder srcFolder = project.getFolder("src");
-					IFolder genFolder = getFolder(srcFolder, getGeneratedPackage(emfModel).split("\\."));
 
 					try {
+						IFolder genFolder = getFolder(srcFolder, getGeneratedPackage(emfModel).split("\\."));
 						if (!genFolder.exists()) {
 							genFolder.create(true, true, null);
 						}
@@ -51,14 +51,9 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 						}
 						ifile.create(new ByteArrayInputStream(getGeneratedContent(emfModel).getBytes()), IResource.NONE,
 								null);
+						genFolder.refreshLocal(IResource.DEPTH_INFINITE, null);
 					} catch (CoreException e1) {
 						e1.printStackTrace();
-					}
-
-					try {
-						genFolder.refreshLocal(IResource.DEPTH_INFINITE, null);
-					} catch (CoreException e) {
-						e.printStackTrace();
 					}
 				}
 			}
@@ -72,13 +67,14 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 
 	protected abstract String getGeneratedPackage(EmfModel model);
 
-	public IFolder getFolder(IFolder folder, String[] basePackage) {
+	public IFolder getFolder(IFolder folder, String[] basePackage) throws CoreException {
 		IFolder currentFolder = null;
 		for (String pack : basePackage) {
 			if (currentFolder != null) {
 				currentFolder = currentFolder.getFolder(pack);
 			} else {
 				currentFolder = folder.getFolder(pack);
+				currentFolder.create(true, true, null);
 			}
 		}
 		return currentFolder;
