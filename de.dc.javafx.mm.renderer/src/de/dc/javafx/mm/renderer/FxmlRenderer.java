@@ -75,22 +75,10 @@ public class FxmlRenderer extends MmSwitch<Node> {
 
 	private void addChild(Pane node, ENode eNode) {
 		Node current = doSwitch(eNode);
-
 		initSize(eNode, node);
-
 		node.getChildren().add(current);
 	}
 
-	private void invokeMethod(String name) {
-		Method initializeMethod;
-		try {
-			initializeMethod = controller.getMethod(name);
-			initializeMethod.invoke(controllerInstance,null);
-		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	private void invokeMethod(String name, Event event) {
 		Method initializeMethod;
 		try {
@@ -148,7 +136,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 				Method initializeMethod = controller.getMethod("initialize");
 				initializeMethod.invoke(controllerInstance,null);
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException | IllegalArgumentException | InvocationTargetException e) {
-				e.printStackTrace();
+				LOG.error("Failed to init EmfModel", e);
 			}
 		}
 		return root;
@@ -173,7 +161,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 					column.setCellFactory(feature);
 				}
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e1) {
-				e1.printStackTrace();
+				LOG.error("Failed to init cell factory", e1);
 			}
 		}
 		
