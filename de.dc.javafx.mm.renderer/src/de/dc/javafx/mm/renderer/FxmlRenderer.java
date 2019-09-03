@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
@@ -39,6 +40,8 @@ import javafx.util.Callback;
 
 public class FxmlRenderer extends MmSwitch<Node> {
 
+	private static final Logger LOG = Logger.getLogger(FxmlRenderer.class);
+	
 	private Map<String, Node> controlRegistry = new HashMap<>();
 	private Map<String, TableColumn> columnsRegistry = new HashMap<>();
 	
@@ -94,7 +97,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 			initializeMethod = controller.getMethod(name,event.getClass());
 			initializeMethod.invoke(controllerInstance, event);
 		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			e.printStackTrace();
+			LOG.error("Failed to invoke method "+name, e);
 		}
 	}
 	
@@ -138,7 +141,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	@Override
 	public Node caseEmfModel(EmfModel object) {
 		Node root = doSwitch(object.getRoot());
-		if (object.getController()!=null) {
+		if (StringUtils.isNotBlank(object.getController())) {
 			try {
 				controller = Class.forName(object.getController());
 				controllerInstance = controller.newInstance();

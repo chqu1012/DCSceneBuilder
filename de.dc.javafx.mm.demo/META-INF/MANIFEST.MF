@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo
+Bundle-SymbolicName: de.dc.javafx.mm.demo
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: de.dc.javafx.mm.demo
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: de.dc.javafx.mm;bundle-version="0.1.0",
+ de.dc.javafx.mm.edit;bundle-version="1.0.0",
+ de.dc.javafx.mm.renderer;bundle-version="1.0.0"

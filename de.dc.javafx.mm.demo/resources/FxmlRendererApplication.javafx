@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc" controller="" name="Person">
+  <root xsi:type="mm:EBorderPane">
+    <left xsi:type="mm:EVBox">
+      <children xsi:type="mm:EButton" onAction="onRefreshButtonClicked" id="refreshButton" text="Refresh"/>
+      <children xsi:type="mm:EButton" onAction="onAddButtonClicked" id="addButton" text="Add"/>
+      <children xsi:type="mm:EButton" onAction="onDeleteButtonClicked" id="deleteButton" text="Delete"/>
+    </left>
+    <right xsi:type="mm:EButton" onAction="onButtonClicked" id="createButton" text="Create"/>
+    <center xsi:type="mm:ETableView" id="ContactTableView">
+      <columns id="nameColumn" name="Name"/>
+      <columns id="lastnameColumn" name="Lastname"/>
+    </center>
+  </root>
+</mm:EmfModel>

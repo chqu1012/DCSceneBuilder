@@ -1,0 +1,44 @@
+EmfModel{
+	package "de.dc"
+	name Person
+	controller ""
+	root EBorderPane{
+		left EVBox{
+			children {
+				EButton{
+					onAction onRefreshButtonClicked
+					id refreshButton
+					text Refresh
+				},
+				EButton{
+					onAction onAddButtonClicked
+					id addButton
+					text Add
+				},
+				EButton{
+					onAction onDeleteButtonClicked
+					id deleteButton
+					text Delete
+				}
+			}
+		}
+		right EButton{
+			onAction onButtonClicked
+			id createButton
+			text Create
+		}
+		center ETableView{
+			id ContactTableView
+			columns {
+				ETableColumn Name{
+					id nameColumn
+					width 150.0
+				},
+				ETableColumn Lastname{
+					id lastnameColumn
+					width 150.0
+				}
+			}
+		}
+	}
+}
