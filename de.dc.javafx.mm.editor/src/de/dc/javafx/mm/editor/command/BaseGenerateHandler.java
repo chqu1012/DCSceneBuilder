@@ -21,6 +21,8 @@ import de.dc.javafx.mm.file.FxmlFile;
 
 public abstract class BaseGenerateHandler extends AbstractHandler {
 
+	protected IFile currentFileSelection;
+
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelectionService selectionService = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService();
@@ -29,11 +31,11 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 			TreeSelection ss = (TreeSelection) selection;
 			Object firstElement = ss.getFirstElement();
 			if (firstElement instanceof IFile) {
-				IFile model = (IFile) firstElement;
-				IFolder parent = (IFolder) model.getParent();
+				currentFileSelection = (IFile) firstElement;
+				IFolder parent = (IFolder) currentFileSelection.getParent();
 
 				FxmlFile fxmlFile = new FxmlFile();
-				EObject root = fxmlFile.load(model.getRawLocation().toPortableString());
+				EObject root = fxmlFile.load(currentFileSelection.getRawLocation().toPortableString());
 				if (root instanceof EmfModel) {
 					EmfModel emfModel = (EmfModel) root;
 
@@ -74,9 +76,9 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 				currentFolder = currentFolder.getFolder(pack);
 			} else {
 				currentFolder = folder.getFolder(pack);
-				if (!currentFolder.exists()) {
-					currentFolder.create(true, true, null);
-				}
+			}
+			if (!currentFolder.exists()) {
+				currentFolder.create(true, true, null);
 			}
 		}
 		return currentFolder;

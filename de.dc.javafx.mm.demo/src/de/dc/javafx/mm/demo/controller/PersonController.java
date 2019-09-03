@@ -1,8 +1,7 @@
 package de.dc.javafx.mm.demo.controller;
 
-import org.apache.log4j.Logger;
-
-import javafx.event.ActionEvent;
+import javafx.event.*;
+import org.apache.log4j.*;
 
 public class PersonController extends BasePersonController{
 	
@@ -10,12 +9,11 @@ public class PersonController extends BasePersonController{
 	
 	@Override
 	public void initialize() {
-		log.info("Initialize PersonController");
+		log.info("Initialize  PersonController");
 	}
 	
 	@Override
-	public void onRefreshButtonClicked(ActionEvent event) {
-	}
+	public void onRefreshButtonClicked(ActionEvent event) {}
 	
 	@Override
 	public void onAddButtonClicked(ActionEvent event) {}

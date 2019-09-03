@@ -4,6 +4,12 @@ import de.dc.javafx.mm.EmfModel
 
 class ApplicationTemplate implements IGenerator<EmfModel>{
 	
+	String className
+	
+	new(String className){
+		this.className=className
+	}
+	
 	override gen(EmfModel t)'''
 	package «t.basePackage»;
 	
@@ -14,11 +20,11 @@ class ApplicationTemplate implements IGenerator<EmfModel>{
 	
 	import de.dc.javafx.mm.EmfApplication;
 	
-	public class «t.name.toFirstUpper»Application extends EmfApplication{
+	public class «className» extends EmfApplication{
 	
 		@Override
 		protected String getJavaFXFilePath() {
-			return "/«t.name.toFirstUpper».javafx";
+			return "/«className».javafx";
 		}
 	
 		public static void main(String[] args) {

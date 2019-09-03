@@ -1,0 +1,20 @@
+2019/09/03 21:46:11.778 [ INFO] JavaFX Application Thread (PersonController.java) - Initialize PersonController
+2019/09/03 21:46:15.297 [ INFO] main (FxmlRenderApplication.java) - Start FxmlRenderApplication
+2019/09/03 21:46:36.190 [ INFO] JavaFX Application Thread (PersonController.java) - Initialize PersonController
+2019/09/03 21:46:49.937 [ INFO] main (FxmlRenderApplication.java) - Start FxmlRenderApplication
+2019/09/03 22:25:51.045 [ INFO] JavaFX Application Thread (PersonController.java) - Initialize  PersonController
+2019/09/03 22:26:02.665 [ INFO] main (PersonApplication.java) - Start PersonApplication
+2019/09/03 22:27:05.644 [ INFO] JavaFX Application Thread (PersonController.java) - Initialize  PersonController
+2019/09/03 22:27:18.335 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:18.531 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:18.742 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:19.202 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:19.681 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:20.034 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:20.396 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:20.622 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:21.071 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:21.307 [ INFO] JavaFX Application Thread (PersonController.java) - Refresh Button Clicked
+2019/09/03 22:27:30.251 [ INFO] main (PersonApplication.java) - Start PersonApplication
+2019/09/03 22:37:16.834 [ INFO] JavaFX Application Thread (PersonController.java) - Initialize  PersonController
+2019/09/03 22:37:25.092 [ INFO] main (FxmlRendererApplication.java) - Start PersonApplication

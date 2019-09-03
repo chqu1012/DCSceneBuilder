@@ -129,6 +129,11 @@
                   label="Generate Binding"
                   style="push">
             </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.command.generateApplication"
+                  label="Generate Application"
+                  style="push">
+            </command>
             <separator
                   name="de.dc.javafx.mm.editor.separator1"
                   visible="true">
@@ -249,6 +254,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.ConvertToEmfModelHandler"
             id="de.dc.javafx.mm.editor.command.ConvertToEmfModel"
             name="Convert to Emf Model">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateApplicationHandler"
+            id="de.dc.javafx.mm.editor.command.generateApplication"
+            name="Generate Application">
       </command>
    </extension>
 

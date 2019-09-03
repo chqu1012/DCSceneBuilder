@@ -7,6 +7,12 @@ import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class ApplicationTemplate implements IGenerator<EmfModel> {
+  private String className;
+  
+  public ApplicationTemplate(final String className) {
+    this.className = className;
+  }
+  
   @Override
   public String gen(final EmfModel t) {
     StringConcatenation _builder = new StringConcatenation();
@@ -28,9 +34,8 @@ public class ApplicationTemplate implements IGenerator<EmfModel> {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
-    String _firstUpper = StringExtensions.toFirstUpper(t.getName());
-    _builder.append(_firstUpper);
-    _builder.append("Application extends EmfApplication{");
+    _builder.append(this.className);
+    _builder.append(" extends EmfApplication{");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("\t");
@@ -41,8 +46,7 @@ public class ApplicationTemplate implements IGenerator<EmfModel> {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return \"/");
-    String _firstUpper_1 = StringExtensions.toFirstUpper(t.getName());
-    _builder.append(_firstUpper_1, "\t\t");
+    _builder.append(this.className, "\t\t");
     _builder.append(".javafx\";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -60,8 +64,8 @@ public class ApplicationTemplate implements IGenerator<EmfModel> {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Logger.getRootLogger().info(\"Start ");
-    String _firstUpper_2 = StringExtensions.toFirstUpper(t.getName());
-    _builder.append(_firstUpper_2, "\t\t");
+    String _firstUpper = StringExtensions.toFirstUpper(t.getName());
+    _builder.append(_firstUpper, "\t\t");
     _builder.append("Application\");");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
