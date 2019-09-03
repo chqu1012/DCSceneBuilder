@@ -80,12 +80,14 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	}
 
 	private void invokeMethod(String name, Event event) {
-		Method initializeMethod;
-		try {
-			initializeMethod = controller.getMethod(name,event.getClass());
-			initializeMethod.invoke(controllerInstance, event);
-		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			LOG.error("Failed to invoke method "+name, e);
+		if (controller!=null) {
+			Method initializeMethod;
+			try {
+				initializeMethod = controller.getMethod(name,event.getClass());
+				initializeMethod.invoke(controllerInstance, event);
+			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+				LOG.error("Failed to invoke method "+name, e);
+			}
 		}
 	}
 	

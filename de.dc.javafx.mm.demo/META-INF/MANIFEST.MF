@@ -7,4 +7,9 @@ Automatic-Module-Name: de.dc.javafx.mm.demo
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: de.dc.javafx.mm;bundle-version="0.1.0",
  de.dc.javafx.mm.edit;bundle-version="1.0.0",
- de.dc.javafx.mm.renderer;bundle-version="1.0.0"
+ de.dc.javafx.mm.renderer;bundle-version="1.0.0",
+ com.google.inject;bundle-version="3.0.0",
+ javax.inject;bundle-version="1.0.0",
+ org.apache.log4j;bundle-version="1.2.15",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.15.0",
+ org.apache.commons.lang3;bundle-version="3.1.0"

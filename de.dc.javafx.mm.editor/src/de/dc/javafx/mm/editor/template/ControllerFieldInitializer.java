@@ -39,7 +39,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	
 	private String initOnActionImpl(ENode node) {
 		if (node.getOnAction()==null) return "";
-		return String.format(ON_ACTION_INIT, node.getOnAction());
+		return String.format(ON_ACTION_IMPL_INIT, node.getOnAction());
 	}
 
 	private String initOnAction(ENode node) {

@@ -19,7 +19,7 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
 	
-	public class Base«t.name.toFirstUpper»Controller{
+	public abstract class Base«t.name.toFirstUpper»Controller{
 		
 		public void initialize(){}
 		

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc" controller="" name="Person">
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc.javafx.mm.demo" controller="de.dc.javafx.mm.demo.controller.PersonController" name="Person">
   <root xsi:type="mm:EBorderPane">
     <left xsi:type="mm:EVBox">
       <children xsi:type="mm:EButton" onAction="onRefreshButtonClicked" id="refreshButton" text="Refresh"/>

@@ -14,10 +14,16 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 	package «t.basePackage».controller;
 	
 	import javafx.event.*;
-	import javafx.fxml.*;
-	import javafx.scene.control.*;
+	import org.apache.log4j.*;
 	
 	public class «t.name.toFirstUpper»Controller extends Base«t.name.toFirstUpper»Controller{
+		
+		private Logger log = Logger.getLogger(PersonController.class);
+		
+		@Override
+		public void initialize() {
+			log.info("Initialize  «t.name.toFirstUpper»Controller");
+		}
 		
 		«t.root.initField»
 		«onActionBuffer.toString»

@@ -1,7 +1,7 @@
 EmfModel{
-	package "de.dc"
+	package "de.dc.javafx.mm.demo"
 	name Person
-	controller ""
+	controller "de.dc.javafx.mm.demo.controller.ContactController"
 	root EBorderPane{
 		left EVBox{
 			children {
@@ -9,12 +9,12 @@ EmfModel{
 					onAction onRefreshButtonClicked
 					id refreshButton
 					text Refresh
-				},
+				}
 				EButton{
 					onAction onAddButtonClicked
 					id addButton
 					text Add
-				},
+				}
 				EButton{
 					onAction onDeleteButtonClicked
 					id deleteButton
@@ -30,14 +30,8 @@ EmfModel{
 		center ETableView{
 			id ContactTableView
 			columns {
-				ETableColumn Name{
-					id nameColumn
-					width 150.0
-				},
-				ETableColumn Lastname{
-					id lastnameColumn
-					width 150.0
-				}
+				ETableColumn Name( id nameColumn width 150.0)
+				ETableColumn Lastname(id lastnameColumn width 150.0)
 			}
 		}
 	}

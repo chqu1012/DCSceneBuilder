@@ -36,7 +36,7 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
     _builder.append("import javafx.scene.control.*;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("public class Base");
+    _builder.append("public abstract class Base");
     String _firstUpper = StringExtensions.toFirstUpper(t.getName());
     _builder.append(_firstUpper);
     _builder.append("Controller{");

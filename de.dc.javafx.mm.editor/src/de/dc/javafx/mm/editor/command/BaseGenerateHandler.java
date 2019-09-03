@@ -74,7 +74,9 @@ public abstract class BaseGenerateHandler extends AbstractHandler {
 				currentFolder = currentFolder.getFolder(pack);
 			} else {
 				currentFolder = folder.getFolder(pack);
-				currentFolder.create(true, true, null);
+				if (!currentFolder.exists()) {
+					currentFolder.create(true, true, null);
+				}
 			}
 		}
 		return currentFolder;
