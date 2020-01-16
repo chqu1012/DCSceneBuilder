@@ -42,6 +42,7 @@ import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
 import de.dc.javafx.mm.MmPackage;
+import de.dc.javafx.mm.editor.util.FxmlToENodeSwitch;
 import de.dc.javafx.mm.file.FxmlFile;
 import javafx.embed.swing.JFXPanel;
 
@@ -49,7 +50,10 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 
 	private EmfModel emfModel;
 	private ENode currentNode;
-	private EBorderPane rootPane;
+	private ENode rootPane;
+	
+	private FxmlToENodeSwitch fxmlToENode = new FxmlToENodeSwitch();
+	private boolean firstElement = true;
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -79,13 +83,7 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 					browseAllEvents(fxomDocument);
 
 					FXOMObject root = fxomDocument.getFxomRoot();
-					
-					rootPane = MmFactory.eINSTANCE.createEBorderPane();
-					emfModel.setRoot(rootPane);
-					
-					browseObject(rootPane, root);
-					
-					
+					browseObject(null, root);
 					
 					FxmlFile fxmlFile = new FxmlFile();
 					fxmlFile.write(emfModel, parent.getRawLocation().toOSString()+"/"+model.getName()+".javafx");
@@ -125,14 +123,19 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 
 			String eClassName = "E" + declaredClass.getSimpleName();
 			EClassifier classif = MmPackage.eINSTANCE.getEClassifier(eClassName);
-			if (classif != null && classif instanceof ENode) {
+			if (classif != null) {
 				EObject newNode = MmFactory.eINSTANCE.create((EClass) classif);
 				if (newNode instanceof ENode) {
-					if (node==rootPane) {
-						rootPane.setCenter((ENode) newNode);
+					if (node==null) {
+						rootPane = (ENode) newNode;
+						emfModel.setRoot(rootPane);
 					}else {
 						node.getChildren().add((ENode) newNode);
 					}
+					
+					fxmlToENode.setFxmObject(instance);
+					fxmlToENode.doSwitch(newNode);
+					
 					Map<PropertyName, FXOMProperty> properties = instance.getProperties();
 					System.out.println("declaredClass: " + declaredClass);
 					System.out.println("controller: " + instance.getFxController());

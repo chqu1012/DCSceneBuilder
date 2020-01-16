@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx">
+  <root xsi:type="mm:EBorderPane">
+    <children xsi:type="mm:EVBox"/>
+    <children xsi:type="mm:EStackPane">
+      <children xsi:type="mm:EBorderPane"/>
+    </children>
+  </root>
+</mm:EmfModel>

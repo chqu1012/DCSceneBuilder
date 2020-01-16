@@ -43,5 +43,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
  de.dc.scene.builder;bundle-version="1.0.0",
- de.dc.javafx.mm.renderer;bundle-version="1.0.0"
+ de.dc.javafx.mm.renderer;bundle-version="1.0.0",
+ org.eclipse.equinox.event;bundle-version="1.5.200"
 Bundle-ActivationPolicy: lazy
