@@ -116,6 +116,8 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEVBox();
 		case MmPackage.EFLOW_PANE:
 			return createEFlowPane();
+		case MmPackage.ESPLIT_PANE:
+			return createESplitPane();
 		case MmPackage.ETILE_PANE:
 			return createETilePane();
 		case MmPackage.EANCHOR_PANE:
@@ -474,6 +476,17 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EFlowPane createEFlowPane() {
 		EFlowPaneImpl eFlowPane = new EFlowPaneImpl();
 		return eFlowPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ESplitPane createESplitPane() {
+		ESplitPaneImpl eSplitPane = new ESplitPaneImpl();
+		return eSplitPane;
 	}
 
 	/**

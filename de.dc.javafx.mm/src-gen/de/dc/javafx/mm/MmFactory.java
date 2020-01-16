@@ -285,6 +285,15 @@ public interface MmFactory extends EFactory {
 	EFlowPane createEFlowPane();
 
 	/**
+	 * Returns a new object of class '<em>ESplit Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ESplit Pane</em>'.
+	 * @generated
+	 */
+	ESplitPane createESplitPane();
+
+	/**
 	 * Returns a new object of class '<em>ETile Pane</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

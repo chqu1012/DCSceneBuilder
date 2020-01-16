@@ -28,6 +28,7 @@ import de.dc.javafx.mm.EPane;
 import de.dc.javafx.mm.EPieChart;
 import de.dc.javafx.mm.ERadioButton;
 import de.dc.javafx.mm.ESplitMenuButton;
+import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
@@ -313,6 +314,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eFlowPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eSplitPaneEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1224,6 +1232,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getESplitPane() {
+		return eSplitPaneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getETilePane() {
 		return eTilePaneEClass;
 	}
@@ -1455,6 +1473,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		eFlowPaneEClass = createEClass(EFLOW_PANE);
 
+		eSplitPaneEClass = createEClass(ESPLIT_PANE);
+
 		eTilePaneEClass = createEClass(ETILE_PANE);
 
 		eAnchorPaneEClass = createEClass(EANCHOR_PANE);
@@ -1534,6 +1554,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		ehBoxEClass.getESuperTypes().add(this.getEPane());
 		evBoxEClass.getESuperTypes().add(this.getEPane());
 		eFlowPaneEClass.getESuperTypes().add(this.getEPane());
+		eSplitPaneEClass.getESuperTypes().add(this.getEPane());
 		eTilePaneEClass.getESuperTypes().add(this.getEPane());
 		eAnchorPaneEClass.getESuperTypes().add(this.getEPane());
 		eBorderPaneEClass.getESuperTypes().add(this.getEPane());
@@ -1762,6 +1783,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_ORDERED);
 
 		initEClass(eFlowPaneEClass, EFlowPane.class, "EFlowPane", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eSplitPaneEClass, ESplitPane.class, "ESplitPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eTilePaneEClass, ETilePane.class, "ETilePane", !IS_ABSTRACT, !IS_INTERFACE,

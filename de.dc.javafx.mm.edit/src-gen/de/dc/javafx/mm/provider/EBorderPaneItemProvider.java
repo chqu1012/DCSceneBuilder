@@ -221,6 +221,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEFlowPane()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createESplitPane()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createETilePane()));
 
 		newChildDescriptors.add(
@@ -299,6 +302,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEFlowPane()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createESplitPane()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createETilePane()));
 
 		newChildDescriptors.add(
@@ -375,6 +381,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEFlowPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createESplitPane()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createETilePane()));
@@ -455,6 +464,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEFlowPane()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createESplitPane()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createETilePane()));
 
 		newChildDescriptors.add(
@@ -531,6 +543,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEFlowPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createESplitPane()));
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createETilePane()));

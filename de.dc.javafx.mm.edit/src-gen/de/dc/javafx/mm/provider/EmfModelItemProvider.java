@@ -330,6 +330,9 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEFlowPane()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createESplitPane()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createETilePane()));
 
 		newChildDescriptors

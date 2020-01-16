@@ -144,6 +144,8 @@ class EVBox extends EPane{
 
 class EFlowPane extends EPane{}
 
+class ESplitPane extends EPane{}
+
 class ETilePane extends EPane{}
 
 class EAnchorPane extends EPane{}

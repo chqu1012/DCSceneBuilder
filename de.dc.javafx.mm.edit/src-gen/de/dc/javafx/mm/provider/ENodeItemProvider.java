@@ -476,6 +476,9 @@ public class ENodeItemProvider extends StyleableItemProvider {
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEFlowPane()));
 
 		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createESplitPane()));
+
+		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createETilePane()));
 
 		newChildDescriptors

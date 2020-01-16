@@ -742,6 +742,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ESplitPane} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ESplitPaneItemProvider eSplitPaneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ESplitPane}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createESplitPaneAdapter() {
+		if (eSplitPaneItemProvider == null) {
+			eSplitPaneItemProvider = new ESplitPaneItemProvider(this);
+		}
+
+		return eSplitPaneItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETilePane} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -973,6 +996,8 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			evBoxItemProvider.dispose();
 		if (eFlowPaneItemProvider != null)
 			eFlowPaneItemProvider.dispose();
+		if (eSplitPaneItemProvider != null)
+			eSplitPaneItemProvider.dispose();
 		if (eTilePaneItemProvider != null)
 			eTilePaneItemProvider.dispose();
 		if (eAnchorPaneItemProvider != null)

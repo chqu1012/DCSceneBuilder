@@ -640,6 +640,23 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.ESPLIT_PANE: {
+			ESplitPane eSplitPane = (ESplitPane) theEObject;
+			T result = caseESplitPane(eSplitPane);
+			if (result == null)
+				result = caseEPane(eSplitPane);
+			if (result == null)
+				result = caseENode(eSplitPane);
+			if (result == null)
+				result = caseStyleable(eSplitPane);
+			if (result == null)
+				result = caseSkinnable(eSplitPane);
+			if (result == null)
+				result = caseEEvents(eSplitPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ETILE_PANE: {
 			ETilePane eTilePane = (ETilePane) theEObject;
 			T result = caseETilePane(eTilePane);
@@ -1233,6 +1250,21 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEFlowPane(EFlowPane object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ESplit Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ESplit Pane</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseESplitPane(ESplitPane object) {
 		return null;
 	}
 

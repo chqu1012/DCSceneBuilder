@@ -247,6 +247,11 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseESplitPane(ESplitPane object) {
+			return createESplitPaneAdapter();
+		}
+
+		@Override
 		public Adapter caseETilePane(ETilePane object) {
 			return createETilePaneAdapter();
 		}
@@ -781,6 +786,20 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEFlowPaneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ESplitPane <em>ESplit Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ESplitPane
+	 * @generated
+	 */
+	public Adapter createESplitPaneAdapter() {
 		return null;
 	}
 
