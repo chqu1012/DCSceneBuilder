@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see de.dc.javafx.mm.MmFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel multipleEditorPages='false' creationIcons='false' editDirectory='/de.dc.javafx.mm.edit/src-gen' editorDirectory='/de.dc.javafx.mm.editor/src-gen' richClientPlatform='true' codeFormatting='true' importerID='org.eclipse.emf.importer.ecore' runtimePlatform='RCP' fileExtensions='javafx' tableProviders='true' dataTypeConverters='true' basePackage='de.dc.javafx'"
  * @generated
  */
 public interface MmPackage extends EPackage {
@@ -7930,7 +7929,6 @@ public interface MmPackage extends EPackage {
 	 * @return the meta object for data type '<em>EPos</em>'.
 	 * @see javafx.geometry.Pos
 	 * @model instanceClass="javafx.geometry.Pos"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel create='&lt;%javafx.geometry.Pos%&gt; _xifexpression = null;\nif ((it != null))\n{\n\t_xifexpression = &lt;%javafx.geometry.Pos%&gt;.valueOf(it);\n}\nreturn _xifexpression;' convert='&lt;%java.lang.String%&gt; _xifexpression = null;\nif ((it != null))\n{\n\t_xifexpression = it.name();\n}\nreturn _xifexpression;'"
 	 * @generated
 	 */
 	EDataType getEPos();

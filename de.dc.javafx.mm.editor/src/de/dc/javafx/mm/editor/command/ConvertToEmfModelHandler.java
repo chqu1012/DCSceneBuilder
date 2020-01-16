@@ -18,6 +18,8 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.viewers.ISelection;
@@ -35,12 +37,20 @@ import com.oracle.javafx.scenebuilder.kit.fxom.FXOMPropertyC;
 import com.oracle.javafx.scenebuilder.kit.fxom.FXOMPropertyT;
 import com.oracle.javafx.scenebuilder.kit.metadata.util.PropertyName;
 
+import de.dc.javafx.mm.EBorderPane;
+import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EmfModel;
+import de.dc.javafx.mm.MmFactory;
+import de.dc.javafx.mm.MmPackage;
 import de.dc.javafx.mm.file.FxmlFile;
 import javafx.embed.swing.JFXPanel;
 
 public class ConvertToEmfModelHandler extends AbstractHandler {
 
+	private EmfModel emfModel;
+	private ENode currentNode;
+	private EBorderPane rootPane;
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelectionService selectionService = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService();
@@ -56,6 +66,9 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 				new JFXPanel();
 				EditorController editorController = new EditorController();
 				URL fxmlLocation;
+
+				emfModel = MmFactory.eINSTANCE.createEmfModel();
+
 				try {
 					fxmlLocation = model.getLocation().toFile().toURI().toURL();
 					editorController.setFxmlTextAndLocation(fxmlText, fxmlLocation);
@@ -66,7 +79,16 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 					browseAllEvents(fxomDocument);
 
 					FXOMObject root = fxomDocument.getFxomRoot();
-					browseObject(root);
+					
+					rootPane = MmFactory.eINSTANCE.createEBorderPane();
+					emfModel.setRoot(rootPane);
+					
+					browseObject(rootPane, root);
+					
+					
+					
+					FxmlFile fxmlFile = new FxmlFile();
+					fxmlFile.write(emfModel, parent.getRawLocation().toOSString()+"/"+model.getName()+".javafx");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -81,7 +103,7 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 //		});
 		for (FXOMPropertyT handler : fxomDocument.getFxomRoot().collectEventHandlers()) {
 			String eventTypeName = handler.getName().getName();
-			System.out.println("Handler: "+handler.getValue()+", eventType: "+eventTypeName);
+			System.out.println("Handler: " + handler.getValue() + ", eventType: " + eventTypeName);
 		}
 	}
 
@@ -94,35 +116,48 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 		}
 	}
 
-	private void browseObject(FXOMObject o) {
+	private void browseObject(ENode node, FXOMObject o) {
 		if (o instanceof FXOMInstance) {
 			FXOMInstance instance = (FXOMInstance) o;
 			Class<?> declaredClass = instance.getDeclaredClass();
 			// PrefWidth, PrefHeight, Stylesheets
 			// Here: center and left
-			Map<PropertyName, FXOMProperty> properties = instance.getProperties();
-			System.out.println("declaredClass: " + declaredClass);
-			System.out.println("controller: " + instance.getFxController());
-			System.out.println("constant: " + instance.getFxConstant());
-			System.out.println("value: " + instance.getFxValue());
-			System.out.println("id: " + instance.getFxId());
-			for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
-				FXOMProperty property = entry.getValue();
-				String value = "";
-				if (property instanceof FXOMPropertyC) {
-					FXOMPropertyC c = (FXOMPropertyC) property;
-					value = "C:" + c.getValues().toString();
 
-				} else if (property instanceof FXOMPropertyT) {
-					FXOMPropertyT t = (FXOMPropertyT) property;
-					value = "T:" + t.getValue();
-
+			String eClassName = "E" + declaredClass.getSimpleName();
+			EClassifier classif = MmPackage.eINSTANCE.getEClassifier(eClassName);
+			if (classif != null && classif instanceof ENode) {
+				EObject newNode = MmFactory.eINSTANCE.create((EClass) classif);
+				if (newNode instanceof ENode) {
+					if (node==rootPane) {
+						rootPane.setCenter((ENode) newNode);
+					}else {
+						node.getChildren().add((ENode) newNode);
+					}
+					Map<PropertyName, FXOMProperty> properties = instance.getProperties();
+					System.out.println("declaredClass: " + declaredClass);
+					System.out.println("controller: " + instance.getFxController());
+					System.out.println("constant: " + instance.getFxConstant());
+					System.out.println("value: " + instance.getFxValue());
+					System.out.println("id: " + instance.getFxId());
+					for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
+						FXOMProperty property = entry.getValue();
+						String value = "";
+						if (property instanceof FXOMPropertyC) {
+							FXOMPropertyC c = (FXOMPropertyC) property;
+							value = "C:" + c.getValues().toString();
+							
+						} else if (property instanceof FXOMPropertyT) {
+							FXOMPropertyT t = (FXOMPropertyT) property;
+							value = "T:" + t.getValue();
+							
+						}
+						System.out.println("Key: " + entry.getKey().getName() + ", value: " + value);
+					}
+					System.out.println("************************************************************");
+					o.getChildObjects().forEach(e->browseObject((ENode) newNode, e));
 				}
-				System.out.println("Key: " + entry.getKey().getName() + ", value: " + value);
 			}
-			System.out.println("************************************************************");
 		}
-		o.getChildObjects().forEach(this::browseObject);
 	}
 
 	public String fileToString(String path) {
