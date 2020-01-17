@@ -167,6 +167,8 @@ public class FxmlEditor extends TextEditor {
 
 	@Override
 	public void setFocus() {
-		text.forceFocus();
+		if (text!=null) {
+			text.forceFocus();
+		}
 	}
 }

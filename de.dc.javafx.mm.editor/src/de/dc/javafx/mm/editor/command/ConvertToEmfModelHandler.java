@@ -53,7 +53,6 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 	private ENode rootPane;
 	
 	private FxmlToENodeSwitch fxmlToENode = new FxmlToENodeSwitch();
-	private boolean firstElement = true;
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -110,7 +109,7 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 		for (Entry<String, FXOMObject> entry : fxIds.entrySet()) {
 			Object obj = entry.getValue().getSceneGraphObject();
 			Class<?> type = obj.getClass();
-			System.out.println("Key: " + entry.getKey() + ",  instance: " + type.getSimpleName());
+//			System.out.println("Key: " + entry.getKey() + ",  instance: " + type.getSimpleName());
 		}
 	}
 
@@ -118,45 +117,40 @@ public class ConvertToEmfModelHandler extends AbstractHandler {
 		if (o instanceof FXOMInstance) {
 			FXOMInstance instance = (FXOMInstance) o;
 			Class<?> declaredClass = instance.getDeclaredClass();
-			// PrefWidth, PrefHeight, Stylesheets
-			// Here: center and left
-
 			String eClassName = "E" + declaredClass.getSimpleName();
 			EClassifier classif = MmPackage.eINSTANCE.getEClassifier(eClassName);
 			if (classif != null) {
 				EObject newNode = MmFactory.eINSTANCE.create((EClass) classif);
 				if (newNode instanceof ENode) {
+					ENode enode = (ENode) newNode;
+					enode.setId(instance.getFxId());
 					if (node==null) {
-						rootPane = (ENode) newNode;
+						rootPane = enode;
+						currentNode = rootPane;
 						emfModel.setRoot(rootPane);
 					}else {
-						node.getChildren().add((ENode) newNode);
+						fxmlToENode.setFxmObject((FXOMInstance) instance.getParentObject(), enode);
+						currentNode = fxmlToENode.doSwitch(currentNode);
 					}
 					
-					fxmlToENode.setFxmObject(instance);
-					fxmlToENode.doSwitch(newNode);
 					
-					Map<PropertyName, FXOMProperty> properties = instance.getProperties();
-					System.out.println("declaredClass: " + declaredClass);
-					System.out.println("controller: " + instance.getFxController());
-					System.out.println("constant: " + instance.getFxConstant());
-					System.out.println("value: " + instance.getFxValue());
-					System.out.println("id: " + instance.getFxId());
-					for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
-						FXOMProperty property = entry.getValue();
-						String value = "";
-						if (property instanceof FXOMPropertyC) {
-							FXOMPropertyC c = (FXOMPropertyC) property;
-							value = "C:" + c.getValues().toString();
-							
-						} else if (property instanceof FXOMPropertyT) {
-							FXOMPropertyT t = (FXOMPropertyT) property;
-							value = "T:" + t.getValue();
-							
-						}
-						System.out.println("Key: " + entry.getKey().getName() + ", value: " + value);
-					}
-					System.out.println("************************************************************");
+//					Map<PropertyName, FXOMProperty> properties = instance.getProperties();
+//					for (Entry<PropertyName, FXOMProperty> entry : properties.entrySet()) {
+//						FXOMProperty property = entry.getValue();
+//						String value = "";
+//						if (property instanceof FXOMPropertyC) {
+//							FXOMPropertyC c = (FXOMPropertyC) property;
+//							value = "C:" + c.getValues().toString();
+//							
+//						} else if (property instanceof FXOMPropertyT) {
+//							FXOMPropertyT t = (FXOMPropertyT) property;
+//							value = "T:" + t.getValue();
+//							
+//						}
+//						System.out.println("Key: " + entry.getKey().getName() + ", value: " + value);
+//					}
+//					System.out.println("************************************************************");
+					currentNode = enode;
 					o.getChildObjects().forEach(e->browseObject((ENode) newNode, e));
 				}
 			}

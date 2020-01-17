@@ -2,9 +2,14 @@ package de.dc.javafx.mm.editor.template;
 
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
+import de.dc.javafx.mm.EHBox;
+import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ENode;
+import de.dc.javafx.mm.ESplitPane;
+import de.dc.javafx.mm.EStackPane;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EText;
+import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.util.MmSwitch;
 
 public class ControllerFieldInitializer extends MmSwitch<String> {
@@ -20,9 +25,14 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	}
 	
 	@Override public String caseEBorderPane(EBorderPane object) { return init(object); }
+	@Override public String caseEVBox(EVBox object) { return init(object); }
+	@Override public String caseEHBox(EHBox object) { return init(object); }
+	@Override public String caseESplitPane(ESplitPane object) { return init(object); }
+	@Override public String caseEStackPane(EStackPane object) { return init(object); }
 	@Override public String caseETableView(ETableView object) { return init(object); }
 	@Override public String caseEButton(EButton object) { return init(object); }
 	@Override public String caseEText(EText object) { return init(object); }
+	@Override public String caseELabel(ELabel object) { return init(object); }
 
 	private String init(ENode object) {
 		switch (type) {
