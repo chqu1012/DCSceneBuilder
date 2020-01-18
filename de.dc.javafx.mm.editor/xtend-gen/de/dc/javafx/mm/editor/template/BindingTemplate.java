@@ -50,6 +50,8 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             _builder.newLineIfNotEmpty();
           }
         }
+        _builder.append("\t");
+        _builder.newLine();
         {
           EList<EBinding> _bindings_1 = t.getBindingModel().getBindings();
           for(final EBinding b_1 : _bindings_1) {
@@ -58,8 +60,8 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             _builder.append("public ");
-            EBindingType _bindingType_1 = b_1.getBindingType();
-            _builder.append(_bindingType_1, "\t");
+            String _replace = b_1.getBindingType().toString().replace("Property", "");
+            _builder.append(_replace, "\t");
             _builder.append(" get");
             String _firstUpper_1 = StringExtensions.toFirstUpper(name_1);
             _builder.append(_firstUpper_1, "\t");
@@ -81,8 +83,8 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             String _firstUpper_2 = StringExtensions.toFirstUpper(name_1);
             _builder.append(_firstUpper_2, "\t");
             _builder.append("(");
-            String _replace = b_1.getBindingType().toString().replace("Property", "");
-            _builder.append(_replace, "\t");
+            String _replace_1 = b_1.getBindingType().toString().replace("Property", "");
+            _builder.append(_replace_1, "\t");
             _builder.append(" ");
             _builder.append(name_1, "\t");
             _builder.append("){");
@@ -102,8 +104,8 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             _builder.newLine();
             _builder.append("\t");
             _builder.append("public ");
-            EBindingType _bindingType_2 = b_1.getBindingType();
-            _builder.append(_bindingType_2, "\t");
+            EBindingType _bindingType_1 = b_1.getBindingType();
+            _builder.append(_bindingType_1, "\t");
             _builder.append(" ");
             _builder.append(name_1, "\t");
             _builder.append("Property(){");
@@ -124,8 +126,8 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             String _firstUpper_3 = StringExtensions.toFirstUpper(name_1);
             _builder.append(_firstUpper_3, "\t");
             _builder.append("Property(");
-            EBindingType _bindingType_3 = b_1.getBindingType();
-            _builder.append(_bindingType_3, "\t");
+            EBindingType _bindingType_2 = b_1.getBindingType();
+            _builder.append(_bindingType_2, "\t");
             _builder.append(" ");
             _builder.append(name_1, "\t");
             _builder.append("){");
@@ -143,6 +145,42 @@ public class BindingTemplate implements IGenerator<EmfModel> {
             _builder.newLine();
           }
         }
+        _builder.append("\t");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("@Override");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("public String toString() {");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("StringBuilder sb = new StringBuilder();");
+        _builder.newLine();
+        {
+          EList<EBinding> _bindings_2 = t.getBindingModel().getBindings();
+          for(final EBinding b_2 : _bindings_2) {
+            _builder.append("\t");
+            _builder.append("\t");
+            final String name_2 = StringExtensions.toFirstLower(b_2.getName());
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("sb.append(\"");
+            _builder.append(name_2, "\t\t");
+            _builder.append(": \").append(");
+            _builder.append(name_2, "\t\t");
+            _builder.append(".get()).append(\",\");");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return sb.toString();");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("}");
+        _builder.newLine();
       }
     }
     _builder.append("}");

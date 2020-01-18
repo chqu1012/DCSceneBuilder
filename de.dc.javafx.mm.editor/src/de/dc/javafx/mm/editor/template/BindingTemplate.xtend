@@ -16,9 +16,10 @@ class BindingTemplate implements IGenerator<EmfModel>{
 		«val name = b.name.toFirstLower»
 		private «b.bindingType» «name»;
 		«ENDFOR»
+		
 		«FOR b : t.bindingModel.bindings»
 		«val name = b.name.toFirstLower»
-		public «b.bindingType» get«name.toFirstUpper»(){
+		public «b.bindingType.toString.replace('Property', '')» get«name.toFirstUpper»(){
 			return this.«name».get();
 		}
 		
@@ -34,6 +35,16 @@ class BindingTemplate implements IGenerator<EmfModel>{
 			this.«name»=«name»;
 		}
 		«ENDFOR»
+		
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			«FOR b : t.bindingModel.bindings»
+			«val name = b.name.toFirstLower»
+			sb.append("«name»: ").append(«name».get()).append(",");
+			«ENDFOR»
+			return sb.toString();
+		}
 		«ENDIF»
 	}
 	'''
