@@ -5,6 +5,10 @@ package de.dc.javafx.mm.impl;
 import de.dc.javafx.mm.EAnchorPane;
 import de.dc.javafx.mm.EAxis;
 import de.dc.javafx.mm.EBaseView;
+import de.dc.javafx.mm.EBinding;
+import de.dc.javafx.mm.EBindingDirection;
+import de.dc.javafx.mm.EBindingModel;
+import de.dc.javafx.mm.EBindingType;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.EButtonBase;
@@ -12,6 +16,7 @@ import de.dc.javafx.mm.ECatgeoryAxis;
 import de.dc.javafx.mm.EChart;
 import de.dc.javafx.mm.ECheckBox;
 import de.dc.javafx.mm.EControl;
+import de.dc.javafx.mm.EControlBinding;
 import de.dc.javafx.mm.EDialogPane;
 import de.dc.javafx.mm.EEvents;
 import de.dc.javafx.mm.EFlowPane;
@@ -50,6 +55,7 @@ import javafx.geometry.Pos;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -69,6 +75,20 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass emfModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBindingModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBindingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -348,6 +368,27 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum eControlBindingEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eBindingTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eBindingDirectionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType ePosEDataType = null;
 
 	/**
@@ -472,8 +513,98 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getEmfModel_Root() {
+	public EReference getEmfModel_BindingModel() {
 		return (EReference) emfModelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEmfModel_Root() {
+		return (EReference) emfModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBindingModel() {
+		return eBindingModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEBindingModel_Bindings() {
+		return (EReference) eBindingModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBinding() {
+		return eBindingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEBinding_Name() {
+		return (EAttribute) eBindingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEBinding_Node() {
+		return (EReference) eBindingEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEBinding_BindingType() {
+		return (EAttribute) eBindingEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEBinding_Binding() {
+		return (EAttribute) eBindingEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEBinding_Direction() {
+		return (EAttribute) eBindingEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1322,6 +1453,36 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getEControlBinding() {
+		return eControlBindingEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getEBindingType() {
+		return eBindingTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getEBindingDirection() {
+		return eBindingDirectionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getEPos() {
 		return ePosEDataType;
 	}
@@ -1361,7 +1522,18 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(emfModelEClass, EMF_MODEL__CONTROLLER);
 		createEAttribute(emfModelEClass, EMF_MODEL__NAME);
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
+		createEReference(emfModelEClass, EMF_MODEL__BINDING_MODEL);
 		createEReference(emfModelEClass, EMF_MODEL__ROOT);
+
+		eBindingModelEClass = createEClass(EBINDING_MODEL);
+		createEReference(eBindingModelEClass, EBINDING_MODEL__BINDINGS);
+
+		eBindingEClass = createEClass(EBINDING);
+		createEAttribute(eBindingEClass, EBINDING__NAME);
+		createEReference(eBindingEClass, EBINDING__NODE);
+		createEAttribute(eBindingEClass, EBINDING__BINDING_TYPE);
+		createEAttribute(eBindingEClass, EBINDING__BINDING);
+		createEAttribute(eBindingEClass, EBINDING__DIRECTION);
 
 		eEventsEClass = createEClass(EEVENTS);
 		createEAttribute(eEventsEClass, EEVENTS__ON_ACTION);
@@ -1486,6 +1658,11 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEReference(eBorderPaneEClass, EBORDER_PANE__BOTTOM);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__CENTER);
 
+		// Create enums
+		eControlBindingEEnum = createEEnum(ECONTROL_BINDING);
+		eBindingTypeEEnum = createEEnum(EBINDING_TYPE);
+		eBindingDirectionEEnum = createEEnum(EBINDING_DIRECTION);
+
 		// Create data types
 		ePosEDataType = createEDataType(EPOS);
 	}
@@ -1574,8 +1751,35 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getEmfModel_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1,
 				EmfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getEmfModel_BindingModel(), this.getEBindingModel(), null, "bindingModel", null, 0, 1,
+				EmfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmfModel_Root(), this.getENode(), null, "root", null, 0, 1, EmfModel.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eBindingModelEClass, EBindingModel.class, "EBindingModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEBindingModel_Bindings(), this.getEBinding(), null, "bindings", null, 0, -1,
+				EBindingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eBindingEClass, EBinding.class, "EBinding", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEBinding_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EBinding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getEBinding_Node(), this.getENode(), null, "node", null, 0, 1, EBinding.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEBinding_BindingType(), this.getEBindingType(), "bindingType", "StringProperty", 0, 1,
+				EBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEBinding_Binding(), this.getEControlBinding(), "binding", "TextProperty", 0, 1,
+				EBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEBinding_Direction(), this.getEBindingDirection(), "direction", "Bind", 0, 1, EBinding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(eEventsEClass, EEvents.class, "EEvents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1811,6 +2015,47 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getEBorderPane_Center(), this.getENode(), null, "center", null, 0, 1, EBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(eControlBindingEEnum, EControlBinding.class, "EControlBinding");
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.BACKGROUND_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.BORDER_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.DISABLE_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.FOCUSED_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.FONT_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.TEXT_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.LAYOUT_XPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.LAYOUT_YPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.MAX_HEIGHT_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.MAX_WIDTH_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.MIN_HEIGHT_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.MIN_WIDTH_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.PREF_HEIGHT_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.MIN_PREF_WIDTH_PROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.SCALE_XPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.SCALE_YPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.SCALE_ZPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.TRANSLATE_XPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.TRANSLATE_YPROPERTY);
+		addEEnumLiteral(eControlBindingEEnum, EControlBinding.TRANSLATE_ZPROPERTY);
+
+		initEEnum(eBindingTypeEEnum, EBindingType.class, "EBindingType");
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.BOOLEAN_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.FLOAT_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.DOUBLE_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.INTEGER_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.LONG_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.STRING_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.OBJECT_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.LIST_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.SET_PROPERTY);
+		addEEnumLiteral(eBindingTypeEEnum, EBindingType.MAP_PROPERTY);
+
+		initEEnum(eBindingDirectionEEnum, EBindingDirection.class, "EBindingDirection");
+		addEEnumLiteral(eBindingDirectionEEnum, EBindingDirection.BIND);
+		addEEnumLiteral(eBindingDirectionEEnum, EBindingDirection.BIND_BIDIRECTIONAL);
+		addEEnumLiteral(eBindingDirectionEEnum, EBindingDirection.UNBIND);
+		addEEnumLiteral(eBindingDirectionEEnum, EBindingDirection.UNBIND_BIDIRECTIONAL);
 
 		// Initialize data types
 		initEDataType(ePosEDataType, Pos.class, "EPos", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

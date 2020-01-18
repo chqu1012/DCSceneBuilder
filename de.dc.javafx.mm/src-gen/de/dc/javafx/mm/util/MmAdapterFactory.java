@@ -72,6 +72,16 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEBindingModel(EBindingModel object) {
+			return createEBindingModelAdapter();
+		}
+
+		@Override
+		public Adapter caseEBinding(EBinding object) {
+			return createEBindingAdapter();
+		}
+
+		@Override
 		public Adapter caseEEvents(EEvents object) {
 			return createEEventsAdapter();
 		}
@@ -296,6 +306,34 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmfModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBindingModel <em>EBinding Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBindingModel
+	 * @generated
+	 */
+	public Adapter createEBindingModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBinding <em>EBinding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBinding
+	 * @generated
+	 */
+	public Adapter createEBindingAdapter() {
 		return null;
 	}
 

@@ -142,6 +142,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__BINDING_MODEL);
 			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__ROOT);
 		}
 		return childrenFeatures;
@@ -242,6 +243,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		case MmPackage.EMF_MODEL__STYLE_CLASS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
+		case MmPackage.EMF_MODEL__BINDING_MODEL:
 		case MmPackage.EMF_MODEL__ROOT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -259,6 +261,9 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EMF_MODEL__BINDING_MODEL,
+				MmFactory.eINSTANCE.createEBindingModel()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEGroup()));

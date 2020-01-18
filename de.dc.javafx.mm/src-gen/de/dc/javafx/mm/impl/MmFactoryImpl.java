@@ -60,6 +60,10 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 		switch (eClass.getClassifierID()) {
 		case MmPackage.EMF_MODEL:
 			return createEmfModel();
+		case MmPackage.EBINDING_MODEL:
+			return createEBindingModel();
+		case MmPackage.EBINDING:
+			return createEBinding();
 		case MmPackage.EEVENTS:
 			return createEEvents();
 		case MmPackage.STYLEABLE:
@@ -137,6 +141,12 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+		case MmPackage.ECONTROL_BINDING:
+			return createEControlBindingFromString(eDataType, initialValue);
+		case MmPackage.EBINDING_TYPE:
+			return createEBindingTypeFromString(eDataType, initialValue);
+		case MmPackage.EBINDING_DIRECTION:
+			return createEBindingDirectionFromString(eDataType, initialValue);
 		case MmPackage.EPOS:
 			return createEPosFromString(eDataType, initialValue);
 		default:
@@ -152,6 +162,12 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+		case MmPackage.ECONTROL_BINDING:
+			return convertEControlBindingToString(eDataType, instanceValue);
+		case MmPackage.EBINDING_TYPE:
+			return convertEBindingTypeToString(eDataType, instanceValue);
+		case MmPackage.EBINDING_DIRECTION:
+			return convertEBindingDirectionToString(eDataType, instanceValue);
 		case MmPackage.EPOS:
 			return convertEPosToString(eDataType, instanceValue);
 		default:
@@ -168,6 +184,28 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EmfModel createEmfModel() {
 		EmfModelImpl emfModel = new EmfModelImpl();
 		return emfModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBindingModel createEBindingModel() {
+		EBindingModelImpl eBindingModel = new EBindingModelImpl();
+		return eBindingModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBinding createEBinding() {
+		EBindingImpl eBinding = new EBindingImpl();
+		return eBinding;
 	}
 
 	/**
@@ -520,6 +558,132 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EBorderPane createEBorderPane() {
 		EBorderPaneImpl eBorderPane = new EBorderPaneImpl();
 		return eBorderPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EControlBinding createEControlBinding(String literal) {
+		EControlBinding result = EControlBinding.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ MmPackage.Literals.ECONTROL_BINDING.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EControlBinding createEControlBindingFromString(EDataType eDataType, String initialValue) {
+		return createEControlBinding(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertEControlBinding(EControlBinding instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEControlBindingToString(EDataType eDataType, Object instanceValue) {
+		return convertEControlBinding((EControlBinding) instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBindingType createEBindingType(String literal) {
+		EBindingType result = EBindingType.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ MmPackage.Literals.EBINDING_TYPE.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EBindingType createEBindingTypeFromString(EDataType eDataType, String initialValue) {
+		return createEBindingType(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertEBindingType(EBindingType instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEBindingTypeToString(EDataType eDataType, Object instanceValue) {
+		return convertEBindingType((EBindingType) instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBindingDirection createEBindingDirection(String literal) {
+		EBindingDirection result = EBindingDirection.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ MmPackage.Literals.EBINDING_DIRECTION.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EBindingDirection createEBindingDirectionFromString(EDataType eDataType, String initialValue) {
+		return createEBindingDirection(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertEBindingDirection(EBindingDirection instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEBindingDirectionToString(EDataType eDataType, Object instanceValue) {
+		return convertEBindingDirection((EBindingDirection) instanceValue);
 	}
 
 	/**

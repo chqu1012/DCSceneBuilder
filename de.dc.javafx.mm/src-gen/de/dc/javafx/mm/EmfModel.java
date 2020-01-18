@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.mm.EmfModel#getController <em>Controller</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EmfModel#getBindingModel <em>Binding Model</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}</li>
  * </ul>
  *
@@ -104,6 +105,28 @@ public interface EmfModel extends EObject {
 	 * @generated
 	 */
 	EList<String> getStyleClass();
+
+	/**
+	 * Returns the value of the '<em><b>Binding Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Binding Model</em>' containment reference.
+	 * @see #setBindingModel(EBindingModel)
+	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_BindingModel()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EBindingModel getBindingModel();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EmfModel#getBindingModel <em>Binding Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Binding Model</em>' containment reference.
+	 * @see #getBindingModel()
+	 * @generated
+	 */
+	void setBindingModel(EBindingModel value);
 
 	/**
 	 * Returns the value of the '<em><b>Root</b></em>' containment reference.

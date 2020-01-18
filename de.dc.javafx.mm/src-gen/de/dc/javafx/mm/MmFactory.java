@@ -33,6 +33,24 @@ public interface MmFactory extends EFactory {
 	EmfModel createEmfModel();
 
 	/**
+	 * Returns a new object of class '<em>EBinding Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBinding Model</em>'.
+	 * @generated
+	 */
+	EBindingModel createEBindingModel();
+
+	/**
+	 * Returns a new object of class '<em>EBinding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBinding</em>'.
+	 * @generated
+	 */
+	EBinding createEBinding();
+
+	/**
 	 * Returns a new object of class '<em>EEvents</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -319,6 +337,66 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	EBorderPane createEBorderPane();
+
+	/**
+	 * Returns an instance of data type '<em>EControl Binding</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	EControlBinding createEControlBinding(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>EControl Binding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertEControlBinding(EControlBinding instanceValue);
+
+	/**
+	 * Returns an instance of data type '<em>EBinding Type</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	EBindingType createEBindingType(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>EBinding Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertEBindingType(EBindingType instanceValue);
+
+	/**
+	 * Returns an instance of data type '<em>EBinding Direction</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	EBindingDirection createEBindingDirection(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>EBinding Direction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertEBindingDirection(EBindingDirection instanceValue);
 
 	/**
 	 * Returns an instance of data type '<em>EPos</em>' corresponding the given literal.

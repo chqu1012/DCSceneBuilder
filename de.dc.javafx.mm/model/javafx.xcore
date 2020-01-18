@@ -13,7 +13,21 @@ class EmfModel{
 	String controller
 	String name
 	String[0..*] styleClass
+	contains EBindingModel[0..1] bindingModel
 	contains ENode[0..1] root
+}
+
+class EBindingModel{
+	contains EBinding[0..*] bindings
+}
+
+class EBinding{
+	String name
+	refers ENode node
+	EBindingType bindingType = 'StringProperty'
+	EControlBinding binding = 'TextProperty'
+	EBindingDirection direction = 'Bind'
+	
 }
 
 class EEvents{
@@ -159,3 +173,46 @@ class EBorderPane extends EPane{
 }
 
 type EPos wraps Pos create{ if(it!==null) Pos.valueOf(it)} convert{ if(it!==null) it.name}
+
+enum EControlBinding{
+	BackgroundProperty
+	BorderProperty
+	DisableProperty
+	FocusedProperty
+	FontProperty
+	TextProperty
+	LayoutXProperty
+	LayoutYProperty
+	MaxHeightProperty
+	MaxWidthProperty
+	MinHeightProperty
+	MinWidthProperty
+	PrefHeightProperty
+	MinPrefWidthProperty
+	ScaleXProperty
+	ScaleYProperty
+	ScaleZProperty
+	TranslateXProperty
+	TranslateYProperty
+	TranslateZProperty
+}
+
+enum EBindingType{
+	BooleanProperty
+	FloatProperty
+	DoubleProperty
+	IntegerProperty
+	LongProperty
+	StringProperty
+	ObjectProperty
+	ListProperty
+	SetProperty
+	MapProperty	
+}
+
+enum EBindingDirection{
+	Bind
+	BindBidirectional
+	Unbind
+	UnbindBidirectional
+}

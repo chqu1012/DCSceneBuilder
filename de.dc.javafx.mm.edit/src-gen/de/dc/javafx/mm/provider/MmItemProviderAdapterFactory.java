@@ -98,6 +98,52 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBindingModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBindingModelItemProvider eBindingModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBindingModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBindingModelAdapter() {
+		if (eBindingModelItemProvider == null) {
+			eBindingModelItemProvider = new EBindingModelItemProvider(this);
+		}
+
+		return eBindingModelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBinding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBindingItemProvider eBindingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBinding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBindingAdapter() {
+		if (eBindingItemProvider == null) {
+			eBindingItemProvider = new EBindingItemProvider(this);
+		}
+
+		return eBindingItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EEvents} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,6 +986,10 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	public void dispose() {
 		if (emfModelItemProvider != null)
 			emfModelItemProvider.dispose();
+		if (eBindingModelItemProvider != null)
+			eBindingModelItemProvider.dispose();
+		if (eBindingItemProvider != null)
+			eBindingItemProvider.dispose();
 		if (eEventsItemProvider != null)
 			eEventsItemProvider.dispose();
 		if (styleableItemProvider != null)

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc.javafx.mm.demo" controller="de.dc.javafx.mm.demo.MainController" name="Main">
+  <bindingModel>
+    <bindings name="name" node="//@root/@center/@children.1"/>
+  </bindingModel>
   <root xsi:type="mm:EBorderPane" id="root">
     <center xsi:type="mm:EVBox" id="vbox1">
       <children xsi:type="mm:EHBox" id="hbox1"/>
+      <children xsi:type="mm:EText" id="textName"/>
     </center>
   </root>
 </mm:EmfModel>

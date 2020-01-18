@@ -1,15 +1,22 @@
 package de.dc.javafx.mm.editor.command;
 
-import org.eclipse.core.commands.AbstractHandler;
-import org.eclipse.core.commands.ExecutionEvent;
-import org.eclipse.core.commands.ExecutionException;
+import de.dc.javafx.mm.EmfModel;
+import de.dc.javafx.mm.editor.template.BindingTemplate;
 
-public class GenerateBindingHandler extends AbstractHandler {
+public class GenerateBindingHandler extends BaseGenerateHandler {
 
 	@Override
-	public Object execute(ExecutionEvent event) throws ExecutionException {
-		// TODO Auto-generated method stub
-		return null;
+	protected String getGeneratedContent(EmfModel model) {
+		return new BindingTemplate().gen(model);
 	}
 
+	@Override
+	protected String getGeneratedFileName(EmfModel model) {
+		return model.getName() + "Binding.java";
+	}
+
+	@Override
+	protected String getGeneratedPackage(EmfModel model) {
+		return model.getBasePackage()+".model";
+	}
 }

@@ -5,6 +5,7 @@ package de.dc.javafx.mm;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -104,13 +105,22 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL__STYLE_CLASS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Binding Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMF_MODEL__BINDING_MODEL = 4;
+
+	/**
 	 * The feature id for the '<em><b>Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL__ROOT = 4;
+	int EMF_MODEL__ROOT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Emf Model</em>' class.
@@ -119,7 +129,7 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_MODEL_FEATURE_COUNT = 5;
+	int EMF_MODEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Emf Model</em>' class.
@@ -131,6 +141,116 @@ public interface MmPackage extends EPackage {
 	int EMF_MODEL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBindingModelImpl <em>EBinding Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBindingModelImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingModel()
+	 * @generated
+	 */
+	int EBINDING_MODEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING_MODEL__BINDINGS = 0;
+
+	/**
+	 * The number of structural features of the '<em>EBinding Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING_MODEL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>EBinding Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING_MODEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBindingImpl <em>EBinding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBindingImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBinding()
+	 * @generated
+	 */
+	int EBINDING = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING__NODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Binding Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING__BINDING_TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Binding</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING__BINDING = 3;
+
+	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING__DIRECTION = 4;
+
+	/**
+	 * The number of structural features of the '<em>EBinding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>EBinding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBINDING_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,7 +258,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
 	 * @generated
 	 */
-	int EEVENTS = 1;
+	int EEVENTS = 3;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -175,7 +295,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getStyleable()
 	 * @generated
 	 */
-	int STYLEABLE = 2;
+	int STYLEABLE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Styleable</em>' class.
@@ -203,7 +323,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getSkinnable()
 	 * @generated
 	 */
-	int SKINNABLE = 3;
+	int SKINNABLE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Skinnable</em>' class.
@@ -231,7 +351,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getENode()
 	 * @generated
 	 */
-	int ENODE = 4;
+	int ENODE = 6;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -421,7 +541,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEInsets()
 	 * @generated
 	 */
-	int EINSETS = 5;
+	int EINSETS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -485,7 +605,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGroup()
 	 * @generated
 	 */
-	int EGROUP = 6;
+	int EGROUP = 8;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -675,7 +795,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
 	 * @generated
 	 */
-	int EWEB_VIEW = 7;
+	int EWEB_VIEW = 9;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -865,7 +985,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControl()
 	 * @generated
 	 */
-	int ECONTROL = 8;
+	int ECONTROL = 10;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1055,7 +1175,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabeled()
 	 * @generated
 	 */
-	int ELABELED = 9;
+	int ELABELED = 11;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1254,7 +1374,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEText()
 	 * @generated
 	 */
-	int ETEXT = 10;
+	int ETEXT = 12;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1462,7 +1582,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabel()
 	 * @generated
 	 */
-	int ELABEL = 11;
+	int ELABEL = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1661,7 +1781,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButtonBase()
 	 * @generated
 	 */
-	int EBUTTON_BASE = 12;
+	int EBUTTON_BASE = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1860,7 +1980,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 13;
+	int EBUTTON = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2059,7 +2179,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECheckBox()
 	 * @generated
 	 */
-	int ECHECK_BOX = 14;
+	int ECHECK_BOX = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2267,7 +2387,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHyperlink()
 	 * @generated
 	 */
-	int EHYPERLINK = 15;
+	int EHYPERLINK = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2475,7 +2595,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEMenuButton()
 	 * @generated
 	 */
-	int EMENU_BUTTON = 16;
+	int EMENU_BUTTON = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2674,7 +2794,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitMenuButton()
 	 * @generated
 	 */
-	int ESPLIT_MENU_BUTTON = 17;
+	int ESPLIT_MENU_BUTTON = 19;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2873,7 +2993,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEToogleButton()
 	 * @generated
 	 */
-	int ETOOGLE_BUTTON = 18;
+	int ETOOGLE_BUTTON = 20;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3081,7 +3201,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
 	 * @generated
 	 */
-	int EBASE_VIEW = 19;
+	int EBASE_VIEW = 21;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3271,7 +3391,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 20;
+	int ETABLE_VIEW = 22;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3470,7 +3590,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 21;
+	int ETABLE_COLUMN = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3543,7 +3663,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 22;
+	int ERADIO_BUTTON = 24;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3751,7 +3871,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 23;
+	int EAXIS = 25;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3941,7 +4061,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 24;
+	int ECATGEORY_AXIS = 26;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4131,7 +4251,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 25;
+	int EVALUE_AXIS = 27;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4321,7 +4441,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 26;
+	int ECHART = 28;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4511,7 +4631,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 27;
+	int EPIE_CHART = 29;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4701,7 +4821,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 28;
+	int EXY_CHART = 30;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4891,7 +5011,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 29;
+	int EPANE = 31;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5090,7 +5210,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 30;
+	int ESTACK_PANE = 32;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5289,7 +5409,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 31;
+	int EDIALOG_PANE = 33;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5524,7 +5644,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 32;
+	int EGRID_PANE = 34;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5723,7 +5843,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 33;
+	int EH_BOX = 35;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5931,7 +6051,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 34;
+	int EV_BOX = 36;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6139,7 +6259,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 35;
+	int EFLOW_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6338,7 +6458,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitPane()
 	 * @generated
 	 */
-	int ESPLIT_PANE = 36;
+	int ESPLIT_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6537,7 +6657,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 37;
+	int ETILE_PANE = 39;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6736,7 +6856,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 38;
+	int EANCHOR_PANE = 40;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6935,7 +7055,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 39;
+	int EBORDER_PANE = 41;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7172,6 +7292,36 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE_OPERATION_COUNT = EPANE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.EControlBinding
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControlBinding()
+	 * @generated
+	 */
+	int ECONTROL_BINDING = 42;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.EBindingType
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingType()
+	 * @generated
+	 */
+	int EBINDING_TYPE = 43;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.EBindingDirection
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingDirection()
+	 * @generated
+	 */
+	int EBINDING_DIRECTION = 44;
+
+	/**
 	 * The meta object id for the '<em>EPos</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7179,7 +7329,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 40;
+	int EPOS = 45;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -7236,6 +7386,17 @@ public interface MmPackage extends EPackage {
 	EAttribute getEmfModel_StyleClass();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.EmfModel#getBindingModel <em>Binding Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Binding Model</em>'.
+	 * @see de.dc.javafx.mm.EmfModel#getBindingModel()
+	 * @see #getEmfModel()
+	 * @generated
+	 */
+	EReference getEmfModel_BindingModel();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7245,6 +7406,92 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEmfModel_Root();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBindingModel <em>EBinding Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBinding Model</em>'.
+	 * @see de.dc.javafx.mm.EBindingModel
+	 * @generated
+	 */
+	EClass getEBindingModel();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.EBindingModel#getBindings <em>Bindings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bindings</em>'.
+	 * @see de.dc.javafx.mm.EBindingModel#getBindings()
+	 * @see #getEBindingModel()
+	 * @generated
+	 */
+	EReference getEBindingModel_Bindings();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBinding <em>EBinding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBinding</em>'.
+	 * @see de.dc.javafx.mm.EBinding
+	 * @generated
+	 */
+	EClass getEBinding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EBinding#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.javafx.mm.EBinding#getName()
+	 * @see #getEBinding()
+	 * @generated
+	 */
+	EAttribute getEBinding_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.dc.javafx.mm.EBinding#getNode <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Node</em>'.
+	 * @see de.dc.javafx.mm.EBinding#getNode()
+	 * @see #getEBinding()
+	 * @generated
+	 */
+	EReference getEBinding_Node();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EBinding#getBindingType <em>Binding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Binding Type</em>'.
+	 * @see de.dc.javafx.mm.EBinding#getBindingType()
+	 * @see #getEBinding()
+	 * @generated
+	 */
+	EAttribute getEBinding_BindingType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EBinding#getBinding <em>Binding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Binding</em>'.
+	 * @see de.dc.javafx.mm.EBinding#getBinding()
+	 * @see #getEBinding()
+	 * @generated
+	 */
+	EAttribute getEBinding_Binding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EBinding#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see de.dc.javafx.mm.EBinding#getDirection()
+	 * @see #getEBinding()
+	 * @generated
+	 */
+	EAttribute getEBinding_Direction();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
@@ -8132,6 +8379,36 @@ public interface MmPackage extends EPackage {
 	EReference getEBorderPane_Center();
 
 	/**
+	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EControl Binding</em>'.
+	 * @see de.dc.javafx.mm.EControlBinding
+	 * @generated
+	 */
+	EEnum getEControlBinding();
+
+	/**
+	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EBinding Type</em>'.
+	 * @see de.dc.javafx.mm.EBindingType
+	 * @generated
+	 */
+	EEnum getEBindingType();
+
+	/**
+	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EBinding Direction</em>'.
+	 * @see de.dc.javafx.mm.EBindingDirection
+	 * @generated
+	 */
+	EEnum getEBindingDirection();
+
+	/**
 	 * Returns the meta object for data type '{@link javafx.geometry.Pos <em>EPos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8208,12 +8485,88 @@ public interface MmPackage extends EPackage {
 		EAttribute EMF_MODEL__STYLE_CLASS = eINSTANCE.getEmfModel_StyleClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Binding Model</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EMF_MODEL__BINDING_MODEL = eINSTANCE.getEmfModel_BindingModel();
+
+		/**
 		 * The meta object literal for the '<em><b>Root</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference EMF_MODEL__ROOT = eINSTANCE.getEmfModel_Root();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBindingModelImpl <em>EBinding Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBindingModelImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingModel()
+		 * @generated
+		 */
+		EClass EBINDING_MODEL = eINSTANCE.getEBindingModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Bindings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EBINDING_MODEL__BINDINGS = eINSTANCE.getEBindingModel_Bindings();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBindingImpl <em>EBinding</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBindingImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBinding()
+		 * @generated
+		 */
+		EClass EBINDING = eINSTANCE.getEBinding();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EBINDING__NAME = eINSTANCE.getEBinding_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Node</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EBINDING__NODE = eINSTANCE.getEBinding_Node();
+
+		/**
+		 * The meta object literal for the '<em><b>Binding Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EBINDING__BINDING_TYPE = eINSTANCE.getEBinding_BindingType();
+
+		/**
+		 * The meta object literal for the '<em><b>Binding</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EBINDING__BINDING = eINSTANCE.getEBinding_Binding();
+
+		/**
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EBINDING__DIRECTION = eINSTANCE.getEBinding_Direction();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
@@ -8964,6 +9317,36 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EBORDER_PANE__CENTER = eINSTANCE.getEBorderPane_Center();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.EControlBinding
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControlBinding()
+		 * @generated
+		 */
+		EEnum ECONTROL_BINDING = eINSTANCE.getEControlBinding();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.EBindingType
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingType()
+		 * @generated
+		 */
+		EEnum EBINDING_TYPE = eINSTANCE.getEBindingType();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.EBindingDirection
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingDirection()
+		 * @generated
+		 */
+		EEnum EBINDING_DIRECTION = eINSTANCE.getEBindingDirection();
 
 		/**
 		 * The meta object literal for the '<em>EPos</em>' data type.
