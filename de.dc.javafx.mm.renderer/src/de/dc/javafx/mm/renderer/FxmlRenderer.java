@@ -2,10 +2,12 @@ package de.dc.javafx.mm.renderer;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
@@ -41,10 +43,11 @@ import javafx.util.Callback;
 public class FxmlRenderer extends MmSwitch<Node> {
 
 	private static final Logger LOG = Logger.getLogger(FxmlRenderer.class);
-	
+
 	private Map<String, Node> controlRegistry = new HashMap<>();
 	private Map<String, TableColumn> columnsRegistry = new HashMap<>();
-	
+	private Map<String, Field> fieldsMapper = new HashMap<>();
+
 	private Class<?> controller;
 	private Object controllerInstance;
 
@@ -53,12 +56,68 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		return (T) controlRegistry.get(id);
 	}
 
+	@Override
+	public Node caseEmfModel(EmfModel object) {
+		Node root = doSwitch(object.getRoot());
+		if (StringUtils.isNotBlank(object.getController())) {
+			try {
+				controller = Class.forName(object.getController());
+				controllerInstance = controller.newInstance();
+
+				for (Field field : controllerInstance.getClass().getSuperclass().getDeclaredFields()) {
+					if (field.isAnnotationPresent(javafx.fxml.FXML.class)) {
+						field.setAccessible(true);
+						fieldsMapper.put(field.getName(), field);
+					}
+				}
+				initFields();
+
+				Method initializeMethod = controller.getMethod("initialize");
+				initializeMethod.invoke(controllerInstance, null);
+			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException
+					| SecurityException | IllegalArgumentException | InvocationTargetException e) {
+				LOG.error("Failed to init EmfModel", e);
+			}
+		}
+		return root;
+	}
+
+	@Override
+	public Node caseETableView(ETableView object) {
+		TableView<Object> tableView = new TableView<>();
+		object.getColumns().forEach(e -> addColumn(tableView, e));
+		controlRegistry.put(object.getId(), tableView);
+		return tableView;
+	}
+
+	private void initFields() {
+		for (Entry<String, Node> node : controlRegistry.entrySet()) {
+			if (fieldsMapper.get(node.getKey()) != null) {
+				try {
+					fieldsMapper.get(node.getKey()).set(controllerInstance, node.getValue());
+				} catch (IllegalArgumentException | IllegalAccessException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+
+		for (Entry<String, TableColumn> columnEntry : columnsRegistry.entrySet()) {
+			if (columnsRegistry.get(columnEntry.getKey()) != null) {
+				try {
+					fieldsMapper.get(columnEntry.getKey()).set(controllerInstance, columnEntry.getValue());
+				} catch (IllegalArgumentException | IllegalAccessException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+	}
+
 	public TableColumn findColumnBy(String id) {
 		return columnsRegistry.get(id);
 	}
-	
+
 	private Optional<Node> createBorderPaneItem(ENode mNode) {
-		if (mNode!=null) {
+		if (mNode != null) {
 			Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
 			BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
 			return node;
@@ -80,17 +139,18 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	}
 
 	private void invokeMethod(String name, Event event) {
-		if (controller!=null) {
+		if (controller != null) {
 			Method initializeMethod;
 			try {
-				initializeMethod = controller.getMethod(name,event.getClass());
+				initializeMethod = controller.getMethod(name, event.getClass());
 				initializeMethod.invoke(controllerInstance, event);
-			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				LOG.error("Failed to invoke method "+name, e);
+			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
+					| InvocationTargetException e) {
+				LOG.error("Failed to invoke method " + name, e);
 			}
 		}
 	}
-	
+
 	@Override
 	public Node caseEText(EText object) {
 		TextField node = new TextField();
@@ -98,58 +158,34 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		initSize(object, node);
 		return node;
 	}
-	
+
 	@Override
 	public Node caseELabel(ELabel object) {
 		Label node = new Label(object.getText());
 		initSize(object, node);
 		return node;
 	}
-	
+
 	@Override
 	public Node caseEHBox(EHBox object) {
 		HBox node = new HBox(object.getSpacing());
-		object.getChildren().forEach(e->node.getChildren().add(doSwitch(e)));
+		object.getChildren().forEach(e -> node.getChildren().add(doSwitch(e)));
 		initSize(object, node);
 		return node;
 	}
-	
+
 	@Override
 	public Node caseEButton(EButton object) {
 		Button node = new Button();
 		node.setText(object.getText());
-		
+
 		if (isNotBlank(object.getOnAction())) {
-			node.setOnAction(e->invokeMethod(object.getOnAction(),e));
+			node.setOnAction(e -> invokeMethod(object.getOnAction(), e));
 		}
-		
+
 		initSize(object, node);
 		controlRegistry.put(object.getId(), node);
 		return node;
-	}
-	
-	@Override
-	public Node caseEmfModel(EmfModel object) {
-		Node root = doSwitch(object.getRoot());
-		if (StringUtils.isNotBlank(object.getController())) {
-			try {
-				controller = Class.forName(object.getController());
-				controllerInstance = controller.newInstance();
-				Method initializeMethod = controller.getMethod("initialize");
-				initializeMethod.invoke(controllerInstance,null);
-			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException | IllegalArgumentException | InvocationTargetException e) {
-				LOG.error("Failed to init EmfModel", e);
-			}
-		}
-		return root;
-	}
-
-	@Override
-	public Node caseETableView(ETableView object) {
-		TableView<Object> tableView = new TableView<>();
-		object.getColumns().forEach(e -> addColumn(tableView, e));
-		controlRegistry.put(object.getId(), tableView);
-		return tableView;
 	}
 
 	private void addColumn(TableView<Object> view, ETableColumn e) {
@@ -166,10 +202,10 @@ public class FxmlRenderer extends MmSwitch<Node> {
 				LOG.error("Failed to init cell factory", e1);
 			}
 		}
-		
-		String id = e.getId() == null? e.getName() : e.getId();
-		columnsRegistry.put(id , column);
-		
+
+		String id = e.getId() == null ? e.getName() : e.getId();
+		columnsRegistry.put(id, column);
+
 		view.getColumns().add(column);
 	}
 
