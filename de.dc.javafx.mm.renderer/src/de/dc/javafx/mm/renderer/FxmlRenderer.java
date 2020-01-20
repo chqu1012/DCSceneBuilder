@@ -135,6 +135,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 	private void addChild(Pane node, ENode eNode) {
 		Node current = doSwitch(eNode);
 		initSize(eNode, node);
+		controlRegistry.put(eNode.getId(), current);
 		node.getChildren().add(current);
 	}
 
