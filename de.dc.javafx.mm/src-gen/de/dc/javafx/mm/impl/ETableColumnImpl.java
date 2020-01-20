@@ -3,11 +3,13 @@
 package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.ETableColumn;
+import de.dc.javafx.mm.ETableViewModelField;
 import de.dc.javafx.mm.MmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -25,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getCellValueFactory <em>Cell Value Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getCellFactory <em>Cell Factory</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getAssociatedField <em>Associated Field</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +132,16 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @ordered
 	 */
 	protected String cellFactory = CELL_FACTORY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAssociatedField() <em>Associated Field</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssociatedField()
+	 * @generated
+	 * @ordered
+	 */
+	protected ETableViewModelField associatedField;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,6 +285,48 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 */
 	@Override
+	public ETableViewModelField getAssociatedField() {
+		if (associatedField != null && associatedField.eIsProxy()) {
+			InternalEObject oldAssociatedField = (InternalEObject) associatedField;
+			associatedField = (ETableViewModelField) eResolveProxy(oldAssociatedField);
+			if (associatedField != oldAssociatedField) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD,
+							oldAssociatedField, associatedField));
+			}
+		}
+		return associatedField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ETableViewModelField basicGetAssociatedField() {
+		return associatedField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAssociatedField(ETableViewModelField newAssociatedField) {
+		ETableViewModelField oldAssociatedField = associatedField;
+		associatedField = newAssociatedField;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD,
+					oldAssociatedField, associatedField));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MmPackage.ETABLE_COLUMN__ID:
@@ -284,6 +339,10 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			return getCellValueFactory();
 		case MmPackage.ETABLE_COLUMN__CELL_FACTORY:
 			return getCellFactory();
+		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
+			if (resolve)
+				return getAssociatedField();
+			return basicGetAssociatedField();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -310,6 +369,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			return;
 		case MmPackage.ETABLE_COLUMN__CELL_FACTORY:
 			setCellFactory((String) newValue);
+			return;
+		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
+			setAssociatedField((ETableViewModelField) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -338,6 +400,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 		case MmPackage.ETABLE_COLUMN__CELL_FACTORY:
 			setCellFactory(CELL_FACTORY_EDEFAULT);
 			return;
+		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
+			setAssociatedField((ETableViewModelField) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -361,6 +426,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 					: !CELL_VALUE_FACTORY_EDEFAULT.equals(cellValueFactory);
 		case MmPackage.ETABLE_COLUMN__CELL_FACTORY:
 			return CELL_FACTORY_EDEFAULT == null ? cellFactory != null : !CELL_FACTORY_EDEFAULT.equals(cellFactory);
+		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
+			return associatedField != null;
 		}
 		return super.eIsSet(featureID);
 	}

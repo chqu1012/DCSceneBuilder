@@ -390,6 +390,13 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.EVIEW_MODEL: {
+			EViewModel eViewModel = (EViewModel) theEObject;
+			T result = caseEViewModel(eViewModel);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ETABLE_VIEW: {
 			ETableView eTableView = (ETableView) theEObject;
 			T result = caseETableView(eTableView);
@@ -405,6 +412,22 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseSkinnable(eTableView);
 			if (result == null)
 				result = caseEEvents(eTableView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETABLE_VIEW_MODEL: {
+			ETableViewModel eTableViewModel = (ETableViewModel) theEObject;
+			T result = caseETableViewModel(eTableViewModel);
+			if (result == null)
+				result = caseEViewModel(eTableViewModel);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETABLE_VIEW_MODEL_FIELD: {
+			ETableViewModelField eTableViewModelField = (ETableViewModelField) theEObject;
+			T result = caseETableViewModelField(eTableViewModelField);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1058,6 +1081,21 @@ public class MmSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EView Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EView Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEViewModel(EViewModel object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ETable View</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1069,6 +1107,36 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseETableView(ETableView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETable View Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETable View Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETableViewModel(ETableViewModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETable View Model Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETable View Model Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETableViewModelField(ETableViewModelField object) {
 		return null;
 	}
 

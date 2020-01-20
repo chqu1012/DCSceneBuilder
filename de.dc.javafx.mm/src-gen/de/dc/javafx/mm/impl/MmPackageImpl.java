@@ -37,11 +37,14 @@ import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
+import de.dc.javafx.mm.ETableViewModel;
+import de.dc.javafx.mm.ETableViewModelField;
 import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.ETilePane;
 import de.dc.javafx.mm.EToogleButton;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EValueAxis;
+import de.dc.javafx.mm.EViewModel;
 import de.dc.javafx.mm.EWebView;
 import de.dc.javafx.mm.EXYChart;
 import de.dc.javafx.mm.EmfModel;
@@ -228,7 +231,28 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass eViewModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass eTableViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTableViewModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTableViewModelFieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1073,6 +1097,46 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEViewModel() {
+		return eViewModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEViewModel_Name() {
+		return (EAttribute) eViewModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEViewModel_InstanceName() {
+		return (EAttribute) eViewModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEViewModel_GenerateClass() {
+		return (EAttribute) eViewModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getETableView() {
 		return eTableViewEClass;
 	}
@@ -1085,6 +1149,66 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EReference getETableView_Columns() {
 		return (EReference) eTableViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETableView_Model() {
+		return (EReference) eTableViewEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETableViewModel() {
+		return eTableViewModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETableViewModel_Fields() {
+		return (EReference) eTableViewModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETableViewModelField() {
+		return eTableViewModelFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableViewModelField_Name() {
+		return (EAttribute) eTableViewModelFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETableViewModelField_Datatype() {
+		return (EAttribute) eTableViewModelFieldEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1145,6 +1269,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EAttribute getETableColumn_CellFactory() {
 		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETableColumn_AssociatedField() {
+		return (EReference) eTableColumnEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1600,8 +1734,21 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		eBaseViewEClass = createEClass(EBASE_VIEW);
 
+		eViewModelEClass = createEClass(EVIEW_MODEL);
+		createEAttribute(eViewModelEClass, EVIEW_MODEL__NAME);
+		createEAttribute(eViewModelEClass, EVIEW_MODEL__INSTANCE_NAME);
+		createEAttribute(eViewModelEClass, EVIEW_MODEL__GENERATE_CLASS);
+
 		eTableViewEClass = createEClass(ETABLE_VIEW);
 		createEReference(eTableViewEClass, ETABLE_VIEW__COLUMNS);
+		createEReference(eTableViewEClass, ETABLE_VIEW__MODEL);
+
+		eTableViewModelEClass = createEClass(ETABLE_VIEW_MODEL);
+		createEReference(eTableViewModelEClass, ETABLE_VIEW_MODEL__FIELDS);
+
+		eTableViewModelFieldEClass = createEClass(ETABLE_VIEW_MODEL_FIELD);
+		createEAttribute(eTableViewModelFieldEClass, ETABLE_VIEW_MODEL_FIELD__NAME);
+		createEAttribute(eTableViewModelFieldEClass, ETABLE_VIEW_MODEL_FIELD__DATATYPE);
 
 		eTableColumnEClass = createEClass(ETABLE_COLUMN);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__ID);
@@ -1609,6 +1756,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__WIDTH);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_VALUE_FACTORY);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_FACTORY);
+		createEReference(eTableColumnEClass, ETABLE_COLUMN__ASSOCIATED_FIELD);
 
 		eRadioButtonEClass = createEClass(ERADIO_BUTTON);
 
@@ -1717,6 +1865,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eToogleButtonEClass.getESuperTypes().add(this.getEButtonBase());
 		eBaseViewEClass.getESuperTypes().add(this.getEControl());
 		eTableViewEClass.getESuperTypes().add(this.getEBaseView());
+		eTableViewModelEClass.getESuperTypes().add(this.getEViewModel());
 		eRadioButtonEClass.getESuperTypes().add(this.getEToogleButton());
 		eAxisEClass.getESuperTypes().add(this.getENode());
 		eCatgeoryAxisEClass.getESuperTypes().add(this.getEAxis());
@@ -1908,11 +2057,41 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEClass(eBaseViewEClass, EBaseView.class, "EBaseView", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(eViewModelEClass, EViewModel.class, "EViewModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEViewModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EViewModel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEViewModel_InstanceName(), theEcorePackage.getEString(), "instanceName", null, 0, 1,
+				EViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEViewModel_GenerateClass(), theEcorePackage.getEBoolean(), "generateClass", "true", 0, 1,
+				EViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		initEClass(eTableViewEClass, ETableView.class, "ETableView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getETableView_Columns(), this.getETableColumn(), null, "columns", null, 0, -1, ETableView.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getETableView_Model(), this.getETableViewModel(), null, "model", null, 0, 1, ETableView.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eTableViewModelEClass, ETableViewModel.class, "ETableViewModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getETableViewModel_Fields(), this.getETableViewModelField(), null, "fields", null, 0, -1,
+				ETableViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eTableViewModelFieldEClass, ETableViewModelField.class, "ETableViewModelField", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getETableViewModelField_Name(), theEcorePackage.getEString(), "name", null, 0, 1,
+				ETableViewModelField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				!IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETableViewModelField_Datatype(), theEcorePackage.getEString(), "datatype", "String", 0, 1,
+				ETableViewModelField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				!IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTableColumnEClass, ETableColumn.class, "ETableColumn", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1931,6 +2110,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getETableColumn_CellFactory(), theEcorePackage.getEString(), "cellFactory", null, 0, 1,
 				ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getETableColumn_AssociatedField(), this.getETableViewModelField(), null, "associatedField", null,
+				0, 1, ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eRadioButtonEClass, ERadioButton.class, "ERadioButton", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

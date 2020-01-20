@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link de.dc.javafx.mm.ETableView#getColumns <em>Columns</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ETableView#getModel <em>Model</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getETableView()
@@ -32,5 +33,27 @@ public interface ETableView extends EBaseView {
 	 * @generated
 	 */
 	EList<ETableColumn> getColumns();
+
+	/**
+	 * Returns the value of the '<em><b>Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Model</em>' containment reference.
+	 * @see #setModel(ETableViewModel)
+	 * @see de.dc.javafx.mm.MmPackage#getETableView_Model()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ETableViewModel getModel();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ETableView#getModel <em>Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Model</em>' containment reference.
+	 * @see #getModel()
+	 * @generated
+	 */
+	void setModel(ETableViewModel value);
 
 } // ETableView

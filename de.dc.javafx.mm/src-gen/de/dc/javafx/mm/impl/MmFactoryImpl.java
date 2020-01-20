@@ -92,8 +92,14 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createESplitMenuButton();
 		case MmPackage.ETOOGLE_BUTTON:
 			return createEToogleButton();
+		case MmPackage.EVIEW_MODEL:
+			return createEViewModel();
 		case MmPackage.ETABLE_VIEW:
 			return createETableView();
+		case MmPackage.ETABLE_VIEW_MODEL:
+			return createETableViewModel();
+		case MmPackage.ETABLE_VIEW_MODEL_FIELD:
+			return createETableViewModelField();
 		case MmPackage.ETABLE_COLUMN:
 			return createETableColumn();
 		case MmPackage.ERADIO_BUTTON:
@@ -368,9 +374,42 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	 * @generated
 	 */
 	@Override
+	public EViewModel createEViewModel() {
+		EViewModelImpl eViewModel = new EViewModelImpl();
+		return eViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ETableView createETableView() {
 		ETableViewImpl eTableView = new ETableViewImpl();
 		return eTableView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETableViewModel createETableViewModel() {
+		ETableViewModelImpl eTableViewModel = new ETableViewModelImpl();
+		return eTableViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETableViewModelField createETableViewModelField() {
+		ETableViewModelFieldImpl eTableViewModelField = new ETableViewModelFieldImpl();
+		return eTableViewModelField;
 	}
 
 	/**

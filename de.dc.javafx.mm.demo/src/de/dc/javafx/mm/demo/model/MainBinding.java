@@ -2,24 +2,24 @@ package de.dc.javafx.mm.demo.model;
 
 import javafx.beans.property.*;
 
-public class MainBinding {
-
+public class MainBinding{
+	
 	private StringProperty name;
-
-	public String getName() {
+	
+	public String getName(){
 		return this.name.get();
 	}
-
-	public void setName(String name) {
+	
+	public void setName(String name){
 		this.name.set(name);
 	}
-
-	public StringProperty nameProperty() {
+	
+	public StringProperty nameProperty(){
 		return this.name;
 	}
-
-	public void setNameProperty(StringProperty name) {
-		this.name = name;
+	
+	public void setNameProperty(StringProperty name){
+		this.name=name;
 	}
 	
 	@Override

@@ -60,6 +60,7 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 			addWidthPropertyDescriptor(object);
 			addCellValueFactoryPropertyDescriptor(object);
 			addCellFactoryPropertyDescriptor(object);
+			addAssociatedFieldPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -142,6 +143,21 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 								"_UI_ETableColumn_type"),
 						MmPackage.Literals.ETABLE_COLUMN__CELL_FACTORY, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Associated Field feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAssociatedFieldPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ETableColumn_associatedField_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ETableColumn_associatedField_feature",
+								"_UI_ETableColumn_type"),
+						MmPackage.Literals.ETABLE_COLUMN__ASSOCIATED_FIELD, true, false, true, null, null, null));
 	}
 
 	/**

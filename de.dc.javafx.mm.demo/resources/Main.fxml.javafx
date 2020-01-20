@@ -5,7 +5,9 @@
   </bindingModel>
   <root xsi:type="mm:EBorderPane" id="root">
     <center xsi:type="mm:EVBox" id="vbox1">
-      <children xsi:type="mm:EHBox" id="hbox1"/>
+      <children xsi:type="mm:EHBox" id="hbox1">
+        <children xsi:type="mm:ETableView" id="tableViewPerson"/>
+      </children>
       <children xsi:type="mm:EText" id="textName"/>
     </center>
   </root>

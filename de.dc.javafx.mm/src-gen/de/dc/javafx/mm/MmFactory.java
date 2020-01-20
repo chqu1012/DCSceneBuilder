@@ -177,6 +177,15 @@ public interface MmFactory extends EFactory {
 	EToogleButton createEToogleButton();
 
 	/**
+	 * Returns a new object of class '<em>EView Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EView Model</em>'.
+	 * @generated
+	 */
+	EViewModel createEViewModel();
+
+	/**
 	 * Returns a new object of class '<em>ETable View</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +193,24 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	ETableView createETableView();
+
+	/**
+	 * Returns a new object of class '<em>ETable View Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETable View Model</em>'.
+	 * @generated
+	 */
+	ETableViewModel createETableViewModel();
+
+	/**
+	 * Returns a new object of class '<em>ETable View Model Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETable View Model Field</em>'.
+	 * @generated
+	 */
+	ETableViewModelField createETableViewModelField();
 
 	/**
 	 * Returns a new object of class '<em>ETable Column</em>'.

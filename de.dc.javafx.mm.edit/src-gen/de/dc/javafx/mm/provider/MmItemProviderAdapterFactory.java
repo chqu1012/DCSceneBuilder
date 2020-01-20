@@ -466,6 +466,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EViewModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EViewModelItemProvider eViewModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EViewModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEViewModelAdapter() {
+		if (eViewModelItemProvider == null) {
+			eViewModelItemProvider = new EViewModelItemProvider(this);
+		}
+
+		return eViewModelItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -486,6 +509,52 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 		}
 
 		return eTableViewItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableViewModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETableViewModelItemProvider eTableViewModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETableViewModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETableViewModelAdapter() {
+		if (eTableViewModelItemProvider == null) {
+			eTableViewModelItemProvider = new ETableViewModelItemProvider(this);
+		}
+
+		return eTableViewModelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableViewModelField} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETableViewModelFieldItemProvider eTableViewModelFieldItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETableViewModelField}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETableViewModelFieldAdapter() {
+		if (eTableViewModelFieldItemProvider == null) {
+			eTableViewModelFieldItemProvider = new ETableViewModelFieldItemProvider(this);
+		}
+
+		return eTableViewModelFieldItemProvider;
 	}
 
 	/**
@@ -1018,8 +1087,14 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eSplitMenuButtonItemProvider.dispose();
 		if (eToogleButtonItemProvider != null)
 			eToogleButtonItemProvider.dispose();
+		if (eViewModelItemProvider != null)
+			eViewModelItemProvider.dispose();
 		if (eTableViewItemProvider != null)
 			eTableViewItemProvider.dispose();
+		if (eTableViewModelItemProvider != null)
+			eTableViewModelItemProvider.dispose();
+		if (eTableViewModelFieldItemProvider != null)
+			eTableViewModelFieldItemProvider.dispose();
 		if (eTableColumnItemProvider != null)
 			eTableColumnItemProvider.dispose();
 		if (eRadioButtonItemProvider != null)

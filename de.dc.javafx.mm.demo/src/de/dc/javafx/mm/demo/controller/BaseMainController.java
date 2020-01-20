@@ -18,4 +18,7 @@ public abstract class BaseMainController{
 	@FXML
 	protected HBox hbox1;
 	
+	@FXML
+	protected TextField textName;
+	
 }

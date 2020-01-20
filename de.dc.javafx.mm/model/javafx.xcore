@@ -107,8 +107,24 @@ class EToogleButton extends EButtonBase{
 abstract class EBaseView extends EControl{
 }
 
+class EViewModel{
+	String name
+	String instanceName
+	boolean generateClass = 'true'
+}
+
 class ETableView extends EBaseView{
 	contains ETableColumn[0..*] columns
+	contains ETableViewModel[0..1] model
+}
+
+class ETableViewModel extends EViewModel{
+	contains ETableViewModelField[0..*] fields
+}
+
+class ETableViewModelField{
+	String name
+	String datatype = 'String'
 }
 
 class ETableColumn{
@@ -117,6 +133,7 @@ class ETableColumn{
 	double width = '150'
 	String cellValueFactory
 	String cellFactory
+	refers ETableViewModelField associatedField
 }
 
 class ERadioButton extends EToogleButton{}

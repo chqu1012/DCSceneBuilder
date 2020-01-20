@@ -59,6 +59,7 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MmPackage.Literals.ETABLE_VIEW__COLUMNS);
+			childrenFeatures.add(MmPackage.Literals.ETABLE_VIEW__MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -123,6 +124,7 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 
 		switch (notification.getFeatureID(ETableView.class)) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
+		case MmPackage.ETABLE_VIEW__MODEL:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -142,6 +144,9 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ETABLE_VIEW__COLUMNS,
 				MmFactory.eINSTANCE.createETableColumn()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ETABLE_VIEW__MODEL,
+				MmFactory.eINSTANCE.createETableViewModel()));
 	}
 
 	/**

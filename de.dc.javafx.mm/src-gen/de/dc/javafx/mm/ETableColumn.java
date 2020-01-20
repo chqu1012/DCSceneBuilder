@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getCellValueFactory <em>Cell Value Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getCellFactory <em>Cell Factory</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ETableColumn#getAssociatedField <em>Associated Field</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getETableColumn()
@@ -135,5 +136,27 @@ public interface ETableColumn extends EObject {
 	 * @generated
 	 */
 	void setCellFactory(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Associated Field</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Associated Field</em>' reference.
+	 * @see #setAssociatedField(ETableViewModelField)
+	 * @see de.dc.javafx.mm.MmPackage#getETableColumn_AssociatedField()
+	 * @model
+	 * @generated
+	 */
+	ETableViewModelField getAssociatedField();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ETableColumn#getAssociatedField <em>Associated Field</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Associated Field</em>' reference.
+	 * @see #getAssociatedField()
+	 * @generated
+	 */
+	void setAssociatedField(ETableViewModelField value);
 
 } // ETableColumn
