@@ -2,17 +2,12 @@
  */
 package de.dc.javafx.mm.provider;
 
-import de.dc.javafx.mm.ETableColumn;
-import de.dc.javafx.mm.MmPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,6 +19,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import de.dc.javafx.mm.ETableColumn;
+import de.dc.javafx.mm.ETableView;
+import de.dc.javafx.mm.MmPackage;
 
 /**
  * This is the item provider adapter for a {@link de.dc.javafx.mm.ETableColumn} object.
@@ -200,13 +199,15 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated not
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ETableColumn) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_ETableColumn_type")
-				: getString("_UI_ETableColumn_type") + " " + label;
+		ETableColumn column = (ETableColumn) object;
+		ETableView tableView = (ETableView) column.eContainer();
+		String modelName = tableView.getModel().getName();
+		String label = "ETableColumn -> " +modelName +": "+column.getName();
+		return label;
 	}
 
 	/**
