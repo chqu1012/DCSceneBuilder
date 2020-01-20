@@ -7,6 +7,7 @@ import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
+import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.EVBox;
@@ -30,6 +31,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	@Override public String caseESplitPane(ESplitPane object) { return init(object); }
 	@Override public String caseEStackPane(EStackPane object) { return init(object); }
 	@Override public String caseETableView(ETableView object) { return init(object); }
+	@Override public String caseETableColumn(ETableColumn object) { return initTableColumn(object); }
 	@Override public String caseEButton(EButton object) { return init(object); }
 	@Override public String caseEText(EText object) { return init(object); }
 	@Override public String caseELabel(ELabel object) { return init(object); }
@@ -47,6 +49,20 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 		}
 	}
 	
+	private String initTableColumn(ETableColumn object) {
+		String name = object.getClass().getSimpleName().replace("E", "").replace("Impl", "");
+		
+		ETableView tableView = (ETableView) object.eContainer();
+		String modelName = tableView.getModel().getName();
+		modelName = modelName == null ? "?" : modelName;
+		
+		String datatype = object.getAssociatedField().getDatatype();
+		datatype = datatype == null ? "?" : datatype;
+		
+		name = String.format(name+"<%s,%s>", modelName, datatype);
+		return String.format(FIELD_INIT, name, object.getId());
+	}
+	
 	private String initOnActionImpl(ENode node) {
 		if (node.getOnAction()==null) return "";
 		return String.format(ON_ACTION_IMPL_INIT, node.getOnAction());
@@ -62,10 +78,20 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	}
 	
 	private String initField(ENode node) {
+		String name = node.getClass().getSimpleName().replace("E", "").replace("Impl", "");
 		if (node instanceof EText) {
 			return initField(node, "TextField");
+		}else if (node instanceof ETableView) {
+			ETableView view = (ETableView) node;
+			String modelName = view.getModel().getName();
+			modelName = modelName == null ? "?" : modelName;
+			StringBuilder sb = new StringBuilder(initField(node, name+"<"+modelName+">"));
+			for (ETableColumn column : view.getColumns()) {
+				String content = doSwitch(column);
+				sb.append(content);
+			}
+			return sb.toString();
 		}
-		String name = node.getClass().getSimpleName().replace("E", "").replace("Impl", "");
 		return initField(node, name);
 	}
 
