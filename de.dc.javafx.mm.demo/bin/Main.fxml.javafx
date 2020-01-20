@@ -9,6 +9,10 @@
         <children xsi:type="mm:ETableView" id="tableViewPerson"/>
       </children>
       <children xsi:type="mm:EText" id="textName"/>
+      <children xsi:type="mm:ETableView" id="tableViewPerson">
+        <columns id="columnPersonName" name="Name"/>
+        <model name="Person" instanceName="de.dc.javafx.mm.demo.model.Person"/>
+      </children>
     </center>
   </root>
 </mm:EmfModel>
