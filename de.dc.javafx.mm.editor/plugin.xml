@@ -97,7 +97,7 @@
             name="%_UI_MmEditor_label"
             icon="icons/full/obj16/MmModelFile.gif"
             extensions="javafx"
-            class="de.dc.javafx.mm.presentation.MmEditor"
+            class="de.dc.javafx.mm.editor.ExtendedMmEditor"
             contributorClass="de.dc.javafx.mm.presentation.MmActionBarContributor">
       </editor>
    </extension>
