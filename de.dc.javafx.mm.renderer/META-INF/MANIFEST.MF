@@ -19,3 +19,6 @@ Export-Package: de.dc.javafx.mm,
  de.dc.javafx.mm.renderer.controller,
  de.dc.javafx.mm.renderer.controller.cell,
  de.dc.javafx.mm.renderer.model
+Import-Package: org.eclipse.core.databinding,
+ org.eclipse.swt.layout,
+ org.eclipse.swt.widgets
