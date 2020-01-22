@@ -4,6 +4,7 @@ import com.google.common.collect.Iterators;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableView;
+import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.template.ControllerFieldInitializer;
 import de.dc.javafx.mm.editor.template.ControllerGenType;
@@ -103,37 +104,51 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
       List<ETableView> _list = IteratorExtensions.<ETableView>toList(Iterators.<ETableView>filter(EcoreUtil.<Object>getAllContents(t, true), ETableView.class));
       for(final ETableView node : _list) {
         _builder.append("\t\t\t");
-        _builder.append("model.sortedData");
-        String _firstUpper_4 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_4, "\t\t\t");
-        _builder.append("().comparatorProperty().bind(tableView");
-        String _firstUpper_5 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_5, "\t\t\t");
-        _builder.append(".comparatorProperty());\t\t\t");
-        String _firstLower = StringExtensions.toFirstLower(node.getId());
-        _builder.append(_firstLower, "\t\t\t");
-        _builder.append(".setItems(model.sortedData");
-        String _firstUpper_6 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_6, "\t\t\t");
-        _builder.append("());");
+        ETableViewModel _model = node.getModel();
+        String _name_2 = null;
+        if (_model!=null) {
+          _name_2=_model.getName();
+        }
+        final String modelName = StringExtensions.toFirstUpper(_name_2);
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        String _firstLower_1 = StringExtensions.toFirstLower(node.getId());
-        _builder.append(_firstLower_1, "\t\t\t");
-        _builder.append(".getSelectionModel().selectedItemProperty().addListener(this::onTableView");
-        String _firstUpper_7 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_7, "\t\t\t");
-        _builder.append("SelectionChanged);");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("model.selected");
-        String _firstUpper_8 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_8, "\t\t\t");
-        _builder.append(".bind(tableView");
-        String _firstUpper_9 = StringExtensions.toFirstUpper(node.getModel().getName());
-        _builder.append(_firstUpper_9, "\t\t\t");
-        _builder.append(".getSelectionModel().selectedItemProperty());");
-        _builder.newLineIfNotEmpty();
+        {
+          boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(modelName);
+          boolean _not = (!_isNullOrEmpty);
+          if (_not) {
+            _builder.append("\t\t\t");
+            _builder.append("model.sortedData");
+            _builder.append(modelName, "\t\t\t");
+            _builder.append("().comparatorProperty().bind(tableView");
+            _builder.append(modelName, "\t\t\t");
+            _builder.append(".comparatorProperty());\t\t\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t\t");
+            String _firstLower = StringExtensions.toFirstLower(node.getId());
+            _builder.append(_firstLower, "\t\t\t");
+            _builder.append(".setItems(model.sortedData");
+            String _firstUpper_4 = StringExtensions.toFirstUpper(node.getModel().getName());
+            _builder.append(_firstUpper_4, "\t\t\t");
+            _builder.append("());");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t\t");
+            String _firstLower_1 = StringExtensions.toFirstLower(node.getId());
+            _builder.append(_firstLower_1, "\t\t\t");
+            _builder.append(".getSelectionModel().selectedItemProperty().addListener(this::onTableView");
+            String _firstUpper_5 = StringExtensions.toFirstUpper(node.getModel().getName());
+            _builder.append(_firstUpper_5, "\t\t\t");
+            _builder.append("SelectionChanged);");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t\t");
+            _builder.append("model.selected");
+            String _firstUpper_6 = StringExtensions.toFirstUpper(node.getModel().getName());
+            _builder.append(_firstUpper_6, "\t\t\t");
+            _builder.append(".bind(tableView");
+            String _firstUpper_7 = StringExtensions.toFirstUpper(node.getModel().getName());
+            _builder.append(_firstUpper_7, "\t\t\t");
+            _builder.append(".getSelectionModel().selectedItemProperty());");
+            _builder.newLineIfNotEmpty();
+          }
+        }
       }
     }
     _builder.append("\t\t");
@@ -145,34 +160,45 @@ public class ControllerTemplate implements IGenerator<EmfModel> {
       List<ETableView> _list_1 = IteratorExtensions.<ETableView>toList(Iterators.<ETableView>filter(EcoreUtil.<Object>getAllContents(t, true), ETableView.class));
       for(final ETableView node_1 : _list_1) {
         _builder.append("\t\t");
-        final String name = StringExtensions.toFirstUpper(node_1.getModel().getName());
+        ETableViewModel _model_1 = node_1.getModel();
+        String _name_3 = null;
+        if (_model_1!=null) {
+          _name_3=_model_1.getName();
+        }
+        final String name = StringExtensions.toFirstUpper(_name_3);
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        _builder.append("private void onTableView");
-        _builder.append(name, "\t\t");
-        _builder.append("SelectionChanged(ObservableValue<? extends ");
-        _builder.append(name, "\t\t");
-        _builder.append("> observable, ");
-        _builder.append(name, "\t\t");
-        _builder.append(" oldValue, ");
-        _builder.append(name, "\t\t");
-        _builder.append(" newValue) {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t");
-        _builder.append("\t");
-        _builder.append("if (newValue!=null) {");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("\t\t");
-        _builder.append("// TODO: not impleted yet!");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("\t");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("}");
-        _builder.newLine();
+        {
+          boolean _isNullOrEmpty_1 = StringExtensions.isNullOrEmpty(name);
+          boolean _not_1 = (!_isNullOrEmpty_1);
+          if (_not_1) {
+            _builder.append("\t\t");
+            _builder.append("private void onTableView");
+            _builder.append(name, "\t\t");
+            _builder.append("SelectionChanged(ObservableValue<? extends ");
+            _builder.append(name, "\t\t");
+            _builder.append("> observable, ");
+            _builder.append(name, "\t\t");
+            _builder.append(" oldValue, ");
+            _builder.append(name, "\t\t");
+            _builder.append(" newValue) {");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t");
+            _builder.append("\t");
+            _builder.append("if (newValue!=null) {");
+            _builder.newLine();
+            _builder.append("\t\t");
+            _builder.append("\t\t");
+            _builder.append("// TODO: not impleted yet!");
+            _builder.newLine();
+            _builder.append("\t\t");
+            _builder.append("\t");
+            _builder.append("}");
+            _builder.newLine();
+            _builder.append("\t\t");
+            _builder.append("}");
+            _builder.newLine();
+          }
+        }
       }
     }
     _builder.append("\t\t");

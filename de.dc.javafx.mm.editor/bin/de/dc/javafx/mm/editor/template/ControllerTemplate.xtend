@@ -34,19 +34,25 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 				log.info("Initialize  «t.name.toFirstUpper»Controller");
 				
 				«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
-				model.sortedData«node.model.name.toFirstUpper»().comparatorProperty().bind(tableView«node.model.name.toFirstUpper».comparatorProperty());			«node.id.toFirstLower».setItems(model.sortedData«node.model.name.toFirstUpper»());
+				«val modelName = node.model?.name.toFirstUpper»
+				«IF !modelName.isNullOrEmpty»
+				model.sortedData«modelName»().comparatorProperty().bind(tableView«modelName».comparatorProperty());			
+				«node.id.toFirstLower».setItems(model.sortedData«node.model.name.toFirstUpper»());
 				«node.id.toFirstLower».getSelectionModel().selectedItemProperty().addListener(this::onTableView«node.model.name.toFirstUpper»SelectionChanged);
 				model.selected«node.model.name.toFirstUpper».bind(tableView«node.model.name.toFirstUpper».getSelectionModel().selectedItemProperty());
+				«ENDIF»
 				«ENDFOR»
 			}
 			
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
-			«val name = node.model.name.toFirstUpper»
+			«val name = node.model?.name.toFirstUpper»
+			«IF !name.isNullOrEmpty»
 			private void onTableView«name»SelectionChanged(ObservableValue<? extends «name»> observable, «name» oldValue, «name» newValue) {
 				if (newValue!=null) {
 					// TODO: not impleted yet!
 				}
 			}
+			«ENDIF»
 			«ENDFOR»
 			
 			«t.root.initField»
