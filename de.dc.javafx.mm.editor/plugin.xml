@@ -261,5 +261,14 @@
             name="Generate Application">
       </command>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="de.dc.javafx.mm.editor.ControlPallete"
+            id="de.dc.javafx.mm.editor.ControlPallete"
+            name="Control Pallete"
+            restorable="true">
+      </view>
+   </extension>
 
 </plugin>
