@@ -56,7 +56,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 		String modelName = tableView.getModel().getName();
 		modelName = modelName == null ? "?" : modelName;
 		
-		String datatype = object.getAssociatedField().getDatatype();
+		String datatype = object.getAssociatedField()==null?"" :object.getAssociatedField().getDatatype();
 		datatype = datatype == null ? "?" : datatype;
 		
 		name = String.format(name+"<%s,%s>", modelName, datatype);
@@ -83,7 +83,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 			return initField(node, "TextField");
 		}else if (node instanceof ETableView) {
 			ETableView view = (ETableView) node;
-			String modelName = view.getModel().getName();
+			String modelName = view.getModel()==null? null: view.getModel().getName();
 			modelName = modelName == null ? "?" : modelName;
 			StringBuilder sb = new StringBuilder(initField(node, name+"<"+modelName+">"));
 			for (ETableColumn column : view.getColumns()) {
