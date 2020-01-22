@@ -44,5 +44,11 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib.macro,
  de.dc.scene.builder;bundle-version="1.0.0",
  de.dc.javafx.mm.renderer;bundle-version="1.0.0",
- org.eclipse.equinox.event;bundle-version="1.5.200"
+ org.eclipse.equinox.event;bundle-version="1.5.200",
+ org.eclipse.core.databinding,
+ org.eclipse.core.databinding.beans;bundle-version="1.5.100",
+ org.eclipse.core.databinding.property;bundle-version="1.7.100",
+ org.eclipse.emf.databinding;bundle-version="1.5.0",
+ org.eclipse.emf.databinding.edit;bundle-version="1.6.0",
+ org.eclipse.jface.databinding;bundle-version="1.9.100"
 Bundle-ActivationPolicy: lazy
