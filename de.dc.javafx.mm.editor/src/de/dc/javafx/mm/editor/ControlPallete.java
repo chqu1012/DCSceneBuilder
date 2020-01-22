@@ -1,5 +1,7 @@
 package de.dc.javafx.mm.editor;
 
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -13,18 +15,25 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.ui.ISelectionListener;
+import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
+import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.editor.control.SwtTableView;
 
-public class ControlPallete extends ViewPart{
+public class ControlPallete extends ViewPart implements ISelectionListener{
+	
 	private Composite compositeForm;
+	private Composite parent;
 
 	public ControlPallete() {
 	}
 
 	@Override
 	public void createPartControl(Composite parent) {
+		this.parent = parent;
 		parent.setLayout(new GridLayout(1, false));
 		
 		TabFolder tabFolder = new TabFolder(parent, SWT.NONE);
@@ -90,6 +99,17 @@ public class ControlPallete extends ViewPart{
 		compositeForm = new Composite(composite, SWT.NONE);
 		compositeForm.setLayout(new FillLayout(SWT.HORIZONTAL));
 		compositeForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
+		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(this);
+	}
+
+	@Override
+	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+		if (selection instanceof IStructuredSelection) {
+			IStructuredSelection ss = (IStructuredSelection) selection;
+			parent.setEnabled(ss.getFirstElement() instanceof ENode);
+		}else {
+			parent.setEnabled(false);
+		}
 	}
 
 	@Override
