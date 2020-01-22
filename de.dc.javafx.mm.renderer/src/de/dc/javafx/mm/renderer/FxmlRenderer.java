@@ -74,9 +74,14 @@ public class FxmlRenderer extends MmSwitch<Node> {
 
 				Method initializeMethod = controller.getMethod("initialize");
 				initializeMethod.invoke(controllerInstance, null);
-			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException
-					| SecurityException | IllegalArgumentException | InvocationTargetException e) {
+			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 				LOG.error("Failed to init EmfModel", e);
+			} catch (ClassNotFoundException e) {
+				LOG.error("Failed to init EmfModel, controller class not found "+object.getController(), e);
+			} catch (NoSuchMethodException e) {
+				LOG.error("No initialize method defined in controller "+object.getController(), e);
+			} catch (SecurityException e) {
+				LOG.error("No initialize method defined in controller "+object.getController(), e);
 			}
 		}
 		return root;
