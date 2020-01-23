@@ -36,11 +36,12 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 			«val modelName = node.model?.name.toFirstUpper»
+			«val nodeId = node.id.toFirstLower»
 			«IF !modelName.isNullOrEmpty»
-			model.sortedData«modelName»().comparatorProperty().bind(«node.id.toFirstLower».comparatorProperty());			
-			«node.id.toFirstLower».setItems(model.sortedData«node.model.name.toFirstUpper»());
-			«node.id.toFirstLower».getSelectionModel().selectedItemProperty().addListener(this::onTableView«node.model.name.toFirstUpper»SelectionChanged);
-			model.selected«node.model.name.toFirstUpper».bind(«node.id.toFirstLower».getSelectionModel().selectedItemProperty());
+			model.sortedData«modelName»().comparatorProperty().bind(«nodeId».comparatorProperty());			
+			«nodeId».setItems(model.sortedData«modelName»());
+			«nodeId».getSelectionModel().selectedItemProperty().addListener(this::onTableView«modelName»SelectionChanged);
+			model.selected«modelName».bind(«nodeId».getSelectionModel().selectedItemProperty());
 			«ENDIF»
 			«ENDFOR»
 		}
