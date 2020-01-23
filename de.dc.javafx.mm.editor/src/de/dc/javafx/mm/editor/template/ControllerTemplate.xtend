@@ -20,6 +20,8 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 	«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableViewModel).toList»
 	import «node.instanceName»;
 	«ENDFOR»
+	
+	import de.dc.javafx.mm.control.*;
 	import javafx.event.*;
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
@@ -47,6 +49,7 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 				node.top.initField
 				node.bottom.initField
 				node.center.initField
+				node.children.forEach[e|e.initField]
 			} else {
 				node.children.forEach[e|e.initField]
 			}

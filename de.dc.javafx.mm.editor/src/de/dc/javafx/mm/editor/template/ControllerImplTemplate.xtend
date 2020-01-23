@@ -17,7 +17,6 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 	override gen(EmfModel t) '''
 	package «t.basePackage».controller;
 	
-	import de.dc.javafx.mm.control.*;
 	import javafx.beans.value.*;
 	import javafx.event.*;
 	import org.apache.log4j.*;

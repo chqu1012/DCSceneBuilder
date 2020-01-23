@@ -97,6 +97,7 @@ public class SwtTableView extends Composite{
 					XMIResource xmiResource = (XMIResource) resource;
 					EObject content = xmiResource.getContents().get(0);
 					if (content instanceof EmfModel) {
+						
 						EmfModel model = (EmfModel) content;
 						extEmfModel = new ExtEmfModel(model);
 					}

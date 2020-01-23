@@ -1,38 +1,33 @@
 package de.dc.javafx.mm.demo.controller;
 
+import de.dc.javafx.mm.demo.model.Person;
+
+import de.dc.javafx.mm.control.*;
 import javafx.event.*;
 import javafx.fxml.*;
 import javafx.scene.control.*;
+import javafx.scene.layout.*;
 
 public abstract class BasePersonController{
 	
 	public void initialize(){}
 	
 	@FXML
-	protected Button refreshButton;
+	protected BorderPane root;
 	
 	@FXML
-	protected Button addButton;
+	protected FilteredTableView<Person> tableViewPerson;
 	
 	@FXML
-	protected Button deleteButton;
+	protected TableColumn<Person,String> columName;
 	
 	@FXML
-	protected Button createButton;
+	protected TableColumn<Person,String> columForename;
 	
 	@FXML
-	protected TableView ContactTableView;
+	protected TableColumn<Person,String> columAge;
 	
 	@FXML
-	public abstract void onRefreshButtonClicked(ActionEvent event);
-	
-	@FXML
-	public abstract void onAddButtonClicked(ActionEvent event);
-	
-	@FXML
-	public abstract void onDeleteButtonClicked(ActionEvent event);
-	
-	@FXML
-	public abstract void onButtonClicked(ActionEvent event);
+	protected TableColumn<Person,String> columEmail;
 	
 }

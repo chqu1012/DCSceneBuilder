@@ -1,5 +1,8 @@
 package de.dc.javafx.mm.control;
 
+import java.util.Comparator;
+
+import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
@@ -16,6 +19,12 @@ public class FilteredTableView<T> extends VBox{
 		setSpacing(5.0d);
 		getChildren().add(textField);
 		getChildren().add(tableView);
+		
+		setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+	}
+	
+	public ReadOnlyObjectProperty<Comparator<T>> comparatorProperty() {
+		return tableView.comparatorProperty();
 	}
 
 	public void addSearchChangeListener(ChangeListener<String> listener) {

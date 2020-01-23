@@ -2,6 +2,7 @@ package de.dc.javafx.mm.editor.template;
 
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
+import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ENode;
@@ -30,6 +31,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	@Override public String caseEHBox(EHBox object) { return init(object); }
 	@Override public String caseESplitPane(ESplitPane object) { return init(object); }
 	@Override public String caseEStackPane(EStackPane object) { return init(object); }
+	@Override public String caseEFilteredTableView(EFilteredTableView object) { return init(object); }
 	@Override public String caseETableView(ETableView object) { return init(object); }
 	@Override public String caseETableColumn(ETableColumn object) { return initTableColumn(object); }
 	@Override public String caseEButton(EButton object) { return init(object); }
@@ -81,6 +83,16 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 		String name = node.getClass().getSimpleName().replace("E", "").replace("Impl", "");
 		if (node instanceof EText) {
 			return initField(node, "TextField");
+		}else if (node instanceof EFilteredTableView) {
+			EFilteredTableView view = (EFilteredTableView) node;
+			String modelName = view.getModel()==null? null: view.getModel().getName();
+			modelName = modelName == null ? "?" : modelName;
+			StringBuilder sb = new StringBuilder(initField(node, name+"<"+modelName+">"));
+			for (ETableColumn column : view.getColumns()) {
+				String content = doSwitch(column);
+				sb.append(content);
+			}
+			return sb.toString();
 		}else if (node instanceof ETableView) {
 			ETableView view = (ETableView) node;
 			String modelName = view.getModel()==null? null: view.getModel().getName();
