@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
+import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ELabel;
@@ -24,6 +25,7 @@ import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.EVBox;
 import de.dc.javafx.mm.EmfModel;
+import de.dc.javafx.mm.control.FilteredTableView;
 import de.dc.javafx.mm.util.MmSwitch;
 import javafx.event.Event;
 import javafx.geometry.Insets;
@@ -85,6 +87,14 @@ public class FxmlRenderer extends MmSwitch<Node> {
 			}
 		}
 		return root;
+	}
+	
+	@Override
+	public Node caseEFilteredTableView(EFilteredTableView object) {
+		FilteredTableView<Object> tableView = new FilteredTableView<>();
+		object.getColumns().forEach(e -> addColumn(tableView.getTableView(), e));
+		controlRegistry.put(object.getId(), tableView);
+		return tableView;
 	}
 
 	@Override
