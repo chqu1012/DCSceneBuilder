@@ -16,7 +16,8 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 	
 	override gen(EmfModel t) '''
 	package «t.basePackage».controller;
-		
+	
+	import de.dc.javafx.mm.control.*;
 	import javafx.beans.value.*;
 	import javafx.event.*;
 	import org.apache.log4j.*;
@@ -36,10 +37,10 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 			«val modelName = node.model?.name.toFirstUpper»
 			«IF !modelName.isNullOrEmpty»
-			model.sortedData«modelName»().comparatorProperty().bind(tableView«modelName».comparatorProperty());			
+			model.sortedData«modelName»().comparatorProperty().bind(«node.id.toFirstLower».comparatorProperty());			
 			«node.id.toFirstLower».setItems(model.sortedData«node.model.name.toFirstUpper»());
 			«node.id.toFirstLower».getSelectionModel().selectedItemProperty().addListener(this::onTableView«node.model.name.toFirstUpper»SelectionChanged);
-			model.selected«node.model.name.toFirstUpper».bind(tableView«node.model.name.toFirstUpper».getSelectionModel().selectedItemProperty());
+			model.selected«node.model.name.toFirstUpper».bind(«node.id.toFirstLower».getSelectionModel().selectedItemProperty());
 			«ENDIF»
 			«ENDFOR»
 		}
