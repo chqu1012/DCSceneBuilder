@@ -113,6 +113,8 @@ class EViewModel{
 	boolean generateClass = 'true'
 }
 
+class EFilteredTableView extends ETableView{}
+
 class ETableView extends EBaseView{
 	contains ETableColumn[0..*] columns
 	contains ETableViewModel[0..1] model

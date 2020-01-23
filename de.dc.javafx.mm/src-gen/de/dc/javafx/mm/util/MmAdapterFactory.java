@@ -182,6 +182,11 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEFilteredTableView(EFilteredTableView object) {
+			return createEFilteredTableViewAdapter();
+		}
+
+		@Override
 		public Adapter caseETableView(ETableView object) {
 			return createETableViewAdapter();
 		}
@@ -629,6 +634,20 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEViewModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EFilteredTableView <em>EFiltered Table View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EFilteredTableView
+	 * @generated
+	 */
+	public Adapter createEFilteredTableViewAdapter() {
 		return null;
 	}
 

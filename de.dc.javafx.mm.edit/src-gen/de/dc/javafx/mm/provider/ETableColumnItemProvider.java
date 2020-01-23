@@ -205,8 +205,8 @@ public class ETableColumnItemProvider extends ItemProviderAdapter
 	public String getText(Object object) {
 		ETableColumn column = (ETableColumn) object;
 		ETableView tableView = (ETableView) column.eContainer();
-		String modelName = tableView.getModel()==null? "" : tableView.getModel().getName();
-		String label = "ETableColumn -> " +modelName +": "+column.getName();
+		String modelName = tableView.getModel() == null ? "" : tableView.getModel().getName();
+		String label = "ETableColumn -> " + modelName + ": " + column.getName();
 		return label;
 	}
 

@@ -184,6 +184,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createETableView()));
 
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
+
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createERadioButton()));
 
@@ -265,6 +268,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createETableView()));
 
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
+
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createERadioButton()));
 
@@ -345,6 +351,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createERadioButton()));
@@ -428,6 +437,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createETableView()));
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
 				MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
@@ -507,6 +519,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createETableView()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
 				MmFactory.eINSTANCE.createERadioButton()));

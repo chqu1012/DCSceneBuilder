@@ -439,6 +439,9 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createETableView()));
 
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN,
+				MmFactory.eINSTANCE.createEFilteredTableView()));
+
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createERadioButton()));
 

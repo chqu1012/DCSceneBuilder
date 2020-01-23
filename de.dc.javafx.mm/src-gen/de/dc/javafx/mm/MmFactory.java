@@ -186,6 +186,15 @@ public interface MmFactory extends EFactory {
 	EViewModel createEViewModel();
 
 	/**
+	 * Returns a new object of class '<em>EFiltered Table View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EFiltered Table View</em>'.
+	 * @generated
+	 */
+	EFilteredTableView createEFilteredTableView();
+
+	/**
 	 * Returns a new object of class '<em>ETable View</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -397,6 +397,27 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.EFILTERED_TABLE_VIEW: {
+			EFilteredTableView eFilteredTableView = (EFilteredTableView) theEObject;
+			T result = caseEFilteredTableView(eFilteredTableView);
+			if (result == null)
+				result = caseETableView(eFilteredTableView);
+			if (result == null)
+				result = caseEBaseView(eFilteredTableView);
+			if (result == null)
+				result = caseEControl(eFilteredTableView);
+			if (result == null)
+				result = caseENode(eFilteredTableView);
+			if (result == null)
+				result = caseStyleable(eFilteredTableView);
+			if (result == null)
+				result = caseSkinnable(eFilteredTableView);
+			if (result == null)
+				result = caseEEvents(eFilteredTableView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ETABLE_VIEW: {
 			ETableView eTableView = (ETableView) theEObject;
 			T result = caseETableView(eTableView);
@@ -1092,6 +1113,21 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEViewModel(EViewModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EFiltered Table View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EFiltered Table View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEFilteredTableView(EFilteredTableView object) {
 		return null;
 	}
 

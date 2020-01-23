@@ -94,6 +94,8 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEToogleButton();
 		case MmPackage.EVIEW_MODEL:
 			return createEViewModel();
+		case MmPackage.EFILTERED_TABLE_VIEW:
+			return createEFilteredTableView();
 		case MmPackage.ETABLE_VIEW:
 			return createETableView();
 		case MmPackage.ETABLE_VIEW_MODEL:
@@ -377,6 +379,17 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EViewModel createEViewModel() {
 		EViewModelImpl eViewModel = new EViewModelImpl();
 		return eViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EFilteredTableView createEFilteredTableView() {
+		EFilteredTableViewImpl eFilteredTableView = new EFilteredTableViewImpl();
+		return eFilteredTableView;
 	}
 
 	/**

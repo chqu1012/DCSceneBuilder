@@ -489,6 +489,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EFilteredTableView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EFilteredTableViewItemProvider eFilteredTableViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EFilteredTableView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEFilteredTableViewAdapter() {
+		if (eFilteredTableViewItemProvider == null) {
+			eFilteredTableViewItemProvider = new EFilteredTableViewItemProvider(this);
+		}
+
+		return eFilteredTableViewItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETableView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1089,6 +1112,8 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eToogleButtonItemProvider.dispose();
 		if (eViewModelItemProvider != null)
 			eViewModelItemProvider.dispose();
+		if (eFilteredTableViewItemProvider != null)
+			eFilteredTableViewItemProvider.dispose();
 		if (eTableViewItemProvider != null)
 			eTableViewItemProvider.dispose();
 		if (eTableViewModelItemProvider != null)

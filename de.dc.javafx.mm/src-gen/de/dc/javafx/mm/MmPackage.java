@@ -3446,7 +3446,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 23;
+	int ETABLE_VIEW = 24;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3647,6 +3647,214 @@ public interface MmPackage extends EPackage {
 	int ETABLE_VIEW_OPERATION_COUNT = EBASE_VIEW_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EFilteredTableViewImpl <em>EFiltered Table View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EFilteredTableViewImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFilteredTableView()
+	 * @generated
+	 */
+	int EFILTERED_TABLE_VIEW = 23;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__ON_ACTION = ETABLE_VIEW__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__ID = ETABLE_VIEW__ID;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__LAYOUT_X = ETABLE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__LAYOUT_Y = ETABLE_VIEW__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__OPACITY = ETABLE_VIEW__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__STYLE = ETABLE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__STYLE_CLASS = ETABLE_VIEW__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__VISIBLE = ETABLE_VIEW__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__DISABLE = ETABLE_VIEW__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MARGIN = ETABLE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MAX_HEIGHT = ETABLE_VIEW__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MIN_HEIGHT = ETABLE_VIEW__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__PREF_HEIGHT = ETABLE_VIEW__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MAX_WIDTH = ETABLE_VIEW__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MIN_WIDTH = ETABLE_VIEW__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__PREF_WIDTH = ETABLE_VIEW__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__PADDING = ETABLE_VIEW__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__CHILDREN = ETABLE_VIEW__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__COLUMNS = ETABLE_VIEW__COLUMNS;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__MODEL = ETABLE_VIEW__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>EFiltered Table View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW_FEATURE_COUNT = ETABLE_VIEW_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EFiltered Table View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW_OPERATION_COUNT = ETABLE_VIEW_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETableViewModelImpl <em>ETable View Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3654,7 +3862,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableViewModel()
 	 * @generated
 	 */
-	int ETABLE_VIEW_MODEL = 24;
+	int ETABLE_VIEW_MODEL = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3718,7 +3926,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableViewModelField()
 	 * @generated
 	 */
-	int ETABLE_VIEW_MODEL_FIELD = 25;
+	int ETABLE_VIEW_MODEL_FIELD = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3764,7 +3972,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 26;
+	int ETABLE_COLUMN = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3846,7 +4054,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 27;
+	int ERADIO_BUTTON = 28;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4054,7 +4262,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 28;
+	int EAXIS = 29;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4244,7 +4452,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 29;
+	int ECATGEORY_AXIS = 30;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4434,7 +4642,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 30;
+	int EVALUE_AXIS = 31;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4624,7 +4832,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 31;
+	int ECHART = 32;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4814,7 +5022,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 32;
+	int EPIE_CHART = 33;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5004,7 +5212,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 33;
+	int EXY_CHART = 34;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5194,7 +5402,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 34;
+	int EPANE = 35;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5393,7 +5601,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 35;
+	int ESTACK_PANE = 36;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5592,7 +5800,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 36;
+	int EDIALOG_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5827,7 +6035,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 37;
+	int EGRID_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6026,7 +6234,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 38;
+	int EH_BOX = 39;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6234,7 +6442,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 39;
+	int EV_BOX = 40;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6442,7 +6650,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 40;
+	int EFLOW_PANE = 41;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6641,7 +6849,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitPane()
 	 * @generated
 	 */
-	int ESPLIT_PANE = 41;
+	int ESPLIT_PANE = 42;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6840,7 +7048,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 42;
+	int ETILE_PANE = 43;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7039,7 +7247,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 43;
+	int EANCHOR_PANE = 44;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7238,7 +7446,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 44;
+	int EBORDER_PANE = 45;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7482,7 +7690,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControlBinding()
 	 * @generated
 	 */
-	int ECONTROL_BINDING = 45;
+	int ECONTROL_BINDING = 46;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}' enum.
@@ -7492,7 +7700,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingType()
 	 * @generated
 	 */
-	int EBINDING_TYPE = 46;
+	int EBINDING_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}' enum.
@@ -7502,7 +7710,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingDirection()
 	 * @generated
 	 */
-	int EBINDING_DIRECTION = 47;
+	int EBINDING_DIRECTION = 48;
 
 	/**
 	 * The meta object id for the '<em>EPos</em>' data type.
@@ -7512,7 +7720,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 48;
+	int EPOS = 49;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -8205,6 +8413,16 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEViewModel_GenerateClass();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EFilteredTableView <em>EFiltered Table View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EFiltered Table View</em>'.
+	 * @see de.dc.javafx.mm.EFilteredTableView
+	 * @generated
+	 */
+	EClass getEFilteredTableView();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETableView <em>ETable View</em>}'.
@@ -9308,6 +9526,16 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EVIEW_MODEL__GENERATE_CLASS = eINSTANCE.getEViewModel_GenerateClass();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EFilteredTableViewImpl <em>EFiltered Table View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EFilteredTableViewImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFilteredTableView()
+		 * @generated
+		 */
+		EClass EFILTERED_TABLE_VIEW = eINSTANCE.getEFilteredTableView();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETableViewImpl <em>ETable View</em>}' class.

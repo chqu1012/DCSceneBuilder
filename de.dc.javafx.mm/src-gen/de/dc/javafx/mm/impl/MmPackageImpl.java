@@ -19,6 +19,7 @@ import de.dc.javafx.mm.EControl;
 import de.dc.javafx.mm.EControlBinding;
 import de.dc.javafx.mm.EDialogPane;
 import de.dc.javafx.mm.EEvents;
+import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EFlowPane;
 import de.dc.javafx.mm.EGridPane;
 import de.dc.javafx.mm.EGroup;
@@ -232,6 +233,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eViewModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eFilteredTableViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1137,6 +1145,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEFilteredTableView() {
+		return eFilteredTableViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getETableView() {
 		return eTableViewEClass;
 	}
@@ -1739,6 +1757,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eViewModelEClass, EVIEW_MODEL__INSTANCE_NAME);
 		createEAttribute(eViewModelEClass, EVIEW_MODEL__GENERATE_CLASS);
 
+		eFilteredTableViewEClass = createEClass(EFILTERED_TABLE_VIEW);
+
 		eTableViewEClass = createEClass(ETABLE_VIEW);
 		createEReference(eTableViewEClass, ETABLE_VIEW__COLUMNS);
 		createEReference(eTableViewEClass, ETABLE_VIEW__MODEL);
@@ -1864,6 +1884,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eSplitMenuButtonEClass.getESuperTypes().add(this.getEButtonBase());
 		eToogleButtonEClass.getESuperTypes().add(this.getEButtonBase());
 		eBaseViewEClass.getESuperTypes().add(this.getEControl());
+		eFilteredTableViewEClass.getESuperTypes().add(this.getETableView());
 		eTableViewEClass.getESuperTypes().add(this.getEBaseView());
 		eTableViewModelEClass.getESuperTypes().add(this.getEViewModel());
 		eRadioButtonEClass.getESuperTypes().add(this.getEToogleButton());
@@ -2068,6 +2089,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getEViewModel_GenerateClass(), theEcorePackage.getEBoolean(), "generateClass", "true", 0, 1,
 				EViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(eFilteredTableViewEClass, EFilteredTableView.class, "EFilteredTableView", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eTableViewEClass, ETableView.class, "ETableView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
