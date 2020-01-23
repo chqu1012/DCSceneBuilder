@@ -4,6 +4,9 @@
     <bindings name="name" node="//@root/@center/@children.1"/>
   </bindingModel>
   <root xsi:type="mm:EBorderPane" id="root">
+    <children xsi:type="mm:ETableView" id="tableViewName">
+      <model/>
+    </children>
     <center xsi:type="mm:EVBox" id="vbox1">
       <children xsi:type="mm:EHBox" id="hbox1">
         <children xsi:type="mm:ETableView" id="tableViewPerson"/>

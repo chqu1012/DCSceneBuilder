@@ -6,9 +6,14 @@ import org.eclipse.emf.ecore.EPackage;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
 import de.dc.javafx.mm.MmPackage;
+import de.dc.javafx.mm.model.ExtEmfModel;
 
 public class FxmlFile extends EmfFile<EmfModel>{
 
+	public ExtEmfModel readExtEmfModel(String path) {
+		return new ExtEmfModel(load(path));
+	}
+	
 	@Override
 	public EPackage getEPackageEInstance() {
 		return MmPackage.eINSTANCE;

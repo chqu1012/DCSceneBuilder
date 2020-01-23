@@ -6,10 +6,15 @@ import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.viewers.ISelection;
@@ -27,6 +32,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
 import org.eclipse.swt.widgets.Text;
@@ -38,11 +44,14 @@ import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.ETableViewModelField;
+import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
+import de.dc.javafx.mm.model.ExtEmfModel;
 import de.dc.javafx.mm.presentation.MmEditor;
 
 public class SwtTableView extends Composite{
 
+	private ExtEmfModel extEmfModel;
 	private DataBindingContext m_bindingContext;
 
 	private Text txtTableViewId;
@@ -69,9 +78,31 @@ public class SwtTableView extends Composite{
 	public SwtTableView(Composite parent, int style) {
 		super(parent, style);
 		initModel();
+		initExtEmfModel();
 		initControls(this);
 		
 		setLayout(new GridLayout(2, false));
+	}
+
+	private void initExtEmfModel() {
+		IEditorPart activeEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
+		if (activeEditor instanceof MmEditor) {
+			MmEditor editor = (MmEditor) activeEditor;
+			
+			Object editorInput = editor.getViewer().getInput();
+			if (editorInput instanceof ResourceSet) {
+				ResourceSet input = (ResourceSet) editorInput;
+				Resource resource = input.getResources().get(0);
+				if (resource instanceof XMIResource) {
+					XMIResource xmiResource = (XMIResource) resource;
+					EObject content = xmiResource.getContents().get(0);
+					if (content instanceof EmfModel) {
+						EmfModel model = (EmfModel) content;
+						extEmfModel = new ExtEmfModel(model);
+					}
+				}
+			}
+		}
 	}
 
 	private void initModel() {
@@ -230,6 +261,17 @@ public class SwtTableView extends Composite{
 		buttonCreate.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				String tableViewId = eTableView.getId();
+				if (tableViewId==null || tableViewId.isEmpty()) {
+					MessageDialog.openError(new Shell(), "Error invalid values!", "Required ETableView Id must be filled!");
+					return;
+				}
+				if (extEmfModel.existId(tableViewId)) {
+					MessageDialog.openError(new Shell(), "Error invalid values!", "Required ETableView Id already exist in EmfModel!");
+					return;
+				}
+				
+				
 				IEditorPart activeEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
 				if (activeEditor instanceof MmEditor) {
 					MmEditor editor = (MmEditor) activeEditor;
