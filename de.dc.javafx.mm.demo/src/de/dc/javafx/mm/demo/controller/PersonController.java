@@ -17,14 +17,17 @@ public class PersonController extends BasePersonController{
 		super.initialize();
 		log.info("Initialize  PersonController");
 		
-		textName.textProperty().bindBidirectional(model.nameProperty());
-		textForename.textProperty().bindBidirectional(model.forenameProperty());
-		textAge.textProperty().bindBidirectional(model.ageProperty());
-		textEmail.textProperty().bindBidirectional(model.emailProperty());
-		
+		initDatabinding();
 		initTableViewPerson();
 	}
 	
+	private void initDatabinding() {
+		textName.textProperty().bindBidirectional(model.nameProperty());
+		textForename.textProperty().bindBidirectional(model.forenameProperty());
+		textAge.textProperty().bindBidirectional(model.ageProperty());
+		textEmail.textProperty().bindBidirectional(model.emailProperty());		
+	}
+
 	private void initTableViewPerson() {
 		model.sortedDataPerson().comparatorProperty().bind(tableViewPerson.comparatorProperty());			
 		tableViewPerson.setItems(model.sortedDataPerson());

@@ -35,13 +35,16 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			super.initialize();
 			log.info("Initialize  «t.name.toFirstUpper»Controller");
 			
-			«FOR binding : EcoreUtil.getAllContents(t, true).filter(EBinding).toList»
-			«binding.node.id».«binding.binding.toString.toFirstLower»().«binding.direction.toString.toFirstLower»(model.«binding.name»Property());
-			«ENDFOR»
-			
+			initDatabinding();
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 			«val nodeId = node.id.toFirstUpper»
 			init«nodeId»();
+			«ENDFOR»
+		}
+		
+		private void initDatabinding() {
+			«FOR binding : EcoreUtil.getAllContents(t, true).filter(EBinding).toList»
+			«binding.node.id».«binding.binding.toString.toFirstLower»().«binding.direction.toString.toFirstLower»(model.«binding.name»Property());
 			«ENDFOR»
 		}
 		
