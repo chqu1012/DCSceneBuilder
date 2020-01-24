@@ -17,10 +17,10 @@ public class PersonController extends BasePersonController{
 		super.initialize();
 		log.info("Initialize  PersonController");
 		
-		inittableViewPerson();
+		initTableViewPerson();
 	}
 	
-	private void inittableViewPerson() {
+	private void initTableViewPerson() {
 		model.sortedDataPerson().comparatorProperty().bind(tableViewPerson.comparatorProperty());			
 		tableViewPerson.setItems(model.sortedDataPerson());
 		tableViewPerson.getSelectionModel().selectedItemProperty().addListener(this::onTableViewPersonSelectionChanged);
@@ -39,6 +39,16 @@ public class PersonController extends BasePersonController{
 	}
 	
 	@Override
-	public void onButtonAction(ActionEvent event) {}
+	public void onButtonAction(ActionEvent event) {
+		Object source = event.getSource();
+		if (source == buttonCreate) {
+			Person person = new Person();
+			person.setAge(model.getAge());
+			person.setEmail(model.getEmail());
+			person.setForename(model.getForename());
+			person.setName(model.getName());
+			model.addPerson(person);
+		}
+	}
 	
 }

@@ -16,6 +16,18 @@ public abstract class BasePersonController{
 	protected BorderPane root;
 	
 	@FXML
+	protected TextField textName;
+	
+	@FXML
+	protected TextField textForename;
+	
+	@FXML
+	protected TextField textAge;
+	
+	@FXML
+	protected TextField textEmail;
+	
+	@FXML
 	protected Button buttonCreate;
 	
 	@FXML
