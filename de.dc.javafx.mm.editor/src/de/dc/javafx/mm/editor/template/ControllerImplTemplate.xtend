@@ -6,6 +6,9 @@ import de.dc.javafx.mm.ETableView
 import de.dc.javafx.mm.EmfModel
 import org.eclipse.emf.ecore.util.EcoreUtil
 import de.dc.javafx.mm.EBinding
+import de.dc.javafx.mm.EBaseView
+import de.dc.javafx.mm.EListView
+import de.dc.javafx.mm.EListViewModel
 
 class ControllerImplTemplate implements IGenerator<EmfModel> {
 
@@ -36,7 +39,7 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			log.info("Initialize  «t.name.toFirstUpper»Controller");
 			
 			initDatabinding();
-			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
+			«FOR node : EcoreUtil.getAllContents(t, true).filter(EBaseView).toList»
 			«val nodeId = node.id.toFirstUpper»
 			init«nodeId»();
 			«ENDFOR»
@@ -55,7 +58,7 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			«IF !modelName.isNullOrEmpty»
 			model.sortedData«modelName»().comparatorProperty().bind(«nodeId».comparatorProperty());			
 			«nodeId».setItems(model.sortedData«modelName»());
-			«nodeId».getSelectionModel().selectedItemProperty().addListener(this::onTableView«modelName»SelectionChanged);
+			«nodeId».getSelectionModel().selectedItemProperty().addListener(this::onView«modelName»SelectionChanged);
 			model.selected«modelName».bind(«nodeId».getSelectionModel().selectedItemProperty());
 			«ENDIF»
 			
@@ -65,10 +68,31 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 		}
 		«ENDFOR»
 		
+		«FOR node : EcoreUtil.getAllContents(t, true).filter(EListView).toList»
+		«val modelName = node.model?.name.toFirstUpper»
+		«val nodeId = node.id.toFirstLower»
+		private void init«nodeId.toFirstUpper»() {
+			«nodeId».setItems(model.sortedData«modelName»());
+			«nodeId».getSelectionModel().selectedItemProperty().addListener(this::onView«modelName»SelectionChanged);
+			model.selected«modelName».bind(«nodeId».getSelectionModel().selectedItemProperty());
+		}
+		«ENDFOR»
+		
 		«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 		«val name = node.model?.name.toFirstUpper»
 		«IF !name.isNullOrEmpty»
-		private void onTableView«name»SelectionChanged(ObservableValue<? extends «name»> observable, «name» oldValue, «name» newValue) {
+		private void onView«name»SelectionChanged(ObservableValue<? extends «name»> observable, «name» oldValue, «name» newValue) {
+			if (newValue!=null) {
+				// TODO: not impleted yet!
+			}
+		}
+		«ENDIF»
+		«ENDFOR»
+		
+		«FOR node : EcoreUtil.getAllContents(t, true).filter(EListView).toList»
+		«val name = node.model?.name.toFirstUpper»
+		«IF !name.isNullOrEmpty»
+		private void onView«name»SelectionChanged(ObservableValue<? extends «name»> observable, «name» oldValue, «name» newValue) {
 			if (newValue!=null) {
 				// TODO: not impleted yet!
 			}

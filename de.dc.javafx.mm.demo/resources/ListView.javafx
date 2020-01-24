@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc.javafx.mm.demo" controller="de.dc.javafx.mm.demo.controller.ListViewController" name="ListItem">
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc.javafx.mm.demo" controller="de.dc.javafx.mm.demo.controller.ListViewController" name="ListView">
+  <bindingModel>
+    <bindings name="name" node="//@root/@right/@children.0" direction="BindBidirectional"/>
+    <bindings name="forename" node="//@root/@right/@children.1" direction="BindBidirectional"/>
+    <bindings name="age" node="//@root/@right/@children.2" direction="BindBidirectional"/>
+    <bindings name="email" node="//@root/@right/@children.3" direction="BindBidirectional"/>
+  </bindingModel>
   <root xsi:type="mm:EBorderPane" id="root">
-    <children xsi:type="mm:EListView" id="listView"/>
+    <children xsi:type="mm:EListView" id="listView">
+      <model name="Person" instanceName="de.dc.javafx.mm.demo.model.Person"/>
+    </children>
+    <right xsi:type="mm:EVBox">
+      <children xsi:type="mm:EText" id="textName"/>
+      <children xsi:type="mm:EText" id="textForename"/>
+      <children xsi:type="mm:EText" id="textAge"/>
+      <children xsi:type="mm:EText" id="textEmail"/>
+      <children xsi:type="mm:EButton" onAction="onButtonAction" id="buttonCreate" text="Create"/>
+      <children xsi:type="mm:EButton" onAction="onButtonAction" id="buttonDelete" text="Delete"/>
+    </right>
   </root>
 </mm:EmfModel>

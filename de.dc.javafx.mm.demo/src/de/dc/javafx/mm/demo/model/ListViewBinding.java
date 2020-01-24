@@ -4,7 +4,7 @@ import javafx.beans.property.*;
 import javafx.collections.*;
 import javafx.collections.transformation.*;
 
-public class ListItemBinding{
+public class ListViewBinding{
 
 	// Binding for view Person
 	private ObservableList<Person> dataPerson = FXCollections.observableArrayList(); 

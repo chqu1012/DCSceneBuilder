@@ -3,11 +3,14 @@
 package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EListView;
+import de.dc.javafx.mm.EListViewModel;
 import de.dc.javafx.mm.MmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -19,31 +22,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.dc.javafx.mm.impl.EListViewImpl#getCellFactory <em>Cell Factory</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EListViewImpl#getModel <em>Model</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EListViewImpl extends EBaseViewImpl implements EListView {
 	/**
-	 * The default value of the '{@link #getCellFactory() <em>Cell Factory</em>}' attribute.
+	 * The cached value of the '{@link #getModel() <em>Model</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCellFactory()
+	 * @see #getModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CELL_FACTORY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCellFactory() <em>Cell Factory</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCellFactory()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cellFactory = CELL_FACTORY_EDEFAULT;
+	protected EListViewModel model;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +63,27 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	 * @generated
 	 */
 	@Override
-	public String getCellFactory() {
-		return cellFactory;
+	public EListViewModel getModel() {
+		return model;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetModel(EListViewModel newModel, NotificationChain msgs) {
+		EListViewModel oldModel = model;
+		model = newModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.ELIST_VIEW__MODEL,
+					oldModel, newModel);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -80,12 +92,34 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	 * @generated
 	 */
 	@Override
-	public void setCellFactory(String newCellFactory) {
-		String oldCellFactory = cellFactory;
-		cellFactory = newCellFactory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ELIST_VIEW__CELL_FACTORY, oldCellFactory,
-					cellFactory));
+	public void setModel(EListViewModel newModel) {
+		if (newModel != model) {
+			NotificationChain msgs = null;
+			if (model != null)
+				msgs = ((InternalEObject) model).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ELIST_VIEW__MODEL, null, msgs);
+			if (newModel != null)
+				msgs = ((InternalEObject) newModel).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ELIST_VIEW__MODEL, null, msgs);
+			msgs = basicSetModel(newModel, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ELIST_VIEW__MODEL, newModel, newModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case MmPackage.ELIST_VIEW__MODEL:
+			return basicSetModel(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -96,8 +130,8 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MmPackage.ELIST_VIEW__CELL_FACTORY:
-			return getCellFactory();
+		case MmPackage.ELIST_VIEW__MODEL:
+			return getModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,8 +144,8 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MmPackage.ELIST_VIEW__CELL_FACTORY:
-			setCellFactory((String) newValue);
+		case MmPackage.ELIST_VIEW__MODEL:
+			setModel((EListViewModel) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +159,8 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MmPackage.ELIST_VIEW__CELL_FACTORY:
-			setCellFactory(CELL_FACTORY_EDEFAULT);
+		case MmPackage.ELIST_VIEW__MODEL:
+			setModel((EListViewModel) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -140,27 +174,10 @@ public class EListViewImpl extends EBaseViewImpl implements EListView {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MmPackage.ELIST_VIEW__CELL_FACTORY:
-			return CELL_FACTORY_EDEFAULT == null ? cellFactory != null : !CELL_FACTORY_EDEFAULT.equals(cellFactory);
+		case MmPackage.ELIST_VIEW__MODEL:
+			return model != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (cellFactory: ");
-		result.append(cellFactory);
-		result.append(')');
-		return result.toString();
 	}
 
 } //EListViewImpl

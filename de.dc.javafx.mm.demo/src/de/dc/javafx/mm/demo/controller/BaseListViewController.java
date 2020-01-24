@@ -8,7 +8,7 @@ import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
-public abstract class BaseListItemController{
+public abstract class BaseListViewController{
 	
 	public void initialize(){}
 	

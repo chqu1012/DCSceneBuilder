@@ -627,6 +627,29 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EListViewModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EListViewModelItemProvider eListViewModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EListViewModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEListViewModelAdapter() {
+		if (eListViewModelItemProvider == null) {
+			eListViewModelItemProvider = new EListViewModelItemProvider(this);
+		}
+
+		return eListViewModelItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ERadioButton} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1147,6 +1170,8 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eTableColumnItemProvider.dispose();
 		if (eListViewItemProvider != null)
 			eListViewItemProvider.dispose();
+		if (eListViewModelItemProvider != null)
+			eListViewModelItemProvider.dispose();
 		if (eRadioButtonItemProvider != null)
 			eRadioButtonItemProvider.dispose();
 		if (eCatgeoryAxisItemProvider != null)

@@ -5,9 +5,7 @@
 	dataTypeConverters="true")
 package de.dc.javafx.mm
 
-// https://www.ntu.edu.sg/home/ehchua/programming/java/Javafx1_intro.html
 import javafx.geometry.Pos
-import org.eclipse.emf.ecore.xml.^type.Base64Binary
 
 class EmfModel{
 	String basePackage
@@ -140,7 +138,10 @@ class ETableColumn{
 }
 
 class EListView extends EBaseView{
-	String cellFactory
+	contains EListViewModel[0..1] model
+}
+
+class EListViewModel extends EViewModel{
 }
 
 class ERadioButton extends EToogleButton{}

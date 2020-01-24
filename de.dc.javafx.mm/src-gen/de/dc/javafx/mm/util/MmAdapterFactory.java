@@ -212,6 +212,11 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEListViewModel(EListViewModel object) {
+			return createEListViewModelAdapter();
+		}
+
+		@Override
 		public Adapter caseERadioButton(ERadioButton object) {
 			return createERadioButtonAdapter();
 		}
@@ -723,6 +728,20 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEListViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EListViewModel <em>EList View Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EListViewModel
+	 * @generated
+	 */
+	public Adapter createEListViewModelAdapter() {
 		return null;
 	}
 

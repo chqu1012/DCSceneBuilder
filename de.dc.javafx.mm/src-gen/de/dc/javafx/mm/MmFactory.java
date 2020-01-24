@@ -240,6 +240,15 @@ public interface MmFactory extends EFactory {
 	EListView createEListView();
 
 	/**
+	 * Returns a new object of class '<em>EList View Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EList View Model</em>'.
+	 * @generated
+	 */
+	EListViewModel createEListViewModel();
+
+	/**
 	 * Returns a new object of class '<em>ERadio Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
