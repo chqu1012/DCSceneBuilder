@@ -25,6 +25,8 @@ import de.dc.javafx.mm.editor.control.SwtTableView;
 
 public class ControlPallete extends ViewPart implements ISelectionListener{
 	
+	public static final String ID = "de.dc.javafx.mm.editor.ControlPallete";
+	
 	private Composite compositeForm;
 	private Composite parent;
 

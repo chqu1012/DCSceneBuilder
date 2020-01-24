@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
-
+import org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuManager;
@@ -45,6 +45,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.edit.ui.action.LoadResourceAction;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
+import de.dc.javafx.mm.editor.ControlPallete;
 import de.dc.javafx.mm.presentation.MmEditorPlugin;
 
 /**
@@ -142,17 +143,21 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 		 * @see org.eclipse.ui.IPerspectiveFactory#createInitialLayout(org.eclipse.ui.IPageLayout)
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
+		 * @generated not
 		 */
 		@Override
 		public void createInitialLayout(IPageLayout layout) {
 			layout.setEditorAreaVisible(true);
 			layout.addPerspectiveShortcut(ID_PERSPECTIVE);
 
+			IFolderLayout left = layout.createFolder("left", IPageLayout.LEFT, (float) 0.33, layout.getEditorArea());
+			left.addView("org.eclipse.jdt.ui.PackageExplorer");			
+			
 			IFolderLayout right = layout.createFolder("right", IPageLayout.RIGHT, (float) 0.66, layout.getEditorArea());
+			right.addView(ControlPallete.ID);
 			right.addView(IPageLayout.ID_OUTLINE);
 
-			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60, "right");
+			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60, layout.getEditorArea());
 			bottonRight.addView(IPageLayout.ID_PROP_SHEET);
 		}
 	}

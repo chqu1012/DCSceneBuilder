@@ -18,7 +18,7 @@
    <extension point="org.eclipse.ui.perspectives">
       <!-- @generated javafx -->
       <perspective
-            name="%_UI_Perspective_label"
+            name="JavaFX Renderer Perspective"
             class="de.dc.javafx.mm.presentation.MmEditorAdvisor$Perspective"
             id="de.dc.javafx.mm.presentation.MmEditorAdvisorPerspective">
       </perspective>
