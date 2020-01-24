@@ -460,6 +460,25 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.ELIST_VIEW: {
+			EListView eListView = (EListView) theEObject;
+			T result = caseEListView(eListView);
+			if (result == null)
+				result = caseEBaseView(eListView);
+			if (result == null)
+				result = caseEControl(eListView);
+			if (result == null)
+				result = caseENode(eListView);
+			if (result == null)
+				result = caseStyleable(eListView);
+			if (result == null)
+				result = caseSkinnable(eListView);
+			if (result == null)
+				result = caseEEvents(eListView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.ERADIO_BUTTON: {
 			ERadioButton eRadioButton = (ERadioButton) theEObject;
 			T result = caseERadioButton(eRadioButton);
@@ -1188,6 +1207,21 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseETableColumn(ETableColumn object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EList View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EList View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEListView(EListView object) {
 		return null;
 	}
 

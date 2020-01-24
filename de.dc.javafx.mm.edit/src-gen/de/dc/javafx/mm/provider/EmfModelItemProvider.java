@@ -301,6 +301,9 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
 
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEListView()));
+
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createERadioButton()));
 

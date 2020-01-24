@@ -28,6 +28,7 @@ import de.dc.javafx.mm.EHyperlink;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ELabeled;
+import de.dc.javafx.mm.EListView;
 import de.dc.javafx.mm.EMenuButton;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EPane;
@@ -268,6 +269,13 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eTableColumnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eListViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1305,6 +1313,26 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEListView() {
+		return eListViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEListView_CellFactory() {
+		return (EAttribute) eListViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getERadioButton() {
 		return eRadioButtonEClass;
 	}
@@ -1778,6 +1806,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_FACTORY);
 		createEReference(eTableColumnEClass, ETABLE_COLUMN__ASSOCIATED_FIELD);
 
+		eListViewEClass = createEClass(ELIST_VIEW);
+		createEAttribute(eListViewEClass, ELIST_VIEW__CELL_FACTORY);
+
 		eRadioButtonEClass = createEClass(ERADIO_BUTTON);
 
 		eAxisEClass = createEClass(EAXIS);
@@ -1887,6 +1918,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eFilteredTableViewEClass.getESuperTypes().add(this.getETableView());
 		eTableViewEClass.getESuperTypes().add(this.getEBaseView());
 		eTableViewModelEClass.getESuperTypes().add(this.getEViewModel());
+		eListViewEClass.getESuperTypes().add(this.getEBaseView());
 		eRadioButtonEClass.getESuperTypes().add(this.getEToogleButton());
 		eAxisEClass.getESuperTypes().add(this.getENode());
 		eCatgeoryAxisEClass.getESuperTypes().add(this.getEAxis());
@@ -2137,6 +2169,12 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getETableColumn_AssociatedField(), this.getETableViewModelField(), null, "associatedField", null,
 				0, 1, ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eListViewEClass, EListView.class, "EListView", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEListView_CellFactory(), theEcorePackage.getEString(), "cellFactory", null, 0, 1,
+				EListView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(eRadioButtonEClass, ERadioButton.class, "ERadioButton", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

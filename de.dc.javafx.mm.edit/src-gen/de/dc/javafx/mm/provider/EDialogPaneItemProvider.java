@@ -237,6 +237,9 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
 
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEListView()));
+
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
 				MmFactory.eINSTANCE.createERadioButton()));
 

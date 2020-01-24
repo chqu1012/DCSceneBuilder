@@ -5,6 +5,7 @@ import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.ELabel;
+import de.dc.javafx.mm.EListView;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
@@ -34,6 +35,7 @@ public class ControllerFieldInitializer extends MmSwitch<String> {
 	@Override public String caseEFilteredTableView(EFilteredTableView object) { return init(object); }
 	@Override public String caseETableView(ETableView object) { return init(object); }
 	@Override public String caseETableColumn(ETableColumn object) { return initTableColumn(object); }
+	@Override public String caseEListView(EListView object) { return init(object); }
 	@Override public String caseEButton(EButton object) { return init(object); }
 	@Override public String caseEText(EText object) { return init(object); }
 	@Override public String caseELabel(ELabel object) { return init(object); }

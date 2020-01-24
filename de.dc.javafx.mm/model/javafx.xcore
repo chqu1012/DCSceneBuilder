@@ -7,6 +7,7 @@ package de.dc.javafx.mm
 
 // https://www.ntu.edu.sg/home/ehchua/programming/java/Javafx1_intro.html
 import javafx.geometry.Pos
+import org.eclipse.emf.ecore.xml.^type.Base64Binary
 
 class EmfModel{
 	String basePackage
@@ -136,6 +137,10 @@ class ETableColumn{
 	String cellValueFactory
 	String cellFactory
 	refers ETableViewModelField associatedField
+}
+
+class EListView extends EBaseView{
+	String cellFactory
 }
 
 class ERadioButton extends EToogleButton{}

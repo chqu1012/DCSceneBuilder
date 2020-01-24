@@ -42,7 +42,7 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 			if (!node.id.isNullOrEmpty) {
 				fieldBuffer.append = '''«fieldInitializer.doSwitch(node)»'''
 				val content = onActionInitializer.doSwitch(node)
-				if(!onActionBuffer.toString.contains(content)){
+				if(!onActionBuffer?.toString.contains(content)){
 					onActionBuffer.append = content
 				}
 			}

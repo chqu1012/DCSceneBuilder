@@ -231,6 +231,15 @@ public interface MmFactory extends EFactory {
 	ETableColumn createETableColumn();
 
 	/**
+	 * Returns a new object of class '<em>EList View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EList View</em>'.
+	 * @generated
+	 */
+	EListView createEListView();
+
+	/**
 	 * Returns a new object of class '<em>ERadio Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

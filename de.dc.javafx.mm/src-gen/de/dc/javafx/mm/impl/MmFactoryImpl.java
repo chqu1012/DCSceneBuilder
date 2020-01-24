@@ -104,6 +104,8 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createETableViewModelField();
 		case MmPackage.ETABLE_COLUMN:
 			return createETableColumn();
+		case MmPackage.ELIST_VIEW:
+			return createEListView();
 		case MmPackage.ERADIO_BUTTON:
 			return createERadioButton();
 		case MmPackage.ECATGEORY_AXIS:
@@ -434,6 +436,17 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public ETableColumn createETableColumn() {
 		ETableColumnImpl eTableColumn = new ETableColumnImpl();
 		return eTableColumn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EListView createEListView() {
+		EListViewImpl eListView = new EListViewImpl();
+		return eListView;
 	}
 
 	/**

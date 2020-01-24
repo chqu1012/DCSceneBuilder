@@ -19,6 +19,7 @@ import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ELabel;
+import de.dc.javafx.mm.EListView;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
@@ -32,6 +33,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -97,6 +99,13 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		return tableView;
 	}
 
+	@Override
+	public Node caseEListView(EListView object) {
+		ListView<Object> listView = new ListView<>();
+		controlRegistry.put(object.getId(), listView);
+		return listView;
+	}
+	
 	@Override
 	public Node caseETableView(ETableView object) {
 		TableView<Object> tableView = new TableView<>();

@@ -7,7 +7,6 @@ import java.util.Arrays;
 
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
-import org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuManager;
@@ -151,13 +150,14 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 			layout.addPerspectiveShortcut(ID_PERSPECTIVE);
 
 			IFolderLayout left = layout.createFolder("left", IPageLayout.LEFT, (float) 0.33, layout.getEditorArea());
-			left.addView("org.eclipse.jdt.ui.PackageExplorer");			
-			
+			left.addView("org.eclipse.jdt.ui.PackageExplorer");
+
 			IFolderLayout right = layout.createFolder("right", IPageLayout.RIGHT, (float) 0.66, layout.getEditorArea());
 			right.addView(ControlPallete.ID);
 			right.addView(IPageLayout.ID_OUTLINE);
 
-			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60, layout.getEditorArea());
+			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60,
+					layout.getEditorArea());
 			bottonRight.addView(IPageLayout.ID_PROP_SHEET);
 		}
 	}
@@ -278,7 +278,7 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 			IMenuManager menu = new MenuManager(getString("_UI_Menu_Edit_label"), IWorkbenchActionConstants.M_EDIT);
 			menu.add(new GroupMarker(IWorkbenchActionConstants.EDIT_START));
 			menu.add(new GroupMarker(IWorkbenchActionConstants.FIND_EXT));
-			
+
 			addToMenuAndRegister(menu, ActionFactory.UNDO.create(window));
 			addToMenuAndRegister(menu, ActionFactory.REDO.create(window));
 			menu.add(new GroupMarker(IWorkbenchActionConstants.UNDO_EXT));

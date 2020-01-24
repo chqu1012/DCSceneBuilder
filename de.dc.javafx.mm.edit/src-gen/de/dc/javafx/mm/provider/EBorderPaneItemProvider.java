@@ -188,6 +188,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				MmFactory.eINSTANCE.createEFilteredTableView()));
 
 		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEListView()));
+
+		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createERadioButton()));
 
 		newChildDescriptors.add(
@@ -270,6 +273,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEListView()));
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createERadioButton()));
@@ -355,6 +361,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
 
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEListView()));
+
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createERadioButton()));
 
@@ -439,6 +448,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
 
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEListView()));
+
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
 				MmFactory.eINSTANCE.createERadioButton()));
 
@@ -522,6 +534,9 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
 				MmFactory.eINSTANCE.createEFilteredTableView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEListView()));
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
 				MmFactory.eINSTANCE.createERadioButton()));
