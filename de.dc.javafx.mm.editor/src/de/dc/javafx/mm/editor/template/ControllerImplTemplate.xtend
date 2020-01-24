@@ -19,6 +19,7 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 	
 	import javafx.beans.value.*;
 	import javafx.event.*;
+	import javafx.scene.control.cell.*;
 	import org.apache.log4j.*;
 	import «t.basePackage».model.*;
 	
@@ -35,15 +36,26 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 			«val modelName = node.model?.name.toFirstUpper»
-			«val nodeId = node.id.toFirstLower»
+			init«modelName»();
+			«ENDFOR»
+		}
+		
+		«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
+		«val modelName = node.model?.name.toFirstUpper»
+		«val nodeId = node.id.toFirstLower»
+		private void init«modelName»() {
 			«IF !modelName.isNullOrEmpty»
 			model.sortedData«modelName»().comparatorProperty().bind(«nodeId».comparatorProperty());			
 			«nodeId».setItems(model.sortedData«modelName»());
 			«nodeId».getSelectionModel().selectedItemProperty().addListener(this::onTableView«modelName»SelectionChanged);
 			model.selected«modelName».bind(«nodeId».getSelectionModel().selectedItemProperty());
 			«ENDIF»
+			
+			«FOR column : node.columns»
+			«column.id.toFirstLower».setCellValueFactory(new PropertyValueFactory<>("«column.associatedField.name»"));
 			«ENDFOR»
 		}
+		«ENDFOR»
 		
 		«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 		«val name = node.model?.name.toFirstUpper»

@@ -38,4 +38,5 @@ public abstract class BasePersonController{
 	
 	@FXML
 	public abstract void onButtonAction(ActionEvent event);
+	
 }
