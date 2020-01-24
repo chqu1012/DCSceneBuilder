@@ -17,6 +17,11 @@ public class PersonController extends BasePersonController{
 		super.initialize();
 		log.info("Initialize  PersonController");
 		
+		textName.textProperty().bindBidirectional(model.nameProperty());
+		textForename.textProperty().bindBidirectional(model.forenameProperty());
+		textAge.textProperty().bindBidirectional(model.ageProperty());
+		textEmail.textProperty().bindBidirectional(model.emailProperty());
+		
 		initTableViewPerson();
 	}
 	
@@ -29,7 +34,9 @@ public class PersonController extends BasePersonController{
 		columName.setCellValueFactory(new PropertyValueFactory<>("name"));
 		columForename.setCellValueFactory(new PropertyValueFactory<>("forename"));
 		columAge.setCellValueFactory(new PropertyValueFactory<>("age"));
-		columEmail.setCellValueFactory(new PropertyValueFactory<>("age"));
+		columEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+		
+		tableViewPerson.addSearchChangeListener((obs, oldV, newV)->model.filteredDataPerson().setPredicate(p->p.getName().toLowerCase().contains(newV.toLowerCase())));
 	}
 	
 	private void onTableViewPersonSelectionChanged(ObservableValue<? extends Person> observable, Person oldValue, Person newValue) {

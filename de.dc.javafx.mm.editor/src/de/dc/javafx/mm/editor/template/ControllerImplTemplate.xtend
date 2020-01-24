@@ -5,6 +5,7 @@ import de.dc.javafx.mm.ENode
 import de.dc.javafx.mm.ETableView
 import de.dc.javafx.mm.EmfModel
 import org.eclipse.emf.ecore.util.EcoreUtil
+import de.dc.javafx.mm.EBinding
 
 class ControllerImplTemplate implements IGenerator<EmfModel> {
 
@@ -33,6 +34,10 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 		public void initialize() {
 			super.initialize();
 			log.info("Initialize  «t.name.toFirstUpper»Controller");
+			
+			«FOR binding : EcoreUtil.getAllContents(t, true).filter(EBinding).toList»
+			«binding.node.id».«binding.binding.toString.toFirstLower»().«binding.direction.toString.toFirstLower»(model.«binding.name»Property());
+			«ENDFOR»
 			
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 			«val nodeId = node.id.toFirstUpper»
