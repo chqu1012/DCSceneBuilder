@@ -16,6 +16,12 @@ public abstract class BasePersonController{
 	protected BorderPane root;
 	
 	@FXML
+	protected Button buttonCreate;
+	
+	@FXML
+	protected Button buttonDelete;
+	
+	@FXML
 	protected FilteredTableView<Person> tableViewPerson;
 	
 	@FXML
@@ -30,4 +36,6 @@ public abstract class BasePersonController{
 	@FXML
 	protected TableColumn<Person,String> columEmail;
 	
+	@FXML
+	public abstract void onButtonAction(ActionEvent event);
 }

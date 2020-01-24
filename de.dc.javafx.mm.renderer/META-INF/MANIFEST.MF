@@ -33,3 +33,4 @@ Export-Package: de.dc.javafx.mm;
 Import-Package: org.eclipse.core.databinding,
  org.eclipse.swt.layout,
  org.eclipse.swt.widgets
+Bundle-ClassPath: .

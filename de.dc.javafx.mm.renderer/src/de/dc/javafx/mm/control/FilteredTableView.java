@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableView.TableViewSelectionModel;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
 public class FilteredTableView<T> extends VBox{
@@ -18,6 +19,8 @@ public class FilteredTableView<T> extends VBox{
 	public FilteredTableView() {
 		setSpacing(5.0d);
 		getChildren().add(textField);
+		
+		VBox.setVgrow(tableView, Priority.ALWAYS);
 		getChildren().add(tableView);
 		
 		setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
