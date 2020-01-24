@@ -41,7 +41,10 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 		if (node !== null) {
 			if (!node.id.isNullOrEmpty) {
 				fieldBuffer.append = '''«fieldInitializer.doSwitch(node)»'''
-				onActionBuffer.append = '''«onActionInitializer.doSwitch(node)»'''
+				val content = onActionInitializer.doSwitch(node)
+				if(!onActionBuffer.toString.contains(content)){
+					onActionBuffer.append = content
+				}
 			}
 			if (node instanceof EBorderPane) {
 				node.left.initField

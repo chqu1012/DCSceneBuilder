@@ -12,7 +12,7 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 	StringBuffer onActionBuffer = new StringBuffer
 
 	ControllerFieldInitializer fieldInitializer = new ControllerFieldInitializer(ControllerGenType.FIELD)
-	ControllerFieldInitializer onActionInitializer = new ControllerFieldInitializer(ControllerGenType.ON_ACTION)
+	ControllerFieldInitializer onActionInitializer = new ControllerFieldInitializer(ControllerGenType.ON_ACTION_IMPL)
 	
 	override gen(EmfModel t) '''
 	package «t.basePackage».controller;
@@ -35,15 +35,15 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 			log.info("Initialize  «t.name.toFirstUpper»Controller");
 			
 			«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
-			«val modelName = node.model?.name.toFirstUpper»
-			init«modelName»();
+			«val nodeId = node.id.toFirstUpper»
+			init«nodeId»();
 			«ENDFOR»
 		}
 		
 		«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableView).toList»
 		«val modelName = node.model?.name.toFirstUpper»
 		«val nodeId = node.id.toFirstLower»
-		private void init«modelName»() {
+		private void init«nodeId.toFirstUpper»() {
 			«IF !modelName.isNullOrEmpty»
 			model.sortedData«modelName»().comparatorProperty().bind(«nodeId».comparatorProperty());			
 			«nodeId».setItems(model.sortedData«modelName»());
@@ -77,7 +77,10 @@ class ControllerImplTemplate implements IGenerator<EmfModel> {
 		if (node !== null) {
 			if (!node.id.isNullOrEmpty) {
 				fieldBuffer.append = '''«fieldInitializer.doSwitch(node)»'''
-				onActionBuffer.append = '''«onActionInitializer.doSwitch(node)»'''
+				val content = onActionInitializer.doSwitch(node)
+				if(!onActionBuffer.toString.contains(content)){
+					onActionBuffer.append = content
+				}
 			}
 			if (node instanceof EBorderPane) {
 				node.left.initField
