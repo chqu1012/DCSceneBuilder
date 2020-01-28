@@ -134,6 +134,11 @@
                   label="Generate Application"
                   style="push">
             </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.ValidateEmfModelCommand"
+                  label="Validate EmfModel"
+                  style="push">
+            </command>
             <separator
                   name="de.dc.javafx.mm.editor.separator1"
                   visible="true">
@@ -259,6 +264,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.GenerateApplicationHandler"
             id="de.dc.javafx.mm.editor.command.generateApplication"
             name="Generate Application">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.ValidateEmfModelHandler"
+            id="de.dc.javafx.mm.editor.ValidateEmfModelCommand"
+            name="Validate EmfModel">
       </command>
    </extension>
    <extension
