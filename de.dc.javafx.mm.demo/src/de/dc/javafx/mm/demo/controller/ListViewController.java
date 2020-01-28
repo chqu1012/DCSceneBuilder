@@ -37,8 +37,9 @@ public class ListViewController extends BaseListViewController{
 	
 	
 	private void onViewPersonSelectionChanged(ObservableValue<? extends Person> observable, Person oldValue, Person newValue) {
+		System.out.println(newValue);
 		if (newValue!=null) {
-			// TODO: not impleted yet!
+			System.out.println(newValue);
 		}
 	}
 	
