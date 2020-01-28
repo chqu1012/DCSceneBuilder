@@ -33,6 +33,24 @@ public interface MmFactory extends EFactory {
 	EmfModel createEmfModel();
 
 	/**
+	 * Returns a new object of class '<em>EBean</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBean</em>'.
+	 * @generated
+	 */
+	EBean createEBean();
+
+	/**
+	 * Returns a new object of class '<em>EField</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EField</em>'.
+	 * @generated
+	 */
+	EField createEField();
+
+	/**
 	 * Returns a new object of class '<em>EBinding Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

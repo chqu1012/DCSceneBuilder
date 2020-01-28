@@ -144,6 +144,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__BINDING_MODEL);
 			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__ROOT);
+			childrenFeatures.add(MmPackage.Literals.EMF_MODEL__BEANS);
 		}
 		return childrenFeatures;
 	}
@@ -245,6 +246,7 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 			return;
 		case MmPackage.EMF_MODEL__BINDING_MODEL:
 		case MmPackage.EMF_MODEL__ROOT:
+		case MmPackage.EMF_MODEL__BEANS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -351,6 +353,9 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__BEANS, MmFactory.eINSTANCE.createEBean()));
 	}
 
 	/**

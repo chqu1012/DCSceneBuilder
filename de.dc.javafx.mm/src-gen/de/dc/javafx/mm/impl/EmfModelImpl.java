@@ -2,6 +2,7 @@
  */
 package de.dc.javafx.mm.impl;
 
+import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.EBindingModel;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EmfModel;
@@ -21,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +39,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getBindingModel <em>Binding Model</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getRoot <em>Root</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EmfModelImpl#getBeans <em>Beans</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,6 +134,16 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	 * @ordered
 	 */
 	protected ENode root;
+
+	/**
+	 * The cached value of the '{@link #getBeans() <em>Beans</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBeans()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EBean> beans;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,12 +357,27 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 	 * @generated
 	 */
 	@Override
+	public EList<EBean> getBeans() {
+		if (beans == null) {
+			beans = new EObjectContainmentEList<EBean>(EBean.class, this, MmPackage.EMF_MODEL__BEANS);
+		}
+		return beans;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case MmPackage.EMF_MODEL__BINDING_MODEL:
 			return basicSetBindingModel(null, msgs);
 		case MmPackage.EMF_MODEL__ROOT:
 			return basicSetRoot(null, msgs);
+		case MmPackage.EMF_MODEL__BEANS:
+			return ((InternalEList<?>) getBeans()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -373,6 +402,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return getBindingModel();
 		case MmPackage.EMF_MODEL__ROOT:
 			return getRoot();
+		case MmPackage.EMF_MODEL__BEANS:
+			return getBeans();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -405,6 +436,10 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 		case MmPackage.EMF_MODEL__ROOT:
 			setRoot((ENode) newValue);
 			return;
+		case MmPackage.EMF_MODEL__BEANS:
+			getBeans().clear();
+			getBeans().addAll((Collection<? extends EBean>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -435,6 +470,9 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 		case MmPackage.EMF_MODEL__ROOT:
 			setRoot((ENode) null);
 			return;
+		case MmPackage.EMF_MODEL__BEANS:
+			getBeans().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -459,6 +497,8 @@ public class EmfModelImpl extends MinimalEObjectImpl.Container implements EmfMod
 			return bindingModel != null;
 		case MmPackage.EMF_MODEL__ROOT:
 			return root != null;
+		case MmPackage.EMF_MODEL__BEANS:
+			return beans != null && !beans.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

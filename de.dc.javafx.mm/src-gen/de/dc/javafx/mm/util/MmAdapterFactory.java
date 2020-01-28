@@ -72,6 +72,16 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEBean(EBean object) {
+			return createEBeanAdapter();
+		}
+
+		@Override
+		public Adapter caseEField(EField object) {
+			return createEFieldAdapter();
+		}
+
+		@Override
 		public Adapter caseEBindingModel(EBindingModel object) {
 			return createEBindingModelAdapter();
 		}
@@ -336,6 +346,34 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmfModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBean <em>EBean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBean
+	 * @generated
+	 */
+	public Adapter createEBeanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EField <em>EField</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EField
+	 * @generated
+	 */
+	public Adapter createEFieldAdapter() {
 		return null;
 	}
 

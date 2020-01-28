@@ -98,6 +98,52 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBean} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBeanItemProvider eBeanItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBeanAdapter() {
+		if (eBeanItemProvider == null) {
+			eBeanItemProvider = new EBeanItemProvider(this);
+		}
+
+		return eBeanItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EField} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EFieldItemProvider eFieldItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EField}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEFieldAdapter() {
+		if (eFieldItemProvider == null) {
+			eFieldItemProvider = new EFieldItemProvider(this);
+		}
+
+		return eFieldItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBindingModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1124,6 +1170,10 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	public void dispose() {
 		if (emfModelItemProvider != null)
 			emfModelItemProvider.dispose();
+		if (eBeanItemProvider != null)
+			eBeanItemProvider.dispose();
+		if (eFieldItemProvider != null)
+			eFieldItemProvider.dispose();
 		if (eBindingModelItemProvider != null)
 			eBindingModelItemProvider.dispose();
 		if (eBindingItemProvider != null)

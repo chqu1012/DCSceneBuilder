@@ -160,9 +160,9 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60,
 					layout.getEditorArea());
 			bottonRight.addView(IPageLayout.ID_PROP_SHEET);
-			
-			IFolderLayout nextToPropertyView = layout.createFolder("nextToPropertyView", IPageLayout.BOTTOM, (float) 0.60,
-					layout.getEditorArea());
+
+			IFolderLayout nextToPropertyView = layout.createFolder("nextToPropertyView", IPageLayout.BOTTOM,
+					(float) 0.60, layout.getEditorArea());
 			nextToPropertyView.addView(ModelLogView.ID);
 		}
 	}
@@ -188,13 +188,14 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 		 * @see org.eclipse.ui.application.WorkbenchWindowAdvisor#preWindowOpen()
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
+		 * @generated not
 		 */
 		@Override
 		public void preWindowOpen() {
 			IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
 			configurer.setInitialSize(new Point(600, 450));
-			configurer.setShowCoolBar(false);
+			configurer.setShowCoolBar(true);
+			configurer.setShowPerspectiveBar(true);
 			configurer.setShowStatusLine(true);
 			configurer.setTitle(getString("_UI_Application_title"));
 		}

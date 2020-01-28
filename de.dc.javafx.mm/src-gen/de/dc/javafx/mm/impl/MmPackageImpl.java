@@ -5,6 +5,7 @@ package de.dc.javafx.mm.impl;
 import de.dc.javafx.mm.EAnchorPane;
 import de.dc.javafx.mm.EAxis;
 import de.dc.javafx.mm.EBaseView;
+import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.EBinding;
 import de.dc.javafx.mm.EBindingDirection;
 import de.dc.javafx.mm.EBindingModel;
@@ -19,6 +20,7 @@ import de.dc.javafx.mm.EControl;
 import de.dc.javafx.mm.EControlBinding;
 import de.dc.javafx.mm.EDialogPane;
 import de.dc.javafx.mm.EEvents;
+import de.dc.javafx.mm.EField;
 import de.dc.javafx.mm.EFilteredTableView;
 import de.dc.javafx.mm.EFlowPane;
 import de.dc.javafx.mm.EGridPane;
@@ -81,6 +83,20 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass emfModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBeanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eFieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -573,6 +589,66 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EReference getEmfModel_Root() {
 		return (EReference) emfModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEmfModel_Beans() {
+		return (EReference) emfModelEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBean() {
+		return eBeanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEBean_Fields() {
+		return (EReference) eBeanEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEField() {
+		return eFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEField_Name() {
+		return (EAttribute) eFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEField_Datatype() {
+		return (EAttribute) eFieldEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1722,6 +1798,14 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(emfModelEClass, EMF_MODEL__STYLE_CLASS);
 		createEReference(emfModelEClass, EMF_MODEL__BINDING_MODEL);
 		createEReference(emfModelEClass, EMF_MODEL__ROOT);
+		createEReference(emfModelEClass, EMF_MODEL__BEANS);
+
+		eBeanEClass = createEClass(EBEAN);
+		createEReference(eBeanEClass, EBEAN__FIELDS);
+
+		eFieldEClass = createEClass(EFIELD);
+		createEAttribute(eFieldEClass, EFIELD__NAME);
+		createEAttribute(eFieldEClass, EFIELD__DATATYPE);
 
 		eBindingModelEClass = createEClass(EBINDING_MODEL);
 		createEReference(eBindingModelEClass, EBINDING_MODEL__BINDINGS);
@@ -1979,6 +2063,21 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmfModel_Root(), this.getENode(), null, "root", null, 0, 1, EmfModel.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getEmfModel_Beans(), this.getEBean(), null, "beans", null, 0, -1, EmfModel.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eBeanEClass, EBean.class, "EBean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEBean_Fields(), this.getEField(), null, "fields", null, 0, -1, EBean.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eFieldEClass, EField.class, "EField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEField_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EField.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEField_Datatype(), theEcorePackage.getEString(), "datatype", "String", 0, 1, EField.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(eBindingModelEClass, EBindingModel.class, "EBindingModel", !IS_ABSTRACT, !IS_INTERFACE,

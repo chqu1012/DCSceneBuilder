@@ -60,6 +60,10 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 		switch (eClass.getClassifierID()) {
 		case MmPackage.EMF_MODEL:
 			return createEmfModel();
+		case MmPackage.EBEAN:
+			return createEBean();
+		case MmPackage.EFIELD:
+			return createEField();
 		case MmPackage.EBINDING_MODEL:
 			return createEBindingModel();
 		case MmPackage.EBINDING:
@@ -196,6 +200,28 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EmfModel createEmfModel() {
 		EmfModelImpl emfModel = new EmfModelImpl();
 		return emfModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBean createEBean() {
+		EBeanImpl eBean = new EBeanImpl();
+		return eBean;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EField createEField() {
+		EFieldImpl eField = new EFieldImpl();
+		return eField;
 	}
 
 	/**

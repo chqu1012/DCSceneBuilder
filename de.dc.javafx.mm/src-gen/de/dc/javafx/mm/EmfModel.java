@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.mm.EmfModel#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getBindingModel <em>Binding Model</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EmfModel#getRoot <em>Root</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EmfModel#getBeans <em>Beans</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getEmfModel()
@@ -149,5 +150,17 @@ public interface EmfModel extends EObject {
 	 * @generated
 	 */
 	void setRoot(ENode value);
+
+	/**
+	 * Returns the value of the '<em><b>Beans</b></em>' containment reference list.
+	 * The list contents are of type {@link de.dc.javafx.mm.EBean}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Beans</em>' containment reference list.
+	 * @see de.dc.javafx.mm.MmPackage#getEmfModel_Beans()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EBean> getBeans();
 
 } // EmfModel

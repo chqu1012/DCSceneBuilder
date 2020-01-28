@@ -14,6 +14,16 @@ class EmfModel{
 	String[0..*] styleClass
 	contains EBindingModel[0..1] bindingModel
 	contains ENode[0..1] root
+	contains EBean[0..*] beans
+}
+
+class EBean{
+	contains EField[0..*] fields
+}
+
+class EField{
+	String name
+	String datatype = 'String'
 }
 
 class EBindingModel{

@@ -73,6 +73,20 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.EBEAN: {
+			EBean eBean = (EBean) theEObject;
+			T result = caseEBean(eBean);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EFIELD: {
+			EField eField = (EField) theEObject;
+			T result = caseEField(eField);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.EBINDING_MODEL: {
 			EBindingModel eBindingModel = (EBindingModel) theEObject;
 			T result = caseEBindingModel(eBindingModel);
@@ -811,6 +825,36 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEmfModel(EmfModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EBean</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EBean</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEBean(EBean object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EField</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EField</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEField(EField object) {
 		return null;
 	}
 
