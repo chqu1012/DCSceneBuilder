@@ -45,6 +45,7 @@ import org.eclipse.emf.edit.ui.action.LoadResourceAction;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import de.dc.javafx.mm.editor.ControlPallete;
+import de.dc.javafx.mm.editor.ModelLogView;
 import de.dc.javafx.mm.presentation.MmEditorPlugin;
 
 /**
@@ -159,6 +160,10 @@ public final class MmEditorAdvisor extends WorkbenchAdvisor {
 			IFolderLayout bottonRight = layout.createFolder("bottonRight", IPageLayout.BOTTOM, (float) 0.60,
 					layout.getEditorArea());
 			bottonRight.addView(IPageLayout.ID_PROP_SHEET);
+			
+			IFolderLayout nextToPropertyView = layout.createFolder("nextToPropertyView", IPageLayout.BOTTOM, (float) 0.60,
+					layout.getEditorArea());
+			nextToPropertyView.addView(ModelLogView.ID);
 		}
 	}
 

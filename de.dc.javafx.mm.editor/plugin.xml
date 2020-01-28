@@ -269,6 +269,12 @@
             name="Control Pallete"
             restorable="true">
       </view>
+      <view
+            class="de.dc.javafx.mm.editor.ModelLogView"
+            id="de.dc.javafx.mm.editor.ModelLogView"
+            name="Mode Log View"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>
