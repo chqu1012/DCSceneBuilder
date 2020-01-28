@@ -74,9 +74,9 @@ public class SwtTableView extends Composite{
 	private Text textColumnWidth;
 
 	private ETableView eTableView;
-	private EBean eTableViewModel;
+	private EBean eBean;
 	private ETableColumn eTableColumn;
-	private EField eTableViewModelField;
+	private EField eField;
 	private Button buttonTableModelGenerate;
 	private List listModelField;
 	private List listTableColumn;
@@ -85,6 +85,7 @@ public class SwtTableView extends Composite{
 
 	private ListViewer listTableColumnViewer;
 	private Combo textModelFieldDatatype;
+	private EmfModel model;
 	
 	public SwtTableView(Composite parent, int style) {
 		super(parent, style);
@@ -110,7 +111,7 @@ public class SwtTableView extends Composite{
 					EObject content = xmiResource.getContents().get(0);
 					if (content instanceof EmfModel) {
 						
-						EmfModel model = (EmfModel) content;
+						model = (EmfModel) content;
 						extEmfModel = new ExtEmfModel(model);
 					}
 				}
@@ -121,10 +122,10 @@ public class SwtTableView extends Composite{
 	private void initModel() {
 		eTableView = MmFactory.eINSTANCE.createETableView();
 		eTableView.setId("tableViewName");
-		eTableViewModel = MmFactory.eINSTANCE.createEBean();
-		eTableView.setModel(eTableViewModel);
+		eBean = MmFactory.eINSTANCE.createEBean();
+		eTableView.setModel(eBean);
 		eTableColumn = MmFactory.eINSTANCE.createETableColumn();
-		eTableViewModelField = MmFactory.eINSTANCE.createEField();		
+		eField = MmFactory.eINSTANCE.createEField();		
 	}
 
 	private void initControls(Composite parent) {
@@ -179,8 +180,8 @@ public class SwtTableView extends Composite{
 				Object[] types= dialog.getResult();
 				if (types != null && types.length > 0) {
 					IType type= (IType)types[0];
-					eTableViewModel.setName(type.getElementName());
-					eTableViewModel.setInstanceName(type.getFullyQualifiedName());
+					eBean.setName(type.getElementName());
+					eBean.setInstanceName(type.getFullyQualifiedName());
 					
 					textTableModelName.setText(type.getElementName());
 					textTableModelInstanceName.setText(type.getFullyQualifiedName());
@@ -190,16 +191,18 @@ public class SwtTableView extends Composite{
 							String fieldName = field.getElementName();
 							String fieldType = Signature.getSignatureSimpleName(field.getTypeSignature());
 							
-							EField sfield = EcoreUtil.copy(eTableViewModelField);
+							EField sfield = EcoreUtil.copy(eField);
 							sfield.setName(fieldName);
 							sfield.setDatatype(fieldType);
-							eTableViewModel.getFields().add(sfield);
+							eBean.getFields().add(sfield);
 							
 							ETableColumn column = EcoreUtil.copy(eTableColumn);
 							column.setAssociatedField(sfield);
-							column.setId("column"+eTableViewModel.getName()+StringUtils.capitalize(sfield.getName()));
+							column.setId("column"+eBean.getName()+StringUtils.capitalize(sfield.getName()));
 							column.setName(StringUtils.capitalize(sfield.getName()));
 							eTableView.getColumns().add(column);
+							
+							model.getBeans().add(eBean);
 							
 							listTableColumnViewer.refresh();
 							listModelFieldViewer.refresh();
@@ -266,12 +269,12 @@ public class SwtTableView extends Composite{
 		buttonModelAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				EField field = EcoreUtil.copy(eTableViewModelField);
-				eTableViewModel.getFields().add(field);
+				EField field = EcoreUtil.copy(eField);
+				eBean.getFields().add(field);
 				if (btnCreateAssoicatedColumn.getSelection()) {
 					ETableColumn column = EcoreUtil.copy(eTableColumn);
 					column.setAssociatedField(field);
-					column.setId("column"+eTableViewModel.getName()+StringUtils.capitalize(field.getName()));
+					column.setId("column"+eBean.getName()+StringUtils.capitalize(field.getName()));
 					column.setName(StringUtils.capitalize(field.getName()));
 					eTableView.getColumns().add(column);
 					listTableColumnViewer.refresh();
@@ -397,32 +400,32 @@ public class SwtTableView extends Composite{
 		//
 		IObservableValue observeTextTextTableModelNameObserveWidget = WidgetProperties.text(SWT.Modify)
 				.observe(textTableModelName);
-		IObservableValue nameETableViewModelObserveValue = PojoProperties.value("name").observe(eTableViewModel);
+		IObservableValue nameETableViewModelObserveValue = PojoProperties.value("name").observe(eBean);
 		bindingContext.bindValue(observeTextTextTableModelNameObserveWidget, nameETableViewModelObserveValue, null,
 				null);
 		//
 		IObservableValue observeTextTextTableModelInstanceNameObserveWidget = WidgetProperties.text(SWT.Modify)
 				.observe(textTableModelInstanceName);
 		IObservableValue instanceNameETableViewModelObserveValue = PojoProperties.value("instanceName")
-				.observe(eTableViewModel);
+				.observe(eBean);
 		bindingContext.bindValue(observeTextTextTableModelInstanceNameObserveWidget,
 				instanceNameETableViewModelObserveValue, null, null);
 		//
 		IObservableValue observeSelectionButtonTableModelGenerateObserveWidget = WidgetProperties.selection()
 				.observe(buttonTableModelGenerate);
 		IObservableValue generateClassETableViewModelObserveValue = PojoProperties.value("generateClass")
-				.observe(eTableViewModel);
+				.observe(eBean);
 		bindingContext.bindValue(observeSelectionButtonTableModelGenerateObserveWidget,
 				generateClassETableViewModelObserveValue, null, null);
 		//
 		IObservableValue observeTextTextModelFieldDatatypeObserveWidget = WidgetProperties.text().observe(textModelFieldDatatype);
-		IObservableValue datatypeETableViewModelFieldObserveValue = PojoProperties.value("datatype").observe(eTableViewModelField);
+		IObservableValue datatypeETableViewModelFieldObserveValue = PojoProperties.value("datatype").observe(eField);
 		bindingContext.bindValue(observeTextTextModelFieldDatatypeObserveWidget, datatypeETableViewModelFieldObserveValue, null, null);
 		//
 		IObservableValue observeTextTextModelFieldNameObserveWidget = WidgetProperties.text(SWT.Modify)
 				.observe(textModelFieldName);
 		IObservableValue nameETableViewModelFieldObserveValue = PojoProperties.value("name")
-				.observe(eTableViewModelField);
+				.observe(eField);
 		bindingContext.bindValue(observeTextTextModelFieldNameObserveWidget, nameETableViewModelFieldObserveValue, null,
 				null);
 		//
@@ -446,7 +449,7 @@ public class SwtTableView extends Composite{
 		bindingContext.bindValue(observeTextTxtTableViewIdObserveWidget, idETableViewObserveValue, null, null);
 		//
 		IObservableList itemsListModelFieldObserveWidget = WidgetProperties.items().observe(listModelField);
-		IObservableList fieldsETableViewModelObserveList = PojoProperties.list("fields").observe(eTableViewModel);
+		IObservableList fieldsETableViewModelObserveList = PojoProperties.list("fields").observe(eBean);
 		bindingContext.bindList(itemsListModelFieldObserveWidget, fieldsETableViewModelObserveList, null, null);
 		//
 		IObservableList itemsListTableColumnObserveWidget = WidgetProperties.items().observe(listTableColumn);
@@ -459,16 +462,6 @@ public class SwtTableView extends Composite{
 		comboAssociatedFieldViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap));
 		comboAssociatedFieldViewer.setContentProvider(listContentProvider);
 		//
-		comboAssociatedFieldViewer.setLabelProvider(new LabelProvider() {
-			@Override
-			public String getText(Object element) {
-				if (element instanceof EField) {
-					EField field = (EField) element;
-					return field.getName();
-				}
-				return super.getText(element);
-			}
-		});
 		comboAssociatedFieldViewer.setInput(fieldsETableViewModelObserveList);
 		//
 		ObservableListContentProvider listContentProvider_1 = new ObservableListContentProvider();
@@ -477,17 +470,6 @@ public class SwtTableView extends Composite{
 		listModelFieldViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap_1));
 		listModelFieldViewer.setContentProvider(listContentProvider_1);
 		//
-
-		listModelFieldViewer.setLabelProvider(new LabelProvider() {
-			@Override
-			public String getText(Object element) {
-				if (element instanceof EField) {
-					EField field = (EField) element;
-					return field.getName();
-				}
-				return super.getText(element);
-			}
-		});
 		listModelFieldViewer.setInput(fieldsETableViewModelObserveList);
 		//
 		ObservableListContentProvider listContentProvider_2 = new ObservableListContentProvider();
@@ -496,16 +478,36 @@ public class SwtTableView extends Composite{
 		listTableColumnViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap_2));
 		listTableColumnViewer.setContentProvider(listContentProvider_2);
 		//
-		listTableColumnViewer.setLabelProvider(new LabelProvider() {
-			@Override
-			public String getText(Object element) {
-				if (element instanceof ETableColumn) {
-					ETableColumn column = (ETableColumn) element;
-					return column.getName();
-				}
-				return super.getText(element);
-			}
-		});
+//		listTableColumnViewer.setLabelProvider(new LabelProvider() {
+//			@Override
+//			public String getText(Object element) {
+//				if (element instanceof ETableColumn) {
+//					ETableColumn column = (ETableColumn) element;
+//					return column.getName();
+//				}
+//				return super.getText(element);
+//			}
+//		});
+//		comboAssociatedFieldViewer.setLabelProvider(new LabelProvider() {
+//			@Override
+//			public String getText(Object element) {
+//				if (element instanceof EField) {
+//					EField field = (EField) element;
+//					return field.getName();
+//				}
+//				return super.getText(element);
+//			}
+//		});
+//		listModelFieldViewer.setLabelProvider(new LabelProvider() {
+//			@Override
+//			public String getText(Object element) {
+//				if (element instanceof EField) {
+//					EField field = (EField) element;
+//					return field.getName();
+//				}
+//				return super.getText(element);
+//			}
+//		});
 		listTableColumnViewer.setInput(columnsETableViewObserveList);
 		//
 		return bindingContext;

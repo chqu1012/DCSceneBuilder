@@ -2,22 +2,18 @@
  */
 package de.dc.javafx.mm.impl;
 
-import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.MmPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -31,7 +27,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link de.dc.javafx.mm.impl.ETableViewImpl#getColumns <em>Columns</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.ETableViewImpl#getModel <em>Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,16 +41,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	 * @ordered
 	 */
 	protected EList<ETableColumn> columns;
-
-	/**
-	 * The cached value of the '{@link #getModel() <em>Model</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModel()
-	 * @generated
-	 * @ordered
-	 */
-	protected EBean model;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,47 +81,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	 * @generated
 	 */
 	@Override
-	public EBean getModel() {
-		if (model != null && model.eIsProxy()) {
-			InternalEObject oldModel = (InternalEObject) model;
-			model = (EBean) eResolveProxy(oldModel);
-			if (model != oldModel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MmPackage.ETABLE_VIEW__MODEL, oldModel,
-							model));
-			}
-		}
-		return model;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EBean basicGetModel() {
-		return model;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setModel(EBean newModel) {
-		EBean oldModel = model;
-		model = newModel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_VIEW__MODEL, oldModel, model));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
@@ -155,10 +99,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 		switch (featureID) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
 			return getColumns();
-		case MmPackage.ETABLE_VIEW__MODEL:
-			if (resolve)
-				return getModel();
-			return basicGetModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,9 +116,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 			getColumns().clear();
 			getColumns().addAll((Collection<? extends ETableColumn>) newValue);
 			return;
-		case MmPackage.ETABLE_VIEW__MODEL:
-			setModel((EBean) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -194,9 +131,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
 			getColumns().clear();
 			return;
-		case MmPackage.ETABLE_VIEW__MODEL:
-			setModel((EBean) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +145,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 		switch (featureID) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
 			return columns != null && !columns.isEmpty();
-		case MmPackage.ETABLE_VIEW__MODEL:
-			return model != null;
 		}
 		return super.eIsSet(featureID);
 	}

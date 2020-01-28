@@ -1,14 +1,13 @@
 package de.dc.javafx.mm.editor.template
 
+import de.dc.javafx.mm.EBaseView
+import de.dc.javafx.mm.EBinding
 import de.dc.javafx.mm.EBorderPane
+import de.dc.javafx.mm.EListView
 import de.dc.javafx.mm.ENode
 import de.dc.javafx.mm.ETableView
 import de.dc.javafx.mm.EmfModel
 import org.eclipse.emf.ecore.util.EcoreUtil
-import de.dc.javafx.mm.EBinding
-import de.dc.javafx.mm.EBaseView
-import de.dc.javafx.mm.EListView
-import de.dc.javafx.mm.EListViewModel
 
 class ControllerImplTemplate implements IGenerator<EmfModel> {
 

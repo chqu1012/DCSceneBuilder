@@ -1,9 +1,9 @@
 package de.dc.javafx.mm.editor.template
 
-import de.dc.javafx.mm.EViewModel
 import de.dc.javafx.mm.EmfModel
 import de.dc.javafx.mm.editor.template.util.ViewerContent
 import org.eclipse.emf.ecore.util.EcoreUtil
+import de.dc.javafx.mm.EBaseView
 
 class BindingTemplate implements IGenerator<EmfModel>{
 	
@@ -16,17 +16,15 @@ class BindingTemplate implements IGenerator<EmfModel>{
 	
 	public class «t.name.toFirstUpper»Binding{
 
-		«FOR node : EcoreUtil.getAllContents(t, true).filter(EViewModel).toList»
-		«val name = node.name.toFirstUpper»
+		«FOR node : EcoreUtil.getAllContents(t, true).filter(EBaseView).toList»
+		«val name = node.model.name.toFirstUpper»
 		«ViewerContent.createContent(name)»
 		«ENDFOR»
-		
 		«IF t.bindingModel!==null»
 		«FOR b : t.bindingModel.bindings»
 		«val name = b.name.toFirstLower»
 		private «b.bindingType» «name» = new Simple«b.bindingType»();
 		«ENDFOR»
-		
 		«FOR b : t.bindingModel.bindings»
 		«val name = b.name.toFirstLower»
 		public «b.bindingType.toString.replace('Property', '')» get«name.toFirstUpper»(){

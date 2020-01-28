@@ -187,11 +187,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEViewModel(EViewModel object) {
-			return createEViewModelAdapter();
-		}
-
-		@Override
 		public Adapter caseEFilteredTableView(EFilteredTableView object) {
 			return createEFilteredTableViewAdapter();
 		}
@@ -209,11 +204,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseEListView(EListView object) {
 			return createEListViewAdapter();
-		}
-
-		@Override
-		public Adapter caseEListViewModel(EListViewModel object) {
-			return createEListViewModelAdapter();
 		}
 
 		@Override
@@ -662,20 +652,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EViewModel <em>EView Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EViewModel
-	 * @generated
-	 */
-	public Adapter createEViewModelAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EFilteredTableView <em>EFiltered Table View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -728,20 +704,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEListViewAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EListViewModel <em>EList View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EListViewModel
-	 * @generated
-	 */
-	public Adapter createEListViewModelAdapter() {
 		return null;
 	}
 

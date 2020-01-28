@@ -404,13 +404,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MmPackage.EVIEW_MODEL: {
-			EViewModel eViewModel = (EViewModel) theEObject;
-			T result = caseEViewModel(eViewModel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case MmPackage.EFILTERED_TABLE_VIEW: {
 			EFilteredTableView eFilteredTableView = (EFilteredTableView) theEObject;
 			T result = caseEFilteredTableView(eFilteredTableView);
@@ -473,15 +466,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseSkinnable(eListView);
 			if (result == null)
 				result = caseEEvents(eListView);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MmPackage.ELIST_VIEW_MODEL: {
-			EListViewModel eListViewModel = (EListViewModel) theEObject;
-			T result = caseEListViewModel(eListViewModel);
-			if (result == null)
-				result = caseEViewModel(eListViewModel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1158,21 +1142,6 @@ public class MmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EView Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EView Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEViewModel(EViewModel object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EFiltered Table View</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1229,21 +1198,6 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEListView(EListView object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EList View Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EList View Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEListViewModel(EListViewModel object) {
 		return null;
 	}
 

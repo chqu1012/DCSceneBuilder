@@ -96,8 +96,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createESplitMenuButton();
 		case MmPackage.ETOOGLE_BUTTON:
 			return createEToogleButton();
-		case MmPackage.EVIEW_MODEL:
-			return createEViewModel();
 		case MmPackage.EFILTERED_TABLE_VIEW:
 			return createEFilteredTableView();
 		case MmPackage.ETABLE_VIEW:
@@ -106,8 +104,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createETableColumn();
 		case MmPackage.ELIST_VIEW:
 			return createEListView();
-		case MmPackage.ELIST_VIEW_MODEL:
-			return createEListViewModel();
 		case MmPackage.ERADIO_BUTTON:
 			return createERadioButton();
 		case MmPackage.ECATGEORY_AXIS:
@@ -402,17 +398,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	 * @generated
 	 */
 	@Override
-	public EViewModel createEViewModel() {
-		EViewModelImpl eViewModel = new EViewModelImpl();
-		return eViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EFilteredTableView createEFilteredTableView() {
 		EFilteredTableViewImpl eFilteredTableView = new EFilteredTableViewImpl();
 		return eFilteredTableView;
@@ -449,17 +434,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EListView createEListView() {
 		EListViewImpl eListView = new EListViewImpl();
 		return eListView;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EListViewModel createEListViewModel() {
-		EListViewModelImpl eListViewModel = new EListViewModelImpl();
-		return eListViewModel;
 	}
 
 	/**

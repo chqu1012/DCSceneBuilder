@@ -117,19 +117,13 @@ class EToogleButton extends EButtonBase{
 }
 
 abstract class EBaseView extends EControl{
-}
-
-class EViewModel{
-	String name
-	String instanceName
-	boolean generateClass = 'true'
+	refers EBean model
 }
 
 class EFilteredTableView extends ETableView{}
 
 class ETableView extends EBaseView{
 	contains ETableColumn[0..*] columns
-	refers EBean model
 }
 
 class ETableColumn{
@@ -142,10 +136,6 @@ class ETableColumn{
 }
 
 class EListView extends EBaseView{
-	contains EListViewModel[0..1] model
-}
-
-class EListViewModel extends EViewModel{
 }
 
 class ERadioButton extends EToogleButton{}
