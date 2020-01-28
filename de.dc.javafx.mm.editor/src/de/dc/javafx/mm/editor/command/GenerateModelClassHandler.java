@@ -10,6 +10,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -24,6 +25,7 @@ import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.template.ModelTemplate;
 import de.dc.javafx.mm.file.FxmlFile;
+import de.dc.javafx.mm.impl.ETableViewModelImpl;
 
 public class GenerateModelClassHandler extends AbstractHandler {
 
@@ -47,8 +49,9 @@ public class GenerateModelClassHandler extends AbstractHandler {
 					IFolder srcFolder = project.getFolder("src");
 					IFolder genFolder = getFolder(srcFolder, emfModel.getBasePackage().split("\\.")).getFolder("model");
 
-					EcoreUtil.getAllContents(emfModel, true).forEachRemaining(e->{
-						if (e instanceof ETableViewModel) {
+					TreeIterator<Object> contents = EcoreUtil.getAllContents(emfModel, true);
+					contents.forEachRemaining(e->{
+						if (e instanceof ETableViewModelImpl) {
 							ETableViewModel tableViewModel = (ETableViewModel) e;
 							
 							boolean validInstanceName = tableViewModel.getInstanceName()!=null && !tableViewModel.getInstanceName().isEmpty();

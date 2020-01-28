@@ -1,7 +1,11 @@
 package de.dc.javafx.mm.editor;
 
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -13,23 +17,31 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
-import org.eclipse.ui.ISelectionListener;
-import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
+import de.dc.javafx.mm.EBinding;
+import de.dc.javafx.mm.EBindingType;
+import de.dc.javafx.mm.EControlBinding;
 import de.dc.javafx.mm.ENode;
+import de.dc.javafx.mm.EmfModel;
+import de.dc.javafx.mm.editor.control.SwtFormBindingSwitch;
 import de.dc.javafx.mm.editor.control.SwtTableView;
+import de.dc.javafx.mm.presentation.MmEditor;
 
-public class ControlPallete extends ViewPart implements ISelectionListener{
+public class ControlPallete extends ViewPart {
 	
 	public static final String ID = "de.dc.javafx.mm.editor.ControlPallete";
 	
 	private Composite compositeForm;
 	private Composite parent;
 
+	private SwtFormBindingSwitch bindingSwitch = new SwtFormBindingSwitch();
+	
 	public ControlPallete() {
 	}
 
@@ -88,6 +100,50 @@ public class ControlPallete extends ViewPart implements ISelectionListener{
 		btnEfilteredlistview.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		btnEfilteredlistview.setText("EFilteredListView");
 		
+		TabItem tbtmBinding = new TabItem(tabFolder, SWT.NONE);
+		tbtmBinding.setText("Binding");
+		
+		Group groupBinding = new Group(tabFolder, SWT.NONE);
+		tbtmBinding.setControl(groupBinding);
+		groupBinding.setLayout(new GridLayout(1, false));
+		
+		Button btnTextproperty = new Button(groupBinding, SWT.NONE);
+		btnTextproperty.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				IEditorPart activeEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
+				if (activeEditor instanceof MmEditor) {
+					MmEditor editor = (MmEditor) activeEditor;
+					ISelection selection = editor.getSelection();
+					if (selection instanceof IStructuredSelection) {
+						IStructuredSelection ss = (IStructuredSelection) selection;
+						ENode control = (ENode) ss.getFirstElement();
+						ResourceSet root = (ResourceSet) EcoreUtil.getRoot(control, true);						
+						EmfModel emfModel = (EmfModel) root.getResources().get(0).getContents().get(0);
+						EBinding newBinding = bindingSwitch.doSwitch(control);
+						
+						ENode alreadyBindedNode = null;
+						boolean alreadyBinded = false;
+						for (EBinding binding : emfModel.getBindingModel().getBindings()) {
+							if (binding.getNode()==control && binding.getBinding()==EControlBinding.TEXT_PROPERTY) {
+								alreadyBinded = true;
+								alreadyBindedNode = binding.getNode();
+							}
+						}
+						if (alreadyBinded) {
+							MessageDialog.openInformation(new Shell(), "Control already binded!", control.eClass().getName()+" "+control.getId()+" already binded!");
+							editor.getViewer().setSelection(new StructuredSelection(alreadyBindedNode), true);
+						}else {
+							emfModel.getBindingModel().getBindings().add(newBinding);
+							editor.getViewer().setSelection(new StructuredSelection(newBinding), true);
+						}
+						
+					}
+				}
+			}
+		});
+		btnTextproperty.setText("TextProperty");
+		
 		Composite composite = new Composite(parent, SWT.NONE);
 		composite.setLayout(new GridLayout(2, false));
 		composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -101,17 +157,6 @@ public class ControlPallete extends ViewPart implements ISelectionListener{
 		compositeForm = new Composite(composite, SWT.NONE);
 		compositeForm.setLayout(new FillLayout(SWT.HORIZONTAL));
 		compositeForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
-		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(this);
-	}
-
-	@Override
-	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-		if (selection instanceof IStructuredSelection) {
-			IStructuredSelection ss = (IStructuredSelection) selection;
-			parent.setEnabled(ss.getFirstElement() instanceof ENode);
-		}else {
-			parent.setEnabled(false);
-		}
 	}
 
 	@Override
