@@ -11,6 +11,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -42,8 +43,24 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ETableView_model_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ETableView_model_feature",
+								"_UI_ETableView_type"),
+						MmPackage.Literals.ETABLE_VIEW__MODEL, true, false, true, null, null, null));
 	}
 
 	/**
@@ -59,7 +76,6 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MmPackage.Literals.ETABLE_VIEW__COLUMNS);
-			childrenFeatures.add(MmPackage.Literals.ETABLE_VIEW__MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -124,7 +140,6 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 
 		switch (notification.getFeatureID(ETableView.class)) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
-		case MmPackage.ETABLE_VIEW__MODEL:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -144,9 +159,6 @@ public class ETableViewItemProvider extends EBaseViewItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ETABLE_VIEW__COLUMNS,
 				MmFactory.eINSTANCE.createETableColumn()));
-
-		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ETABLE_VIEW__MODEL,
-				MmFactory.eINSTANCE.createETableViewModel()));
 	}
 
 	/**

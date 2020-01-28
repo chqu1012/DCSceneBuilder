@@ -1,16 +1,16 @@
 package de.dc.javafx.mm.editor.template;
 
-import de.dc.javafx.mm.ETableViewModel;
-import de.dc.javafx.mm.ETableViewModelField;
+import de.dc.javafx.mm.EBean;
+import de.dc.javafx.mm.EField;
 import de.dc.javafx.mm.editor.template.IGenerator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
-public class ModelTemplate implements IGenerator<ETableViewModel> {
+public class ModelTemplate implements IGenerator<EBean> {
   @Override
-  public String gen(final ETableViewModel t) {
+  public String gen(final EBean t) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package ");
     String _instanceName = t.getInstanceName();
@@ -29,8 +29,8 @@ public class ModelTemplate implements IGenerator<ETableViewModel> {
     _builder.append("\t");
     _builder.newLine();
     {
-      EList<ETableViewModelField> _fields = t.getFields();
-      for(final ETableViewModelField field : _fields) {
+      EList<EField> _fields = t.getFields();
+      for(final EField field : _fields) {
         _builder.append("\t");
         _builder.append("private ");
         String _datatype = field.getDatatype();
@@ -44,8 +44,8 @@ public class ModelTemplate implements IGenerator<ETableViewModel> {
     }
     _builder.newLine();
     {
-      EList<ETableViewModelField> _fields_1 = t.getFields();
-      for(final ETableViewModelField field_1 : _fields_1) {
+      EList<EField> _fields_1 = t.getFields();
+      for(final EField field_1 : _fields_1) {
         _builder.append("\t");
         _builder.append("public void set");
         String _firstUpper = StringExtensions.toFirstUpper(field_1.getName());
@@ -108,8 +108,8 @@ public class ModelTemplate implements IGenerator<ETableViewModel> {
     _builder.append(" -> \");");
     _builder.newLineIfNotEmpty();
     {
-      EList<ETableViewModelField> _fields_2 = t.getFields();
-      for(final ETableViewModelField b : _fields_2) {
+      EList<EField> _fields_2 = t.getFields();
+      for(final EField b : _fields_2) {
         _builder.append("\t\t");
         final String name = StringExtensions.toFirstLower(b.getName());
         _builder.newLineIfNotEmpty();

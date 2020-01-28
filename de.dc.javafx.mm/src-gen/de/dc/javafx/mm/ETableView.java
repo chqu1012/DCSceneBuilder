@@ -35,25 +35,25 @@ public interface ETableView extends EBaseView {
 	EList<ETableColumn> getColumns();
 
 	/**
-	 * Returns the value of the '<em><b>Model</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Model</em>' containment reference.
-	 * @see #setModel(ETableViewModel)
+	 * @return the value of the '<em>Model</em>' reference.
+	 * @see #setModel(EBean)
 	 * @see de.dc.javafx.mm.MmPackage#getETableView_Model()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	ETableViewModel getModel();
+	EBean getModel();
 
 	/**
-	 * Sets the value of the '{@link de.dc.javafx.mm.ETableView#getModel <em>Model</em>}' containment reference.
+	 * Sets the value of the '{@link de.dc.javafx.mm.ETableView#getModel <em>Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Model</em>' containment reference.
+	 * @param value the new value of the '<em>Model</em>' reference.
 	 * @see #getModel()
 	 * @generated
 	 */
-	void setModel(ETableViewModel value);
+	void setModel(EBean value);
 
 } // ETableView

@@ -18,6 +18,9 @@ class EmfModel{
 }
 
 class EBean{
+	String name
+	String instanceName
+	boolean generateClass = 'true'
 	contains EField[0..*] fields
 }
 
@@ -126,16 +129,7 @@ class EFilteredTableView extends ETableView{}
 
 class ETableView extends EBaseView{
 	contains ETableColumn[0..*] columns
-	contains ETableViewModel[0..1] model
-}
-
-class ETableViewModel extends EViewModel{
-	contains ETableViewModelField[0..*] fields
-}
-
-class ETableViewModelField{
-	String name
-	String datatype = 'String'
+	refers EBean model
 }
 
 class ETableColumn{
@@ -144,7 +138,7 @@ class ETableColumn{
 	double width = '150'
 	String cellValueFactory
 	String cellFactory
-	refers ETableViewModelField associatedField
+	refers EField associatedField
 }
 
 class EListView extends EBaseView{

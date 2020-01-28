@@ -102,10 +102,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEFilteredTableView();
 		case MmPackage.ETABLE_VIEW:
 			return createETableView();
-		case MmPackage.ETABLE_VIEW_MODEL:
-			return createETableViewModel();
-		case MmPackage.ETABLE_VIEW_MODEL_FIELD:
-			return createETableViewModelField();
 		case MmPackage.ETABLE_COLUMN:
 			return createETableColumn();
 		case MmPackage.ELIST_VIEW:
@@ -431,28 +427,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public ETableView createETableView() {
 		ETableViewImpl eTableView = new ETableViewImpl();
 		return eTableView;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETableViewModel createETableViewModel() {
-		ETableViewModelImpl eTableViewModel = new ETableViewModelImpl();
-		return eTableViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ETableViewModelField createETableViewModelField() {
-		ETableViewModelFieldImpl eTableViewModelField = new ETableViewModelFieldImpl();
-		return eTableViewModelField;
 	}
 
 	/**

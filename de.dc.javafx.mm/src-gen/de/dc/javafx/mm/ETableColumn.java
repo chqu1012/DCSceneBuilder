@@ -142,12 +142,12 @@ public interface ETableColumn extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Associated Field</em>' reference.
-	 * @see #setAssociatedField(ETableViewModelField)
+	 * @see #setAssociatedField(EField)
 	 * @see de.dc.javafx.mm.MmPackage#getETableColumn_AssociatedField()
 	 * @model
 	 * @generated
 	 */
-	ETableViewModelField getAssociatedField();
+	EField getAssociatedField();
 
 	/**
 	 * Sets the value of the '{@link de.dc.javafx.mm.ETableColumn#getAssociatedField <em>Associated Field</em>}' reference.
@@ -157,6 +157,6 @@ public interface ETableColumn extends EObject {
 	 * @see #getAssociatedField()
 	 * @generated
 	 */
-	void setAssociatedField(ETableViewModelField value);
+	void setAssociatedField(EField value);
 
 } // ETableColumn

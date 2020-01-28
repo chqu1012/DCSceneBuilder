@@ -2,9 +2,9 @@
  */
 package de.dc.javafx.mm.impl;
 
+import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
-import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.MmPackage;
 
 import java.util.Collection;
@@ -48,14 +48,14 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	protected EList<ETableColumn> columns;
 
 	/**
-	 * The cached value of the '{@link #getModel() <em>Model</em>}' containment reference.
+	 * The cached value of the '{@link #getModel() <em>Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected ETableViewModel model;
+	protected EBean model;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +96,16 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	 * @generated
 	 */
 	@Override
-	public ETableViewModel getModel() {
+	public EBean getModel() {
+		if (model != null && model.eIsProxy()) {
+			InternalEObject oldModel = (InternalEObject) model;
+			model = (EBean) eResolveProxy(oldModel);
+			if (model != oldModel) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MmPackage.ETABLE_VIEW__MODEL, oldModel,
+							model));
+			}
+		}
 		return model;
 	}
 
@@ -105,18 +114,8 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetModel(ETableViewModel newModel, NotificationChain msgs) {
-		ETableViewModel oldModel = model;
-		model = newModel;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_VIEW__MODEL,
-					oldModel, newModel);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
+	public EBean basicGetModel() {
+		return model;
 	}
 
 	/**
@@ -125,20 +124,11 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 	 * @generated
 	 */
 	@Override
-	public void setModel(ETableViewModel newModel) {
-		if (newModel != model) {
-			NotificationChain msgs = null;
-			if (model != null)
-				msgs = ((InternalEObject) model).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - MmPackage.ETABLE_VIEW__MODEL, null, msgs);
-			if (newModel != null)
-				msgs = ((InternalEObject) newModel).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - MmPackage.ETABLE_VIEW__MODEL, null, msgs);
-			msgs = basicSetModel(newModel, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_VIEW__MODEL, newModel, newModel));
+	public void setModel(EBean newModel) {
+		EBean oldModel = model;
+		model = newModel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_VIEW__MODEL, oldModel, model));
 	}
 
 	/**
@@ -151,8 +141,6 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 		switch (featureID) {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
 			return ((InternalEList<?>) getColumns()).basicRemove(otherEnd, msgs);
-		case MmPackage.ETABLE_VIEW__MODEL:
-			return basicSetModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,7 +156,9 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 		case MmPackage.ETABLE_VIEW__COLUMNS:
 			return getColumns();
 		case MmPackage.ETABLE_VIEW__MODEL:
-			return getModel();
+			if (resolve)
+				return getModel();
+			return basicGetModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,7 +177,7 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 			getColumns().addAll((Collection<? extends ETableColumn>) newValue);
 			return;
 		case MmPackage.ETABLE_VIEW__MODEL:
-			setModel((ETableViewModel) newValue);
+			setModel((EBean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -205,7 +195,7 @@ public class ETableViewImpl extends EBaseViewImpl implements ETableView {
 			getColumns().clear();
 			return;
 		case MmPackage.ETABLE_VIEW__MODEL:
-			setModel((ETableViewModel) null);
+			setModel((EBean) null);
 			return;
 		}
 		super.eUnset(featureID);

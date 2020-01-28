@@ -20,12 +20,11 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.PlatformUI;
 
+import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.ETableView;
-import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.template.ModelTemplate;
 import de.dc.javafx.mm.file.FxmlFile;
-import de.dc.javafx.mm.impl.ETableViewModelImpl;
 
 public class GenerateModelClassHandler extends AbstractHandler {
 
@@ -51,8 +50,8 @@ public class GenerateModelClassHandler extends AbstractHandler {
 
 					TreeIterator<Object> contents = EcoreUtil.getAllContents(emfModel, true);
 					contents.forEachRemaining(e->{
-						if (e instanceof ETableViewModelImpl) {
-							ETableViewModel tableViewModel = (ETableViewModel) e;
+						if (e instanceof EBean) {
+							EBean tableViewModel = (EBean) e;
 							
 							boolean validInstanceName = tableViewModel.getInstanceName()!=null && !tableViewModel.getInstanceName().isEmpty();
 							boolean validName = tableViewModel.getName()!=null && !tableViewModel.getName().isEmpty();

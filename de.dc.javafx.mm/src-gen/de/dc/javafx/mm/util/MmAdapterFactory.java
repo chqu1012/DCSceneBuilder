@@ -202,16 +202,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseETableViewModel(ETableViewModel object) {
-			return createETableViewModelAdapter();
-		}
-
-		@Override
-		public Adapter caseETableViewModelField(ETableViewModelField object) {
-			return createETableViewModelFieldAdapter();
-		}
-
-		@Override
 		public Adapter caseETableColumn(ETableColumn object) {
 			return createETableColumnAdapter();
 		}
@@ -710,34 +700,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createETableViewAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETableViewModel <em>ETable View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.ETableViewModel
-	 * @generated
-	 */
-	public Adapter createETableViewModelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETableViewModelField <em>ETable View Model Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.ETableViewModelField
-	 * @generated
-	 */
-	public Adapter createETableViewModelFieldAdapter() {
 		return null;
 	}
 

@@ -2,8 +2,8 @@
  */
 package de.dc.javafx.mm.impl;
 
+import de.dc.javafx.mm.EField;
 import de.dc.javafx.mm.ETableColumn;
-import de.dc.javafx.mm.ETableViewModelField;
 import de.dc.javafx.mm.MmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -141,7 +141,7 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 * @ordered
 	 */
-	protected ETableViewModelField associatedField;
+	protected EField associatedField;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -285,10 +285,10 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 */
 	@Override
-	public ETableViewModelField getAssociatedField() {
+	public EField getAssociatedField() {
 		if (associatedField != null && associatedField.eIsProxy()) {
 			InternalEObject oldAssociatedField = (InternalEObject) associatedField;
-			associatedField = (ETableViewModelField) eResolveProxy(oldAssociatedField);
+			associatedField = (EField) eResolveProxy(oldAssociatedField);
 			if (associatedField != oldAssociatedField) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD,
@@ -303,7 +303,7 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ETableViewModelField basicGetAssociatedField() {
+	public EField basicGetAssociatedField() {
 		return associatedField;
 	}
 
@@ -313,8 +313,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 */
 	@Override
-	public void setAssociatedField(ETableViewModelField newAssociatedField) {
-		ETableViewModelField oldAssociatedField = associatedField;
+	public void setAssociatedField(EField newAssociatedField) {
+		EField oldAssociatedField = associatedField;
 		associatedField = newAssociatedField;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD,
@@ -371,7 +371,7 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			setCellFactory((String) newValue);
 			return;
 		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
-			setAssociatedField((ETableViewModelField) newValue);
+			setAssociatedField((EField) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -401,7 +401,7 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			setCellFactory(CELL_FACTORY_EDEFAULT);
 			return;
 		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
-			setAssociatedField((ETableViewModelField) null);
+			setAssociatedField((EField) null);
 			return;
 		}
 		super.eUnset(featureID);

@@ -1,10 +1,10 @@
 package de.dc.javafx.mm.editor.template;
 
-import de.dc.javafx.mm.ETableViewModel
+import de.dc.javafx.mm.EBean
 
-class ModelTemplate implements IGenerator<ETableViewModel> {
+class ModelTemplate implements IGenerator<EBean> {
 
-	override gen(ETableViewModel t) '''
+	override gen(EBean t) '''
 	package «t.instanceName.replace("."+t.name, '')»;
 	
 	public class «t.name»{

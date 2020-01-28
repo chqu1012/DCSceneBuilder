@@ -1,8 +1,8 @@
 package de.dc.javafx.mm.editor.template;
 
+import de.dc.javafx.mm.EBean
 import de.dc.javafx.mm.EBorderPane
 import de.dc.javafx.mm.ENode
-import de.dc.javafx.mm.ETableViewModel
 import de.dc.javafx.mm.EmfModel
 import org.eclipse.emf.ecore.util.EcoreUtil
 
@@ -17,7 +17,7 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 	override gen(EmfModel t) '''
 	package «t.basePackage».controller;
 	
-	«FOR node : EcoreUtil.getAllContents(t, true).filter(ETableViewModel).toList»
+	«FOR node : EcoreUtil.getAllContents(t, true).filter(EBean).toList»
 	import «node.instanceName»;
 	«ENDFOR»
 	

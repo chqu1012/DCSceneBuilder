@@ -222,24 +222,6 @@ public interface MmFactory extends EFactory {
 	ETableView createETableView();
 
 	/**
-	 * Returns a new object of class '<em>ETable View Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETable View Model</em>'.
-	 * @generated
-	 */
-	ETableViewModel createETableViewModel();
-
-	/**
-	 * Returns a new object of class '<em>ETable View Model Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ETable View Model Field</em>'.
-	 * @generated
-	 */
-	ETableViewModelField createETableViewModelField();
-
-	/**
 	 * Returns a new object of class '<em>ETable Column</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

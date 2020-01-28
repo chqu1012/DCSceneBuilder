@@ -50,11 +50,11 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
 
+import de.dc.javafx.mm.EBean;
+import de.dc.javafx.mm.EField;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
-import de.dc.javafx.mm.ETableViewModel;
-import de.dc.javafx.mm.ETableViewModelField;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.MmFactory;
 import de.dc.javafx.mm.model.ExtEmfModel;
@@ -74,9 +74,9 @@ public class SwtTableView extends Composite{
 	private Text textColumnWidth;
 
 	private ETableView eTableView;
-	private ETableViewModel eTableViewModel;
+	private EBean eTableViewModel;
 	private ETableColumn eTableColumn;
-	private ETableViewModelField eTableViewModelField;
+	private EField eTableViewModelField;
 	private Button buttonTableModelGenerate;
 	private List listModelField;
 	private List listTableColumn;
@@ -121,10 +121,10 @@ public class SwtTableView extends Composite{
 	private void initModel() {
 		eTableView = MmFactory.eINSTANCE.createETableView();
 		eTableView.setId("tableViewName");
-		eTableViewModel = MmFactory.eINSTANCE.createETableViewModel();
+		eTableViewModel = MmFactory.eINSTANCE.createEBean();
 		eTableView.setModel(eTableViewModel);
 		eTableColumn = MmFactory.eINSTANCE.createETableColumn();
-		eTableViewModelField = MmFactory.eINSTANCE.createETableViewModelField();		
+		eTableViewModelField = MmFactory.eINSTANCE.createEField();		
 	}
 
 	private void initControls(Composite parent) {
@@ -190,7 +190,7 @@ public class SwtTableView extends Composite{
 							String fieldName = field.getElementName();
 							String fieldType = Signature.getSignatureSimpleName(field.getTypeSignature());
 							
-							ETableViewModelField sfield = EcoreUtil.copy(eTableViewModelField);
+							EField sfield = EcoreUtil.copy(eTableViewModelField);
 							sfield.setName(fieldName);
 							sfield.setDatatype(fieldType);
 							eTableViewModel.getFields().add(sfield);
@@ -266,7 +266,7 @@ public class SwtTableView extends Composite{
 		buttonModelAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				ETableViewModelField field = EcoreUtil.copy(eTableViewModelField);
+				EField field = EcoreUtil.copy(eTableViewModelField);
 				eTableViewModel.getFields().add(field);
 				if (btnCreateAssoicatedColumn.getSelection()) {
 					ETableColumn column = EcoreUtil.copy(eTableColumn);
@@ -339,7 +339,7 @@ public class SwtTableView extends Composite{
 			public void widgetSelected(SelectionEvent e) {
 				ETableColumn copiedColumn = EcoreUtil.copy(eTableColumn);
 				IStructuredSelection selection = (IStructuredSelection) comboAssociatedFieldViewer.getSelection();
-				copiedColumn.setAssociatedField((ETableViewModelField) selection.getFirstElement());
+				copiedColumn.setAssociatedField((EField) selection.getFirstElement());
 				eTableView.getColumns().add(copiedColumn);
 				listTableColumnViewer.refresh();
 			}
@@ -455,15 +455,15 @@ public class SwtTableView extends Composite{
 		//
 		ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
 		IObservableMap observeMap = PojoObservables.observeMap(listContentProvider.getKnownElements(),
-				ETableViewModelField.class, "name");
+				EField.class, "name");
 		comboAssociatedFieldViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap));
 		comboAssociatedFieldViewer.setContentProvider(listContentProvider);
 		//
 		comboAssociatedFieldViewer.setLabelProvider(new LabelProvider() {
 			@Override
 			public String getText(Object element) {
-				if (element instanceof ETableViewModelField) {
-					ETableViewModelField field = (ETableViewModelField) element;
+				if (element instanceof EField) {
+					EField field = (EField) element;
 					return field.getName();
 				}
 				return super.getText(element);
@@ -473,7 +473,7 @@ public class SwtTableView extends Composite{
 		//
 		ObservableListContentProvider listContentProvider_1 = new ObservableListContentProvider();
 		IObservableMap observeMap_1 = PojoObservables.observeMap(listContentProvider_1.getKnownElements(),
-				ETableViewModelField.class, "name");
+				EField.class, "name");
 		listModelFieldViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap_1));
 		listModelFieldViewer.setContentProvider(listContentProvider_1);
 		//
@@ -481,8 +481,8 @@ public class SwtTableView extends Composite{
 		listModelFieldViewer.setLabelProvider(new LabelProvider() {
 			@Override
 			public String getText(Object element) {
-				if (element instanceof ETableViewModelField) {
-					ETableViewModelField field = (ETableViewModelField) element;
+				if (element instanceof EField) {
+					EField field = (EField) element;
 					return field.getName();
 				}
 				return super.getText(element);

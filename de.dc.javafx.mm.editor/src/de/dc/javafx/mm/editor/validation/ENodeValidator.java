@@ -4,8 +4,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.PlatformUI;
 
+import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.ETableView;
-import de.dc.javafx.mm.ETableViewModel;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.ModelLogView;
 import de.dc.javafx.mm.util.MmSwitch;
@@ -34,7 +34,7 @@ public class ENodeValidator extends MmSwitch<EObject> {
 	}
 	
 	@Override
-	public EObject caseETableViewModel(ETableViewModel object) {
+	public EObject caseEBean(EBean object) {
 		checkValueEmpty(object, "InstanceName", object.getInstanceName());
 		checkValueEmpty(object, "Name", object.getName());
 		return object;
