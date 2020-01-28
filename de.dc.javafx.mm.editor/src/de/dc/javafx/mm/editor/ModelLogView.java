@@ -38,6 +38,7 @@ import org.eclipse.ui.part.ViewPart;
 
 import de.dc.javafx.mm.editor.filter.ModelLogEntryFilter;
 import de.dc.javafx.mm.editor.model.ModelLogEntry;
+import de.dc.javafx.mm.editor.provider.ModelLogLabelProvider;
 import de.dc.javafx.mm.presentation.MmEditor;
 
 public class ModelLogView extends ViewPart {
@@ -122,7 +123,7 @@ public class ModelLogView extends ViewPart {
 		tblclmnEtype.setWidth(100);
 		tblclmnEtype.setText("EType");
 
-//		tableViewer.setLabelProvider(new ModelLogLabelProvider());
+		tableViewer.setLabelProvider(new ModelLogLabelProvider());
 		tableViewer.setInput(entries);
 
 		tableViewer.addSelectionChangedListener(e -> {
