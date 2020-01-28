@@ -1,5 +1,6 @@
 package de.dc.javafx.mm.editor.control;
 
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.PojoObservables;
 import org.eclipse.core.databinding.beans.PojoProperties;
@@ -11,9 +12,19 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
+import org.eclipse.jdt.core.IField;
+import org.eclipse.jdt.core.IType;
+import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.jdt.core.Signature;
+import org.eclipse.jdt.core.search.IJavaSearchConstants;
+import org.eclipse.jdt.core.search.SearchEngine;
+import org.eclipse.jdt.internal.ui.JavaPlugin;
+import org.eclipse.jdt.internal.ui.actions.ActionMessages;
+import org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
@@ -58,7 +69,6 @@ public class SwtTableView extends Composite{
 	private Text textColumnId;
 	private Text textTableModelName;
 	private Text textTableModelInstanceName;
-	private Text textModelFieldDatatype;
 	private Text textModelFieldName;
 	private Text textColumnName;
 	private Text textColumnWidth;
@@ -74,6 +84,7 @@ public class SwtTableView extends Composite{
 	private ListViewer listModelFieldViewer;
 
 	private ListViewer listTableColumnViewer;
+	private Combo textModelFieldDatatype;
 	
 	public SwtTableView(Composite parent, int style) {
 		super(parent, style);
@@ -82,6 +93,7 @@ public class SwtTableView extends Composite{
 		initControls(this);
 		
 		setLayout(new GridLayout(2, false));
+		new Label(this, SWT.NONE);
 	}
 
 	private void initExtEmfModel() {
@@ -132,7 +144,7 @@ public class SwtTableView extends Composite{
 
 		Group group_1 = new Group(tabFolder, SWT.NONE);
 		tbtmNewItem.setControl(group_1);
-		group_1.setLayout(new GridLayout(2, false));
+		group_1.setLayout(new GridLayout(3, false));
 
 		Label lblName_1 = new Label(group_1, SWT.NONE);
 		lblName_1.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
@@ -140,6 +152,7 @@ public class SwtTableView extends Composite{
 
 		textTableModelName = new Text(group_1, SWT.BORDER);
 		textTableModelName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		new Label(group_1, SWT.NONE);
 
 		Label lblInstancename = new Label(group_1, SWT.NONE);
 		lblInstancename.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
@@ -147,26 +160,83 @@ public class SwtTableView extends Composite{
 
 		textTableModelInstanceName = new Text(group_1, SWT.BORDER);
 		textTableModelInstanceName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		
+		Button buttonOpenType = new Button(group_1, SWT.NONE);
+		buttonOpenType.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				Shell parent= JavaPlugin.getActiveWorkbenchShell();
+				OpenTypeSelectionDialog dialog= new OpenTypeSelectionDialog(parent, false,
+					PlatformUI.getWorkbench().getProgressService(),
+					SearchEngine.createWorkspaceScope(), IJavaSearchConstants.TYPE);
+
+				dialog.setTitle(ActionMessages.OpenTypeInHierarchyAction_dialogTitle);
+				dialog.setMessage(ActionMessages.OpenTypeInHierarchyAction_dialogMessage);
+				int result= dialog.open();
+				if (result != IDialogConstants.OK_ID)
+					return;
+
+				Object[] types= dialog.getResult();
+				if (types != null && types.length > 0) {
+					IType type= (IType)types[0];
+					eTableViewModel.setName(type.getElementName());
+					eTableViewModel.setInstanceName(type.getFullyQualifiedName());
+					
+					textTableModelName.setText(type.getElementName());
+					textTableModelInstanceName.setText(type.getFullyQualifiedName());
+					
+					try {
+						for (IField field : type.getFields()) {
+							String fieldName = field.getElementName();
+							String fieldType = Signature.getSignatureSimpleName(field.getTypeSignature());
+							
+							ETableViewModelField sfield = EcoreUtil.copy(eTableViewModelField);
+							sfield.setName(fieldName);
+							sfield.setDatatype(fieldType);
+							eTableViewModel.getFields().add(sfield);
+							
+							ETableColumn column = EcoreUtil.copy(eTableColumn);
+							column.setAssociatedField(sfield);
+							column.setId("column"+eTableViewModel.getName()+StringUtils.capitalize(sfield.getName()));
+							column.setName(StringUtils.capitalize(sfield.getName()));
+							eTableView.getColumns().add(column);
+							
+							listTableColumnViewer.refresh();
+							listModelFieldViewer.refresh();
+							comboAssociatedFieldViewer.refresh();
+						}
+					} catch (JavaModelException e1) {
+						e1.printStackTrace();
+					}
+					
+				}
+			}
+		});
+		buttonOpenType.setText("...");
 		new Label(group_1, SWT.NONE);
 
 		buttonTableModelGenerate = new Button(group_1, SWT.CHECK);
 		buttonTableModelGenerate.setSelection(true);
 		buttonTableModelGenerate.setText("Generate Class");
+		new Label(group_1, SWT.NONE);
 
 		Label label = new Label(group_1, SWT.SEPARATOR | SWT.HORIZONTAL);
 		label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
+		new Label(group_1, SWT.NONE);
 
 		Label lblModelAttributes = new Label(group_1, SWT.NONE);
 		lblModelAttributes.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
 		lblModelAttributes.setText("Model Attributes");
+		new Label(group_1, SWT.NONE);
 
 		Label lblDatatype = new Label(group_1, SWT.NONE);
 		lblDatatype.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
 		lblDatatype.setText("Datatype");
-
-		textModelFieldDatatype = new Text(group_1, SWT.BORDER);
-		textModelFieldDatatype.setText("String");
+		
+		textModelFieldDatatype = new Combo(group_1, SWT.NONE);
+		textModelFieldDatatype.setItems(new String[] {"String", "Integer", "Long", "Boolean", "java.time.LocalDate", "java.time.LocalDateTime", "Float"});
 		textModelFieldDatatype.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		new Label(group_1, SWT.NONE);
 
 		Label lblName_2 = new Label(group_1, SWT.NONE);
 		lblName_2.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
@@ -175,23 +245,51 @@ public class SwtTableView extends Composite{
 		textModelFieldName = new Text(group_1, SWT.BORDER);
 		textModelFieldName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		new Label(group_1, SWT.NONE);
-
-		Button buttonModelAdd = new Button(group_1, SWT.NONE);
-		buttonModelAdd.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				eTableViewModel.getFields().add(EcoreUtil.copy(eTableViewModelField));
-				listModelFieldViewer.refresh();
-				comboAssociatedFieldViewer.refresh();
-			}
-		});
-		buttonModelAdd.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-		buttonModelAdd.setText("Add");
+		new Label(group_1, SWT.NONE);
+		
+		Button btnCreateAssoicatedColumn = new Button(group_1, SWT.CHECK);
+		btnCreateAssoicatedColumn.setSelection(true);
+		btnCreateAssoicatedColumn.setText("create assoicated column");
+		new Label(group_1, SWT.NONE);
 		new Label(group_1, SWT.NONE);
 
 		listModelFieldViewer = new ListViewer(group_1, SWT.BORDER | SWT.V_SCROLL);
 		listModelField = listModelFieldViewer.getList();
 		listModelField.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		
+		Composite composite = new Composite(group_1, SWT.NONE);
+		composite.setLayout(new GridLayout(1, false));
+		composite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+				
+		Button buttonModelAdd = new Button(composite, SWT.NONE);
+		buttonModelAdd.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+		buttonModelAdd.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ETableViewModelField field = EcoreUtil.copy(eTableViewModelField);
+				eTableViewModel.getFields().add(field);
+				if (btnCreateAssoicatedColumn.getSelection()) {
+					ETableColumn column = EcoreUtil.copy(eTableColumn);
+					column.setAssociatedField(field);
+					column.setId("column"+eTableViewModel.getName()+StringUtils.capitalize(field.getName()));
+					column.setName(StringUtils.capitalize(field.getName()));
+					eTableView.getColumns().add(column);
+					listTableColumnViewer.refresh();
+				}
+				listModelFieldViewer.refresh();
+				comboAssociatedFieldViewer.refresh();
+			}
+		});
+		buttonModelAdd.setText("Add");
+		
+		Button btnRemove = new Button(composite, SWT.NONE);
+		btnRemove.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+			}
+		});
+		btnRemove.setText("Remove");
+		
 		listModelFieldViewer.setContentProvider(new ArrayContentProvider());
 
 		TabItem tbtmColumn = new TabItem(tabFolder, SWT.NONE);
@@ -317,12 +415,9 @@ public class SwtTableView extends Composite{
 		bindingContext.bindValue(observeSelectionButtonTableModelGenerateObserveWidget,
 				generateClassETableViewModelObserveValue, null, null);
 		//
-		IObservableValue observeTextTextModelFieldDatatypeObserveWidget = WidgetProperties.text(SWT.Modify)
-				.observe(textModelFieldDatatype);
-		IObservableValue datatypeETableViewModelFieldObserveValue = PojoProperties.value("datatype")
-				.observe(eTableViewModelField);
-		bindingContext.bindValue(observeTextTextModelFieldDatatypeObserveWidget,
-				datatypeETableViewModelFieldObserveValue, null, null);
+		IObservableValue observeTextTextModelFieldDatatypeObserveWidget = WidgetProperties.text().observe(textModelFieldDatatype);
+		IObservableValue datatypeETableViewModelFieldObserveValue = PojoProperties.value("datatype").observe(eTableViewModelField);
+		bindingContext.bindValue(observeTextTextModelFieldDatatypeObserveWidget, datatypeETableViewModelFieldObserveValue, null, null);
 		//
 		IObservableValue observeTextTextModelFieldNameObserveWidget = WidgetProperties.text(SWT.Modify)
 				.observe(textModelFieldName);
@@ -415,4 +510,5 @@ public class SwtTableView extends Composite{
 		//
 		return bindingContext;
 	}
+	
 }
