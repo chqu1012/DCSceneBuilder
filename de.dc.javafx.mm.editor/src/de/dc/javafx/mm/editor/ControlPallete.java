@@ -31,6 +31,7 @@ import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EmfModel;
 import de.dc.javafx.mm.editor.control.SwtFormBindingSwitch;
 import de.dc.javafx.mm.editor.control.SwtTableView;
+import de.dc.javafx.mm.editor.control.SwtTextField;
 import de.dc.javafx.mm.presentation.MmEditor;
 
 public class ControlPallete extends ViewPart {
@@ -60,6 +61,23 @@ public class ControlPallete extends ViewPart {
 		
 		TabItem tbtmControls = new TabItem(tabFolder, SWT.NONE);
 		tbtmControls.setText("Controls");
+		
+		Group groupControls = new Group(tabFolder, SWT.NONE);
+		tbtmControls.setControl(groupControls);
+		groupControls.setLayout(new GridLayout(1, false));
+		
+		Button btnEText = new Button(groupControls, SWT.NONE);
+		btnEText.setText("EText");
+		btnEText.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				for (Control control : compositeForm.getChildren()) {
+					control.dispose();
+				}
+				new SwtTextField(compositeForm, SWT.NONE);
+				compositeForm.layout();
+			}
+		});
 		
 		TabItem tbtmViewers = new TabItem(tabFolder, SWT.NONE);
 		tbtmViewers.setText("Viewers");
