@@ -271,9 +271,6 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEWebView()));
-
-		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEText()));
 
 		newChildDescriptors
@@ -353,6 +350,39 @@ public class EmfModelItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEImageView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EMF_MODEL__ROOT, MmFactory.eINSTANCE.createEStackedBarChart()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EMF_MODEL__BEANS, MmFactory.eINSTANCE.createEBean()));

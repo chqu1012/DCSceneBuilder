@@ -92,11 +92,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEEvents(EEvents object) {
-			return createEEventsAdapter();
-		}
-
-		@Override
 		public Adapter caseStyleable(Styleable object) {
 			return createStyleableAdapter();
 		}
@@ -107,11 +102,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseENode(ENode object) {
-			return createENodeAdapter();
-		}
-
-		@Override
 		public Adapter caseEInsets(EInsets object) {
 			return createEInsetsAdapter();
 		}
@@ -119,11 +109,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseEGroup(EGroup object) {
 			return createEGroupAdapter();
-		}
-
-		@Override
-		public Adapter caseEWebView(EWebView object) {
-			return createEWebViewAdapter();
 		}
 
 		@Override
@@ -227,11 +212,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEChart(EChart object) {
-			return createEChartAdapter();
-		}
-
-		@Override
 		public Adapter caseEPieChart(EPieChart object) {
 			return createEPieChartAdapter();
 		}
@@ -294,6 +274,81 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseEBorderPane(EBorderPane object) {
 			return createEBorderPaneAdapter();
+		}
+
+		@Override
+		public Adapter caseEChart(EChart object) {
+			return createEChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEImageView(EImageView object) {
+			return createEImageViewAdapter();
+		}
+
+		@Override
+		public Adapter caseEScrollPane(EScrollPane object) {
+			return createEScrollPaneAdapter();
+		}
+
+		@Override
+		public Adapter caseEEvents(EEvents object) {
+			return createEEventsAdapter();
+		}
+
+		@Override
+		public Adapter caseEWebView(EWebView object) {
+			return createEWebViewAdapter();
+		}
+
+		@Override
+		public Adapter caseENode(ENode object) {
+			return createENodeAdapter();
+		}
+
+		@Override
+		public Adapter caseETabPane(ETabPane object) {
+			return createETabPaneAdapter();
+		}
+
+		@Override
+		public Adapter caseETab(ETab object) {
+			return createETabAdapter();
+		}
+
+		@Override
+		public Adapter caseEAreaChart(EAreaChart object) {
+			return createEAreaChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEBarChart(EBarChart object) {
+			return createEBarChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEBubbleChart(EBubbleChart object) {
+			return createEBubbleChartAdapter();
+		}
+
+		@Override
+		public Adapter caseELineChart(ELineChart object) {
+			return createELineChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEScatterChart(EScatterChart object) {
+			return createEScatterChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEStackedAreaChart(EStackedAreaChart object) {
+			return createEStackedAreaChartAdapter();
+		}
+
+		@Override
+		public Adapter caseEStackedBarChart(EStackedBarChart object) {
+			return createEStackedBarChartAdapter();
 		}
 
 		@Override
@@ -386,20 +441,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EEvents
-	 * @generated
-	 */
-	public Adapter createEEventsAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.Styleable <em>Styleable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -428,20 +469,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ENode <em>ENode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.ENode
-	 * @generated
-	 */
-	public Adapter createENodeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EInsets <em>EInsets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -466,20 +493,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EWebView <em>EWeb View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EWebView
-	 * @generated
-	 */
-	public Adapter createEWebViewAdapter() {
 		return null;
 	}
 
@@ -764,20 +777,6 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EChart <em>EChart</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.dc.javafx.mm.EChart
-	 * @generated
-	 */
-	public Adapter createEChartAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EPieChart <em>EPie Chart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -956,6 +955,216 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEBorderPaneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EChart <em>EChart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EChart
+	 * @generated
+	 */
+	public Adapter createEChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EImageView <em>EImage View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EImageView
+	 * @generated
+	 */
+	public Adapter createEImageViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EScrollPane <em>EScroll Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EScrollPane
+	 * @generated
+	 */
+	public Adapter createEScrollPaneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EEvents
+	 * @generated
+	 */
+	public Adapter createEEventsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EWebView <em>EWeb View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EWebView
+	 * @generated
+	 */
+	public Adapter createEWebViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ENode <em>ENode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ENode
+	 * @generated
+	 */
+	public Adapter createENodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETabPane <em>ETab Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ETabPane
+	 * @generated
+	 */
+	public Adapter createETabPaneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ETab <em>ETab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ETab
+	 * @generated
+	 */
+	public Adapter createETabAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EAreaChart <em>EArea Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EAreaChart
+	 * @generated
+	 */
+	public Adapter createEAreaChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBarChart <em>EBar Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBarChart
+	 * @generated
+	 */
+	public Adapter createEBarChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBubbleChart <em>EBubble Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBubbleChart
+	 * @generated
+	 */
+	public Adapter createEBubbleChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ELineChart <em>ELine Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ELineChart
+	 * @generated
+	 */
+	public Adapter createELineChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EScatterChart <em>EScatter Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EScatterChart
+	 * @generated
+	 */
+	public Adapter createEScatterChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EStackedAreaChart <em>EStacked Area Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EStackedAreaChart
+	 * @generated
+	 */
+	public Adapter createEStackedAreaChartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EStackedBarChart <em>EStacked Bar Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EStackedBarChart
+	 * @generated
+	 */
+	public Adapter createEStackedBarChartAdapter() {
 		return null;
 	}
 

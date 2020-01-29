@@ -34,14 +34,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getOnAction <em>On Action</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutX <em>Layout X</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getOpacity <em>Opacity</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#isDisable <em>Disable</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getStyle <em>Style</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMargin <em>Margin</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutX <em>Layout X</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMaxHeight <em>Max Height</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getMinHeight <em>Min Height</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPrefHeight <em>Pref Height</em>}</li>
@@ -96,46 +96,6 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double LAYOUT_X_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutX()
-	 * @generated
-	 * @ordered
-	 */
-	protected double layoutX = LAYOUT_X_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double LAYOUT_Y_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutY()
-	 * @generated
-	 * @ordered
-	 */
-	protected double layoutY = LAYOUT_Y_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,36 +114,6 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @ordered
 	 */
 	protected double opacity = OPACITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected String style = STYLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> styleClass;
 
 	/**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
@@ -226,6 +156,36 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	protected boolean disable = DISABLE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String style = STYLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> styleClass;
+
+	/**
 	 * The cached value of the '{@link #getMargin() <em>Margin</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -234,6 +194,46 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @ordered
 	 */
 	protected EInsets margin;
+
+	/**
+	 * The default value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LAYOUT_X_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutX()
+	 * @generated
+	 * @ordered
+	 */
+	protected double layoutX = LAYOUT_X_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LAYOUT_Y_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutY()
+	 * @generated
+	 * @ordered
+	 */
+	protected double layoutY = LAYOUT_Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMaxHeight() <em>Max Height</em>}' attribute.
@@ -446,52 +446,6 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
-	public double getLayoutX() {
-		return layoutX;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLayoutX(double newLayoutX) {
-		double oldLayoutX = layoutX;
-		layoutX = newLayoutX;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_X, oldLayoutX, layoutX));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public double getLayoutY() {
-		return layoutY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLayoutY(double newLayoutY) {
-		double oldLayoutY = layoutY;
-		layoutY = newLayoutY;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_Y, oldLayoutY, layoutY));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public double getOpacity() {
 		return opacity;
 	}
@@ -507,42 +461,6 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		opacity = newOpacity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__OPACITY, oldOpacity, opacity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getStyle() {
-		return style;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyle(String newStyle) {
-		String oldStyle = style;
-		style = newStyle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__STYLE, oldStyle, style));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getStyleClass() {
-		if (styleClass == null) {
-			styleClass = new EDataTypeEList<String>(String.class, this, MmPackage.ENODE__STYLE_CLASS);
-		}
-		return styleClass;
 	}
 
 	/**
@@ -597,6 +515,42 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
+	public String getStyle() {
+		return style;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
+		style = newStyle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__STYLE, oldStyle, style));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getStyleClass() {
+		if (styleClass == null) {
+			styleClass = new EDataTypeEList<String>(String.class, this, MmPackage.ENODE__STYLE_CLASS);
+		}
+		return styleClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EInsets getMargin() {
 		return margin;
 	}
@@ -640,6 +594,52 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 				msgs.dispatch();
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__MARGIN, newMargin, newMargin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getLayoutX() {
+		return layoutX;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLayoutX(double newLayoutX) {
+		double oldLayoutX = layoutX;
+		layoutX = newLayoutX;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_X, oldLayoutX, layoutX));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getLayoutY() {
+		return layoutY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLayoutY(double newLayoutY) {
+		double oldLayoutY = layoutY;
+		layoutY = newLayoutY;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_Y, oldLayoutY, layoutY));
 	}
 
 	/**
@@ -878,22 +878,22 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return getOnAction();
 		case MmPackage.ENODE__ID:
 			return getId();
-		case MmPackage.ENODE__LAYOUT_X:
-			return getLayoutX();
-		case MmPackage.ENODE__LAYOUT_Y:
-			return getLayoutY();
 		case MmPackage.ENODE__OPACITY:
 			return getOpacity();
-		case MmPackage.ENODE__STYLE:
-			return getStyle();
-		case MmPackage.ENODE__STYLE_CLASS:
-			return getStyleClass();
 		case MmPackage.ENODE__VISIBLE:
 			return isVisible();
 		case MmPackage.ENODE__DISABLE:
 			return isDisable();
+		case MmPackage.ENODE__STYLE:
+			return getStyle();
+		case MmPackage.ENODE__STYLE_CLASS:
+			return getStyleClass();
 		case MmPackage.ENODE__MARGIN:
 			return getMargin();
+		case MmPackage.ENODE__LAYOUT_X:
+			return getLayoutX();
+		case MmPackage.ENODE__LAYOUT_Y:
+			return getLayoutY();
 		case MmPackage.ENODE__MAX_HEIGHT:
 			return getMaxHeight();
 		case MmPackage.ENODE__MIN_HEIGHT:
@@ -929,14 +929,14 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__ID:
 			setId((String) newValue);
 			return;
-		case MmPackage.ENODE__LAYOUT_X:
-			setLayoutX((Double) newValue);
-			return;
-		case MmPackage.ENODE__LAYOUT_Y:
-			setLayoutY((Double) newValue);
-			return;
 		case MmPackage.ENODE__OPACITY:
 			setOpacity((Double) newValue);
+			return;
+		case MmPackage.ENODE__VISIBLE:
+			setVisible((Boolean) newValue);
+			return;
+		case MmPackage.ENODE__DISABLE:
+			setDisable((Boolean) newValue);
 			return;
 		case MmPackage.ENODE__STYLE:
 			setStyle((String) newValue);
@@ -945,14 +945,14 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			getStyleClass().clear();
 			getStyleClass().addAll((Collection<? extends String>) newValue);
 			return;
-		case MmPackage.ENODE__VISIBLE:
-			setVisible((Boolean) newValue);
-			return;
-		case MmPackage.ENODE__DISABLE:
-			setDisable((Boolean) newValue);
-			return;
 		case MmPackage.ENODE__MARGIN:
 			setMargin((EInsets) newValue);
+			return;
+		case MmPackage.ENODE__LAYOUT_X:
+			setLayoutX((Double) newValue);
+			return;
+		case MmPackage.ENODE__LAYOUT_Y:
+			setLayoutY((Double) newValue);
 			return;
 		case MmPackage.ENODE__MAX_HEIGHT:
 			setMaxHeight((Double) newValue);
@@ -997,20 +997,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case MmPackage.ENODE__LAYOUT_X:
-			setLayoutX(LAYOUT_X_EDEFAULT);
-			return;
-		case MmPackage.ENODE__LAYOUT_Y:
-			setLayoutY(LAYOUT_Y_EDEFAULT);
-			return;
 		case MmPackage.ENODE__OPACITY:
 			setOpacity(OPACITY_EDEFAULT);
-			return;
-		case MmPackage.ENODE__STYLE:
-			setStyle(STYLE_EDEFAULT);
-			return;
-		case MmPackage.ENODE__STYLE_CLASS:
-			getStyleClass().clear();
 			return;
 		case MmPackage.ENODE__VISIBLE:
 			setVisible(VISIBLE_EDEFAULT);
@@ -1018,8 +1006,20 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__DISABLE:
 			setDisable(DISABLE_EDEFAULT);
 			return;
+		case MmPackage.ENODE__STYLE:
+			setStyle(STYLE_EDEFAULT);
+			return;
+		case MmPackage.ENODE__STYLE_CLASS:
+			getStyleClass().clear();
+			return;
 		case MmPackage.ENODE__MARGIN:
 			setMargin((EInsets) null);
+			return;
+		case MmPackage.ENODE__LAYOUT_X:
+			setLayoutX(LAYOUT_X_EDEFAULT);
+			return;
+		case MmPackage.ENODE__LAYOUT_Y:
+			setLayoutY(LAYOUT_Y_EDEFAULT);
 			return;
 		case MmPackage.ENODE__MAX_HEIGHT:
 			setMaxHeight(MAX_HEIGHT_EDEFAULT);
@@ -1061,22 +1061,22 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return ON_ACTION_EDEFAULT == null ? onAction != null : !ON_ACTION_EDEFAULT.equals(onAction);
 		case MmPackage.ENODE__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case MmPackage.ENODE__LAYOUT_X:
-			return layoutX != LAYOUT_X_EDEFAULT;
-		case MmPackage.ENODE__LAYOUT_Y:
-			return layoutY != LAYOUT_Y_EDEFAULT;
 		case MmPackage.ENODE__OPACITY:
 			return opacity != OPACITY_EDEFAULT;
-		case MmPackage.ENODE__STYLE:
-			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
-		case MmPackage.ENODE__STYLE_CLASS:
-			return styleClass != null && !styleClass.isEmpty();
 		case MmPackage.ENODE__VISIBLE:
 			return visible != VISIBLE_EDEFAULT;
 		case MmPackage.ENODE__DISABLE:
 			return disable != DISABLE_EDEFAULT;
+		case MmPackage.ENODE__STYLE:
+			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
+		case MmPackage.ENODE__STYLE_CLASS:
+			return styleClass != null && !styleClass.isEmpty();
 		case MmPackage.ENODE__MARGIN:
 			return margin != null;
+		case MmPackage.ENODE__LAYOUT_X:
+			return layoutX != LAYOUT_X_EDEFAULT;
+		case MmPackage.ENODE__LAYOUT_Y:
+			return layoutY != LAYOUT_Y_EDEFAULT;
 		case MmPackage.ENODE__MAX_HEIGHT:
 			return maxHeight != MAX_HEIGHT_EDEFAULT;
 		case MmPackage.ENODE__MIN_HEIGHT:
@@ -1160,20 +1160,20 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		result.append(onAction);
 		result.append(", id: ");
 		result.append(id);
-		result.append(", layoutX: ");
-		result.append(layoutX);
-		result.append(", layoutY: ");
-		result.append(layoutY);
 		result.append(", opacity: ");
 		result.append(opacity);
-		result.append(", style: ");
-		result.append(style);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(", visible: ");
 		result.append(visible);
 		result.append(", disable: ");
 		result.append(disable);
+		result.append(", style: ");
+		result.append(style);
+		result.append(", styleClass: ");
+		result.append(styleClass);
+		result.append(", layoutX: ");
+		result.append(layoutX);
+		result.append(", layoutY: ");
+		result.append(layoutY);
 		result.append(", maxHeight: ");
 		result.append(maxHeight);
 		result.append(", minHeight: ");

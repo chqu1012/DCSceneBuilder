@@ -155,9 +155,6 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEWebView()));
-
-		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEText()));
 
 		newChildDescriptors
@@ -238,11 +235,41 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEBorderPane()));
 
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEGroup()));
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEImageView()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEWebView()));
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT, MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__LEFT,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEText()));
@@ -325,11 +352,41 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEBorderPane()));
 
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEGroup()));
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEImageView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
+				MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__RIGHT,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
 
 		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEWebView()));
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEText()));
@@ -412,11 +469,41 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEBorderPane()));
 
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEGroup()));
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEImageView()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEWebView()));
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP, MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__TOP,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEText()));
@@ -499,11 +586,41 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEBorderPane()));
 
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEGroup()));
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEImageView()));
 
 		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEWebView()));
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
+				MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
+				MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__BOTTOM,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEGroup()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEText()));
@@ -585,6 +702,39 @@ public class EBorderPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEImageView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EBORDER_PANE__CENTER,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
 	}
 
 	/**

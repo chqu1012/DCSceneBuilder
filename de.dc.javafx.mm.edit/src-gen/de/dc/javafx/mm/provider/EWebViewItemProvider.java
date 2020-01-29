@@ -11,7 +11,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link de.dc.javafx.mm.EWebView} object.
@@ -41,8 +44,42 @@ public class EWebViewItemProvider extends ENodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addUrlPropertyDescriptor(object);
+			addContextMenuEnabledPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EWebView_url_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EWebView_url_feature",
+								"_UI_EWebView_type"),
+						MmPackage.Literals.EWEB_VIEW__URL, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Context Menu Enabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContextMenuEnabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EWebView_contextMenuEnabled_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EWebView_contextMenuEnabled_feature",
+								"_UI_EWebView_type"),
+						MmPackage.Literals.EWEB_VIEW__CONTEXT_MENU_ENABLED, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -89,6 +126,13 @@ public class EWebViewItemProvider extends ENodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(EWebView.class)) {
+		case MmPackage.EWEB_VIEW__URL:
+		case MmPackage.EWEB_VIEW__CONTEXT_MENU_ENABLED:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

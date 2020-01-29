@@ -370,43 +370,6 @@ public interface MmPackage extends EPackage {
 	int EBINDING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.dc.javafx.mm.impl.EEventsImpl
-	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
-	 * @generated
-	 */
-	int EEVENTS = 5;
-
-	/**
-	 * The feature id for the '<em><b>On Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EEVENTS__ON_ACTION = 0;
-
-	/**
-	 * The number of structural features of the '<em>EEvents</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EEVENTS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>EEvents</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EEVENTS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.StyleableImpl <em>Styleable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -414,7 +377,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getStyleable()
 	 * @generated
 	 */
-	int STYLEABLE = 6;
+	int STYLEABLE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Styleable</em>' class.
@@ -442,7 +405,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getSkinnable()
 	 * @generated
 	 */
-	int SKINNABLE = 7;
+	int SKINNABLE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Skinnable</em>' class.
@@ -463,6 +426,70 @@ public interface MmPackage extends EPackage {
 	int SKINNABLE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EInsetsImpl <em>EInsets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EInsetsImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEInsets()
+	 * @generated
+	 */
+	int EINSETS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS__TOP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS__BOTTOM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS__RIGHT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS__LEFT = 3;
+
+	/**
+	 * The number of structural features of the '<em>EInsets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>EInsets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINSETS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ENodeImpl <em>ENode</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -470,7 +497,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getENode()
 	 * @generated
 	 */
-	int ENODE = 8;
+	int ENODE = 47;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -491,31 +518,31 @@ public interface MmPackage extends EPackage {
 	int ENODE__ID = STYLEABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENODE__LAYOUT_X = STYLEABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENODE__LAYOUT_Y = STYLEABLE_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__OPACITY = STYLEABLE_FEATURE_COUNT + 4;
+	int ENODE__OPACITY = STYLEABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__VISIBLE = STYLEABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__DISABLE = STYLEABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -536,31 +563,31 @@ public interface MmPackage extends EPackage {
 	int ENODE__STYLE_CLASS = STYLEABLE_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENODE__VISIBLE = STYLEABLE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENODE__DISABLE = STYLEABLE_FEATURE_COUNT + 8;
-
-	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE__MARGIN = STYLEABLE_FEATURE_COUNT + 9;
+	int ENODE__MARGIN = STYLEABLE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__LAYOUT_X = STYLEABLE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__LAYOUT_Y = STYLEABLE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -653,70 +680,6 @@ public interface MmPackage extends EPackage {
 	int ENODE_OPERATION_COUNT = STYLEABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EInsetsImpl <em>EInsets</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.dc.javafx.mm.impl.EInsetsImpl
-	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEInsets()
-	 * @generated
-	 */
-	int EINSETS = 9;
-
-	/**
-	 * The feature id for the '<em><b>Top</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS__TOP = 0;
-
-	/**
-	 * The feature id for the '<em><b>Bottom</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS__BOTTOM = 1;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS__RIGHT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS__LEFT = 3;
-
-	/**
-	 * The number of structural features of the '<em>EInsets</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>EInsets</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EINSETS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EGroupImpl <em>EGroup</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -724,7 +687,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGroup()
 	 * @generated
 	 */
-	int EGROUP = 10;
+	int EGROUP = 8;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -745,24 +708,6 @@ public interface MmPackage extends EPackage {
 	int EGROUP__ID = ENODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGROUP__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGROUP__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -770,24 +715,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGROUP__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGROUP__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGROUP__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -808,6 +735,24 @@ public interface MmPackage extends EPackage {
 	int EGROUP__DISABLE = ENODE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -815,6 +760,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGROUP__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -907,196 +870,6 @@ public interface MmPackage extends EPackage {
 	int EGROUP_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EWebViewImpl <em>EWeb View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.dc.javafx.mm.impl.EWebViewImpl
-	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
-	 * @generated
-	 */
-	int EWEB_VIEW = 11;
-
-	/**
-	 * The feature id for the '<em><b>On Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__ON_ACTION = ENODE__ON_ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__ID = ENODE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__STYLE_CLASS = ENODE__STYLE_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__VISIBLE = ENODE__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__DISABLE = ENODE__DISABLE;
-
-	/**
-	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__MARGIN = ENODE__MARGIN;
-
-	/**
-	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__MAX_HEIGHT = ENODE__MAX_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__MIN_HEIGHT = ENODE__MIN_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__PREF_HEIGHT = ENODE__PREF_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__MAX_WIDTH = ENODE__MAX_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__MIN_WIDTH = ENODE__MIN_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__PREF_WIDTH = ENODE__PREF_WIDTH;
-
-	/**
-	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__PADDING = ENODE__PADDING;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW__CHILDREN = ENODE__CHILDREN;
-
-	/**
-	 * The number of structural features of the '<em>EWeb View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW_FEATURE_COUNT = ENODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>EWeb View</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EWEB_VIEW_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EControlImpl <em>EControl</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1104,7 +877,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControl()
 	 * @generated
 	 */
-	int ECONTROL = 12;
+	int ECONTROL = 9;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1125,24 +898,6 @@ public interface MmPackage extends EPackage {
 	int ECONTROL__ID = ENODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECONTROL__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECONTROL__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1150,24 +905,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECONTROL__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECONTROL__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECONTROL__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1188,6 +925,24 @@ public interface MmPackage extends EPackage {
 	int ECONTROL__DISABLE = ENODE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1195,6 +950,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECONTROL__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -1294,7 +1067,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabeled()
 	 * @generated
 	 */
-	int ELABELED = 13;
+	int ELABELED = 10;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1315,24 +1088,6 @@ public interface MmPackage extends EPackage {
 	int ELABELED__ID = ECONTROL__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABELED__LAYOUT_X = ECONTROL__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABELED__LAYOUT_Y = ECONTROL__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1340,24 +1095,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABELED__OPACITY = ECONTROL__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABELED__STYLE = ECONTROL__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABELED__STYLE_CLASS = ECONTROL__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1378,6 +1115,24 @@ public interface MmPackage extends EPackage {
 	int ELABELED__DISABLE = ECONTROL__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__STYLE = ECONTROL__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__STYLE_CLASS = ECONTROL__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1385,6 +1140,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABELED__MARGIN = ECONTROL__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__LAYOUT_X = ECONTROL__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__LAYOUT_Y = ECONTROL__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -1493,7 +1266,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEText()
 	 * @generated
 	 */
-	int ETEXT = 14;
+	int ETEXT = 11;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1514,24 +1287,6 @@ public interface MmPackage extends EPackage {
 	int ETEXT__ID = ELABELED__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETEXT__LAYOUT_X = ELABELED__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETEXT__LAYOUT_Y = ELABELED__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1539,24 +1294,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETEXT__OPACITY = ELABELED__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETEXT__STYLE = ELABELED__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETEXT__STYLE_CLASS = ELABELED__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1577,6 +1314,24 @@ public interface MmPackage extends EPackage {
 	int ETEXT__DISABLE = ELABELED__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__STYLE = ELABELED__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__STYLE_CLASS = ELABELED__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1584,6 +1339,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETEXT__MARGIN = ELABELED__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__LAYOUT_X = ELABELED__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__LAYOUT_Y = ELABELED__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -1701,7 +1474,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELabel()
 	 * @generated
 	 */
-	int ELABEL = 15;
+	int ELABEL = 12;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1722,24 +1495,6 @@ public interface MmPackage extends EPackage {
 	int ELABEL__ID = ELABELED__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABEL__LAYOUT_X = ELABELED__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABEL__LAYOUT_Y = ELABELED__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1747,24 +1502,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABEL__OPACITY = ELABELED__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABEL__STYLE = ELABELED__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELABEL__STYLE_CLASS = ELABELED__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1785,6 +1522,24 @@ public interface MmPackage extends EPackage {
 	int ELABEL__DISABLE = ELABELED__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__STYLE = ELABELED__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__STYLE_CLASS = ELABELED__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1792,6 +1547,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABEL__MARGIN = ELABELED__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__LAYOUT_X = ELABELED__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__LAYOUT_Y = ELABELED__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -1900,7 +1673,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButtonBase()
 	 * @generated
 	 */
-	int EBUTTON_BASE = 16;
+	int EBUTTON_BASE = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -1921,24 +1694,6 @@ public interface MmPackage extends EPackage {
 	int EBUTTON_BASE__ID = ELABELED__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON_BASE__LAYOUT_X = ELABELED__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON_BASE__LAYOUT_Y = ELABELED__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1946,24 +1701,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON_BASE__OPACITY = ELABELED__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON_BASE__STYLE = ELABELED__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON_BASE__STYLE_CLASS = ELABELED__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1984,6 +1721,24 @@ public interface MmPackage extends EPackage {
 	int EBUTTON_BASE__DISABLE = ELABELED__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__STYLE = ELABELED__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__STYLE_CLASS = ELABELED__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1991,6 +1746,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON_BASE__MARGIN = ELABELED__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__LAYOUT_X = ELABELED__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__LAYOUT_Y = ELABELED__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -2099,7 +1872,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEButton()
 	 * @generated
 	 */
-	int EBUTTON = 17;
+	int EBUTTON = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2120,24 +1893,6 @@ public interface MmPackage extends EPackage {
 	int EBUTTON__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2145,24 +1900,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2183,6 +1920,24 @@ public interface MmPackage extends EPackage {
 	int EBUTTON__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2190,6 +1945,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -2298,7 +2071,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECheckBox()
 	 * @generated
 	 */
-	int ECHECK_BOX = 18;
+	int ECHECK_BOX = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2319,24 +2092,6 @@ public interface MmPackage extends EPackage {
 	int ECHECK_BOX__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHECK_BOX__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHECK_BOX__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2344,24 +2099,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHECK_BOX__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHECK_BOX__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHECK_BOX__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2382,6 +2119,24 @@ public interface MmPackage extends EPackage {
 	int ECHECK_BOX__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2389,6 +2144,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHECK_BOX__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -2506,7 +2279,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHyperlink()
 	 * @generated
 	 */
-	int EHYPERLINK = 19;
+	int EHYPERLINK = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2527,24 +2300,6 @@ public interface MmPackage extends EPackage {
 	int EHYPERLINK__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EHYPERLINK__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EHYPERLINK__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2552,24 +2307,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EHYPERLINK__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EHYPERLINK__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EHYPERLINK__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2590,6 +2327,24 @@ public interface MmPackage extends EPackage {
 	int EHYPERLINK__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2597,6 +2352,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EHYPERLINK__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -2714,7 +2487,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEMenuButton()
 	 * @generated
 	 */
-	int EMENU_BUTTON = 20;
+	int EMENU_BUTTON = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2735,24 +2508,6 @@ public interface MmPackage extends EPackage {
 	int EMENU_BUTTON__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMENU_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMENU_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2760,24 +2515,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMENU_BUTTON__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMENU_BUTTON__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMENU_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2798,6 +2535,24 @@ public interface MmPackage extends EPackage {
 	int EMENU_BUTTON__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2805,6 +2560,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMENU_BUTTON__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -2913,7 +2686,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitMenuButton()
 	 * @generated
 	 */
-	int ESPLIT_MENU_BUTTON = 21;
+	int ESPLIT_MENU_BUTTON = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -2934,24 +2707,6 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_MENU_BUTTON__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_MENU_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_MENU_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2959,24 +2714,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_MENU_BUTTON__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_MENU_BUTTON__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_MENU_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -2997,6 +2734,24 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_MENU_BUTTON__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3004,6 +2759,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_MENU_BUTTON__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -3112,7 +2885,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEToogleButton()
 	 * @generated
 	 */
-	int ETOOGLE_BUTTON = 22;
+	int ETOOGLE_BUTTON = 19;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3133,24 +2906,6 @@ public interface MmPackage extends EPackage {
 	int ETOOGLE_BUTTON__ID = EBUTTON_BASE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETOOGLE_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETOOGLE_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3158,24 +2913,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETOOGLE_BUTTON__OPACITY = EBUTTON_BASE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETOOGLE_BUTTON__STYLE = EBUTTON_BASE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETOOGLE_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -3196,6 +2933,24 @@ public interface MmPackage extends EPackage {
 	int ETOOGLE_BUTTON__DISABLE = EBUTTON_BASE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__STYLE = EBUTTON_BASE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__STYLE_CLASS = EBUTTON_BASE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3203,6 +2958,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETOOGLE_BUTTON__MARGIN = EBUTTON_BASE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__LAYOUT_X = EBUTTON_BASE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__LAYOUT_Y = EBUTTON_BASE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -3320,7 +3093,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBaseView()
 	 * @generated
 	 */
-	int EBASE_VIEW = 23;
+	int EBASE_VIEW = 20;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3341,24 +3114,6 @@ public interface MmPackage extends EPackage {
 	int EBASE_VIEW__ID = ECONTROL__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBASE_VIEW__LAYOUT_X = ECONTROL__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBASE_VIEW__LAYOUT_Y = ECONTROL__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3366,24 +3121,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBASE_VIEW__OPACITY = ECONTROL__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBASE_VIEW__STYLE = ECONTROL__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBASE_VIEW__STYLE_CLASS = ECONTROL__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -3404,6 +3141,24 @@ public interface MmPackage extends EPackage {
 	int EBASE_VIEW__DISABLE = ECONTROL__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__STYLE = ECONTROL__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__STYLE_CLASS = ECONTROL__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3411,6 +3166,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBASE_VIEW__MARGIN = ECONTROL__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__LAYOUT_X = ECONTROL__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__LAYOUT_Y = ECONTROL__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -3519,7 +3292,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableView()
 	 * @generated
 	 */
-	int ETABLE_VIEW = 25;
+	int ETABLE_VIEW = 22;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3540,24 +3313,6 @@ public interface MmPackage extends EPackage {
 	int ETABLE_VIEW__ID = EBASE_VIEW__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETABLE_VIEW__LAYOUT_X = EBASE_VIEW__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETABLE_VIEW__LAYOUT_Y = EBASE_VIEW__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3565,24 +3320,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETABLE_VIEW__OPACITY = EBASE_VIEW__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETABLE_VIEW__STYLE = EBASE_VIEW__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETABLE_VIEW__STYLE_CLASS = EBASE_VIEW__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -3603,6 +3340,24 @@ public interface MmPackage extends EPackage {
 	int ETABLE_VIEW__DISABLE = EBASE_VIEW__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__STYLE = EBASE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__STYLE_CLASS = EBASE_VIEW__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3610,6 +3365,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETABLE_VIEW__MARGIN = EBASE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__LAYOUT_X = EBASE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__LAYOUT_Y = EBASE_VIEW__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -3727,7 +3500,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFilteredTableView()
 	 * @generated
 	 */
-	int EFILTERED_TABLE_VIEW = 24;
+	int EFILTERED_TABLE_VIEW = 21;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -3748,24 +3521,6 @@ public interface MmPackage extends EPackage {
 	int EFILTERED_TABLE_VIEW__ID = ETABLE_VIEW__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFILTERED_TABLE_VIEW__LAYOUT_X = ETABLE_VIEW__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFILTERED_TABLE_VIEW__LAYOUT_Y = ETABLE_VIEW__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3773,24 +3528,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EFILTERED_TABLE_VIEW__OPACITY = ETABLE_VIEW__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFILTERED_TABLE_VIEW__STYLE = ETABLE_VIEW__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFILTERED_TABLE_VIEW__STYLE_CLASS = ETABLE_VIEW__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -3811,6 +3548,24 @@ public interface MmPackage extends EPackage {
 	int EFILTERED_TABLE_VIEW__DISABLE = ETABLE_VIEW__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__STYLE = ETABLE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__STYLE_CLASS = ETABLE_VIEW__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3818,6 +3573,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EFILTERED_TABLE_VIEW__MARGIN = ETABLE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__LAYOUT_X = ETABLE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__LAYOUT_Y = ETABLE_VIEW__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -3935,7 +3708,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETableColumn()
 	 * @generated
 	 */
-	int ETABLE_COLUMN = 26;
+	int ETABLE_COLUMN = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4017,7 +3790,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEListView()
 	 * @generated
 	 */
-	int ELIST_VIEW = 27;
+	int ELIST_VIEW = 24;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4038,24 +3811,6 @@ public interface MmPackage extends EPackage {
 	int ELIST_VIEW__ID = EBASE_VIEW__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELIST_VIEW__LAYOUT_X = EBASE_VIEW__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELIST_VIEW__LAYOUT_Y = EBASE_VIEW__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4063,24 +3818,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELIST_VIEW__OPACITY = EBASE_VIEW__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELIST_VIEW__STYLE = EBASE_VIEW__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELIST_VIEW__STYLE_CLASS = EBASE_VIEW__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4101,6 +3838,24 @@ public interface MmPackage extends EPackage {
 	int ELIST_VIEW__DISABLE = EBASE_VIEW__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELIST_VIEW__STYLE = EBASE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELIST_VIEW__STYLE_CLASS = EBASE_VIEW__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4108,6 +3863,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELIST_VIEW__MARGIN = EBASE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELIST_VIEW__LAYOUT_X = EBASE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELIST_VIEW__LAYOUT_Y = EBASE_VIEW__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4216,7 +3989,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getERadioButton()
 	 * @generated
 	 */
-	int ERADIO_BUTTON = 28;
+	int ERADIO_BUTTON = 25;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4237,24 +4010,6 @@ public interface MmPackage extends EPackage {
 	int ERADIO_BUTTON__ID = ETOOGLE_BUTTON__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERADIO_BUTTON__LAYOUT_X = ETOOGLE_BUTTON__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERADIO_BUTTON__LAYOUT_Y = ETOOGLE_BUTTON__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4262,24 +4017,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ERADIO_BUTTON__OPACITY = ETOOGLE_BUTTON__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERADIO_BUTTON__STYLE = ETOOGLE_BUTTON__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERADIO_BUTTON__STYLE_CLASS = ETOOGLE_BUTTON__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4300,6 +4037,24 @@ public interface MmPackage extends EPackage {
 	int ERADIO_BUTTON__DISABLE = ETOOGLE_BUTTON__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__STYLE = ETOOGLE_BUTTON__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__STYLE_CLASS = ETOOGLE_BUTTON__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4307,6 +4062,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ERADIO_BUTTON__MARGIN = ETOOGLE_BUTTON__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__LAYOUT_X = ETOOGLE_BUTTON__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__LAYOUT_Y = ETOOGLE_BUTTON__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4424,7 +4197,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAxis()
 	 * @generated
 	 */
-	int EAXIS = 29;
+	int EAXIS = 26;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4445,24 +4218,6 @@ public interface MmPackage extends EPackage {
 	int EAXIS__ID = ENODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAXIS__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAXIS__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4470,24 +4225,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EAXIS__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAXIS__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAXIS__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4508,6 +4245,24 @@ public interface MmPackage extends EPackage {
 	int EAXIS__DISABLE = ENODE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4515,6 +4270,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EAXIS__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4614,7 +4387,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getECatgeoryAxis()
 	 * @generated
 	 */
-	int ECATGEORY_AXIS = 30;
+	int ECATGEORY_AXIS = 27;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4635,24 +4408,6 @@ public interface MmPackage extends EPackage {
 	int ECATGEORY_AXIS__ID = EAXIS__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECATGEORY_AXIS__LAYOUT_X = EAXIS__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECATGEORY_AXIS__LAYOUT_Y = EAXIS__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4660,24 +4415,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECATGEORY_AXIS__OPACITY = EAXIS__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECATGEORY_AXIS__STYLE = EAXIS__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECATGEORY_AXIS__STYLE_CLASS = EAXIS__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4698,6 +4435,24 @@ public interface MmPackage extends EPackage {
 	int ECATGEORY_AXIS__DISABLE = EAXIS__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__STYLE = EAXIS__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__STYLE_CLASS = EAXIS__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4705,6 +4460,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECATGEORY_AXIS__MARGIN = EAXIS__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__LAYOUT_X = EAXIS__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__LAYOUT_Y = EAXIS__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4804,7 +4577,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEValueAxis()
 	 * @generated
 	 */
-	int EVALUE_AXIS = 31;
+	int EVALUE_AXIS = 28;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -4825,24 +4598,6 @@ public interface MmPackage extends EPackage {
 	int EVALUE_AXIS__ID = EAXIS__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVALUE_AXIS__LAYOUT_X = EAXIS__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVALUE_AXIS__LAYOUT_Y = EAXIS__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4850,24 +4605,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVALUE_AXIS__OPACITY = EAXIS__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVALUE_AXIS__STYLE = EAXIS__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVALUE_AXIS__STYLE_CLASS = EAXIS__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -4888,6 +4625,24 @@ public interface MmPackage extends EPackage {
 	int EVALUE_AXIS__DISABLE = EAXIS__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__STYLE = EAXIS__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__STYLE_CLASS = EAXIS__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4895,6 +4650,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVALUE_AXIS__MARGIN = EAXIS__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__LAYOUT_X = EAXIS__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__LAYOUT_Y = EAXIS__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -4994,7 +4767,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
 	 * @generated
 	 */
-	int ECHART = 32;
+	int ECHART = 42;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5015,24 +4788,6 @@ public interface MmPackage extends EPackage {
 	int ECHART__ID = ENODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHART__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHART__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5040,24 +4795,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHART__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHART__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHART__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5078,6 +4815,24 @@ public interface MmPackage extends EPackage {
 	int ECHART__DISABLE = ENODE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5085,6 +4840,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHART__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5159,13 +4932,40 @@ public interface MmPackage extends EPackage {
 	int ECHART__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__ANIMATED = ENODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__LEGEND_VISIBLE = ENODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__TITLE = ENODE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>EChart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART_FEATURE_COUNT = ENODE_FEATURE_COUNT + 0;
+	int ECHART_FEATURE_COUNT = ENODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>EChart</em>' class.
@@ -5184,7 +4984,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPieChart()
 	 * @generated
 	 */
-	int EPIE_CHART = 33;
+	int EPIE_CHART = 29;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5205,24 +5005,6 @@ public interface MmPackage extends EPackage {
 	int EPIE_CHART__ID = ECHART__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPIE_CHART__LAYOUT_X = ECHART__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPIE_CHART__LAYOUT_Y = ECHART__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5230,24 +5012,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPIE_CHART__OPACITY = ECHART__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPIE_CHART__STYLE = ECHART__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPIE_CHART__STYLE_CLASS = ECHART__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5268,6 +5032,24 @@ public interface MmPackage extends EPackage {
 	int EPIE_CHART__DISABLE = ECHART__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__STYLE = ECHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__STYLE_CLASS = ECHART__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5275,6 +5057,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPIE_CHART__MARGIN = ECHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__LAYOUT_X = ECHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__LAYOUT_Y = ECHART__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5349,6 +5149,33 @@ public interface MmPackage extends EPackage {
 	int EPIE_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__ANIMATED = ECHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__LEGEND_VISIBLE = ECHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__TITLE = ECHART__TITLE;
+
+	/**
 	 * The number of structural features of the '<em>EPie Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5374,7 +5201,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEXYChart()
 	 * @generated
 	 */
-	int EXY_CHART = 34;
+	int EXY_CHART = 30;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5395,24 +5222,6 @@ public interface MmPackage extends EPackage {
 	int EXY_CHART__ID = ECHART__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXY_CHART__LAYOUT_X = ECHART__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXY_CHART__LAYOUT_Y = ECHART__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5420,24 +5229,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXY_CHART__OPACITY = ECHART__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXY_CHART__STYLE = ECHART__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXY_CHART__STYLE_CLASS = ECHART__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5458,6 +5249,24 @@ public interface MmPackage extends EPackage {
 	int EXY_CHART__DISABLE = ECHART__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__STYLE = ECHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__STYLE_CLASS = ECHART__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5465,6 +5274,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXY_CHART__MARGIN = ECHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__LAYOUT_X = ECHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__LAYOUT_Y = ECHART__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5539,6 +5366,33 @@ public interface MmPackage extends EPackage {
 	int EXY_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__ANIMATED = ECHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__LEGEND_VISIBLE = ECHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__TITLE = ECHART__TITLE;
+
+	/**
 	 * The number of structural features of the '<em>EXY Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5564,7 +5418,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPane()
 	 * @generated
 	 */
-	int EPANE = 35;
+	int EPANE = 31;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5585,24 +5439,6 @@ public interface MmPackage extends EPackage {
 	int EPANE__ID = ENODE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPANE__LAYOUT_X = ENODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPANE__LAYOUT_Y = ENODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5610,24 +5446,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPANE__OPACITY = ENODE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPANE__STYLE = ENODE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPANE__STYLE_CLASS = ENODE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5648,6 +5466,24 @@ public interface MmPackage extends EPackage {
 	int EPANE__DISABLE = ENODE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5655,6 +5491,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPANE__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__LAYOUT_Y = ENODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5763,7 +5617,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackPane()
 	 * @generated
 	 */
-	int ESTACK_PANE = 36;
+	int ESTACK_PANE = 32;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5784,24 +5638,6 @@ public interface MmPackage extends EPackage {
 	int ESTACK_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTACK_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTACK_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5809,24 +5645,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESTACK_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTACK_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTACK_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -5847,6 +5665,24 @@ public interface MmPackage extends EPackage {
 	int ESTACK_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5854,6 +5690,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESTACK_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -5962,7 +5816,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEDialogPane()
 	 * @generated
 	 */
-	int EDIALOG_PANE = 37;
+	int EDIALOG_PANE = 33;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -5983,24 +5837,6 @@ public interface MmPackage extends EPackage {
 	int EDIALOG_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIALOG_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIALOG_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6008,24 +5844,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIALOG_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIALOG_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIALOG_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -6046,6 +5864,24 @@ public interface MmPackage extends EPackage {
 	int EDIALOG_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6053,6 +5889,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIALOG_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -6197,7 +6051,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEGridPane()
 	 * @generated
 	 */
-	int EGRID_PANE = 38;
+	int EGRID_PANE = 34;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6218,24 +6072,6 @@ public interface MmPackage extends EPackage {
 	int EGRID_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGRID_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGRID_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6243,24 +6079,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGRID_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGRID_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EGRID_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -6281,6 +6099,24 @@ public interface MmPackage extends EPackage {
 	int EGRID_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6288,6 +6124,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGRID_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -6396,7 +6250,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBox()
 	 * @generated
 	 */
-	int EH_BOX = 39;
+	int EH_BOX = 35;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6417,24 +6271,6 @@ public interface MmPackage extends EPackage {
 	int EH_BOX__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EH_BOX__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EH_BOX__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6442,24 +6278,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EH_BOX__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EH_BOX__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EH_BOX__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -6480,6 +6298,24 @@ public interface MmPackage extends EPackage {
 	int EH_BOX__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6487,6 +6323,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EH_BOX__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -6604,7 +6458,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBox()
 	 * @generated
 	 */
-	int EV_BOX = 40;
+	int EV_BOX = 36;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6625,24 +6479,6 @@ public interface MmPackage extends EPackage {
 	int EV_BOX__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EV_BOX__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EV_BOX__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6650,24 +6486,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EV_BOX__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EV_BOX__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EV_BOX__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -6688,6 +6506,24 @@ public interface MmPackage extends EPackage {
 	int EV_BOX__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6695,6 +6531,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EV_BOX__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -6812,7 +6666,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEFlowPane()
 	 * @generated
 	 */
-	int EFLOW_PANE = 41;
+	int EFLOW_PANE = 37;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -6833,24 +6687,6 @@ public interface MmPackage extends EPackage {
 	int EFLOW_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFLOW_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFLOW_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6858,24 +6694,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EFLOW_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFLOW_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFLOW_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -6896,6 +6714,24 @@ public interface MmPackage extends EPackage {
 	int EFLOW_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6903,6 +6739,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EFLOW_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -7011,7 +6865,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESplitPane()
 	 * @generated
 	 */
-	int ESPLIT_PANE = 42;
+	int ESPLIT_PANE = 38;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7032,24 +6886,6 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7057,24 +6893,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESPLIT_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -7095,6 +6913,24 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7102,6 +6938,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -7210,7 +7064,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETilePane()
 	 * @generated
 	 */
-	int ETILE_PANE = 43;
+	int ETILE_PANE = 39;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7231,24 +7085,6 @@ public interface MmPackage extends EPackage {
 	int ETILE_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETILE_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETILE_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7256,24 +7092,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETILE_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETILE_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ETILE_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -7294,6 +7112,24 @@ public interface MmPackage extends EPackage {
 	int ETILE_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7301,6 +7137,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETILE_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -7409,7 +7263,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAnchorPane()
 	 * @generated
 	 */
-	int EANCHOR_PANE = 44;
+	int EANCHOR_PANE = 40;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7430,24 +7284,6 @@ public interface MmPackage extends EPackage {
 	int EANCHOR_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EANCHOR_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EANCHOR_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7455,24 +7291,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EANCHOR_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EANCHOR_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EANCHOR_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -7493,6 +7311,24 @@ public interface MmPackage extends EPackage {
 	int EANCHOR_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7500,6 +7336,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EANCHOR_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -7608,7 +7462,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderPane()
 	 * @generated
 	 */
-	int EBORDER_PANE = 45;
+	int EBORDER_PANE = 41;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -7629,24 +7483,6 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE__ID = EPANE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBORDER_PANE__LAYOUT_X = EPANE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBORDER_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7654,24 +7490,6 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBORDER_PANE__OPACITY = EPANE__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBORDER_PANE__STYLE = EPANE__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EBORDER_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -7692,6 +7510,24 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE__DISABLE = EPANE__DISABLE;
 
 	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7699,6 +7535,24 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBORDER_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -7845,6 +7699,2467 @@ public interface MmPackage extends EPackage {
 	int EBORDER_PANE_OPERATION_COUNT = EPANE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EImageViewImpl <em>EImage View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EImageViewImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEImageView()
+	 * @generated
+	 */
+	int EIMAGE_VIEW = 43;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__ON_ACTION = ENODE__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__ID = ENODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__OPACITY = ENODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__VISIBLE = ENODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__DISABLE = ENODE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__LAYOUT_Y = ENODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__MAX_HEIGHT = ENODE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__MIN_HEIGHT = ENODE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__PREF_HEIGHT = ENODE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__MAX_WIDTH = ENODE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__MIN_WIDTH = ENODE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__PREF_WIDTH = ENODE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__CHILDREN = ENODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__IMAGE_PATH = ENODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>EImage View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW_FEATURE_COUNT = ENODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>EImage View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EScrollPaneImpl <em>EScroll Pane</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EScrollPaneImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEScrollPane()
+	 * @generated
+	 */
+	int ESCROLL_PANE = 44;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__ON_ACTION = EPANE__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__ID = EPANE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__OPACITY = EPANE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__VISIBLE = EPANE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__DISABLE = EPANE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__MAX_HEIGHT = EPANE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__MIN_HEIGHT = EPANE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__PREF_HEIGHT = EPANE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__MAX_WIDTH = EPANE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__MIN_WIDTH = EPANE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Pos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__POS = EPANE__POS;
+
+	/**
+	 * The feature id for the '<em><b>Is Pannable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__IS_PANNABLE = EPANE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Fit To Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__FIT_TO_WIDTH = EPANE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Fit To Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__FIT_TO_HEIGHT = EPANE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__CONTENT = EPANE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>EScroll Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE_FEATURE_COUNT = EPANE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>EScroll Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE_OPERATION_COUNT = EPANE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EEventsImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
+	 * @generated
+	 */
+	int EEVENTS = 45;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS__ON_ACTION = 0;
+
+	/**
+	 * The number of structural features of the '<em>EEvents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>EEvents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EEVENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EWebViewImpl <em>EWeb View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EWebViewImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
+	 * @generated
+	 */
+	int EWEB_VIEW = 46;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__ON_ACTION = ENODE__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__ID = ENODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__OPACITY = ENODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__VISIBLE = ENODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__DISABLE = ENODE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__STYLE = ENODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__STYLE_CLASS = ENODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__MARGIN = ENODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__LAYOUT_X = ENODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__LAYOUT_Y = ENODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__MAX_HEIGHT = ENODE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__MIN_HEIGHT = ENODE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__PREF_HEIGHT = ENODE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__MAX_WIDTH = ENODE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__MIN_WIDTH = ENODE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__PREF_WIDTH = ENODE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__PADDING = ENODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__CHILDREN = ENODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__URL = ENODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Context Menu Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__CONTEXT_MENU_ENABLED = ENODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>EWeb View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW_FEATURE_COUNT = ENODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>EWeb View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW_OPERATION_COUNT = ENODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETabPaneImpl <em>ETab Pane</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ETabPaneImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETabPane()
+	 * @generated
+	 */
+	int ETAB_PANE = 48;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__ON_ACTION = EPANE__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__ID = EPANE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__OPACITY = EPANE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__VISIBLE = EPANE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__DISABLE = EPANE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__STYLE = EPANE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__STYLE_CLASS = EPANE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__MARGIN = EPANE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__LAYOUT_X = EPANE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__LAYOUT_Y = EPANE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__MAX_HEIGHT = EPANE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__MIN_HEIGHT = EPANE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__PREF_HEIGHT = EPANE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__MAX_WIDTH = EPANE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__MIN_WIDTH = EPANE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__PREF_WIDTH = EPANE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__PADDING = EPANE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Pos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__POS = EPANE__POS;
+
+	/**
+	 * The feature id for the '<em><b>Tabs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__TABS = EPANE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ETab Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE_FEATURE_COUNT = EPANE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>ETab Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE_OPERATION_COUNT = EPANE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ETabImpl <em>ETab</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ETabImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETab()
+	 * @generated
+	 */
+	int ETAB = 49;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB__CONTENT = 2;
+
+	/**
+	 * The number of structural features of the '<em>ETab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>ETab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EAreaChartImpl <em>EArea Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EAreaChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAreaChart()
+	 * @generated
+	 */
+	int EAREA_CHART = 50;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EArea Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EArea Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBarChartImpl <em>EBar Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBarChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBarChart()
+	 * @generated
+	 */
+	int EBAR_CHART = 51;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EBar Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EBar Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBubbleChartImpl <em>EBubble Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBubbleChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBubbleChart()
+	 * @generated
+	 */
+	int EBUBBLE_CHART = 52;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EBubble Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EBubble Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ELineChartImpl <em>ELine Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ELineChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELineChart()
+	 * @generated
+	 */
+	int ELINE_CHART = 53;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>ELine Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>ELine Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EScatterChartImpl <em>EScatter Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EScatterChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEScatterChart()
+	 * @generated
+	 */
+	int ESCATTER_CHART = 54;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EScatter Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EScatter Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EStackedAreaChartImpl <em>EStacked Area Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EStackedAreaChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedAreaChart()
+	 * @generated
+	 */
+	int ESTACKED_AREA_CHART = 55;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EStacked Area Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EStacked Area Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EStackedBarChartImpl <em>EStacked Bar Chart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EStackedBarChartImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedBarChart()
+	 * @generated
+	 */
+	int ESTACKED_BAR_CHART = 56;
+
+	/**
+	 * The feature id for the '<em><b>On Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__ON_ACTION = EXY_CHART__ON_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__ID = EXY_CHART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__OPACITY = EXY_CHART__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__VISIBLE = EXY_CHART__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__DISABLE = EXY_CHART__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__STYLE = EXY_CHART__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__STYLE_CLASS = EXY_CHART__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__MARGIN = EXY_CHART__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__LAYOUT_X = EXY_CHART__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__LAYOUT_Y = EXY_CHART__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__MAX_HEIGHT = EXY_CHART__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__MIN_HEIGHT = EXY_CHART__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__PREF_HEIGHT = EXY_CHART__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__MAX_WIDTH = EXY_CHART__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__MIN_WIDTH = EXY_CHART__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__PREF_WIDTH = EXY_CHART__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__PADDING = EXY_CHART__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__CHILDREN = EXY_CHART__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Animated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__ANIMATED = EXY_CHART__ANIMATED;
+
+	/**
+	 * The feature id for the '<em><b>Legend Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__LEGEND_VISIBLE = EXY_CHART__LEGEND_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__TITLE = EXY_CHART__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>EStacked Bar Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART_FEATURE_COUNT = EXY_CHART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EStacked Bar Chart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7852,7 +10167,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControlBinding()
 	 * @generated
 	 */
-	int ECONTROL_BINDING = 46;
+	int ECONTROL_BINDING = 57;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}' enum.
@@ -7862,7 +10177,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingType()
 	 * @generated
 	 */
-	int EBINDING_TYPE = 47;
+	int EBINDING_TYPE = 58;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}' enum.
@@ -7872,7 +10187,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingDirection()
 	 * @generated
 	 */
-	int EBINDING_DIRECTION = 48;
+	int EBINDING_DIRECTION = 59;
 
 	/**
 	 * The meta object id for the '<em>EPos</em>' data type.
@@ -7882,7 +10197,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 49;
+	int EPOS = 60;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -8144,27 +10459,6 @@ public interface MmPackage extends EPackage {
 	EAttribute getEBinding_Direction();
 
 	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EEvents</em>'.
-	 * @see de.dc.javafx.mm.EEvents
-	 * @generated
-	 */
-	EClass getEEvents();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EEvents#getOnAction <em>On Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>On Action</em>'.
-	 * @see de.dc.javafx.mm.EEvents#getOnAction()
-	 * @see #getEEvents()
-	 * @generated
-	 */
-	EAttribute getEEvents_OnAction();
-
-	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.Styleable <em>Styleable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8183,203 +10477,6 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSkinnable();
-
-	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.ENode <em>ENode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ENode</em>'.
-	 * @see de.dc.javafx.mm.ENode
-	 * @generated
-	 */
-	EClass getENode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.dc.javafx.mm.ENode#getId()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getLayoutX <em>Layout X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Layout X</em>'.
-	 * @see de.dc.javafx.mm.ENode#getLayoutX()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_LayoutX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getLayoutY <em>Layout Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Layout Y</em>'.
-	 * @see de.dc.javafx.mm.ENode#getLayoutY()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_LayoutY();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getOpacity <em>Opacity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Opacity</em>'.
-	 * @see de.dc.javafx.mm.ENode#getOpacity()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_Opacity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getStyle <em>Style</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style</em>'.
-	 * @see de.dc.javafx.mm.ENode#getStyle()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_Style();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link de.dc.javafx.mm.ENode#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Style Class</em>'.
-	 * @see de.dc.javafx.mm.ENode#getStyleClass()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_StyleClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#isVisible <em>Visible</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see de.dc.javafx.mm.ENode#isVisible()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_Visible();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#isDisable <em>Disable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Disable</em>'.
-	 * @see de.dc.javafx.mm.ENode#isDisable()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_Disable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getMargin <em>Margin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Margin</em>'.
-	 * @see de.dc.javafx.mm.ENode#getMargin()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EReference getENode_Margin();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMaxHeight <em>Max Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Height</em>'.
-	 * @see de.dc.javafx.mm.ENode#getMaxHeight()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_MaxHeight();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMinHeight <em>Min Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min Height</em>'.
-	 * @see de.dc.javafx.mm.ENode#getMinHeight()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_MinHeight();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getPrefHeight <em>Pref Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pref Height</em>'.
-	 * @see de.dc.javafx.mm.ENode#getPrefHeight()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_PrefHeight();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMaxWidth <em>Max Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Width</em>'.
-	 * @see de.dc.javafx.mm.ENode#getMaxWidth()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_MaxWidth();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMinWidth <em>Min Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min Width</em>'.
-	 * @see de.dc.javafx.mm.ENode#getMinWidth()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_MinWidth();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getPrefWidth <em>Pref Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pref Width</em>'.
-	 * @see de.dc.javafx.mm.ENode#getPrefWidth()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EAttribute getENode_PrefWidth();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Padding</em>'.
-	 * @see de.dc.javafx.mm.ENode#getPadding()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EReference getENode_Padding();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.ENode#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see de.dc.javafx.mm.ENode#getChildren()
-	 * @see #getENode()
-	 * @generated
-	 */
-	EReference getENode_Children();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EInsets <em>EInsets</em>}'.
@@ -8444,16 +10541,6 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEGroup();
-
-	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.EWebView <em>EWeb View</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EWeb View</em>'.
-	 * @see de.dc.javafx.mm.EWebView
-	 * @generated
-	 */
-	EClass getEWebView();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EControl <em>EControl</em>}'.
@@ -8799,16 +10886,6 @@ public interface MmPackage extends EPackage {
 	EClass getEValueAxis();
 
 	/**
-	 * Returns the meta object for class '{@link de.dc.javafx.mm.EChart <em>EChart</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EChart</em>'.
-	 * @see de.dc.javafx.mm.EChart
-	 * @generated
-	 */
-	EClass getEChart();
-
-	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EPieChart <em>EPie Chart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9069,6 +11146,508 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEBorderPane_Center();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EChart <em>EChart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EChart</em>'.
+	 * @see de.dc.javafx.mm.EChart
+	 * @generated
+	 */
+	EClass getEChart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EChart#isAnimated <em>Animated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Animated</em>'.
+	 * @see de.dc.javafx.mm.EChart#isAnimated()
+	 * @see #getEChart()
+	 * @generated
+	 */
+	EAttribute getEChart_Animated();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EChart#isLegendVisible <em>Legend Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Legend Visible</em>'.
+	 * @see de.dc.javafx.mm.EChart#isLegendVisible()
+	 * @see #getEChart()
+	 * @generated
+	 */
+	EAttribute getEChart_LegendVisible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EChart#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see de.dc.javafx.mm.EChart#getTitle()
+	 * @see #getEChart()
+	 * @generated
+	 */
+	EAttribute getEChart_Title();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EImageView <em>EImage View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EImage View</em>'.
+	 * @see de.dc.javafx.mm.EImageView
+	 * @generated
+	 */
+	EClass getEImageView();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EImageView#getImagePath <em>Image Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Path</em>'.
+	 * @see de.dc.javafx.mm.EImageView#getImagePath()
+	 * @see #getEImageView()
+	 * @generated
+	 */
+	EAttribute getEImageView_ImagePath();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EScrollPane <em>EScroll Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EScroll Pane</em>'.
+	 * @see de.dc.javafx.mm.EScrollPane
+	 * @generated
+	 */
+	EClass getEScrollPane();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EScrollPane#isIsPannable <em>Is Pannable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Pannable</em>'.
+	 * @see de.dc.javafx.mm.EScrollPane#isIsPannable()
+	 * @see #getEScrollPane()
+	 * @generated
+	 */
+	EAttribute getEScrollPane_IsPannable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EScrollPane#isFitToWidth <em>Fit To Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fit To Width</em>'.
+	 * @see de.dc.javafx.mm.EScrollPane#isFitToWidth()
+	 * @see #getEScrollPane()
+	 * @generated
+	 */
+	EAttribute getEScrollPane_FitToWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EScrollPane#isFitToHeight <em>Fit To Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fit To Height</em>'.
+	 * @see de.dc.javafx.mm.EScrollPane#isFitToHeight()
+	 * @see #getEScrollPane()
+	 * @generated
+	 */
+	EAttribute getEScrollPane_FitToHeight();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.EScrollPane#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Content</em>'.
+	 * @see de.dc.javafx.mm.EScrollPane#getContent()
+	 * @see #getEScrollPane()
+	 * @generated
+	 */
+	EReference getEScrollPane_Content();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EEvents <em>EEvents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EEvents</em>'.
+	 * @see de.dc.javafx.mm.EEvents
+	 * @generated
+	 */
+	EClass getEEvents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EEvents#getOnAction <em>On Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>On Action</em>'.
+	 * @see de.dc.javafx.mm.EEvents#getOnAction()
+	 * @see #getEEvents()
+	 * @generated
+	 */
+	EAttribute getEEvents_OnAction();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EWebView <em>EWeb View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EWeb View</em>'.
+	 * @see de.dc.javafx.mm.EWebView
+	 * @generated
+	 */
+	EClass getEWebView();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EWebView#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see de.dc.javafx.mm.EWebView#getUrl()
+	 * @see #getEWebView()
+	 * @generated
+	 */
+	EAttribute getEWebView_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EWebView#isContextMenuEnabled <em>Context Menu Enabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Context Menu Enabled</em>'.
+	 * @see de.dc.javafx.mm.EWebView#isContextMenuEnabled()
+	 * @see #getEWebView()
+	 * @generated
+	 */
+	EAttribute getEWebView_ContextMenuEnabled();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ENode <em>ENode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ENode</em>'.
+	 * @see de.dc.javafx.mm.ENode
+	 * @generated
+	 */
+	EClass getENode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.dc.javafx.mm.ENode#getId()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getOpacity <em>Opacity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Opacity</em>'.
+	 * @see de.dc.javafx.mm.ENode#getOpacity()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_Opacity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#isVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visible</em>'.
+	 * @see de.dc.javafx.mm.ENode#isVisible()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_Visible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#isDisable <em>Disable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disable</em>'.
+	 * @see de.dc.javafx.mm.ENode#isDisable()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_Disable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see de.dc.javafx.mm.ENode#getStyle()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_Style();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.dc.javafx.mm.ENode#getStyleClass <em>Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Style Class</em>'.
+	 * @see de.dc.javafx.mm.ENode#getStyleClass()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_StyleClass();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getMargin <em>Margin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Margin</em>'.
+	 * @see de.dc.javafx.mm.ENode#getMargin()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EReference getENode_Margin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getLayoutX <em>Layout X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Layout X</em>'.
+	 * @see de.dc.javafx.mm.ENode#getLayoutX()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_LayoutX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getLayoutY <em>Layout Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Layout Y</em>'.
+	 * @see de.dc.javafx.mm.ENode#getLayoutY()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_LayoutY();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMaxHeight <em>Max Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Height</em>'.
+	 * @see de.dc.javafx.mm.ENode#getMaxHeight()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_MaxHeight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMinHeight <em>Min Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Height</em>'.
+	 * @see de.dc.javafx.mm.ENode#getMinHeight()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_MinHeight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getPrefHeight <em>Pref Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pref Height</em>'.
+	 * @see de.dc.javafx.mm.ENode#getPrefHeight()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_PrefHeight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMaxWidth <em>Max Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Width</em>'.
+	 * @see de.dc.javafx.mm.ENode#getMaxWidth()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_MaxWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getMinWidth <em>Min Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Width</em>'.
+	 * @see de.dc.javafx.mm.ENode#getMinWidth()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_MinWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ENode#getPrefWidth <em>Pref Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pref Width</em>'.
+	 * @see de.dc.javafx.mm.ENode#getPrefWidth()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EAttribute getENode_PrefWidth();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Padding</em>'.
+	 * @see de.dc.javafx.mm.ENode#getPadding()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EReference getENode_Padding();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.ENode#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see de.dc.javafx.mm.ENode#getChildren()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EReference getENode_Children();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETabPane <em>ETab Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ETab Pane</em>'.
+	 * @see de.dc.javafx.mm.ETabPane
+	 * @generated
+	 */
+	EClass getETabPane();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.javafx.mm.ETabPane#getTabs <em>Tabs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tabs</em>'.
+	 * @see de.dc.javafx.mm.ETabPane#getTabs()
+	 * @see #getETabPane()
+	 * @generated
+	 */
+	EReference getETabPane_Tabs();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETab <em>ETab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ETab</em>'.
+	 * @see de.dc.javafx.mm.ETab
+	 * @generated
+	 */
+	EClass getETab();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETab#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.dc.javafx.mm.ETab#getId()
+	 * @see #getETab()
+	 * @generated
+	 */
+	EAttribute getETab_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETab#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.javafx.mm.ETab#getName()
+	 * @see #getETab()
+	 * @generated
+	 */
+	EAttribute getETab_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ETab#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Content</em>'.
+	 * @see de.dc.javafx.mm.ETab#getContent()
+	 * @see #getETab()
+	 * @generated
+	 */
+	EReference getETab_Content();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EAreaChart <em>EArea Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EArea Chart</em>'.
+	 * @see de.dc.javafx.mm.EAreaChart
+	 * @generated
+	 */
+	EClass getEAreaChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBarChart <em>EBar Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBar Chart</em>'.
+	 * @see de.dc.javafx.mm.EBarChart
+	 * @generated
+	 */
+	EClass getEBarChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBubbleChart <em>EBubble Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBubble Chart</em>'.
+	 * @see de.dc.javafx.mm.EBubbleChart
+	 * @generated
+	 */
+	EClass getEBubbleChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ELineChart <em>ELine Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ELine Chart</em>'.
+	 * @see de.dc.javafx.mm.ELineChart
+	 * @generated
+	 */
+	EClass getELineChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EScatterChart <em>EScatter Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EScatter Chart</em>'.
+	 * @see de.dc.javafx.mm.EScatterChart
+	 * @generated
+	 */
+	EClass getEScatterChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EStackedAreaChart <em>EStacked Area Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EStacked Area Chart</em>'.
+	 * @see de.dc.javafx.mm.EStackedAreaChart
+	 * @generated
+	 */
+	EClass getEStackedAreaChart();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EStackedBarChart <em>EStacked Bar Chart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EStacked Bar Chart</em>'.
+	 * @see de.dc.javafx.mm.EStackedBarChart
+	 * @generated
+	 */
+	EClass getEStackedBarChart();
 
 	/**
 	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}'.
@@ -9337,24 +11916,6 @@ public interface MmPackage extends EPackage {
 		EAttribute EBINDING__DIRECTION = eINSTANCE.getEBinding_Direction();
 
 		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.EEventsImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
-		 * @generated
-		 */
-		EClass EEVENTS = eINSTANCE.getEEvents();
-
-		/**
-		 * The meta object literal for the '<em><b>On Action</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EEVENTS__ON_ACTION = eINSTANCE.getEEvents_OnAction();
-
-		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.StyleableImpl <em>Styleable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9373,152 +11934,6 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SKINNABLE = eINSTANCE.getSkinnable();
-
-		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ENodeImpl <em>ENode</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.ENodeImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getENode()
-		 * @generated
-		 */
-		EClass ENODE = eINSTANCE.getENode();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__ID = eINSTANCE.getENode_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Layout X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__LAYOUT_X = eINSTANCE.getENode_LayoutX();
-
-		/**
-		 * The meta object literal for the '<em><b>Layout Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__LAYOUT_Y = eINSTANCE.getENode_LayoutY();
-
-		/**
-		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__OPACITY = eINSTANCE.getENode_Opacity();
-
-		/**
-		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__STYLE = eINSTANCE.getENode_Style();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__STYLE_CLASS = eINSTANCE.getENode_StyleClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__VISIBLE = eINSTANCE.getENode_Visible();
-
-		/**
-		 * The meta object literal for the '<em><b>Disable</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__DISABLE = eINSTANCE.getENode_Disable();
-
-		/**
-		 * The meta object literal for the '<em><b>Margin</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENODE__MARGIN = eINSTANCE.getENode_Margin();
-
-		/**
-		 * The meta object literal for the '<em><b>Max Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__MAX_HEIGHT = eINSTANCE.getENode_MaxHeight();
-
-		/**
-		 * The meta object literal for the '<em><b>Min Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__MIN_HEIGHT = eINSTANCE.getENode_MinHeight();
-
-		/**
-		 * The meta object literal for the '<em><b>Pref Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__PREF_HEIGHT = eINSTANCE.getENode_PrefHeight();
-
-		/**
-		 * The meta object literal for the '<em><b>Max Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__MAX_WIDTH = eINSTANCE.getENode_MaxWidth();
-
-		/**
-		 * The meta object literal for the '<em><b>Min Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__MIN_WIDTH = eINSTANCE.getENode_MinWidth();
-
-		/**
-		 * The meta object literal for the '<em><b>Pref Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENODE__PREF_WIDTH = eINSTANCE.getENode_PrefWidth();
-
-		/**
-		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENODE__PADDING = eINSTANCE.getENode_Padding();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENODE__CHILDREN = eINSTANCE.getENode_Children();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EInsetsImpl <em>EInsets</em>}' class.
@@ -9571,16 +11986,6 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EGROUP = eINSTANCE.getEGroup();
-
-		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EWebViewImpl <em>EWeb View</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.EWebViewImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
-		 * @generated
-		 */
-		EClass EWEB_VIEW = eINSTANCE.getEWebView();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EControlImpl <em>EControl</em>}' class.
@@ -9887,16 +12292,6 @@ public interface MmPackage extends EPackage {
 		EClass EVALUE_AXIS = eINSTANCE.getEValueAxis();
 
 		/**
-		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EChartImpl <em>EChart</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.dc.javafx.mm.impl.EChartImpl
-		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
-		 * @generated
-		 */
-		EClass ECHART = eINSTANCE.getEChart();
-
-		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EPieChartImpl <em>EPie Chart</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10121,6 +12516,412 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EBORDER_PANE__CENTER = eINSTANCE.getEBorderPane_Center();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EChartImpl <em>EChart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEChart()
+		 * @generated
+		 */
+		EClass ECHART = eINSTANCE.getEChart();
+
+		/**
+		 * The meta object literal for the '<em><b>Animated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECHART__ANIMATED = eINSTANCE.getEChart_Animated();
+
+		/**
+		 * The meta object literal for the '<em><b>Legend Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECHART__LEGEND_VISIBLE = eINSTANCE.getEChart_LegendVisible();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECHART__TITLE = eINSTANCE.getEChart_Title();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EImageViewImpl <em>EImage View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EImageViewImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEImageView()
+		 * @generated
+		 */
+		EClass EIMAGE_VIEW = eINSTANCE.getEImageView();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EIMAGE_VIEW__IMAGE_PATH = eINSTANCE.getEImageView_ImagePath();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EScrollPaneImpl <em>EScroll Pane</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EScrollPaneImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEScrollPane()
+		 * @generated
+		 */
+		EClass ESCROLL_PANE = eINSTANCE.getEScrollPane();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Pannable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESCROLL_PANE__IS_PANNABLE = eINSTANCE.getEScrollPane_IsPannable();
+
+		/**
+		 * The meta object literal for the '<em><b>Fit To Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESCROLL_PANE__FIT_TO_WIDTH = eINSTANCE.getEScrollPane_FitToWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Fit To Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESCROLL_PANE__FIT_TO_HEIGHT = eINSTANCE.getEScrollPane_FitToHeight();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ESCROLL_PANE__CONTENT = eINSTANCE.getEScrollPane_Content();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EEventsImpl <em>EEvents</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EEventsImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEEvents()
+		 * @generated
+		 */
+		EClass EEVENTS = eINSTANCE.getEEvents();
+
+		/**
+		 * The meta object literal for the '<em><b>On Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EEVENTS__ON_ACTION = eINSTANCE.getEEvents_OnAction();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EWebViewImpl <em>EWeb View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EWebViewImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEWebView()
+		 * @generated
+		 */
+		EClass EWEB_VIEW = eINSTANCE.getEWebView();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EWEB_VIEW__URL = eINSTANCE.getEWebView_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Context Menu Enabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EWEB_VIEW__CONTEXT_MENU_ENABLED = eINSTANCE.getEWebView_ContextMenuEnabled();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ENodeImpl <em>ENode</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ENodeImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getENode()
+		 * @generated
+		 */
+		EClass ENODE = eINSTANCE.getENode();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__ID = eINSTANCE.getENode_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__OPACITY = eINSTANCE.getENode_Opacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__VISIBLE = eINSTANCE.getENode_Visible();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__DISABLE = eINSTANCE.getENode_Disable();
+
+		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__STYLE = eINSTANCE.getENode_Style();
+
+		/**
+		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__STYLE_CLASS = eINSTANCE.getENode_StyleClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Margin</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENODE__MARGIN = eINSTANCE.getENode_Margin();
+
+		/**
+		 * The meta object literal for the '<em><b>Layout X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__LAYOUT_X = eINSTANCE.getENode_LayoutX();
+
+		/**
+		 * The meta object literal for the '<em><b>Layout Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__LAYOUT_Y = eINSTANCE.getENode_LayoutY();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__MAX_HEIGHT = eINSTANCE.getENode_MaxHeight();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__MIN_HEIGHT = eINSTANCE.getENode_MinHeight();
+
+		/**
+		 * The meta object literal for the '<em><b>Pref Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__PREF_HEIGHT = eINSTANCE.getENode_PrefHeight();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__MAX_WIDTH = eINSTANCE.getENode_MaxWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__MIN_WIDTH = eINSTANCE.getENode_MinWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Pref Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENODE__PREF_WIDTH = eINSTANCE.getENode_PrefWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENODE__PADDING = eINSTANCE.getENode_Padding();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENODE__CHILDREN = eINSTANCE.getENode_Children();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETabPaneImpl <em>ETab Pane</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ETabPaneImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETabPane()
+		 * @generated
+		 */
+		EClass ETAB_PANE = eINSTANCE.getETabPane();
+
+		/**
+		 * The meta object literal for the '<em><b>Tabs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ETAB_PANE__TABS = eINSTANCE.getETabPane_Tabs();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETabImpl <em>ETab</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ETabImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getETab()
+		 * @generated
+		 */
+		EClass ETAB = eINSTANCE.getETab();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETAB__ID = eINSTANCE.getETab_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETAB__NAME = eINSTANCE.getETab_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ETAB__CONTENT = eINSTANCE.getETab_Content();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EAreaChartImpl <em>EArea Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EAreaChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAreaChart()
+		 * @generated
+		 */
+		EClass EAREA_CHART = eINSTANCE.getEAreaChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBarChartImpl <em>EBar Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBarChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBarChart()
+		 * @generated
+		 */
+		EClass EBAR_CHART = eINSTANCE.getEBarChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBubbleChartImpl <em>EBubble Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBubbleChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBubbleChart()
+		 * @generated
+		 */
+		EClass EBUBBLE_CHART = eINSTANCE.getEBubbleChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ELineChartImpl <em>ELine Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ELineChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELineChart()
+		 * @generated
+		 */
+		EClass ELINE_CHART = eINSTANCE.getELineChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EScatterChartImpl <em>EScatter Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EScatterChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEScatterChart()
+		 * @generated
+		 */
+		EClass ESCATTER_CHART = eINSTANCE.getEScatterChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EStackedAreaChartImpl <em>EStacked Area Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EStackedAreaChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedAreaChart()
+		 * @generated
+		 */
+		EClass ESTACKED_AREA_CHART = eINSTANCE.getEStackedAreaChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EStackedBarChartImpl <em>EStacked Bar Chart</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EStackedBarChartImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedBarChart()
+		 * @generated
+		 */
+		EClass ESTACKED_BAR_CHART = eINSTANCE.getEStackedBarChart();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.

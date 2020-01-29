@@ -204,9 +204,6 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEGroup()));
 
-		newChildDescriptors.add(
-				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEWebView()));
-
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEText()));
 
@@ -287,6 +284,39 @@ public class EDialogPaneItemProvider extends EPaneItemProvider {
 
 		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
 				MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEImageView()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
+				MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
+				MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
+				MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.EDIALOG_PANE__CONTENT,
+				MmFactory.eINSTANCE.createEStackedBarChart()));
 	}
 
 	/**

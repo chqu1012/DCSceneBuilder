@@ -3,7 +3,9 @@
 package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EAnchorPane;
+import de.dc.javafx.mm.EAreaChart;
 import de.dc.javafx.mm.EAxis;
+import de.dc.javafx.mm.EBarChart;
 import de.dc.javafx.mm.EBaseView;
 import de.dc.javafx.mm.EBean;
 import de.dc.javafx.mm.EBinding;
@@ -11,6 +13,7 @@ import de.dc.javafx.mm.EBindingDirection;
 import de.dc.javafx.mm.EBindingModel;
 import de.dc.javafx.mm.EBindingType;
 import de.dc.javafx.mm.EBorderPane;
+import de.dc.javafx.mm.EBubbleChart;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.EButtonBase;
 import de.dc.javafx.mm.ECatgeoryAxis;
@@ -27,18 +30,26 @@ import de.dc.javafx.mm.EGridPane;
 import de.dc.javafx.mm.EGroup;
 import de.dc.javafx.mm.EHBox;
 import de.dc.javafx.mm.EHyperlink;
+import de.dc.javafx.mm.EImageView;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ELabeled;
+import de.dc.javafx.mm.ELineChart;
 import de.dc.javafx.mm.EListView;
 import de.dc.javafx.mm.EMenuButton;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.EPane;
 import de.dc.javafx.mm.EPieChart;
 import de.dc.javafx.mm.ERadioButton;
+import de.dc.javafx.mm.EScatterChart;
+import de.dc.javafx.mm.EScrollPane;
 import de.dc.javafx.mm.ESplitMenuButton;
 import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
+import de.dc.javafx.mm.EStackedAreaChart;
+import de.dc.javafx.mm.EStackedBarChart;
+import de.dc.javafx.mm.ETab;
+import de.dc.javafx.mm.ETabPane;
 import de.dc.javafx.mm.ETableColumn;
 import de.dc.javafx.mm.ETableView;
 import de.dc.javafx.mm.EText;
@@ -113,13 +124,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eEventsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass styleableEClass = null;
 
 	/**
@@ -134,13 +138,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass eInsetsEClass = null;
 
 	/**
@@ -149,13 +146,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass eWebViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,13 +292,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eChartEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass ePieChartEClass = null;
 
 	/**
@@ -394,6 +377,111 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eBorderPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eImageViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eScrollPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eEventsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eWebViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTabPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eTabEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eAreaChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBarChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBubbleChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eLineChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eScatterChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eStackedAreaChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eStackedBarChartEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -735,26 +823,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getEEvents() {
-		return eEventsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEEvents_OnAction() {
-		return (EAttribute) eEventsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getStyleable() {
 		return styleableEClass;
 	}
@@ -767,186 +835,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EClass getSkinnable() {
 		return skinnableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getENode() {
-		return eNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_Id() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_LayoutX() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_LayoutY() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_Opacity() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_Style() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_StyleClass() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_Visible() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_Disable() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getENode_Margin() {
-		return (EReference) eNodeEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_MaxHeight() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_MinHeight() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_PrefHeight() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_MaxWidth() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_MinWidth() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getENode_PrefWidth() {
-		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getENode_Padding() {
-		return (EReference) eNodeEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getENode_Children() {
-		return (EReference) eNodeEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -1007,16 +895,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EClass getEGroup() {
 		return eGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEWebView() {
-		return eWebViewEClass;
 	}
 
 	/**
@@ -1355,16 +1233,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getEChart() {
-		return eChartEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getEPieChart() {
 		return ePieChartEClass;
 	}
@@ -1615,6 +1483,476 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEChart() {
+		return eChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEChart_Animated() {
+		return (EAttribute) eChartEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEChart_LegendVisible() {
+		return (EAttribute) eChartEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEChart_Title() {
+		return (EAttribute) eChartEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEImageView() {
+		return eImageViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEImageView_ImagePath() {
+		return (EAttribute) eImageViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEScrollPane() {
+		return eScrollPaneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEScrollPane_IsPannable() {
+		return (EAttribute) eScrollPaneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEScrollPane_FitToWidth() {
+		return (EAttribute) eScrollPaneEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEScrollPane_FitToHeight() {
+		return (EAttribute) eScrollPaneEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEScrollPane_Content() {
+		return (EReference) eScrollPaneEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEEvents() {
+		return eEventsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEEvents_OnAction() {
+		return (EAttribute) eEventsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEWebView() {
+		return eWebViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEWebView_Url() {
+		return (EAttribute) eWebViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEWebView_ContextMenuEnabled() {
+		return (EAttribute) eWebViewEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getENode() {
+		return eNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_Id() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_Opacity() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_Visible() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_Disable() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_Style() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_StyleClass() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getENode_Margin() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_LayoutX() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_LayoutY() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MaxHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MinHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_PrefHeight() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MaxWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_MinWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getENode_PrefWidth() {
+		return (EAttribute) eNodeEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getENode_Padding() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getENode_Children() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETabPane() {
+		return eTabPaneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETabPane_Tabs() {
+		return (EReference) eTabPaneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getETab() {
+		return eTabEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETab_Id() {
+		return (EAttribute) eTabEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getETab_Name() {
+		return (EAttribute) eTabEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getETab_Content() {
+		return (EReference) eTabEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEAreaChart() {
+		return eAreaChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBarChart() {
+		return eBarChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBubbleChart() {
+		return eBubbleChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getELineChart() {
+		return eLineChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEScatterChart() {
+		return eScatterChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEStackedAreaChart() {
+		return eStackedAreaChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEStackedBarChart() {
+		return eStackedBarChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getEControlBinding() {
 		return eControlBindingEEnum;
 	}
@@ -1708,31 +2046,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eBindingEClass, EBINDING__BINDING);
 		createEAttribute(eBindingEClass, EBINDING__DIRECTION);
 
-		eEventsEClass = createEClass(EEVENTS);
-		createEAttribute(eEventsEClass, EEVENTS__ON_ACTION);
-
 		styleableEClass = createEClass(STYLEABLE);
 
 		skinnableEClass = createEClass(SKINNABLE);
-
-		eNodeEClass = createEClass(ENODE);
-		createEAttribute(eNodeEClass, ENODE__ID);
-		createEAttribute(eNodeEClass, ENODE__LAYOUT_X);
-		createEAttribute(eNodeEClass, ENODE__LAYOUT_Y);
-		createEAttribute(eNodeEClass, ENODE__OPACITY);
-		createEAttribute(eNodeEClass, ENODE__STYLE);
-		createEAttribute(eNodeEClass, ENODE__STYLE_CLASS);
-		createEAttribute(eNodeEClass, ENODE__VISIBLE);
-		createEAttribute(eNodeEClass, ENODE__DISABLE);
-		createEReference(eNodeEClass, ENODE__MARGIN);
-		createEAttribute(eNodeEClass, ENODE__MAX_HEIGHT);
-		createEAttribute(eNodeEClass, ENODE__MIN_HEIGHT);
-		createEAttribute(eNodeEClass, ENODE__PREF_HEIGHT);
-		createEAttribute(eNodeEClass, ENODE__MAX_WIDTH);
-		createEAttribute(eNodeEClass, ENODE__MIN_WIDTH);
-		createEAttribute(eNodeEClass, ENODE__PREF_WIDTH);
-		createEReference(eNodeEClass, ENODE__PADDING);
-		createEReference(eNodeEClass, ENODE__CHILDREN);
 
 		eInsetsEClass = createEClass(EINSETS);
 		createEAttribute(eInsetsEClass, EINSETS__TOP);
@@ -1741,8 +2057,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eInsetsEClass, EINSETS__LEFT);
 
 		eGroupEClass = createEClass(EGROUP);
-
-		eWebViewEClass = createEClass(EWEB_VIEW);
 
 		eControlEClass = createEClass(ECONTROL);
 
@@ -1797,8 +2111,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 
 		eValueAxisEClass = createEClass(EVALUE_AXIS);
 
-		eChartEClass = createEClass(ECHART);
-
 		ePieChartEClass = createEClass(EPIE_CHART);
 
 		exyChartEClass = createEClass(EXY_CHART);
@@ -1836,6 +2148,68 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEReference(eBorderPaneEClass, EBORDER_PANE__TOP);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__BOTTOM);
 		createEReference(eBorderPaneEClass, EBORDER_PANE__CENTER);
+
+		eChartEClass = createEClass(ECHART);
+		createEAttribute(eChartEClass, ECHART__ANIMATED);
+		createEAttribute(eChartEClass, ECHART__LEGEND_VISIBLE);
+		createEAttribute(eChartEClass, ECHART__TITLE);
+
+		eImageViewEClass = createEClass(EIMAGE_VIEW);
+		createEAttribute(eImageViewEClass, EIMAGE_VIEW__IMAGE_PATH);
+
+		eScrollPaneEClass = createEClass(ESCROLL_PANE);
+		createEAttribute(eScrollPaneEClass, ESCROLL_PANE__IS_PANNABLE);
+		createEAttribute(eScrollPaneEClass, ESCROLL_PANE__FIT_TO_WIDTH);
+		createEAttribute(eScrollPaneEClass, ESCROLL_PANE__FIT_TO_HEIGHT);
+		createEReference(eScrollPaneEClass, ESCROLL_PANE__CONTENT);
+
+		eEventsEClass = createEClass(EEVENTS);
+		createEAttribute(eEventsEClass, EEVENTS__ON_ACTION);
+
+		eWebViewEClass = createEClass(EWEB_VIEW);
+		createEAttribute(eWebViewEClass, EWEB_VIEW__URL);
+		createEAttribute(eWebViewEClass, EWEB_VIEW__CONTEXT_MENU_ENABLED);
+
+		eNodeEClass = createEClass(ENODE);
+		createEAttribute(eNodeEClass, ENODE__ID);
+		createEAttribute(eNodeEClass, ENODE__OPACITY);
+		createEAttribute(eNodeEClass, ENODE__VISIBLE);
+		createEAttribute(eNodeEClass, ENODE__DISABLE);
+		createEAttribute(eNodeEClass, ENODE__STYLE);
+		createEAttribute(eNodeEClass, ENODE__STYLE_CLASS);
+		createEReference(eNodeEClass, ENODE__MARGIN);
+		createEAttribute(eNodeEClass, ENODE__LAYOUT_X);
+		createEAttribute(eNodeEClass, ENODE__LAYOUT_Y);
+		createEAttribute(eNodeEClass, ENODE__MAX_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__MIN_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__PREF_HEIGHT);
+		createEAttribute(eNodeEClass, ENODE__MAX_WIDTH);
+		createEAttribute(eNodeEClass, ENODE__MIN_WIDTH);
+		createEAttribute(eNodeEClass, ENODE__PREF_WIDTH);
+		createEReference(eNodeEClass, ENODE__PADDING);
+		createEReference(eNodeEClass, ENODE__CHILDREN);
+
+		eTabPaneEClass = createEClass(ETAB_PANE);
+		createEReference(eTabPaneEClass, ETAB_PANE__TABS);
+
+		eTabEClass = createEClass(ETAB);
+		createEAttribute(eTabEClass, ETAB__ID);
+		createEAttribute(eTabEClass, ETAB__NAME);
+		createEReference(eTabEClass, ETAB__CONTENT);
+
+		eAreaChartEClass = createEClass(EAREA_CHART);
+
+		eBarChartEClass = createEClass(EBAR_CHART);
+
+		eBubbleChartEClass = createEClass(EBUBBLE_CHART);
+
+		eLineChartEClass = createEClass(ELINE_CHART);
+
+		eScatterChartEClass = createEClass(ESCATTER_CHART);
+
+		eStackedAreaChartEClass = createEClass(ESTACKED_AREA_CHART);
+
+		eStackedBarChartEClass = createEClass(ESTACKED_BAR_CHART);
 
 		// Create enums
 		eControlBindingEEnum = createEEnum(ECONTROL_BINDING);
@@ -1878,11 +2252,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		eNodeEClass.getESuperTypes().add(this.getStyleable());
-		eNodeEClass.getESuperTypes().add(this.getSkinnable());
-		eNodeEClass.getESuperTypes().add(this.getEEvents());
 		eGroupEClass.getESuperTypes().add(this.getENode());
-		eWebViewEClass.getESuperTypes().add(this.getENode());
 		eControlEClass.getESuperTypes().add(this.getENode());
 		eLabeledEClass.getESuperTypes().add(this.getEControl());
 		eTextEClass.getESuperTypes().add(this.getELabeled());
@@ -1902,7 +2272,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eAxisEClass.getESuperTypes().add(this.getENode());
 		eCatgeoryAxisEClass.getESuperTypes().add(this.getEAxis());
 		eValueAxisEClass.getESuperTypes().add(this.getEAxis());
-		eChartEClass.getESuperTypes().add(this.getENode());
 		ePieChartEClass.getESuperTypes().add(this.getEChart());
 		exyChartEClass.getESuperTypes().add(this.getEChart());
 		ePaneEClass.getESuperTypes().add(this.getENode());
@@ -1916,6 +2285,21 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eTilePaneEClass.getESuperTypes().add(this.getEPane());
 		eAnchorPaneEClass.getESuperTypes().add(this.getEPane());
 		eBorderPaneEClass.getESuperTypes().add(this.getEPane());
+		eChartEClass.getESuperTypes().add(this.getENode());
+		eImageViewEClass.getESuperTypes().add(this.getENode());
+		eScrollPaneEClass.getESuperTypes().add(this.getEPane());
+		eWebViewEClass.getESuperTypes().add(this.getENode());
+		eNodeEClass.getESuperTypes().add(this.getStyleable());
+		eNodeEClass.getESuperTypes().add(this.getSkinnable());
+		eNodeEClass.getESuperTypes().add(this.getEEvents());
+		eTabPaneEClass.getESuperTypes().add(this.getEPane());
+		eAreaChartEClass.getESuperTypes().add(this.getEXYChart());
+		eBarChartEClass.getESuperTypes().add(this.getEXYChart());
+		eBubbleChartEClass.getESuperTypes().add(this.getEXYChart());
+		eLineChartEClass.getESuperTypes().add(this.getEXYChart());
+		eScatterChartEClass.getESuperTypes().add(this.getEXYChart());
+		eStackedAreaChartEClass.getESuperTypes().add(this.getEXYChart());
+		eStackedBarChartEClass.getESuperTypes().add(this.getEXYChart());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(emfModelEClass, EmfModel.class, "EmfModel", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1986,67 +2370,11 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(eEventsEClass, EEvents.class, "EEvents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEEvents_OnAction(), theEcorePackage.getEString(), "onAction", null, 0, 1, EEvents.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-
 		initEClass(styleableEClass, Styleable.class, "Styleable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(skinnableEClass, Skinnable.class, "Skinnable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(eNodeEClass, ENode.class, "ENode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getENode_Id(), theEcorePackage.getEString(), "id", null, 0, 1, ENode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getENode_LayoutX(), theEcorePackage.getEDouble(), "layoutX", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_LayoutY(), theEcorePackage.getEDouble(), "layoutY", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_Opacity(), theEcorePackage.getEDouble(), "opacity", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_Style(), theEcorePackage.getEString(), "style", null, 0, 1, ENode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getENode_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_Visible(), theEcorePackage.getEBoolean(), "visible", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_Disable(), theEcorePackage.getEBoolean(), "disable", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getENode_Margin(), this.getEInsets(), null, "margin", null, 0, 1, ENode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_MinHeight(), theEcorePackage.getEDouble(), "minHeight", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_PrefHeight(), theEcorePackage.getEDouble(), "prefHeight", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_MaxWidth(), theEcorePackage.getEDouble(), "maxWidth", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_MinWidth(), theEcorePackage.getEDouble(), "minWidth", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getENode_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, ENode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getENode_Padding(), this.getEInsets(), null, "padding", null, 0, 1, ENode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getENode_Children(), this.getENode(), null, "children", null, 0, -1, ENode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 
 		initEClass(eInsetsEClass, EInsets.class, "EInsets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEInsets_Top(), theEcorePackage.getEDouble(), "top", "0.0", 0, 1, EInsets.class, !IS_TRANSIENT,
@@ -2062,9 +2390,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_ORDERED);
 
 		initEClass(eGroupEClass, EGroup.class, "EGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(eWebViewEClass, EWebView.class, "EWebView", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eControlEClass, EControl.class, "EControl", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2159,8 +2484,6 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEClass(eValueAxisEClass, EValueAxis.class, "EValueAxis", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(eChartEClass, EChart.class, "EChart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(ePieChartEClass, EPieChart.class, "EPieChart", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -2231,6 +2554,139 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getEBorderPane_Center(), this.getENode(), null, "center", null, 0, 1, EBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eChartEClass, EChart.class, "EChart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEChart_Animated(), theEcorePackage.getEBoolean(), "animated", "true", 0, 1, EChart.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEChart_LegendVisible(), theEcorePackage.getEBoolean(), "legendVisible", "true", 0, 1,
+				EChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEChart_Title(), theEcorePackage.getEString(), "title", null, 0, 1, EChart.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eImageViewEClass, EImageView.class, "EImageView", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEImageView_ImagePath(), theEcorePackage.getEString(), "imagePath", null, 0, 1,
+				EImageView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(eScrollPaneEClass, EScrollPane.class, "EScrollPane", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEScrollPane_IsPannable(), theEcorePackage.getEBoolean(), "isPannable", "true", 0, 1,
+				EScrollPane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEScrollPane_FitToWidth(), theEcorePackage.getEBoolean(), "fitToWidth", "false", 0, 1,
+				EScrollPane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEScrollPane_FitToHeight(), theEcorePackage.getEBoolean(), "fitToHeight", "false", 0, 1,
+				EScrollPane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getEScrollPane_Content(), this.getENode(), null, "content", null, 0, 1, EScrollPane.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eEventsEClass, EEvents.class, "EEvents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEEvents_OnAction(), theEcorePackage.getEString(), "onAction", null, 0, 1, EEvents.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eWebViewEClass, EWebView.class, "EWebView", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEWebView_Url(), theEcorePackage.getEString(), "url", null, 0, 1, EWebView.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEWebView_ContextMenuEnabled(), theEcorePackage.getEBoolean(), "contextMenuEnabled", "false",
+				0, 1, EWebView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(eNodeEClass, ENode.class, "ENode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getENode_Id(), theEcorePackage.getEString(), "id", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getENode_Opacity(), theEcorePackage.getEDouble(), "opacity", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_Visible(), theEcorePackage.getEBoolean(), "visible", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_Disable(), theEcorePackage.getEBoolean(), "disable", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_Style(), theEcorePackage.getEString(), "style", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getENode_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getENode_Margin(), this.getEInsets(), null, "margin", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_LayoutX(), theEcorePackage.getEDouble(), "layoutX", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_LayoutY(), theEcorePackage.getEDouble(), "layoutY", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MinHeight(), theEcorePackage.getEDouble(), "minHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_PrefHeight(), theEcorePackage.getEDouble(), "prefHeight", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MaxWidth(), theEcorePackage.getEDouble(), "maxWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_MinWidth(), theEcorePackage.getEDouble(), "minWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getENode_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getENode_Padding(), this.getEInsets(), null, "padding", null, 0, 1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getENode_Children(), this.getENode(), null, "children", null, 0, -1, ENode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eTabPaneEClass, ETabPane.class, "ETabPane", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getETabPane_Tabs(), this.getETab(), null, "tabs", null, 0, -1, ETabPane.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eTabEClass, ETab.class, "ETab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getETab_Id(), theEcorePackage.getEString(), "id", null, 0, 1, ETab.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETab_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ETab.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getETab_Content(), this.getENode(), null, "content", null, 0, 1, ETab.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(eAreaChartEClass, EAreaChart.class, "EAreaChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eBarChartEClass, EBarChart.class, "EBarChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eBubbleChartEClass, EBubbleChart.class, "EBubbleChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eLineChartEClass, ELineChart.class, "ELineChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eScatterChartEClass, EScatterChart.class, "EScatterChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eStackedAreaChartEClass, EStackedAreaChart.class, "EStackedAreaChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eStackedBarChartEClass, EStackedBarChart.class, "EStackedBarChart", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(eControlBindingEEnum, EControlBinding.class, "EControlBinding");

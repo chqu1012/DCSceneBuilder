@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mm:EmfModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mm="http://www.frateranatis.org/javafx" basePackage="de.dc.javafx.mm.demo" controller="de.dc.javafx.mm.demo.controller.TableView" name="TableView">
+  <bindingModel/>
+  <root xsi:type="mm:EVBox" id="root">
+    <children xsi:type="mm:ETableView" id="tableViewName" model="//@beans.0">
+      <columns id="columnPersonName" name="Name" associatedField="//@beans.0/@fields.0"/>
+      <columns id="columnPersonForename" name="Forename" associatedField="//@beans.0/@fields.1"/>
+      <columns id="columnPersonAge" name="Age" associatedField="//@beans.0/@fields.2"/>
+      <columns id="columnPersonEmail" name="Email" associatedField="//@beans.0/@fields.3"/>
+    </children>
+    <children xsi:type="mm:EText"/>
+  </root>
+  <beans name="Person" instanceName="de.dc.javafx.mm.demo.model.Person" generateClass="false">
+    <fields name="name"/>
+    <fields name="forename"/>
+    <fields name="age"/>
+    <fields name="email"/>
+  </beans>
+</mm:EmfModel>

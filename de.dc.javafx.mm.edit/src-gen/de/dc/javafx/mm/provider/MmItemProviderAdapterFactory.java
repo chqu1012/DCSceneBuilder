@@ -328,6 +328,213 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETabPane} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETabPaneItemProvider eTabPaneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETabPane}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETabPaneAdapter() {
+		if (eTabPaneItemProvider == null) {
+			eTabPaneItemProvider = new ETabPaneItemProvider(this);
+		}
+
+		return eTabPaneItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ETab} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ETabItemProvider eTabItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ETab}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createETabAdapter() {
+		if (eTabItemProvider == null) {
+			eTabItemProvider = new ETabItemProvider(this);
+		}
+
+		return eTabItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EAreaChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EAreaChartItemProvider eAreaChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EAreaChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEAreaChartAdapter() {
+		if (eAreaChartItemProvider == null) {
+			eAreaChartItemProvider = new EAreaChartItemProvider(this);
+		}
+
+		return eAreaChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBarChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBarChartItemProvider eBarChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBarChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBarChartAdapter() {
+		if (eBarChartItemProvider == null) {
+			eBarChartItemProvider = new EBarChartItemProvider(this);
+		}
+
+		return eBarChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBubbleChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBubbleChartItemProvider eBubbleChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBubbleChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBubbleChartAdapter() {
+		if (eBubbleChartItemProvider == null) {
+			eBubbleChartItemProvider = new EBubbleChartItemProvider(this);
+		}
+
+		return eBubbleChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.ELineChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ELineChartItemProvider eLineChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.ELineChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createELineChartAdapter() {
+		if (eLineChartItemProvider == null) {
+			eLineChartItemProvider = new ELineChartItemProvider(this);
+		}
+
+		return eLineChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EScatterChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EScatterChartItemProvider eScatterChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EScatterChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEScatterChartAdapter() {
+		if (eScatterChartItemProvider == null) {
+			eScatterChartItemProvider = new EScatterChartItemProvider(this);
+		}
+
+		return eScatterChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EStackedAreaChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EStackedAreaChartItemProvider eStackedAreaChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EStackedAreaChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEStackedAreaChartAdapter() {
+		if (eStackedAreaChartItemProvider == null) {
+			eStackedAreaChartItemProvider = new EStackedAreaChartItemProvider(this);
+		}
+
+		return eStackedAreaChartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EStackedBarChart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EStackedBarChartItemProvider eStackedBarChartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EStackedBarChart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEStackedBarChartAdapter() {
+		if (eStackedBarChartItemProvider == null) {
+			eStackedBarChartItemProvider = new EStackedBarChartItemProvider(this);
+		}
+
+		return eStackedBarChartItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EText} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -972,6 +1179,52 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EImageView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EImageViewItemProvider eImageViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EImageView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEImageViewAdapter() {
+		if (eImageViewItemProvider == null) {
+			eImageViewItemProvider = new EImageViewItemProvider(this);
+		}
+
+		return eImageViewItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EScrollPane} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EScrollPaneItemProvider eScrollPaneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EScrollPane}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEScrollPaneAdapter() {
+		if (eScrollPaneItemProvider == null) {
+			eScrollPaneItemProvider = new EScrollPaneItemProvider(this);
+		}
+
+		return eScrollPaneItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1086,8 +1339,6 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eBindingModelItemProvider.dispose();
 		if (eBindingItemProvider != null)
 			eBindingItemProvider.dispose();
-		if (eEventsItemProvider != null)
-			eEventsItemProvider.dispose();
 		if (styleableItemProvider != null)
 			styleableItemProvider.dispose();
 		if (skinnableItemProvider != null)
@@ -1096,8 +1347,6 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eInsetsItemProvider.dispose();
 		if (eGroupItemProvider != null)
 			eGroupItemProvider.dispose();
-		if (eWebViewItemProvider != null)
-			eWebViewItemProvider.dispose();
 		if (eTextItemProvider != null)
 			eTextItemProvider.dispose();
 		if (eLabelItemProvider != null)
@@ -1154,6 +1403,32 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eAnchorPaneItemProvider.dispose();
 		if (eBorderPaneItemProvider != null)
 			eBorderPaneItemProvider.dispose();
+		if (eImageViewItemProvider != null)
+			eImageViewItemProvider.dispose();
+		if (eScrollPaneItemProvider != null)
+			eScrollPaneItemProvider.dispose();
+		if (eEventsItemProvider != null)
+			eEventsItemProvider.dispose();
+		if (eWebViewItemProvider != null)
+			eWebViewItemProvider.dispose();
+		if (eTabPaneItemProvider != null)
+			eTabPaneItemProvider.dispose();
+		if (eTabItemProvider != null)
+			eTabItemProvider.dispose();
+		if (eAreaChartItemProvider != null)
+			eAreaChartItemProvider.dispose();
+		if (eBarChartItemProvider != null)
+			eBarChartItemProvider.dispose();
+		if (eBubbleChartItemProvider != null)
+			eBubbleChartItemProvider.dispose();
+		if (eLineChartItemProvider != null)
+			eLineChartItemProvider.dispose();
+		if (eScatterChartItemProvider != null)
+			eScatterChartItemProvider.dispose();
+		if (eStackedAreaChartItemProvider != null)
+			eStackedAreaChartItemProvider.dispose();
+		if (eStackedBarChartItemProvider != null)
+			eStackedBarChartItemProvider.dispose();
 	}
 
 }

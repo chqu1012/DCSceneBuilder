@@ -48,13 +48,13 @@ public class ENodeItemProvider extends StyleableItemProvider {
 
 			addOnActionPropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
-			addLayoutXPropertyDescriptor(object);
-			addLayoutYPropertyDescriptor(object);
 			addOpacityPropertyDescriptor(object);
-			addStylePropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 			addVisiblePropertyDescriptor(object);
 			addDisablePropertyDescriptor(object);
+			addStylePropertyDescriptor(object);
+			addStyleClassPropertyDescriptor(object);
+			addLayoutXPropertyDescriptor(object);
+			addLayoutYPropertyDescriptor(object);
 			addMaxHeightPropertyDescriptor(object);
 			addMinHeightPropertyDescriptor(object);
 			addPrefHeightPropertyDescriptor(object);
@@ -78,7 +78,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_EEvents_onAction_feature",
 								"_UI_EEvents_type"),
 						MmPackage.Literals.EEVENTS__ON_ACTION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_EventsPropertyCategory"), null));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_id_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_id_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_layoutX_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_layoutX_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__LAYOUT_X, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null, null));
+						getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_layoutY_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_layoutY_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__LAYOUT_Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null, null));
+						getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_opacity_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_opacity_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__OPACITY, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-						null, null));
+						getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_style_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_style_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__STYLE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_styleClass_feature",
 								"_UI_ENode_type"),
 						MmPackage.Literals.ENODE__STYLE_CLASS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_visible_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_visible_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__VISIBLE, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_disable_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_disable_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__DISABLE, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, getString("_UI_BasePropertyCategory"), null));
 	}
 
 	/**
@@ -215,7 +215,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_maxHeight_feature",
 								"_UI_ENode_type"),
 						MmPackage.Literals.ENODE__MAX_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -231,7 +231,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_minHeight_feature",
 								"_UI_ENode_type"),
 						MmPackage.Literals.ENODE__MIN_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -247,7 +247,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_prefHeight_feature",
 								"_UI_ENode_type"),
 						MmPackage.Literals.ENODE__PREF_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -262,7 +262,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_maxWidth_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_maxWidth_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__MAX_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getResourceLocator(), getString("_UI_ENode_minWidth_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_minWidth_feature", "_UI_ENode_type"),
 						MmPackage.Literals.ENODE__MIN_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -293,7 +293,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ENode_prefWidth_feature",
 								"_UI_ENode_type"),
 						MmPackage.Literals.ENODE__PREF_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -365,13 +365,13 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		switch (notification.getFeatureID(ENode.class)) {
 		case MmPackage.ENODE__ON_ACTION:
 		case MmPackage.ENODE__ID:
-		case MmPackage.ENODE__LAYOUT_X:
-		case MmPackage.ENODE__LAYOUT_Y:
 		case MmPackage.ENODE__OPACITY:
-		case MmPackage.ENODE__STYLE:
-		case MmPackage.ENODE__STYLE_CLASS:
 		case MmPackage.ENODE__VISIBLE:
 		case MmPackage.ENODE__DISABLE:
+		case MmPackage.ENODE__STYLE:
+		case MmPackage.ENODE__STYLE_CLASS:
+		case MmPackage.ENODE__LAYOUT_X:
+		case MmPackage.ENODE__LAYOUT_Y:
 		case MmPackage.ENODE__MAX_HEIGHT:
 		case MmPackage.ENODE__MIN_HEIGHT:
 		case MmPackage.ENODE__PREF_HEIGHT:
@@ -408,9 +408,6 @@ public class ENodeItemProvider extends StyleableItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEGroup()));
-
-		newChildDescriptors
-				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEWebView()));
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEText()));
@@ -492,6 +489,39 @@ public class ENodeItemProvider extends StyleableItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEBorderPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEImageView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEScrollPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEWebView()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createETabPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEAreaChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEBubbleChart()));
+
+		newChildDescriptors
+				.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createELineChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEScatterChart()));
+
+		newChildDescriptors.add(createChildParameter(MmPackage.Literals.ENODE__CHILDREN,
+				MmFactory.eINSTANCE.createEStackedAreaChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEStackedBarChart()));
 	}
 
 	/**

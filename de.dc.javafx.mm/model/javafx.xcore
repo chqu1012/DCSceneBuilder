@@ -42,35 +42,9 @@ class EBinding{
 	
 }
 
-class EEvents{
-	String onAction
-}
-
 class Styleable{}
 
 class Skinnable{}
-
-abstract class ENode extends Styleable, Skinnable, EEvents{
-	String ^id
-	double layoutX
-	double layoutY
-	double opacity
-	String style
-	String[0..*] styleClass
-	boolean visible
-	boolean disable
-	contains EInsets margin
-	double maxHeight
-	double minHeight
-	double prefHeight
-	double maxWidth
-	double minWidth
-	double prefWidth
-
-	contains EInsets padding
-	contains ENode[0..*] children
-}
-
 
 class EInsets{
 	double top ='0.0'
@@ -80,8 +54,6 @@ class EInsets{
 }
 
 class EGroup extends ENode{}
-
-class EWebView extends ENode{}
 
 abstract class EControl extends ENode{
 }
@@ -146,8 +118,6 @@ class ECatgeoryAxis extends EAxis{}
 
 class EValueAxis extends EAxis{}
 
-abstract class EChart extends ENode{}
-
 class EPieChart extends EChart{}
 
 class EXYChart extends EChart{}
@@ -190,6 +160,89 @@ class EBorderPane extends EPane{
 	contains ENode bottom
 	contains ENode center
 }
+
+abstract class EChart extends ENode{
+	boolean animated = 'true'
+	boolean legendVisible = 'true'
+	String title
+}
+
+class EImageView extends ENode{
+	String imagePath
+}
+
+class EScrollPane extends EPane{
+       boolean isPannable = 'true'
+	boolean fitToWidth = 'false'
+	boolean fitToHeight = 'false'
+	contains ENode content
+}
+
+class EEvents{
+ @GenModel(propertyCategory="Events")
+	String onAction
+}
+
+class EWebView extends ENode{
+	String url
+	boolean contextMenuEnabled = 'false'
+}
+
+abstract class ENode extends Styleable, Skinnable, EEvents{
+
+ @GenModel(propertyCategory="Base")
+	String ^id
+ @GenModel(propertyCategory="Base")
+	double opacity
+ @GenModel(propertyCategory="Base")
+	boolean visible
+ @GenModel(propertyCategory="Base")
+	boolean disable
+ @GenModel(propertyCategory="Base")
+	String style
+ @GenModel(propertyCategory="Base")
+	String[0..*] styleClass
+
+ @GenModel(propertyCategory="Layout")
+	contains EInsets margin
+ @GenModel(propertyCategory="Layout")
+	double layoutX
+ @GenModel(propertyCategory="Layout")
+	double layoutY
+ @GenModel(propertyCategory="Layout")
+	double maxHeight
+ @GenModel(propertyCategory="Layout")
+	double minHeight
+ @GenModel(propertyCategory="Layout")
+	double prefHeight
+ @GenModel(propertyCategory="Layout")
+	double maxWidth
+ @GenModel(propertyCategory="Layout")
+	double minWidth
+ @GenModel(propertyCategory="Layout")
+	double prefWidth
+ @GenModel(propertyCategory="Layout")
+	contains EInsets padding
+	contains ENode[0..*] children
+}
+
+class ETabPane extends EPane{
+	contains ETab[0..*] tabs
+}
+
+class ETab{
+	String ^id
+	String name
+	contains ENode[0..1] content
+}
+
+class EAreaChart extends EXYChart{}
+class EBarChart extends EXYChart{}
+class EBubbleChart extends EXYChart{}
+class ELineChart extends EXYChart{}
+class EScatterChart extends EXYChart{}
+class EStackedAreaChart extends EXYChart{}
+class EStackedBarChart extends EXYChart{}
 
 type EPos wraps Pos create{ if(it!==null) Pos.valueOf(it)} convert{ if(it!==null) it.name}
 

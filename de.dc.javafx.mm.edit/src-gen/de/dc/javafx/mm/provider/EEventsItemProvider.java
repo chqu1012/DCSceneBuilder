@@ -73,7 +73,7 @@ public class EEventsItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_EEvents_onAction_feature",
 								"_UI_EEvents_type"),
 						MmPackage.Literals.EEVENTS__ON_ACTION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_EventsPropertyCategory"), null));
 	}
 
 	/**

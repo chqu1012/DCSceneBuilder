@@ -68,8 +68,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEBindingModel();
 		case MmPackage.EBINDING:
 			return createEBinding();
-		case MmPackage.EEVENTS:
-			return createEEvents();
 		case MmPackage.STYLEABLE:
 			return createStyleable();
 		case MmPackage.SKINNABLE:
@@ -78,8 +76,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEInsets();
 		case MmPackage.EGROUP:
 			return createEGroup();
-		case MmPackage.EWEB_VIEW:
-			return createEWebView();
 		case MmPackage.ETEXT:
 			return createEText();
 		case MmPackage.ELABEL:
@@ -136,6 +132,32 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createEAnchorPane();
 		case MmPackage.EBORDER_PANE:
 			return createEBorderPane();
+		case MmPackage.EIMAGE_VIEW:
+			return createEImageView();
+		case MmPackage.ESCROLL_PANE:
+			return createEScrollPane();
+		case MmPackage.EEVENTS:
+			return createEEvents();
+		case MmPackage.EWEB_VIEW:
+			return createEWebView();
+		case MmPackage.ETAB_PANE:
+			return createETabPane();
+		case MmPackage.ETAB:
+			return createETab();
+		case MmPackage.EAREA_CHART:
+			return createEAreaChart();
+		case MmPackage.EBAR_CHART:
+			return createEBarChart();
+		case MmPackage.EBUBBLE_CHART:
+			return createEBubbleChart();
+		case MmPackage.ELINE_CHART:
+			return createELineChart();
+		case MmPackage.ESCATTER_CHART:
+			return createEScatterChart();
+		case MmPackage.ESTACKED_AREA_CHART:
+			return createEStackedAreaChart();
+		case MmPackage.ESTACKED_BAR_CHART:
+			return createEStackedBarChart();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -244,17 +266,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	 * @generated
 	 */
 	@Override
-	public EEvents createEEvents() {
-		EEventsImpl eEvents = new EEventsImpl();
-		return eEvents;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Styleable createStyleable() {
 		StyleableImpl styleable = new StyleableImpl();
 		return styleable;
@@ -291,17 +302,6 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EGroup createEGroup() {
 		EGroupImpl eGroup = new EGroupImpl();
 		return eGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EWebView createEWebView() {
-		EWebViewImpl eWebView = new EWebViewImpl();
-		return eWebView;
 	}
 
 	/**
@@ -610,6 +610,149 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EBorderPane createEBorderPane() {
 		EBorderPaneImpl eBorderPane = new EBorderPaneImpl();
 		return eBorderPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EImageView createEImageView() {
+		EImageViewImpl eImageView = new EImageViewImpl();
+		return eImageView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EScrollPane createEScrollPane() {
+		EScrollPaneImpl eScrollPane = new EScrollPaneImpl();
+		return eScrollPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEvents createEEvents() {
+		EEventsImpl eEvents = new EEventsImpl();
+		return eEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EWebView createEWebView() {
+		EWebViewImpl eWebView = new EWebViewImpl();
+		return eWebView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETabPane createETabPane() {
+		ETabPaneImpl eTabPane = new ETabPaneImpl();
+		return eTabPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ETab createETab() {
+		ETabImpl eTab = new ETabImpl();
+		return eTab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAreaChart createEAreaChart() {
+		EAreaChartImpl eAreaChart = new EAreaChartImpl();
+		return eAreaChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBarChart createEBarChart() {
+		EBarChartImpl eBarChart = new EBarChartImpl();
+		return eBarChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBubbleChart createEBubbleChart() {
+		EBubbleChartImpl eBubbleChart = new EBubbleChartImpl();
+		return eBubbleChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ELineChart createELineChart() {
+		ELineChartImpl eLineChart = new ELineChartImpl();
+		return eLineChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EScatterChart createEScatterChart() {
+		EScatterChartImpl eScatterChart = new EScatterChartImpl();
+		return eScatterChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EStackedAreaChart createEStackedAreaChart() {
+		EStackedAreaChartImpl eStackedAreaChart = new EStackedAreaChartImpl();
+		return eStackedAreaChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EStackedBarChart createEStackedBarChart() {
+		EStackedBarChartImpl eStackedBarChart = new EStackedBarChartImpl();
+		return eStackedBarChart;
 	}
 
 	/**

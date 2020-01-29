@@ -101,13 +101,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MmPackage.EEVENTS: {
-			EEvents eEvents = (EEvents) theEObject;
-			T result = caseEEvents(eEvents);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case MmPackage.STYLEABLE: {
 			Styleable styleable = (Styleable) theEObject;
 			T result = caseStyleable(styleable);
@@ -118,19 +111,6 @@ public class MmSwitch<T> extends Switch<T> {
 		case MmPackage.SKINNABLE: {
 			Skinnable skinnable = (Skinnable) theEObject;
 			T result = caseSkinnable(skinnable);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MmPackage.ENODE: {
-			ENode eNode = (ENode) theEObject;
-			T result = caseENode(eNode);
-			if (result == null)
-				result = caseStyleable(eNode);
-			if (result == null)
-				result = caseSkinnable(eNode);
-			if (result == null)
-				result = caseEEvents(eNode);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -153,21 +133,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = caseSkinnable(eGroup);
 			if (result == null)
 				result = caseEEvents(eGroup);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MmPackage.EWEB_VIEW: {
-			EWebView eWebView = (EWebView) theEObject;
-			T result = caseEWebView(eWebView);
-			if (result == null)
-				result = caseENode(eWebView);
-			if (result == null)
-				result = caseStyleable(eWebView);
-			if (result == null)
-				result = caseSkinnable(eWebView);
-			if (result == null)
-				result = caseEEvents(eWebView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -542,21 +507,6 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MmPackage.ECHART: {
-			EChart eChart = (EChart) theEObject;
-			T result = caseEChart(eChart);
-			if (result == null)
-				result = caseENode(eChart);
-			if (result == null)
-				result = caseStyleable(eChart);
-			if (result == null)
-				result = caseSkinnable(eChart);
-			if (result == null)
-				result = caseEEvents(eChart);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case MmPackage.EPIE_CHART: {
 			EPieChart ePieChart = (EPieChart) theEObject;
 			T result = caseEPieChart(ePieChart);
@@ -776,6 +726,245 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.ECHART: {
+			EChart eChart = (EChart) theEObject;
+			T result = caseEChart(eChart);
+			if (result == null)
+				result = caseENode(eChart);
+			if (result == null)
+				result = caseStyleable(eChart);
+			if (result == null)
+				result = caseSkinnable(eChart);
+			if (result == null)
+				result = caseEEvents(eChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EIMAGE_VIEW: {
+			EImageView eImageView = (EImageView) theEObject;
+			T result = caseEImageView(eImageView);
+			if (result == null)
+				result = caseENode(eImageView);
+			if (result == null)
+				result = caseStyleable(eImageView);
+			if (result == null)
+				result = caseSkinnable(eImageView);
+			if (result == null)
+				result = caseEEvents(eImageView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ESCROLL_PANE: {
+			EScrollPane eScrollPane = (EScrollPane) theEObject;
+			T result = caseEScrollPane(eScrollPane);
+			if (result == null)
+				result = caseEPane(eScrollPane);
+			if (result == null)
+				result = caseENode(eScrollPane);
+			if (result == null)
+				result = caseStyleable(eScrollPane);
+			if (result == null)
+				result = caseSkinnable(eScrollPane);
+			if (result == null)
+				result = caseEEvents(eScrollPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EEVENTS: {
+			EEvents eEvents = (EEvents) theEObject;
+			T result = caseEEvents(eEvents);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EWEB_VIEW: {
+			EWebView eWebView = (EWebView) theEObject;
+			T result = caseEWebView(eWebView);
+			if (result == null)
+				result = caseENode(eWebView);
+			if (result == null)
+				result = caseStyleable(eWebView);
+			if (result == null)
+				result = caseSkinnable(eWebView);
+			if (result == null)
+				result = caseEEvents(eWebView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ENODE: {
+			ENode eNode = (ENode) theEObject;
+			T result = caseENode(eNode);
+			if (result == null)
+				result = caseStyleable(eNode);
+			if (result == null)
+				result = caseSkinnable(eNode);
+			if (result == null)
+				result = caseEEvents(eNode);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETAB_PANE: {
+			ETabPane eTabPane = (ETabPane) theEObject;
+			T result = caseETabPane(eTabPane);
+			if (result == null)
+				result = caseEPane(eTabPane);
+			if (result == null)
+				result = caseENode(eTabPane);
+			if (result == null)
+				result = caseStyleable(eTabPane);
+			if (result == null)
+				result = caseSkinnable(eTabPane);
+			if (result == null)
+				result = caseEEvents(eTabPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ETAB: {
+			ETab eTab = (ETab) theEObject;
+			T result = caseETab(eTab);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EAREA_CHART: {
+			EAreaChart eAreaChart = (EAreaChart) theEObject;
+			T result = caseEAreaChart(eAreaChart);
+			if (result == null)
+				result = caseEXYChart(eAreaChart);
+			if (result == null)
+				result = caseEChart(eAreaChart);
+			if (result == null)
+				result = caseENode(eAreaChart);
+			if (result == null)
+				result = caseStyleable(eAreaChart);
+			if (result == null)
+				result = caseSkinnable(eAreaChart);
+			if (result == null)
+				result = caseEEvents(eAreaChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EBAR_CHART: {
+			EBarChart eBarChart = (EBarChart) theEObject;
+			T result = caseEBarChart(eBarChart);
+			if (result == null)
+				result = caseEXYChart(eBarChart);
+			if (result == null)
+				result = caseEChart(eBarChart);
+			if (result == null)
+				result = caseENode(eBarChart);
+			if (result == null)
+				result = caseStyleable(eBarChart);
+			if (result == null)
+				result = caseSkinnable(eBarChart);
+			if (result == null)
+				result = caseEEvents(eBarChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EBUBBLE_CHART: {
+			EBubbleChart eBubbleChart = (EBubbleChart) theEObject;
+			T result = caseEBubbleChart(eBubbleChart);
+			if (result == null)
+				result = caseEXYChart(eBubbleChart);
+			if (result == null)
+				result = caseEChart(eBubbleChart);
+			if (result == null)
+				result = caseENode(eBubbleChart);
+			if (result == null)
+				result = caseStyleable(eBubbleChart);
+			if (result == null)
+				result = caseSkinnable(eBubbleChart);
+			if (result == null)
+				result = caseEEvents(eBubbleChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ELINE_CHART: {
+			ELineChart eLineChart = (ELineChart) theEObject;
+			T result = caseELineChart(eLineChart);
+			if (result == null)
+				result = caseEXYChart(eLineChart);
+			if (result == null)
+				result = caseEChart(eLineChart);
+			if (result == null)
+				result = caseENode(eLineChart);
+			if (result == null)
+				result = caseStyleable(eLineChart);
+			if (result == null)
+				result = caseSkinnable(eLineChart);
+			if (result == null)
+				result = caseEEvents(eLineChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ESCATTER_CHART: {
+			EScatterChart eScatterChart = (EScatterChart) theEObject;
+			T result = caseEScatterChart(eScatterChart);
+			if (result == null)
+				result = caseEXYChart(eScatterChart);
+			if (result == null)
+				result = caseEChart(eScatterChart);
+			if (result == null)
+				result = caseENode(eScatterChart);
+			if (result == null)
+				result = caseStyleable(eScatterChart);
+			if (result == null)
+				result = caseSkinnable(eScatterChart);
+			if (result == null)
+				result = caseEEvents(eScatterChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ESTACKED_AREA_CHART: {
+			EStackedAreaChart eStackedAreaChart = (EStackedAreaChart) theEObject;
+			T result = caseEStackedAreaChart(eStackedAreaChart);
+			if (result == null)
+				result = caseEXYChart(eStackedAreaChart);
+			if (result == null)
+				result = caseEChart(eStackedAreaChart);
+			if (result == null)
+				result = caseENode(eStackedAreaChart);
+			if (result == null)
+				result = caseStyleable(eStackedAreaChart);
+			if (result == null)
+				result = caseSkinnable(eStackedAreaChart);
+			if (result == null)
+				result = caseEEvents(eStackedAreaChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.ESTACKED_BAR_CHART: {
+			EStackedBarChart eStackedBarChart = (EStackedBarChart) theEObject;
+			T result = caseEStackedBarChart(eStackedBarChart);
+			if (result == null)
+				result = caseEXYChart(eStackedBarChart);
+			if (result == null)
+				result = caseEChart(eStackedBarChart);
+			if (result == null)
+				result = caseENode(eStackedBarChart);
+			if (result == null)
+				result = caseStyleable(eStackedBarChart);
+			if (result == null)
+				result = caseSkinnable(eStackedBarChart);
+			if (result == null)
+				result = caseEEvents(eStackedBarChart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -857,21 +1046,6 @@ public class MmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EEvents</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EEvents</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEEvents(EEvents object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Styleable</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -902,21 +1076,6 @@ public class MmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ENode</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ENode</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseENode(ENode object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EInsets</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -943,21 +1102,6 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEGroup(EGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EWeb View</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EWeb View</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEWebView(EWebView object) {
 		return null;
 	}
 
@@ -1262,21 +1406,6 @@ public class MmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EChart</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EChart</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEChart(EChart object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EPie Chart</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1468,6 +1597,231 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEBorderPane(EBorderPane object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EChart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EChart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEChart(EChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EImage View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EImage View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEImageView(EImageView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EScroll Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EScroll Pane</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEScrollPane(EScrollPane object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EEvents</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EEvents</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEEvents(EEvents object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EWeb View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EWeb View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEWebView(EWebView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ENode</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ENode</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseENode(ENode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETab Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETab Pane</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETabPane(ETabPane object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETab</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETab</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETab(ETab object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EArea Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EArea Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEAreaChart(EAreaChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EBar Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EBar Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEBarChart(EBarChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EBubble Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EBubble Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEBubbleChart(EBubbleChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ELine Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ELine Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseELineChart(ELineChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EScatter Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EScatter Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEScatterChart(EScatterChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EStacked Area Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EStacked Area Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEStackedAreaChart(EStackedAreaChart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EStacked Bar Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EStacked Bar Chart</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEStackedBarChart(EStackedBarChart object) {
 		return null;
 	}
 

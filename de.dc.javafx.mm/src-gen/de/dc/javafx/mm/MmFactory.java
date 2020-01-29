@@ -69,15 +69,6 @@ public interface MmFactory extends EFactory {
 	EBinding createEBinding();
 
 	/**
-	 * Returns a new object of class '<em>EEvents</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EEvents</em>'.
-	 * @generated
-	 */
-	EEvents createEEvents();
-
-	/**
 	 * Returns a new object of class '<em>Styleable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,15 +103,6 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	EGroup createEGroup();
-
-	/**
-	 * Returns a new object of class '<em>EWeb View</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EWeb View</em>'.
-	 * @generated
-	 */
-	EWebView createEWebView();
 
 	/**
 	 * Returns a new object of class '<em>EText</em>'.
@@ -373,6 +355,123 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	EBorderPane createEBorderPane();
+
+	/**
+	 * Returns a new object of class '<em>EImage View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EImage View</em>'.
+	 * @generated
+	 */
+	EImageView createEImageView();
+
+	/**
+	 * Returns a new object of class '<em>EScroll Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EScroll Pane</em>'.
+	 * @generated
+	 */
+	EScrollPane createEScrollPane();
+
+	/**
+	 * Returns a new object of class '<em>EEvents</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EEvents</em>'.
+	 * @generated
+	 */
+	EEvents createEEvents();
+
+	/**
+	 * Returns a new object of class '<em>EWeb View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EWeb View</em>'.
+	 * @generated
+	 */
+	EWebView createEWebView();
+
+	/**
+	 * Returns a new object of class '<em>ETab Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETab Pane</em>'.
+	 * @generated
+	 */
+	ETabPane createETabPane();
+
+	/**
+	 * Returns a new object of class '<em>ETab</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ETab</em>'.
+	 * @generated
+	 */
+	ETab createETab();
+
+	/**
+	 * Returns a new object of class '<em>EArea Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EArea Chart</em>'.
+	 * @generated
+	 */
+	EAreaChart createEAreaChart();
+
+	/**
+	 * Returns a new object of class '<em>EBar Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBar Chart</em>'.
+	 * @generated
+	 */
+	EBarChart createEBarChart();
+
+	/**
+	 * Returns a new object of class '<em>EBubble Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBubble Chart</em>'.
+	 * @generated
+	 */
+	EBubbleChart createEBubbleChart();
+
+	/**
+	 * Returns a new object of class '<em>ELine Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ELine Chart</em>'.
+	 * @generated
+	 */
+	ELineChart createELineChart();
+
+	/**
+	 * Returns a new object of class '<em>EScatter Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EScatter Chart</em>'.
+	 * @generated
+	 */
+	EScatterChart createEScatterChart();
+
+	/**
+	 * Returns a new object of class '<em>EStacked Area Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EStacked Area Chart</em>'.
+	 * @generated
+	 */
+	EStackedAreaChart createEStackedAreaChart();
+
+	/**
+	 * Returns a new object of class '<em>EStacked Bar Chart</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EStacked Bar Chart</em>'.
+	 * @generated
+	 */
+	EStackedBarChart createEStackedBarChart();
 
 	/**
 	 * Returns an instance of data type '<em>EControl Binding</em>' corresponding the given literal.
