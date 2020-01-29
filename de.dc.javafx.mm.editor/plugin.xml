@@ -285,6 +285,12 @@
             name="Mode Log View"
             restorable="true">
       </view>
+      <view
+            class="de.dc.javafx.mm.editor.EmfModelPreview"
+            id="de.dc.javafx.mm.editor.EmfModelPreview"
+            name="EmfModelPreview"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>
