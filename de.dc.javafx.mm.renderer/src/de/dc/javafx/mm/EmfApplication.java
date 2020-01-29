@@ -2,6 +2,7 @@ package de.dc.javafx.mm;
 
 import de.dc.javafx.mm.di.EmfPlatform;
 import de.dc.javafx.mm.file.FxmlFile;
+import de.dc.javafx.mm.renderer.FxmlChartRenderer;
 import de.dc.javafx.mm.renderer.FxmlRenderer;
 import de.dc.javafx.mm.renderer.FxmlRendererApplication;
 import javafx.application.Application;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 public abstract class EmfApplication extends Application {
 
 	protected FxmlFile file = new FxmlFile();
-	protected FxmlRenderer renderer;
+	protected FxmlChartRenderer renderer;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -33,8 +34,8 @@ public abstract class EmfApplication extends Application {
 		return 1200;
 	}
 
-	protected FxmlRenderer getRenderer() {
-		return EmfPlatform.getInstance(FxmlRenderer.class);
+	protected FxmlChartRenderer getRenderer() {
+		return EmfPlatform.getInstance(FxmlChartRenderer.class);
 	}
 
 	protected Parent getRoot(String path) {

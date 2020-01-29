@@ -17,7 +17,7 @@ public class FxmlRendererApplication extends EmfApplication {
 	}
 
 	@Override
-	protected FxmlRenderer getRenderer() {
-		return EmfPlatform.getInstance(FxmlRenderer.class);
+	protected FxmlChartRenderer getRenderer() {
+		return EmfPlatform.getInstance(FxmlChartRenderer.class);
 	}
 }
