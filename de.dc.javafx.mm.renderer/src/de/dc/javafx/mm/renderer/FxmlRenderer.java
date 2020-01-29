@@ -264,7 +264,7 @@ public class FxmlRenderer extends MmSwitch<Node> {
 		return node;
 	}
 
-	private void initSize(ENode object, Region node) {
+	protected void initSize(ENode object, Region node) {
 		node.setMinHeight(object.getMinHeight() == 0 ? Double.MIN_VALUE : object.getMinHeight());
 		node.setMinWidth(object.getMinWidth() == 0 ? Double.MIN_VALUE : object.getMinWidth());
 		node.setMaxHeight(object.getMaxHeight() == 0 ? Double.MAX_VALUE : object.getMaxHeight());
