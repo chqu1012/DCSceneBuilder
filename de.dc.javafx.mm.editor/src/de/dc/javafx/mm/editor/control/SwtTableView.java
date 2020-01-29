@@ -478,36 +478,36 @@ public class SwtTableView extends Composite{
 		listTableColumnViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap_2));
 		listTableColumnViewer.setContentProvider(listContentProvider_2);
 		//
-//		listTableColumnViewer.setLabelProvider(new LabelProvider() {
-//			@Override
-//			public String getText(Object element) {
-//				if (element instanceof ETableColumn) {
-//					ETableColumn column = (ETableColumn) element;
-//					return column.getName();
-//				}
-//				return super.getText(element);
-//			}
-//		});
-//		comboAssociatedFieldViewer.setLabelProvider(new LabelProvider() {
-//			@Override
-//			public String getText(Object element) {
-//				if (element instanceof EField) {
-//					EField field = (EField) element;
-//					return field.getName();
-//				}
-//				return super.getText(element);
-//			}
-//		});
-//		listModelFieldViewer.setLabelProvider(new LabelProvider() {
-//			@Override
-//			public String getText(Object element) {
-//				if (element instanceof EField) {
-//					EField field = (EField) element;
-//					return field.getName();
-//				}
-//				return super.getText(element);
-//			}
-//		});
+		listTableColumnViewer.setLabelProvider(new LabelProvider() {
+			@Override
+			public String getText(Object element) {
+				if (element instanceof ETableColumn) {
+					ETableColumn column = (ETableColumn) element;
+					return column.getName();
+				}
+				return super.getText(element);
+			}
+		});
+		comboAssociatedFieldViewer.setLabelProvider(new LabelProvider() {
+			@Override
+			public String getText(Object element) {
+				if (element instanceof EField) {
+					EField field = (EField) element;
+					return field.getName();
+				}
+				return super.getText(element);
+			}
+		});
+		listModelFieldViewer.setLabelProvider(new LabelProvider() {
+			@Override
+			public String getText(Object element) {
+				if (element instanceof EField) {
+					EField field = (EField) element;
+					return field.getName();
+				}
+				return super.getText(element);
+			}
+		});
 		listTableColumnViewer.setInput(columnsETableViewObserveList);
 		//
 		return bindingContext;
