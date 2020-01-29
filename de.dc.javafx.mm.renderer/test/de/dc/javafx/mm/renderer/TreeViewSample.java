@@ -1,17 +1,13 @@
 package de.dc.javafx.mm.renderer;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import de.dc.javafx.mm.control.viewer.TreeViewer;
 import de.dc.javafx.mm.control.viewer.model.Node;
-import de.dc.javafx.mm.control.viewer.provider.IContentProvider;
-import de.dc.javafx.mm.control.viewer.provider.ILabelProvider;
 import de.dc.javafx.mm.control.viewer.provider.NodeContentProvider;
 import de.dc.javafx.mm.control.viewer.provider.NodeLabelProvider;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
