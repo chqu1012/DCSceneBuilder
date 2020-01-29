@@ -26,7 +26,7 @@ public class TreeViewer<T extends Node> extends TreeView<T> implements IViewer<T
 	}
 	
 	@Override
-	public void setLabelProvider(ILabelProvider<T> labelProvider) {
+	public void setLabelProvider(ILabelProvider labelProvider) {
 		setCellFactory(e->{
 			return new TreeCell<T>() {
 				@Override

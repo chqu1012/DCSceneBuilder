@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import de.dc.javafx.mm.control.viewer.TreeViewer;
+import de.dc.javafx.mm.control.viewer.model.Node;
 import de.dc.javafx.mm.control.viewer.provider.IContentProvider;
 import de.dc.javafx.mm.control.viewer.provider.ILabelProvider;
+import de.dc.javafx.mm.control.viewer.provider.NodeContentProvider;
+import de.dc.javafx.mm.control.viewer.provider.NodeLabelProvider;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -36,42 +39,9 @@ public class TreeViewSample extends Application {
  
     @Override
     public void start(Stage stage) {
-    	TreeViewer<de.dc.javafx.mm.control.viewer.model.Node> treeViewer = new TreeViewer<>();
-    	treeViewer.setLabelProvider(new ILabelProvider<de.dc.javafx.mm.control.viewer.model.Node>() {
-			
-			@Override
-			public String getText(de.dc.javafx.mm.control.viewer.model.Node element) {
-				return element.getName();
-			}
-			
-			@Override
-			public Image getImage(de.dc.javafx.mm.control.viewer.model.Node element) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-		});
-    	treeViewer.setContentProvider(new IContentProvider<de.dc.javafx.mm.control.viewer.model.Node>() {
-			
-			@Override
-			public boolean hasChildren(de.dc.javafx.mm.control.viewer.model.Node input) {
-				return !input.getChildren().isEmpty();
-			}
-			
-			@Override
-			public de.dc.javafx.mm.control.viewer.model.Node getParent(de.dc.javafx.mm.control.viewer.model.Node input) {
-				return input.getParent();
-			}
-			
-			@Override
-			public List<de.dc.javafx.mm.control.viewer.model.Node> getElements(de.dc.javafx.mm.control.viewer.model.Node input) {
-				return new ArrayList<>();
-			}
-			
-			@Override
-			public List<de.dc.javafx.mm.control.viewer.model.Node> getChildren(de.dc.javafx.mm.control.viewer.model.Node input) {
-				return input.getChildren();
-			}
-		});
+    	TreeViewer<Node> treeViewer = new TreeViewer<>();
+    	treeViewer.setLabelProvider(new NodeLabelProvider());
+    	treeViewer.setContentProvider(new NodeContentProvider());
     	treeViewer.setInput(root);
     	
         stage.setTitle("Tree View Sample");
@@ -84,11 +54,11 @@ public class TreeViewSample extends Application {
         stage.show();
     }
  
-    public static class Employee extends de.dc.javafx.mm.control.viewer.model.Node{
+    public static class Employee extends Node{
 
     	private String department;
     	
-		public Employee(de.dc.javafx.mm.control.viewer.model.Node parent, String name, String deparment) {
+		public Employee(Node parent, String name, String deparment) {
 			super(parent);
 			setName(name);
 			setDepartment(deparment);
