@@ -166,44 +166,49 @@ public class SwtTableView extends Composite{
 		buttonOpenType.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				Shell parent= JavaPlugin.getActiveWorkbenchShell();
-				OpenTypeSelectionDialog dialog= new OpenTypeSelectionDialog(parent, false,
-					PlatformUI.getWorkbench().getProgressService(),
-					SearchEngine.createWorkspaceScope(), IJavaSearchConstants.TYPE);
+				Shell parent = JavaPlugin.getActiveWorkbenchShell();
+				OpenTypeSelectionDialog dialog = new OpenTypeSelectionDialog(parent, false,
+						PlatformUI.getWorkbench().getProgressService(), SearchEngine.createWorkspaceScope(),
+						IJavaSearchConstants.TYPE);
 
 				dialog.setTitle(ActionMessages.OpenTypeInHierarchyAction_dialogTitle);
 				dialog.setMessage(ActionMessages.OpenTypeInHierarchyAction_dialogMessage);
-				int result= dialog.open();
+				int result = dialog.open();
 				if (result != IDialogConstants.OK_ID)
 					return;
 
-				Object[] types= dialog.getResult();
+				Object[] types = dialog.getResult();
 				if (types != null && types.length > 0) {
-					IType type= (IType)types[0];
+					IType type = (IType) types[0];
 					eBean.setName(type.getElementName());
 					eBean.setInstanceName(type.getFullyQualifiedName());
-					
+
 					textTableModelName.setText(type.getElementName());
 					textTableModelInstanceName.setText(type.getFullyQualifiedName());
-					
+
 					try {
 						for (IField field : type.getFields()) {
 							String fieldName = field.getElementName();
 							String fieldType = Signature.getSignatureSimpleName(field.getTypeSignature());
-							
+
 							EField sfield = EcoreUtil.copy(eField);
 							sfield.setName(fieldName);
 							sfield.setDatatype(fieldType);
 							eBean.getFields().add(sfield);
-							
+
 							ETableColumn column = EcoreUtil.copy(eTableColumn);
 							column.setAssociatedField(sfield);
-							column.setId("column"+eBean.getName()+StringUtils.capitalize(sfield.getName()));
+							column.setId("column" + eBean.getName() + StringUtils.capitalize(sfield.getName()));
 							column.setName(StringUtils.capitalize(sfield.getName()));
 							eTableView.getColumns().add(column);
-							
+
+							boolean existBean = model.getBeans().parallelStream()
+									.filter(b -> b.getName().equals(eBean.getName())).findAny().isPresent();
+							if (!existBean) {
+								MessageDialog.openError(new Shell(), "EBean already exist!", "EBean "+eBean.getName()+" already added to EmfModel!");
+							}
 							model.getBeans().add(eBean);
-							
+
 							listTableColumnViewer.refresh();
 							listModelFieldViewer.refresh();
 							comboAssociatedFieldViewer.refresh();
@@ -211,7 +216,7 @@ public class SwtTableView extends Composite{
 					} catch (JavaModelException e1) {
 						e1.printStackTrace();
 					}
-					
+
 				}
 			}
 		});
