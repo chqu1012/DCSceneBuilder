@@ -220,6 +220,11 @@
                   label="Convert to Emf Model"
                   style="push">
             </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.GenerateControllerByFxml"
+                  label="Generate Controller By Fxml"
+                  style="push">
+            </command>
          </menu>
       </menuContribution>
    </extension>
@@ -269,6 +274,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.ValidateEmfModelHandler"
             id="de.dc.javafx.mm.editor.ValidateEmfModelCommand"
             name="Validate EmfModel">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerFromFxmlHandler"
+            id="de.dc.javafx.mm.editor.GenerateControllerByFxml"
+            name="Generate Controller By Fxml">
       </command>
    </extension>
    <extension
