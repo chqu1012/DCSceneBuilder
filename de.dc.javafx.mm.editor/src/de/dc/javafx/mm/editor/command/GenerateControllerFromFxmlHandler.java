@@ -4,32 +4,29 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.jdt.core.JavaCore;
+import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.jdt.internal.core.PackageFragment;
+import org.eclipse.jdt.ui.JavaUI;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.dialogs.SelectionDialog;
 
 import com.oracle.javafx.scenebuilder.kit.editor.EditorController;
 import com.oracle.javafx.scenebuilder.kit.fxom.FXOMDocument;
-import com.oracle.javafx.scenebuilder.kit.fxom.FXOMInstance;
-import com.oracle.javafx.scenebuilder.kit.fxom.FXOMObject;
-import com.oracle.javafx.scenebuilder.kit.fxom.FXOMPropertyT;
 
-import de.dc.javafx.mm.ENode;
-import de.dc.javafx.mm.MmFactory;
-import de.dc.javafx.mm.MmPackage;
 import de.dc.javafx.mm.editor.model.FxmlModel;
 import de.dc.javafx.mm.editor.template.ControllerByFxmlTemplate;
 import javafx.embed.swing.JFXPanel;
@@ -58,10 +55,28 @@ public class GenerateControllerFromFxmlHandler extends AbstractHandler {
 
 					FXOMDocument fxomDocument = editorController.getFxomDocument();
 
-					FxmlModel fxmlModel = new FxmlModel(model.getName().replace(".fxml", ""), "", fxomDocument);
-					String controllerContent = new ControllerByFxmlTemplate().gen(fxmlModel);
-					System.out.println(controllerContent);
+					IProject project = parent.getProject();
+					IFolder srcFolder = project.getFolder("src");
 					
+					IJavaProject jp = JavaCore.create(project);
+					try {
+						SelectionDialog dialog = JavaUI.createPackageDialog(new Shell(), jp.getPackageFragmentRoot(srcFolder));
+						int code = dialog.open();
+						if (code == 0) {
+							for (Object object : dialog.getResult()) {
+								if (object instanceof PackageFragment) {
+									PackageFragment fragment = (PackageFragment) object;
+
+									FxmlModel fxmlModel = new FxmlModel(model.getName().replace(".fxml", ""), fragment.getElementName(), fxomDocument);
+									String controllerContent = new ControllerByFxmlTemplate().gen(fxmlModel);
+									System.out.println(controllerContent);
+								}
+							}
+							
+						}
+					} catch (JavaModelException e) {
+						e.printStackTrace();
+					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
