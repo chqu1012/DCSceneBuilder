@@ -12,8 +12,11 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.eclipse.emf.ecore.EObject;
 
 import de.dc.javafx.mm.EAnchorPane;
+import de.dc.javafx.mm.EBorderData;
+import de.dc.javafx.mm.EBorderDirection;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EButton;
 import de.dc.javafx.mm.ECheckBox;
@@ -84,6 +87,8 @@ public class FxmlRenderer extends MmSwitch<Node> {
 
 	private Class<?> controller;
 	private Object controllerInstance;
+
+	private BorderPane node;
 
 	@SuppressWarnings("unchecked")
 	public <T extends Node> T findNodeBy(String id) {
@@ -421,21 +426,48 @@ private void initId(ENode object, Node node) {
 
 	@Override
 	public Node caseEBorderPane(EBorderPane object) {
-		BorderPane node = new BorderPane();
+		node = new BorderPane();
 		node.setLayoutX(object.getLayoutX());
 		node.setLayoutY(object.getLayoutY());
 
 		initSize(object, node);
 
-		object.getChildren().forEach(e->node.setCenter(doSwitch(e)));
-		
-		createBorderPaneItem(object.getLeft()).ifPresent(e -> node.setLeft(e));
-		createBorderPaneItem(object.getRight()).ifPresent(e -> node.setRight(e));
-		createBorderPaneItem(object.getTop()).ifPresent(e -> node.setTop(e));
-		createBorderPaneItem(object.getBottom()).ifPresent(e -> node.setBottom(e));
-		createBorderPaneItem(object.getCenter()).ifPresent(e -> node.setCenter(e));
-
+		object.getChildren().forEach(e->{
+			if (e.getLayoutData()!=null) {
+				doSwitch(e.getLayoutData());
+			}else {
+				node.setCenter(doSwitch(e));
+			}
+		});
 		return node;
+	}
+	
+	@Override
+	public Node caseEBorderData(EBorderData object) {
+		EBorderDirection direction = object.getDirection();
+		EObject parent = object.eContainer();
+		Node child = doSwitch(parent);
+		switch (direction) {
+		case BOTTOM:
+			node.setBottom(child);
+			break;
+		case TOP:
+			node.setTop(child);
+			break;
+		case LEFT:
+			node.setLeft(child);
+			break;
+		case RIGHT:
+			node.setRight(child);
+			break;
+		case CENTER:
+			node.setCenter(child);
+			break;
+		default:
+			node.setCenter(child);
+			break;
+		}
+		return super.caseEBorderData(object);
 	}
 
 	@Override
