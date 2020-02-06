@@ -1,7 +1,6 @@
 package de.dc.javafx.mm.editor.template;
 
 import de.dc.javafx.mm.EBean
-import de.dc.javafx.mm.EBorderPane
 import de.dc.javafx.mm.ENode
 import de.dc.javafx.mm.EmfModel
 import org.eclipse.emf.ecore.util.EcoreUtil
@@ -40,22 +39,14 @@ class ControllerTemplate implements IGenerator<EmfModel> {
 	def void getInitField(ENode node) {
 		if (node !== null) {
 			if (!node.id.isNullOrEmpty) {
+				println(node.id)
 				fieldBuffer.append = '''«fieldInitializer.doSwitch(node)»'''
 				val content = onActionInitializer.doSwitch(node)
 				if(!onActionBuffer?.toString.contains(content)){
 					onActionBuffer.append = content
 				}
 			}
-			if (node instanceof EBorderPane) {
-				node.left.initField
-				node.right.initField
-				node.top.initField
-				node.bottom.initField
-				node.center.initField
-				node.children.forEach[e|e.initField]
-			} else {
-				node.children.forEach[e|e.initField]
-			}
+			node.children.forEach[ e | e.initField ]
 		}
 	}
 }
