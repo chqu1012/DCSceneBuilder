@@ -139,6 +139,11 @@
                   label="Validate EmfModel"
                   style="push">
             </command>
+            <command
+                  commandId="de.dc.javafx.mm.editor.GenerateFormByETableView"
+                  label="Generate Form by ETableView"
+                  style="push">
+            </command>
             <separator
                   name="de.dc.javafx.mm.editor.separator1"
                   visible="true">
@@ -279,6 +284,11 @@
             defaultHandler="de.dc.javafx.mm.editor.command.GenerateControllerFromFxmlHandler"
             id="de.dc.javafx.mm.editor.GenerateControllerByFxml"
             name="Generate Controller By Fxml">
+      </command>
+      <command
+            defaultHandler="de.dc.javafx.mm.editor.command.GenerateFormByETableViewHandler"
+            id="de.dc.javafx.mm.editor.GenerateFormByETableView"
+            name="Generate TableForm">
       </command>
    </extension>
    <extension
