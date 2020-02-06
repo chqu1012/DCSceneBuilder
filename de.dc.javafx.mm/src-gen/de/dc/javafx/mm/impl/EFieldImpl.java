@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.impl.EFieldImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EFieldImpl#getDatatype <em>Datatype</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EFieldImpl#isIsMadatory <em>Is Madatory</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 	 * @ordered
 	 */
 	protected String datatype = DATATYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsMadatory() <em>Is Madatory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsMadatory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_MADATORY_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isIsMadatory() <em>Is Madatory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsMadatory()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isMadatory = IS_MADATORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -138,12 +159,38 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 	 * @generated
 	 */
 	@Override
+	public boolean isIsMadatory() {
+		return isMadatory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsMadatory(boolean newIsMadatory) {
+		boolean oldIsMadatory = isMadatory;
+		isMadatory = newIsMadatory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.EFIELD__IS_MADATORY, oldIsMadatory,
+					isMadatory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MmPackage.EFIELD__NAME:
 			return getName();
 		case MmPackage.EFIELD__DATATYPE:
 			return getDatatype();
+		case MmPackage.EFIELD__IS_MADATORY:
+			return isIsMadatory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +208,9 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 			return;
 		case MmPackage.EFIELD__DATATYPE:
 			setDatatype((String) newValue);
+			return;
+		case MmPackage.EFIELD__IS_MADATORY:
+			setIsMadatory((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,6 +230,9 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 		case MmPackage.EFIELD__DATATYPE:
 			setDatatype(DATATYPE_EDEFAULT);
 			return;
+		case MmPackage.EFIELD__IS_MADATORY:
+			setIsMadatory(IS_MADATORY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +249,8 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case MmPackage.EFIELD__DATATYPE:
 			return DATATYPE_EDEFAULT == null ? datatype != null : !DATATYPE_EDEFAULT.equals(datatype);
+		case MmPackage.EFIELD__IS_MADATORY:
+			return isMadatory != IS_MADATORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +270,8 @@ public class EFieldImpl extends MinimalEObjectImpl.Container implements EField {
 		result.append(name);
 		result.append(", datatype: ");
 		result.append(datatype);
+		result.append(", isMadatory: ");
+		result.append(isMadatory);
 		result.append(')');
 		return result.toString();
 	}

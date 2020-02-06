@@ -12,6 +12,8 @@ import de.dc.javafx.mm.EBinding;
 import de.dc.javafx.mm.EBindingDirection;
 import de.dc.javafx.mm.EBindingModel;
 import de.dc.javafx.mm.EBindingType;
+import de.dc.javafx.mm.EBorderData;
+import de.dc.javafx.mm.EBorderDirection;
 import de.dc.javafx.mm.EBorderPane;
 import de.dc.javafx.mm.EBubbleChart;
 import de.dc.javafx.mm.EButton;
@@ -29,11 +31,13 @@ import de.dc.javafx.mm.EFlowPane;
 import de.dc.javafx.mm.EGridPane;
 import de.dc.javafx.mm.EGroup;
 import de.dc.javafx.mm.EHBox;
+import de.dc.javafx.mm.EHBoxData;
 import de.dc.javafx.mm.EHyperlink;
 import de.dc.javafx.mm.EImageView;
 import de.dc.javafx.mm.EInsets;
 import de.dc.javafx.mm.ELabel;
 import de.dc.javafx.mm.ELabeled;
+import de.dc.javafx.mm.ELayoutData;
 import de.dc.javafx.mm.ELineChart;
 import de.dc.javafx.mm.EListView;
 import de.dc.javafx.mm.EMenuButton;
@@ -43,6 +47,7 @@ import de.dc.javafx.mm.EPieChart;
 import de.dc.javafx.mm.ERadioButton;
 import de.dc.javafx.mm.EScatterChart;
 import de.dc.javafx.mm.EScrollPane;
+import de.dc.javafx.mm.ESide;
 import de.dc.javafx.mm.ESplitMenuButton;
 import de.dc.javafx.mm.ESplitPane;
 import de.dc.javafx.mm.EStackPane;
@@ -56,6 +61,7 @@ import de.dc.javafx.mm.EText;
 import de.dc.javafx.mm.ETilePane;
 import de.dc.javafx.mm.EToogleButton;
 import de.dc.javafx.mm.EVBox;
+import de.dc.javafx.mm.EVBoxData;
 import de.dc.javafx.mm.EValueAxis;
 import de.dc.javafx.mm.EWebView;
 import de.dc.javafx.mm.EXYChart;
@@ -439,6 +445,34 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass eLayoutDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eBorderDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evBoxDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ehBoxDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass eAreaChartEClass = null;
 
 	/**
@@ -482,6 +516,20 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	private EClass eStackedBarChartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eSideEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eBorderDirectionEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -735,6 +783,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EAttribute getEField_Datatype() {
 		return (EAttribute) eFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEField_IsMadatory() {
+		return (EAttribute) eFieldEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1183,6 +1241,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getETableColumn_IsEditable() {
+		return (EAttribute) eTableColumnEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEListView() {
 		return eListViewEClass;
 	}
@@ -1523,6 +1591,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getEChart_LegendSide() {
+		return (EAttribute) eChartEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEImageView() {
 		return eImageViewEClass;
 	}
@@ -1823,6 +1901,16 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getENode_LayoutData() {
+		return (EReference) eNodeEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getETabPane() {
 		return eTabPaneEClass;
 	}
@@ -1875,6 +1963,56 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EReference getETab_Content() {
 		return (EReference) eTabEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getELayoutData() {
+		return eLayoutDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEBorderData() {
+		return eBorderDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEBorderData_Direction() {
+		return (EAttribute) eBorderDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEVBoxData() {
+		return evBoxDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEHBoxData() {
+		return ehBoxDataEClass;
 	}
 
 	/**
@@ -1945,6 +2083,26 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 	@Override
 	public EClass getEStackedBarChart() {
 		return eStackedBarChartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getESide() {
+		return eSideEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getEBorderDirection() {
+		return eBorderDirectionEEnum;
 	}
 
 	/**
@@ -2035,6 +2193,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eFieldEClass = createEClass(EFIELD);
 		createEAttribute(eFieldEClass, EFIELD__NAME);
 		createEAttribute(eFieldEClass, EFIELD__DATATYPE);
+		createEAttribute(eFieldEClass, EFIELD__IS_MADATORY);
 
 		eBindingModelEClass = createEClass(EBINDING_MODEL);
 		createEReference(eBindingModelEClass, EBINDING_MODEL__BINDINGS);
@@ -2100,6 +2259,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_VALUE_FACTORY);
 		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__CELL_FACTORY);
 		createEReference(eTableColumnEClass, ETABLE_COLUMN__ASSOCIATED_FIELD);
+		createEAttribute(eTableColumnEClass, ETABLE_COLUMN__IS_EDITABLE);
 
 		eListViewEClass = createEClass(ELIST_VIEW);
 
@@ -2153,6 +2313,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eChartEClass, ECHART__ANIMATED);
 		createEAttribute(eChartEClass, ECHART__LEGEND_VISIBLE);
 		createEAttribute(eChartEClass, ECHART__TITLE);
+		createEAttribute(eChartEClass, ECHART__LEGEND_SIDE);
 
 		eImageViewEClass = createEClass(EIMAGE_VIEW);
 		createEAttribute(eImageViewEClass, EIMAGE_VIEW__IMAGE_PATH);
@@ -2188,6 +2349,7 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eNodeEClass, ENODE__PREF_WIDTH);
 		createEReference(eNodeEClass, ENODE__PADDING);
 		createEReference(eNodeEClass, ENODE__CHILDREN);
+		createEReference(eNodeEClass, ENODE__LAYOUT_DATA);
 
 		eTabPaneEClass = createEClass(ETAB_PANE);
 		createEReference(eTabPaneEClass, ETAB_PANE__TABS);
@@ -2196,6 +2358,15 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		createEAttribute(eTabEClass, ETAB__ID);
 		createEAttribute(eTabEClass, ETAB__NAME);
 		createEReference(eTabEClass, ETAB__CONTENT);
+
+		eLayoutDataEClass = createEClass(ELAYOUT_DATA);
+
+		eBorderDataEClass = createEClass(EBORDER_DATA);
+		createEAttribute(eBorderDataEClass, EBORDER_DATA__DIRECTION);
+
+		evBoxDataEClass = createEClass(EV_BOX_DATA);
+
+		ehBoxDataEClass = createEClass(EH_BOX_DATA);
 
 		eAreaChartEClass = createEClass(EAREA_CHART);
 
@@ -2212,6 +2383,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eStackedBarChartEClass = createEClass(ESTACKED_BAR_CHART);
 
 		// Create enums
+		eSideEEnum = createEEnum(ESIDE);
+		eBorderDirectionEEnum = createEEnum(EBORDER_DIRECTION);
 		eControlBindingEEnum = createEEnum(ECONTROL_BINDING);
 		eBindingTypeEEnum = createEEnum(EBINDING_TYPE);
 		eBindingDirectionEEnum = createEEnum(EBINDING_DIRECTION);
@@ -2293,6 +2466,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		eNodeEClass.getESuperTypes().add(this.getSkinnable());
 		eNodeEClass.getESuperTypes().add(this.getEEvents());
 		eTabPaneEClass.getESuperTypes().add(this.getEPane());
+		eBorderDataEClass.getESuperTypes().add(this.getELayoutData());
+		evBoxDataEClass.getESuperTypes().add(this.getELayoutData());
+		ehBoxDataEClass.getESuperTypes().add(this.getELayoutData());
 		eAreaChartEClass.getESuperTypes().add(this.getEXYChart());
 		eBarChartEClass.getESuperTypes().add(this.getEXYChart());
 		eBubbleChartEClass.getESuperTypes().add(this.getEXYChart());
@@ -2343,6 +2519,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getEField_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EField.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEField_Datatype(), theEcorePackage.getEString(), "datatype", "String", 0, 1, EField.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getEField_IsMadatory(), theEcorePackage.getEBoolean(), "isMadatory", "true", 0, 1, EField.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -2469,6 +2648,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getETableColumn_AssociatedField(), this.getEField(), null, "associatedField", null, 0, 1,
 				ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETableColumn_IsEditable(), theEcorePackage.getEBoolean(), "isEditable", "false", 0, 1,
+				ETableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(eListViewEClass, EListView.class, "EListView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2565,6 +2747,8 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEAttribute(getEChart_Title(), theEcorePackage.getEString(), "title", null, 0, 1, EChart.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getEChart_LegendSide(), this.getESide(), "legendSide", null, 0, 1, EChart.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eImageViewEClass, EImageView.class, "EImageView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2651,6 +2835,9 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getENode_Children(), this.getENode(), null, "children", null, 0, -1, ENode.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getENode_LayoutData(), this.getELayoutData(), null, "layoutData", null, 0, 1, ENode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTabPaneEClass, ETabPane.class, "ETabPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2666,6 +2853,21 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 		initEReference(getETab_Content(), this.getENode(), null, "content", null, 0, 1, ETab.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+
+		initEClass(eLayoutDataEClass, ELayoutData.class, "ELayoutData", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eBorderDataEClass, EBorderData.class, "EBorderData", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEBorderData_Direction(), this.getEBorderDirection(), "direction", null, 0, 1,
+				EBorderData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(evBoxDataEClass, EVBoxData.class, "EVBoxData", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(ehBoxDataEClass, EHBoxData.class, "EHBoxData", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eAreaChartEClass, EAreaChart.class, "EAreaChart", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2689,6 +2891,19 @@ public class MmPackageImpl extends EPackageImpl implements MmPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
+		initEEnum(eSideEEnum, ESide.class, "ESide");
+		addEEnumLiteral(eSideEEnum, ESide.LEFT);
+		addEEnumLiteral(eSideEEnum, ESide.RIGHT);
+		addEEnumLiteral(eSideEEnum, ESide.TOP);
+		addEEnumLiteral(eSideEEnum, ESide.BOTTOM);
+
+		initEEnum(eBorderDirectionEEnum, EBorderDirection.class, "EBorderDirection");
+		addEEnumLiteral(eBorderDirectionEEnum, EBorderDirection.TOP);
+		addEEnumLiteral(eBorderDirectionEEnum, EBorderDirection.BOTTOM);
+		addEEnumLiteral(eBorderDirectionEEnum, EBorderDirection.LEFT);
+		addEEnumLiteral(eBorderDirectionEEnum, EBorderDirection.RIGHT);
+		addEEnumLiteral(eBorderDirectionEEnum, EBorderDirection.CENTER);
+
 		initEEnum(eControlBindingEEnum, EControlBinding.class, "EControlBinding");
 		addEEnumLiteral(eControlBindingEEnum, EControlBinding.BACKGROUND_PROPERTY);
 		addEEnumLiteral(eControlBindingEEnum, EControlBinding.BORDER_PROPERTY);

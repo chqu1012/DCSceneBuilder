@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getCellValueFactory <em>Cell Value Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getCellFactory <em>Cell Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ETableColumn#getAssociatedField <em>Associated Field</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ETableColumn#isIsEditable <em>Is Editable</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getETableColumn()
@@ -158,5 +159,28 @@ public interface ETableColumn extends EObject {
 	 * @generated
 	 */
 	void setAssociatedField(EField value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Editable</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Editable</em>' attribute.
+	 * @see #setIsEditable(boolean)
+	 * @see de.dc.javafx.mm.MmPackage#getETableColumn_IsEditable()
+	 * @model default="false" unique="false"
+	 * @generated
+	 */
+	boolean isIsEditable();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ETableColumn#isIsEditable <em>Is Editable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Editable</em>' attribute.
+	 * @see #isIsEditable()
+	 * @generated
+	 */
+	void setIsEditable(boolean value);
 
 } // ETableColumn

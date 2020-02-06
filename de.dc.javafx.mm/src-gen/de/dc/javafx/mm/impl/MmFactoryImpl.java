@@ -144,6 +144,12 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 			return createETabPane();
 		case MmPackage.ETAB:
 			return createETab();
+		case MmPackage.EBORDER_DATA:
+			return createEBorderData();
+		case MmPackage.EV_BOX_DATA:
+			return createEVBoxData();
+		case MmPackage.EH_BOX_DATA:
+			return createEHBoxData();
 		case MmPackage.EAREA_CHART:
 			return createEAreaChart();
 		case MmPackage.EBAR_CHART:
@@ -171,6 +177,10 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+		case MmPackage.ESIDE:
+			return createESideFromString(eDataType, initialValue);
+		case MmPackage.EBORDER_DIRECTION:
+			return createEBorderDirectionFromString(eDataType, initialValue);
 		case MmPackage.ECONTROL_BINDING:
 			return createEControlBindingFromString(eDataType, initialValue);
 		case MmPackage.EBINDING_TYPE:
@@ -192,6 +202,10 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+		case MmPackage.ESIDE:
+			return convertESideToString(eDataType, instanceValue);
+		case MmPackage.EBORDER_DIRECTION:
+			return convertEBorderDirectionToString(eDataType, instanceValue);
 		case MmPackage.ECONTROL_BINDING:
 			return convertEControlBindingToString(eDataType, instanceValue);
 		case MmPackage.EBINDING_TYPE:
@@ -684,6 +698,39 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	 * @generated
 	 */
 	@Override
+	public EBorderData createEBorderData() {
+		EBorderDataImpl eBorderData = new EBorderDataImpl();
+		return eBorderData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EVBoxData createEVBoxData() {
+		EVBoxDataImpl evBoxData = new EVBoxDataImpl();
+		return evBoxData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EHBoxData createEHBoxData() {
+		EHBoxDataImpl ehBoxData = new EHBoxDataImpl();
+		return ehBoxData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAreaChart createEAreaChart() {
 		EAreaChartImpl eAreaChart = new EAreaChartImpl();
 		return eAreaChart;
@@ -753,6 +800,90 @@ public class MmFactoryImpl extends EFactoryImpl implements MmFactory {
 	public EStackedBarChart createEStackedBarChart() {
 		EStackedBarChartImpl eStackedBarChart = new EStackedBarChartImpl();
 		return eStackedBarChart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ESide createESide(String literal) {
+		ESide result = ESide.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ MmPackage.Literals.ESIDE.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ESide createESideFromString(EDataType eDataType, String initialValue) {
+		return createESide(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertESide(ESide instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertESideToString(EDataType eDataType, Object instanceValue) {
+		return convertESide((ESide) instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EBorderDirection createEBorderDirection(String literal) {
+		EBorderDirection result = EBorderDirection.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ MmPackage.Literals.EBORDER_DIRECTION.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EBorderDirection createEBorderDirectionFromString(EDataType eDataType, String initialValue) {
+		return createEBorderDirection(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertEBorderDirection(EBorderDirection instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEBorderDirectionToString(EDataType eDataType, Object instanceValue) {
+		return convertEBorderDirection((EBorderDirection) instanceValue);
 	}
 
 	/**

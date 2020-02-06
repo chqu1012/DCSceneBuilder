@@ -14,6 +14,7 @@ package de.dc.javafx.mm;
  *   <li>{@link de.dc.javafx.mm.EChart#isAnimated <em>Animated</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EChart#isLegendVisible <em>Legend Visible</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EChart#getTitle <em>Title</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EChart#getLegendSide <em>Legend Side</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getEChart()
@@ -88,5 +89,30 @@ public interface EChart extends ENode {
 	 * @generated
 	 */
 	void setTitle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Legend Side</b></em>' attribute.
+	 * The literals are from the enumeration {@link de.dc.javafx.mm.ESide}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Legend Side</em>' attribute.
+	 * @see de.dc.javafx.mm.ESide
+	 * @see #setLegendSide(ESide)
+	 * @see de.dc.javafx.mm.MmPackage#getEChart_LegendSide()
+	 * @model unique="false"
+	 * @generated
+	 */
+	ESide getLegendSide();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EChart#getLegendSide <em>Legend Side</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Legend Side</em>' attribute.
+	 * @see de.dc.javafx.mm.ESide
+	 * @see #getLegendSide()
+	 * @generated
+	 */
+	void setLegendSide(ESide value);
 
 } // EChart

@@ -2,9 +2,6 @@
  */
 package de.dc.javafx.mm.provider;
 
-import de.dc.javafx.mm.EField;
-import de.dc.javafx.mm.MmPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -13,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -21,17 +17,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.javafx.mm.EField} object.
+ * This is the item provider adapter for a {@link de.dc.javafx.mm.ELayoutData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EFieldItemProvider extends ItemProviderAdapter
+public class ELayoutDataItemProvider extends ItemProviderAdapter
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource, ITableItemLabelProvider {
 	/**
@@ -40,7 +34,7 @@ public class EFieldItemProvider extends ItemProviderAdapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EFieldItemProvider(AdapterFactory adapterFactory) {
+	public ELayoutDataItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -55,69 +49,8 @@ public class EFieldItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDatatypePropertyDescriptor(object);
-			addIsMadatoryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_EField_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_EField_name_feature", "_UI_EField_type"),
-						MmPackage.Literals.EFIELD__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Datatype feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDatatypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_EField_datatype_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_EField_datatype_feature",
-								"_UI_EField_type"),
-						MmPackage.Literals.EFIELD__DATATYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Madatory feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsMadatoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_EField_isMadatory_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_EField_isMadatory_feature",
-								"_UI_EField_type"),
-						MmPackage.Literals.EFIELD__IS_MADATORY, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns EField.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/EField"));
 	}
 
 	/**
@@ -153,9 +86,7 @@ public class EFieldItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EField) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_EField_type")
-				: getString("_UI_EField_type") + " " + label;
+		return getString("_UI_ELayoutData_type");
 	}
 
 	/**
@@ -183,14 +114,6 @@ public class EFieldItemProvider extends ItemProviderAdapter
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(EField.class)) {
-		case MmPackage.EFIELD__NAME:
-		case MmPackage.EFIELD__DATATYPE:
-		case MmPackage.EFIELD__IS_MADATORY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

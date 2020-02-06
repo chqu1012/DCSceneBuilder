@@ -27,6 +27,7 @@ class EBean{
 class EField{
 	String name
 	String datatype = 'String'
+	boolean isMadatory = 'true'
 }
 
 class EBindingModel{
@@ -105,7 +106,13 @@ class ETableColumn{
 	String cellValueFactory
 	String cellFactory
 	refers EField associatedField
+	boolean isEditable = 'false'
 }
+
+enum ESide{
+	LEFT RIGHT TOP BOTTOM
+}
+
 
 class EListView extends EBaseView{
 }
@@ -165,6 +172,7 @@ abstract class EChart extends ENode{
 	boolean animated = 'true'
 	boolean legendVisible = 'true'
 	String title
+	ESide legendSide
 }
 
 class EImageView extends ENode{
@@ -224,6 +232,8 @@ abstract class ENode extends Styleable, Skinnable, EEvents{
  @GenModel(propertyCategory="Layout")
 	contains EInsets padding
 	contains ENode[0..*] children
+	
+	contains ELayoutData[0..1] layoutData
 }
 
 class ETabPane extends EPane{
@@ -235,6 +245,19 @@ class ETab{
 	String name
 	contains ENode[0..1] content
 }
+
+abstract class ELayoutData{}
+
+class EBorderData extends ELayoutData{
+	EBorderDirection direction	
+}
+
+enum EBorderDirection{
+	Top Bottom Left Right Center
+}
+
+class EVBoxData extends ELayoutData{}
+class EHBoxData extends ELayoutData{}
 
 class EAreaChart extends EXYChart{}
 class EBarChart extends EXYChart{}

@@ -47,6 +47,7 @@ public class EChartItemProvider extends ENodeItemProvider {
 			addAnimatedPropertyDescriptor(object);
 			addLegendVisiblePropertyDescriptor(object);
 			addTitlePropertyDescriptor(object);
+			addLegendSidePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -99,6 +100,22 @@ public class EChartItemProvider extends ENodeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Legend Side feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLegendSidePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_EChart_legendSide_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_EChart_legendSide_feature",
+								"_UI_EChart_type"),
+						MmPackage.Literals.ECHART__LEGEND_SIDE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,6 +153,7 @@ public class EChartItemProvider extends ENodeItemProvider {
 		case MmPackage.ECHART__ANIMATED:
 		case MmPackage.ECHART__LEGEND_VISIBLE:
 		case MmPackage.ECHART__TITLE:
+		case MmPackage.ECHART__LEGEND_SIDE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

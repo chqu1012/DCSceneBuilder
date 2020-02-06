@@ -317,6 +317,26 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseELayoutData(ELayoutData object) {
+			return createELayoutDataAdapter();
+		}
+
+		@Override
+		public Adapter caseEBorderData(EBorderData object) {
+			return createEBorderDataAdapter();
+		}
+
+		@Override
+		public Adapter caseEVBoxData(EVBoxData object) {
+			return createEVBoxDataAdapter();
+		}
+
+		@Override
+		public Adapter caseEHBoxData(EHBoxData object) {
+			return createEHBoxDataAdapter();
+		}
+
+		@Override
 		public Adapter caseEAreaChart(EAreaChart object) {
 			return createEAreaChartAdapter();
 		}
@@ -1067,6 +1087,62 @@ public class MmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createETabAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.ELayoutData <em>ELayout Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.ELayoutData
+	 * @generated
+	 */
+	public Adapter createELayoutDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EBorderData <em>EBorder Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EBorderData
+	 * @generated
+	 */
+	public Adapter createEBorderDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EVBoxData <em>EV Box Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EVBoxData
+	 * @generated
+	 */
+	public Adapter createEVBoxDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.javafx.mm.EHBoxData <em>EH Box Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.javafx.mm.EHBoxData
+	 * @generated
+	 */
+	public Adapter createEHBoxDataAdapter() {
 		return null;
 	}
 

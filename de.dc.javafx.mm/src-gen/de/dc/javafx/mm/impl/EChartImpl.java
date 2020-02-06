@@ -3,6 +3,7 @@
 package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EChart;
+import de.dc.javafx.mm.ESide;
 import de.dc.javafx.mm.MmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.dc.javafx.mm.impl.EChartImpl#isAnimated <em>Animated</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EChartImpl#isLegendVisible <em>Legend Visible</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.EChartImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.EChartImpl#getLegendSide <em>Legend Side</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,26 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 	 * @ordered
 	 */
 	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLegendSide() <em>Legend Side</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLegendSide()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ESide LEGEND_SIDE_EDEFAULT = ESide.LEFT;
+
+	/**
+	 * The cached value of the '{@link #getLegendSide() <em>Legend Side</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLegendSide()
+	 * @generated
+	 * @ordered
+	 */
+	protected ESide legendSide = LEGEND_SIDE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,6 +204,30 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 	 * @generated
 	 */
 	@Override
+	public ESide getLegendSide() {
+		return legendSide;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLegendSide(ESide newLegendSide) {
+		ESide oldLegendSide = legendSide;
+		legendSide = newLegendSide == null ? LEGEND_SIDE_EDEFAULT : newLegendSide;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ECHART__LEGEND_SIDE, oldLegendSide,
+					legendSide));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MmPackage.ECHART__ANIMATED:
@@ -190,6 +236,8 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 			return isLegendVisible();
 		case MmPackage.ECHART__TITLE:
 			return getTitle();
+		case MmPackage.ECHART__LEGEND_SIDE:
+			return getLegendSide();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,6 +258,9 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 			return;
 		case MmPackage.ECHART__TITLE:
 			setTitle((String) newValue);
+			return;
+		case MmPackage.ECHART__LEGEND_SIDE:
+			setLegendSide((ESide) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,6 +283,9 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 		case MmPackage.ECHART__TITLE:
 			setTitle(TITLE_EDEFAULT);
 			return;
+		case MmPackage.ECHART__LEGEND_SIDE:
+			setLegendSide(LEGEND_SIDE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -250,6 +304,8 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 			return legendVisible != LEGEND_VISIBLE_EDEFAULT;
 		case MmPackage.ECHART__TITLE:
 			return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
+		case MmPackage.ECHART__LEGEND_SIDE:
+			return legendSide != LEGEND_SIDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,6 +327,8 @@ public abstract class EChartImpl extends ENodeImpl implements EChart {
 		result.append(legendVisible);
 		result.append(", title: ");
 		result.append(title);
+		result.append(", legendSide: ");
+		result.append(legendSide);
 		result.append(')');
 		return result.toString();
 	}

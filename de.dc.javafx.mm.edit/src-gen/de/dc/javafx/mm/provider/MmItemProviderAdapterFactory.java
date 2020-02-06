@@ -374,6 +374,75 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EBorderData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EBorderDataItemProvider eBorderDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EBorderData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEBorderDataAdapter() {
+		if (eBorderDataItemProvider == null) {
+			eBorderDataItemProvider = new EBorderDataItemProvider(this);
+		}
+
+		return eBorderDataItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EVBoxData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EVBoxDataItemProvider evBoxDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EVBoxData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEVBoxDataAdapter() {
+		if (evBoxDataItemProvider == null) {
+			evBoxDataItemProvider = new EVBoxDataItemProvider(this);
+		}
+
+		return evBoxDataItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EHBoxData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EHBoxDataItemProvider ehBoxDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.javafx.mm.EHBoxData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEHBoxDataAdapter() {
+		if (ehBoxDataItemProvider == null) {
+			ehBoxDataItemProvider = new EHBoxDataItemProvider(this);
+		}
+
+		return ehBoxDataItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.javafx.mm.EAreaChart} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1415,6 +1484,12 @@ public class MmItemProviderAdapterFactory extends MmAdapterFactory
 			eTabPaneItemProvider.dispose();
 		if (eTabItemProvider != null)
 			eTabItemProvider.dispose();
+		if (eBorderDataItemProvider != null)
+			eBorderDataItemProvider.dispose();
+		if (evBoxDataItemProvider != null)
+			evBoxDataItemProvider.dispose();
+		if (ehBoxDataItemProvider != null)
+			ehBoxDataItemProvider.dispose();
 		if (eAreaChartItemProvider != null)
 			eAreaChartItemProvider.dispose();
 		if (eBarChartItemProvider != null)

@@ -4,6 +4,7 @@ package de.dc.javafx.mm.impl;
 
 import de.dc.javafx.mm.EEvents;
 import de.dc.javafx.mm.EInsets;
+import de.dc.javafx.mm.ELayoutData;
 import de.dc.javafx.mm.ENode;
 import de.dc.javafx.mm.MmPackage;
 import de.dc.javafx.mm.Skinnable;
@@ -50,6 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPrefWidth <em>Pref Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getPadding <em>Padding</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ENodeImpl#getLayoutData <em>Layout Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -374,6 +376,16 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @ordered
 	 */
 	protected EList<ENode> children;
+
+	/**
+	 * The cached value of the '{@link #getLayoutData() <em>Layout Data</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutData()
+	 * @generated
+	 * @ordered
+	 */
+	protected ELayoutData layoutData;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -854,6 +866,58 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 	 * @generated
 	 */
 	@Override
+	public ELayoutData getLayoutData() {
+		return layoutData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLayoutData(ELayoutData newLayoutData, NotificationChain msgs) {
+		ELayoutData oldLayoutData = layoutData;
+		layoutData = newLayoutData;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_DATA,
+					oldLayoutData, newLayoutData);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLayoutData(ELayoutData newLayoutData) {
+		if (newLayoutData != layoutData) {
+			NotificationChain msgs = null;
+			if (layoutData != null)
+				msgs = ((InternalEObject) layoutData).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__LAYOUT_DATA, null, msgs);
+			if (newLayoutData != null)
+				msgs = ((InternalEObject) newLayoutData).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - MmPackage.ENODE__LAYOUT_DATA, null, msgs);
+			msgs = basicSetLayoutData(newLayoutData, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ENODE__LAYOUT_DATA, newLayoutData,
+					newLayoutData));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case MmPackage.ENODE__MARGIN:
@@ -862,6 +926,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return basicSetPadding(null, msgs);
 		case MmPackage.ENODE__CHILDREN:
 			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		case MmPackage.ENODE__LAYOUT_DATA:
+			return basicSetLayoutData(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -910,6 +976,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return getPadding();
 		case MmPackage.ENODE__CHILDREN:
 			return getChildren();
+		case MmPackage.ENODE__LAYOUT_DATA:
+			return getLayoutData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -979,6 +1047,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			getChildren().clear();
 			getChildren().addAll((Collection<? extends ENode>) newValue);
 			return;
+		case MmPackage.ENODE__LAYOUT_DATA:
+			setLayoutData((ELayoutData) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1045,6 +1116,9 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 		case MmPackage.ENODE__CHILDREN:
 			getChildren().clear();
 			return;
+		case MmPackage.ENODE__LAYOUT_DATA:
+			setLayoutData((ELayoutData) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1093,6 +1167,8 @@ public abstract class ENodeImpl extends StyleableImpl implements ENode {
 			return padding != null;
 		case MmPackage.ENODE__CHILDREN:
 			return children != null && !children.isEmpty();
+		case MmPackage.ENODE__LAYOUT_DATA:
+			return layoutData != null;
 		}
 		return super.eIsSet(featureID);
 	}

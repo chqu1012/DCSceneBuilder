@@ -411,6 +411,33 @@ public interface MmFactory extends EFactory {
 	ETab createETab();
 
 	/**
+	 * Returns a new object of class '<em>EBorder Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EBorder Data</em>'.
+	 * @generated
+	 */
+	EBorderData createEBorderData();
+
+	/**
+	 * Returns a new object of class '<em>EV Box Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EV Box Data</em>'.
+	 * @generated
+	 */
+	EVBoxData createEVBoxData();
+
+	/**
+	 * Returns a new object of class '<em>EH Box Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EH Box Data</em>'.
+	 * @generated
+	 */
+	EHBoxData createEHBoxData();
+
+	/**
 	 * Returns a new object of class '<em>EArea Chart</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +499,46 @@ public interface MmFactory extends EFactory {
 	 * @generated
 	 */
 	EStackedBarChart createEStackedBarChart();
+
+	/**
+	 * Returns an instance of data type '<em>ESide</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	ESide createESide(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>ESide</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertESide(ESide instanceValue);
+
+	/**
+	 * Returns an instance of data type '<em>EBorder Direction</em>' corresponding the given literal.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal a literal of the data type.
+	 * @return a new instance value of the data type.
+	 * @generated
+	 */
+	EBorderDirection createEBorderDirection(String literal);
+
+	/**
+	 * Returns a literal representation of an instance of data type '<em>EBorder Direction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param instanceValue an instance value of the data type.
+	 * @return a literal representation of the instance value.
+	 * @generated
+	 */
+	String convertEBorderDirection(EBorderDirection instanceValue);
 
 	/**
 	 * Returns an instance of data type '<em>EControl Binding</em>' corresponding the given literal.

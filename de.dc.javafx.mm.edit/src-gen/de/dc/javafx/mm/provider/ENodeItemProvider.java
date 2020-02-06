@@ -311,6 +311,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 			childrenFeatures.add(MmPackage.Literals.ENODE__MARGIN);
 			childrenFeatures.add(MmPackage.Literals.ENODE__PADDING);
 			childrenFeatures.add(MmPackage.Literals.ENODE__CHILDREN);
+			childrenFeatures.add(MmPackage.Literals.ENODE__LAYOUT_DATA);
 		}
 		return childrenFeatures;
 	}
@@ -383,6 +384,7 @@ public class ENodeItemProvider extends StyleableItemProvider {
 		case MmPackage.ENODE__MARGIN:
 		case MmPackage.ENODE__PADDING:
 		case MmPackage.ENODE__CHILDREN:
+		case MmPackage.ENODE__LAYOUT_DATA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -522,6 +524,15 @@ public class ENodeItemProvider extends StyleableItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(MmPackage.Literals.ENODE__CHILDREN, MmFactory.eINSTANCE.createEStackedBarChart()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__LAYOUT_DATA, MmFactory.eINSTANCE.createEBorderData()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__LAYOUT_DATA, MmFactory.eINSTANCE.createEVBoxData()));
+
+		newChildDescriptors.add(
+				createChildParameter(MmPackage.Literals.ENODE__LAYOUT_DATA, MmFactory.eINSTANCE.createEHBoxData()));
 	}
 
 	/**

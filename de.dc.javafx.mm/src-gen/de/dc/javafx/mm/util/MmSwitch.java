@@ -832,6 +832,40 @@ public class MmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MmPackage.ELAYOUT_DATA: {
+			ELayoutData eLayoutData = (ELayoutData) theEObject;
+			T result = caseELayoutData(eLayoutData);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EBORDER_DATA: {
+			EBorderData eBorderData = (EBorderData) theEObject;
+			T result = caseEBorderData(eBorderData);
+			if (result == null)
+				result = caseELayoutData(eBorderData);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EV_BOX_DATA: {
+			EVBoxData evBoxData = (EVBoxData) theEObject;
+			T result = caseEVBoxData(evBoxData);
+			if (result == null)
+				result = caseELayoutData(evBoxData);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MmPackage.EH_BOX_DATA: {
+			EHBoxData ehBoxData = (EHBoxData) theEObject;
+			T result = caseEHBoxData(ehBoxData);
+			if (result == null)
+				result = caseELayoutData(ehBoxData);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MmPackage.EAREA_CHART: {
 			EAreaChart eAreaChart = (EAreaChart) theEObject;
 			T result = caseEAreaChart(eAreaChart);
@@ -1717,6 +1751,66 @@ public class MmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseETab(ETab object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ELayout Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ELayout Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseELayoutData(ELayoutData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EBorder Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EBorder Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEBorderData(EBorderData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EV Box Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EV Box Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEVBoxData(EVBoxData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EH Box Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EH Box Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEHBoxData(EHBoxData object) {
 		return null;
 	}
 

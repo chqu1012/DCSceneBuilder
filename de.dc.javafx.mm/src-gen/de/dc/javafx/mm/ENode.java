@@ -30,6 +30,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.dc.javafx.mm.ENode#getPrefWidth <em>Pref Width</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getPadding <em>Padding</em>}</li>
  *   <li>{@link de.dc.javafx.mm.ENode#getChildren <em>Children</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.ENode#getLayoutData <em>Layout Data</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getENode()
@@ -390,5 +391,27 @@ public interface ENode extends Styleable, Skinnable, EEvents {
 	 * @generated
 	 */
 	EList<ENode> getChildren();
+
+	/**
+	 * Returns the value of the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Layout Data</em>' containment reference.
+	 * @see #setLayoutData(ELayoutData)
+	 * @see de.dc.javafx.mm.MmPackage#getENode_LayoutData()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ELayoutData getLayoutData();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.ENode#getLayoutData <em>Layout Data</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Layout Data</em>' containment reference.
+	 * @see #getLayoutData()
+	 * @generated
+	 */
+	void setLayoutData(ELayoutData value);
 
 } // ENode

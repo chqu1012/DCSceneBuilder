@@ -242,13 +242,22 @@ public interface MmPackage extends EPackage {
 	int EFIELD__DATATYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Is Madatory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFIELD__IS_MADATORY = 2;
+
+	/**
 	 * The number of structural features of the '<em>EField</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EFIELD_FEATURE_COUNT = 2;
+	int EFIELD_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>EField</em>' class.
@@ -662,13 +671,22 @@ public interface MmPackage extends EPackage {
 	int ENODE__CHILDREN = STYLEABLE_FEATURE_COUNT + 17;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENODE__LAYOUT_DATA = STYLEABLE_FEATURE_COUNT + 18;
+
+	/**
 	 * The number of structural features of the '<em>ENode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 18;
+	int ENODE_FEATURE_COUNT = STYLEABLE_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>ENode</em>' class.
@@ -850,6 +868,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EGROUP__CHILDREN = ENODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGROUP__LAYOUT_DATA = ENODE__LAYOUT_DATA;
 
 	/**
 	 * The number of structural features of the '<em>EGroup</em>' class.
@@ -1042,6 +1069,15 @@ public interface MmPackage extends EPackage {
 	int ECONTROL__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONTROL__LAYOUT_DATA = ENODE__LAYOUT_DATA;
+
+	/**
 	 * The number of structural features of the '<em>EControl</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1230,6 +1266,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELABELED__CHILDREN = ECONTROL__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABELED__LAYOUT_DATA = ECONTROL__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1429,6 +1474,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETEXT__CHILDREN = ELABELED__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETEXT__LAYOUT_DATA = ELABELED__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1639,6 +1693,15 @@ public interface MmPackage extends EPackage {
 	int ELABEL__CHILDREN = ELABELED__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELABEL__LAYOUT_DATA = ELABELED__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1836,6 +1899,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBUTTON_BASE__CHILDREN = ELABELED__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON_BASE__LAYOUT_DATA = ELABELED__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2037,6 +2109,15 @@ public interface MmPackage extends EPackage {
 	int EBUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUTTON__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2234,6 +2315,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECHECK_BOX__CHILDREN = EBUTTON_BASE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHECK_BOX__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2444,6 +2534,15 @@ public interface MmPackage extends EPackage {
 	int EHYPERLINK__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EHYPERLINK__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2652,6 +2751,15 @@ public interface MmPackage extends EPackage {
 	int EMENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMENU_BUTTON__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2851,6 +2959,15 @@ public interface MmPackage extends EPackage {
 	int ESPLIT_MENU_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_MENU_BUTTON__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3048,6 +3165,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETOOGLE_BUTTON__CHILDREN = EBUTTON_BASE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETOOGLE_BUTTON__LAYOUT_DATA = EBUTTON_BASE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -3258,6 +3384,15 @@ public interface MmPackage extends EPackage {
 	int EBASE_VIEW__CHILDREN = ECONTROL__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBASE_VIEW__LAYOUT_DATA = ECONTROL__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3455,6 +3590,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETABLE_VIEW__CHILDREN = EBASE_VIEW__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_VIEW__LAYOUT_DATA = EBASE_VIEW__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' reference.
@@ -3665,6 +3809,15 @@ public interface MmPackage extends EPackage {
 	int EFILTERED_TABLE_VIEW__CHILDREN = ETABLE_VIEW__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFILTERED_TABLE_VIEW__LAYOUT_DATA = ETABLE_VIEW__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3765,13 +3918,22 @@ public interface MmPackage extends EPackage {
 	int ETABLE_COLUMN__ASSOCIATED_FIELD = 5;
 
 	/**
+	 * The feature id for the '<em><b>Is Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETABLE_COLUMN__IS_EDITABLE = 6;
+
+	/**
 	 * The number of structural features of the '<em>ETable Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ETABLE_COLUMN_FEATURE_COUNT = 6;
+	int ETABLE_COLUMN_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>ETable Column</em>' class.
@@ -3953,6 +4115,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELIST_VIEW__CHILDREN = EBASE_VIEW__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELIST_VIEW__LAYOUT_DATA = EBASE_VIEW__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' reference.
@@ -4152,6 +4323,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ERADIO_BUTTON__CHILDREN = ETOOGLE_BUTTON__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERADIO_BUTTON__LAYOUT_DATA = ETOOGLE_BUTTON__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -4362,6 +4542,15 @@ public interface MmPackage extends EPackage {
 	int EAXIS__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAXIS__LAYOUT_DATA = ENODE__LAYOUT_DATA;
+
+	/**
 	 * The number of structural features of the '<em>EAxis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4550,6 +4739,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECATGEORY_AXIS__CHILDREN = EAXIS__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECATGEORY_AXIS__LAYOUT_DATA = EAXIS__LAYOUT_DATA;
 
 	/**
 	 * The number of structural features of the '<em>ECatgeory Axis</em>' class.
@@ -4742,6 +4940,15 @@ public interface MmPackage extends EPackage {
 	int EVALUE_AXIS__CHILDREN = EAXIS__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUE_AXIS__LAYOUT_DATA = EAXIS__LAYOUT_DATA;
+
+	/**
 	 * The number of structural features of the '<em>EValue Axis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4932,6 +5139,15 @@ public interface MmPackage extends EPackage {
 	int ECHART__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__LAYOUT_DATA = ENODE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4959,13 +5175,22 @@ public interface MmPackage extends EPackage {
 	int ECHART__TITLE = ENODE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECHART__LEGEND_SIDE = ENODE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>EChart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECHART_FEATURE_COUNT = ENODE_FEATURE_COUNT + 3;
+	int ECHART_FEATURE_COUNT = ENODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>EChart</em>' class.
@@ -5149,6 +5374,15 @@ public interface MmPackage extends EPackage {
 	int EPIE_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__LAYOUT_DATA = ECHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5174,6 +5408,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPIE_CHART__TITLE = ECHART__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIE_CHART__LEGEND_SIDE = ECHART__LEGEND_SIDE;
 
 	/**
 	 * The number of structural features of the '<em>EPie Chart</em>' class.
@@ -5366,6 +5609,15 @@ public interface MmPackage extends EPackage {
 	int EXY_CHART__CHILDREN = ECHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__LAYOUT_DATA = ECHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5391,6 +5643,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXY_CHART__TITLE = ECHART__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXY_CHART__LEGEND_SIDE = ECHART__LEGEND_SIDE;
 
 	/**
 	 * The number of structural features of the '<em>EXY Chart</em>' class.
@@ -5581,6 +5842,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPANE__CHILDREN = ENODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPANE__LAYOUT_DATA = ENODE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -5782,6 +6052,15 @@ public interface MmPackage extends EPackage {
 	int ESTACK_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACK_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5979,6 +6258,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDIALOG_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIALOG_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6216,6 +6504,15 @@ public interface MmPackage extends EPackage {
 	int EGRID_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EGRID_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6413,6 +6710,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EH_BOX__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX__LAYOUT_DATA = EPANE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -6623,6 +6929,15 @@ public interface MmPackage extends EPackage {
 	int EV_BOX__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6831,6 +7146,15 @@ public interface MmPackage extends EPackage {
 	int EFLOW_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFLOW_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7028,6 +7352,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESPLIT_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESPLIT_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -7229,6 +7562,15 @@ public interface MmPackage extends EPackage {
 	int ETILE_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETILE_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7428,6 +7770,15 @@ public interface MmPackage extends EPackage {
 	int EANCHOR_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EANCHOR_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7625,6 +7976,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int EBORDER_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -7871,6 +8231,15 @@ public interface MmPackage extends EPackage {
 	int EIMAGE_VIEW__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EIMAGE_VIEW__LAYOUT_DATA = ENODE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8068,6 +8437,15 @@ public interface MmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESCROLL_PANE__CHILDREN = EPANE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCROLL_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
@@ -8342,6 +8720,15 @@ public interface MmPackage extends EPackage {
 	int EWEB_VIEW__CHILDREN = ENODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EWEB_VIEW__LAYOUT_DATA = ENODE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8550,6 +8937,15 @@ public interface MmPackage extends EPackage {
 	int ETAB_PANE__CHILDREN = EPANE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETAB_PANE__LAYOUT_DATA = EPANE__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Pos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8641,6 +9037,127 @@ public interface MmPackage extends EPackage {
 	int ETAB_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.ELayoutDataImpl <em>ELayout Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.ELayoutDataImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELayoutData()
+	 * @generated
+	 */
+	int ELAYOUT_DATA = 50;
+
+	/**
+	 * The number of structural features of the '<em>ELayout Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELAYOUT_DATA_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>ELayout Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELAYOUT_DATA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EBorderDataImpl <em>EBorder Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EBorderDataImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderData()
+	 * @generated
+	 */
+	int EBORDER_DATA = 51;
+
+	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_DATA__DIRECTION = ELAYOUT_DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>EBorder Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_DATA_FEATURE_COUNT = ELAYOUT_DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>EBorder Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBORDER_DATA_OPERATION_COUNT = ELAYOUT_DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EVBoxDataImpl <em>EV Box Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EVBoxDataImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBoxData()
+	 * @generated
+	 */
+	int EV_BOX_DATA = 52;
+
+	/**
+	 * The number of structural features of the '<em>EV Box Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX_DATA_FEATURE_COUNT = ELAYOUT_DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EV Box Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EV_BOX_DATA_OPERATION_COUNT = ELAYOUT_DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EHBoxDataImpl <em>EH Box Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.impl.EHBoxDataImpl
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBoxData()
+	 * @generated
+	 */
+	int EH_BOX_DATA = 53;
+
+	/**
+	 * The number of structural features of the '<em>EH Box Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX_DATA_FEATURE_COUNT = ELAYOUT_DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>EH Box Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EH_BOX_DATA_OPERATION_COUNT = ELAYOUT_DATA_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.impl.EAreaChartImpl <em>EArea Chart</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8648,7 +9165,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEAreaChart()
 	 * @generated
 	 */
-	int EAREA_CHART = 50;
+	int EAREA_CHART = 54;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -8813,6 +9330,15 @@ public interface MmPackage extends EPackage {
 	int EAREA_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8840,6 +9366,15 @@ public interface MmPackage extends EPackage {
 	int EAREA_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAREA_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EArea Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8865,7 +9400,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBarChart()
 	 * @generated
 	 */
-	int EBAR_CHART = 51;
+	int EBAR_CHART = 55;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -9030,6 +9565,15 @@ public interface MmPackage extends EPackage {
 	int EBAR_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9057,6 +9601,15 @@ public interface MmPackage extends EPackage {
 	int EBAR_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBAR_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EBar Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9082,7 +9635,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBubbleChart()
 	 * @generated
 	 */
-	int EBUBBLE_CHART = 52;
+	int EBUBBLE_CHART = 56;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -9247,6 +9800,15 @@ public interface MmPackage extends EPackage {
 	int EBUBBLE_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9274,6 +9836,15 @@ public interface MmPackage extends EPackage {
 	int EBUBBLE_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EBUBBLE_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EBubble Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9299,7 +9870,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELineChart()
 	 * @generated
 	 */
-	int ELINE_CHART = 53;
+	int ELINE_CHART = 57;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -9464,6 +10035,15 @@ public interface MmPackage extends EPackage {
 	int ELINE_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9491,6 +10071,15 @@ public interface MmPackage extends EPackage {
 	int ELINE_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELINE_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>ELine Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9516,7 +10105,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEScatterChart()
 	 * @generated
 	 */
-	int ESCATTER_CHART = 54;
+	int ESCATTER_CHART = 58;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -9681,6 +10270,15 @@ public interface MmPackage extends EPackage {
 	int ESCATTER_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9708,6 +10306,15 @@ public interface MmPackage extends EPackage {
 	int ESCATTER_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCATTER_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EScatter Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9733,7 +10340,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedAreaChart()
 	 * @generated
 	 */
-	int ESTACKED_AREA_CHART = 55;
+	int ESTACKED_AREA_CHART = 59;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -9898,6 +10505,15 @@ public interface MmPackage extends EPackage {
 	int ESTACKED_AREA_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9925,6 +10541,15 @@ public interface MmPackage extends EPackage {
 	int ESTACKED_AREA_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_AREA_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EStacked Area Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9950,7 +10575,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEStackedBarChart()
 	 * @generated
 	 */
-	int ESTACKED_BAR_CHART = 56;
+	int ESTACKED_BAR_CHART = 60;
 
 	/**
 	 * The feature id for the '<em><b>On Action</b></em>' attribute.
@@ -10115,6 +10740,15 @@ public interface MmPackage extends EPackage {
 	int ESTACKED_BAR_CHART__CHILDREN = EXY_CHART__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Layout Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__LAYOUT_DATA = EXY_CHART__LAYOUT_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Animated</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10142,6 +10776,15 @@ public interface MmPackage extends EPackage {
 	int ESTACKED_BAR_CHART__TITLE = EXY_CHART__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Legend Side</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTACKED_BAR_CHART__LEGEND_SIDE = EXY_CHART__LEGEND_SIDE;
+
+	/**
 	 * The number of structural features of the '<em>EStacked Bar Chart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10160,6 +10803,26 @@ public interface MmPackage extends EPackage {
 	int ESTACKED_BAR_CHART_OPERATION_COUNT = EXY_CHART_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.ESide <em>ESide</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.ESide
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESide()
+	 * @generated
+	 */
+	int ESIDE = 61;
+
+	/**
+	 * The meta object id for the '{@link de.dc.javafx.mm.EBorderDirection <em>EBorder Direction</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.javafx.mm.EBorderDirection
+	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderDirection()
+	 * @generated
+	 */
+	int EBORDER_DIRECTION = 62;
+
+	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10167,7 +10830,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEControlBinding()
 	 * @generated
 	 */
-	int ECONTROL_BINDING = 57;
+	int ECONTROL_BINDING = 63;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingType <em>EBinding Type</em>}' enum.
@@ -10177,7 +10840,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingType()
 	 * @generated
 	 */
-	int EBINDING_TYPE = 58;
+	int EBINDING_TYPE = 64;
 
 	/**
 	 * The meta object id for the '{@link de.dc.javafx.mm.EBindingDirection <em>EBinding Direction</em>}' enum.
@@ -10187,7 +10850,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBindingDirection()
 	 * @generated
 	 */
-	int EBINDING_DIRECTION = 59;
+	int EBINDING_DIRECTION = 65;
 
 	/**
 	 * The meta object id for the '<em>EPos</em>' data type.
@@ -10197,7 +10860,7 @@ public interface MmPackage extends EPackage {
 	 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEPos()
 	 * @generated
 	 */
-	int EPOS = 60;
+	int EPOS = 66;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EmfModel <em>Emf Model</em>}'.
@@ -10371,6 +11034,17 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEField_Datatype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EField#isIsMadatory <em>Is Madatory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Madatory</em>'.
+	 * @see de.dc.javafx.mm.EField#isIsMadatory()
+	 * @see #getEField()
+	 * @generated
+	 */
+	EAttribute getEField_IsMadatory();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBindingModel <em>EBinding Model</em>}'.
@@ -10836,6 +11510,17 @@ public interface MmPackage extends EPackage {
 	EReference getETableColumn_AssociatedField();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.ETableColumn#isIsEditable <em>Is Editable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Editable</em>'.
+	 * @see de.dc.javafx.mm.ETableColumn#isIsEditable()
+	 * @see #getETableColumn()
+	 * @generated
+	 */
+	EAttribute getETableColumn_IsEditable();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EListView <em>EList View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11191,6 +11876,17 @@ public interface MmPackage extends EPackage {
 	EAttribute getEChart_Title();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EChart#getLegendSide <em>Legend Side</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Legend Side</em>'.
+	 * @see de.dc.javafx.mm.EChart#getLegendSide()
+	 * @see #getEChart()
+	 * @generated
+	 */
+	EAttribute getEChart_LegendSide();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EImageView <em>EImage View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11516,6 +12212,17 @@ public interface MmPackage extends EPackage {
 	EReference getENode_Children();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.javafx.mm.ENode#getLayoutData <em>Layout Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Layout Data</em>'.
+	 * @see de.dc.javafx.mm.ENode#getLayoutData()
+	 * @see #getENode()
+	 * @generated
+	 */
+	EReference getENode_LayoutData();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.ETabPane <em>ETab Pane</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11578,6 +12285,57 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getETab_Content();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.ELayoutData <em>ELayout Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ELayout Data</em>'.
+	 * @see de.dc.javafx.mm.ELayoutData
+	 * @generated
+	 */
+	EClass getELayoutData();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EBorderData <em>EBorder Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EBorder Data</em>'.
+	 * @see de.dc.javafx.mm.EBorderData
+	 * @generated
+	 */
+	EClass getEBorderData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.mm.EBorderData#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see de.dc.javafx.mm.EBorderData#getDirection()
+	 * @see #getEBorderData()
+	 * @generated
+	 */
+	EAttribute getEBorderData_Direction();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EVBoxData <em>EV Box Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EV Box Data</em>'.
+	 * @see de.dc.javafx.mm.EVBoxData
+	 * @generated
+	 */
+	EClass getEVBoxData();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.javafx.mm.EHBoxData <em>EH Box Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EH Box Data</em>'.
+	 * @see de.dc.javafx.mm.EHBoxData
+	 * @generated
+	 */
+	EClass getEHBoxData();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.mm.EAreaChart <em>EArea Chart</em>}'.
@@ -11648,6 +12406,26 @@ public interface MmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEStackedBarChart();
+
+	/**
+	 * Returns the meta object for enum '{@link de.dc.javafx.mm.ESide <em>ESide</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ESide</em>'.
+	 * @see de.dc.javafx.mm.ESide
+	 * @generated
+	 */
+	EEnum getESide();
+
+	/**
+	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EBorderDirection <em>EBorder Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EBorder Direction</em>'.
+	 * @see de.dc.javafx.mm.EBorderDirection
+	 * @generated
+	 */
+	EEnum getEBorderDirection();
 
 	/**
 	 * Returns the meta object for enum '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}'.
@@ -11846,6 +12624,14 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EFIELD__DATATYPE = eINSTANCE.getEField_Datatype();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Madatory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EFIELD__IS_MADATORY = eINSTANCE.getEField_IsMadatory();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBindingModelImpl <em>EBinding Model</em>}' class.
@@ -12242,6 +13028,14 @@ public interface MmPackage extends EPackage {
 		EReference ETABLE_COLUMN__ASSOCIATED_FIELD = eINSTANCE.getETableColumn_AssociatedField();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Editable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETABLE_COLUMN__IS_EDITABLE = eINSTANCE.getETableColumn_IsEditable();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EListViewImpl <em>EList View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12552,6 +13346,14 @@ public interface MmPackage extends EPackage {
 		EAttribute ECHART__TITLE = eINSTANCE.getEChart_Title();
 
 		/**
+		 * The meta object literal for the '<em><b>Legend Side</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECHART__LEGEND_SIDE = eINSTANCE.getEChart_LegendSide();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EImageViewImpl <em>EImage View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12802,6 +13604,14 @@ public interface MmPackage extends EPackage {
 		EReference ENODE__CHILDREN = eINSTANCE.getENode_Children();
 
 		/**
+		 * The meta object literal for the '<em><b>Layout Data</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENODE__LAYOUT_DATA = eINSTANCE.getENode_LayoutData();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ETabPaneImpl <em>ETab Pane</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12852,6 +13662,54 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ETAB__CONTENT = eINSTANCE.getETab_Content();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.ELayoutDataImpl <em>ELayout Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.ELayoutDataImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getELayoutData()
+		 * @generated
+		 */
+		EClass ELAYOUT_DATA = eINSTANCE.getELayoutData();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EBorderDataImpl <em>EBorder Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EBorderDataImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderData()
+		 * @generated
+		 */
+		EClass EBORDER_DATA = eINSTANCE.getEBorderData();
+
+		/**
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EBORDER_DATA__DIRECTION = eINSTANCE.getEBorderData_Direction();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EVBoxDataImpl <em>EV Box Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EVBoxDataImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEVBoxData()
+		 * @generated
+		 */
+		EClass EV_BOX_DATA = eINSTANCE.getEVBoxData();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EHBoxDataImpl <em>EH Box Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.impl.EHBoxDataImpl
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEHBoxData()
+		 * @generated
+		 */
+		EClass EH_BOX_DATA = eINSTANCE.getEHBoxData();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.impl.EAreaChartImpl <em>EArea Chart</em>}' class.
@@ -12922,6 +13780,26 @@ public interface MmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ESTACKED_BAR_CHART = eINSTANCE.getEStackedBarChart();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.ESide <em>ESide</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.ESide
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getESide()
+		 * @generated
+		 */
+		EEnum ESIDE = eINSTANCE.getESide();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.javafx.mm.EBorderDirection <em>EBorder Direction</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.javafx.mm.EBorderDirection
+		 * @see de.dc.javafx.mm.impl.MmPackageImpl#getEBorderDirection()
+		 * @generated
+		 */
+		EEnum EBORDER_DIRECTION = eINSTANCE.getEBorderDirection();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.mm.EControlBinding <em>EControl Binding</em>}' enum.

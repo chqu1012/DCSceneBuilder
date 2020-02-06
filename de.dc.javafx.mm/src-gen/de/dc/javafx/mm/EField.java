@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link de.dc.javafx.mm.EField#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.javafx.mm.EField#getDatatype <em>Datatype</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.EField#isIsMadatory <em>Is Madatory</em>}</li>
  * </ul>
  *
  * @see de.dc.javafx.mm.MmPackage#getEField()
@@ -66,5 +67,28 @@ public interface EField extends EObject {
 	 * @generated
 	 */
 	void setDatatype(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Madatory</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Madatory</em>' attribute.
+	 * @see #setIsMadatory(boolean)
+	 * @see de.dc.javafx.mm.MmPackage#getEField_IsMadatory()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isIsMadatory();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.mm.EField#isIsMadatory <em>Is Madatory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Madatory</em>' attribute.
+	 * @see #isIsMadatory()
+	 * @generated
+	 */
+	void setIsMadatory(boolean value);
 
 } // EField

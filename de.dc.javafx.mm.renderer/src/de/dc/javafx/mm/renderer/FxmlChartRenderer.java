@@ -9,6 +9,7 @@ import de.dc.javafx.mm.EPieChart;
 import de.dc.javafx.mm.EScatterChart;
 import de.dc.javafx.mm.EStackedAreaChart;
 import de.dc.javafx.mm.EStackedBarChart;
+import javafx.geometry.Side;
 import javafx.scene.Node;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.BarChart;
@@ -74,6 +75,9 @@ public class FxmlChartRenderer extends FxmlRenderer {
 		}else if (object instanceof EStackedBarChart) {
 			node = new StackedBarChart<>(xAxis, yAxis);
 		}
+		node.setLegendVisible(object.isVisible());		
+		node.setAnimated(object.isAnimated());
+		node.setLegendSide(Side.valueOf(object.getLegendSide().getLiteral()));
 		initSize(object, node);
 		return node;
 	}

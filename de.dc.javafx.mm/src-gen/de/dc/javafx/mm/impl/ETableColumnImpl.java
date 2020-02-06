@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getCellValueFactory <em>Cell Value Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getCellFactory <em>Cell Factory</em>}</li>
  *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#getAssociatedField <em>Associated Field</em>}</li>
+ *   <li>{@link de.dc.javafx.mm.impl.ETableColumnImpl#isIsEditable <em>Is Editable</em>}</li>
  * </ul>
  *
  * @generated
@@ -142,6 +143,26 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @ordered
 	 */
 	protected EField associatedField;
+
+	/**
+	 * The default value of the '{@link #isIsEditable() <em>Is Editable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsEditable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_EDITABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsEditable() <em>Is Editable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsEditable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isEditable = IS_EDITABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -327,6 +348,30 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 	 * @generated
 	 */
 	@Override
+	public boolean isIsEditable() {
+		return isEditable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsEditable(boolean newIsEditable) {
+		boolean oldIsEditable = isEditable;
+		isEditable = newIsEditable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MmPackage.ETABLE_COLUMN__IS_EDITABLE, oldIsEditable,
+					isEditable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MmPackage.ETABLE_COLUMN__ID:
@@ -343,6 +388,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			if (resolve)
 				return getAssociatedField();
 			return basicGetAssociatedField();
+		case MmPackage.ETABLE_COLUMN__IS_EDITABLE:
+			return isIsEditable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -372,6 +419,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			return;
 		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
 			setAssociatedField((EField) newValue);
+			return;
+		case MmPackage.ETABLE_COLUMN__IS_EDITABLE:
+			setIsEditable((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -403,6 +453,9 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
 			setAssociatedField((EField) null);
 			return;
+		case MmPackage.ETABLE_COLUMN__IS_EDITABLE:
+			setIsEditable(IS_EDITABLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -428,6 +481,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 			return CELL_FACTORY_EDEFAULT == null ? cellFactory != null : !CELL_FACTORY_EDEFAULT.equals(cellFactory);
 		case MmPackage.ETABLE_COLUMN__ASSOCIATED_FIELD:
 			return associatedField != null;
+		case MmPackage.ETABLE_COLUMN__IS_EDITABLE:
+			return isEditable != IS_EDITABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -453,6 +508,8 @@ public class ETableColumnImpl extends MinimalEObjectImpl.Container implements ET
 		result.append(cellValueFactory);
 		result.append(", cellFactory: ");
 		result.append(cellFactory);
+		result.append(", isEditable: ");
+		result.append(isEditable);
 		result.append(')');
 		return result.toString();
 	}
