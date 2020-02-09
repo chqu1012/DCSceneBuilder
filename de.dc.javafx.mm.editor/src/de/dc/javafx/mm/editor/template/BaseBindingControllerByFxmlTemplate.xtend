@@ -29,6 +29,7 @@ class BaseBindingControllerByFxmlTemplate implements IGenerator<FxmlModel> {
 			«IF control instanceof TextField»
 			«fxmo.key».textProperty().bindBidirectional(binding.«fxmo.key»Property());
 			«ELSEIF control instanceof TableColumn»
+			// TODO: Property not init yet!
 			column«name».setCellValueFactory(new PropertyValueFactory<>(""));
 			«ELSEIF control instanceof TableView || control instanceof ListView || control instanceof ComboBox»
 			«fxmo.key».setItems(binding.sortedData«name»());
