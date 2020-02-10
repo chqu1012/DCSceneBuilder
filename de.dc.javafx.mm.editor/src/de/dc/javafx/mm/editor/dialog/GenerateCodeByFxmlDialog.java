@@ -289,6 +289,10 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 
 				IProject project = parent.getProject();
 				srcFolder = project.getFolder("src");
+				IFolder mainFolder = srcFolder.getFolder("main");
+				if (mainFolder.exists()) {
+					srcFolder = mainFolder.getFolder("java");
+				}
 
 				jp = JavaCore.create(project);
 				try {
