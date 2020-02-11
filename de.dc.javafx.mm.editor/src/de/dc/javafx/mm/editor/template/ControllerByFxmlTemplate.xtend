@@ -10,6 +10,8 @@ import java.util.HashSet
 import java.util.Map
 import java.util.Set
 import java.util.TreeMap
+import javafx.scene.control.TableView
+import javafx.scene.control.TableColumn
 
 class ControllerByFxmlTemplate implements IGenerator<FxmlModel> {
 
@@ -20,10 +22,10 @@ class ControllerByFxmlTemplate implements IGenerator<FxmlModel> {
 	StringBuilder handlers = new StringBuilder
 	
 	override gen(FxmlModel t) '''
-		package «t.document.constructPackageLine»;
+		package «t.basePackage».controller;
 		«mapMethods(t)»
 			
-		import de.dc.javafx.mm.control.*;
+		import javafx.scene.image.ImageView;
 		import javafx.event.*;
 		import javafx.fxml.*;
 		import javafx.scene.control.*;
@@ -31,10 +33,20 @@ class ControllerByFxmlTemplate implements IGenerator<FxmlModel> {
 		«FOR imp : imports»
 		«imp»
 		«ENDFOR»
-		public abstract class Base«t.name»{
+		public abstract class Base«t.name»Controller{
 			
 			«FOR fxmo : t.document.fxomRoot.collectFxIds.entrySet»
+			«val control = fxmo.value.sceneGraphObject»
+			«IF control instanceof TableView»
+			«val model = '''«IF fxmo.value.fxValue===null»«ELSE»<«fxmo.value.fxValue»>«ENDIF»'''»
+			@FXML protected TableView«model» «fxmo.key»;
+			«ELSEIF control instanceof TableColumn»
+			«val parent = '''«IF fxmo.value.parentObject.fxValue===null»Object«ELSE»«fxmo.value.parentObject.fxValue»«ENDIF»'''»
+			«val tableColumn = control as TableColumn»
+			@FXML protected TableColumn<«parent»,?> «fxmo.key»;
+			«ELSE»
 			@FXML protected «fxmo.value.sceneGraphObject.class.simpleName» «fxmo.key»;
+			«ENDIF»
 			«ENDFOR»
 			
 			public void initialize(){}
