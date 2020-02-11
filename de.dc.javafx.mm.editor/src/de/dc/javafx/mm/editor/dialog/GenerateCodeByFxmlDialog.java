@@ -15,7 +15,9 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.apt.ui.internal.util.ExceptionHandler;
+import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragment;
@@ -93,7 +95,9 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 
 	private List<FXOMObject> viewerElements = new ArrayList<>();
 	private TableViewer tableViewer;
-
+	private IFolder srcGen;
+	private Button btnUseSrcmainjavaStructure;
+	
 	public GenerateCodeByFxmlDialog() {
 		super(new Shell());
 		setShellStyle(SWT.DIALOG_TRIM | SWT.RESIZE);
@@ -122,15 +126,12 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		});
 		textBasePackage.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 
-		initModel();
-
 		Button buttonOpenPackageDialog = new Button(container, SWT.NONE);
 		buttonOpenPackageDialog.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				try {
-					SelectionDialog dialog = JavaUI.createPackageDialog(new Shell(),
-							jp.getPackageFragmentRoot(srcFolder));
+					SelectionDialog dialog = JavaUI.createPackageDialog(new Shell(), jp.getPackageFragmentRoot(srcFolder));
 					int code = dialog.open();
 					if (code == 0) {
 						for (Object object : dialog.getResult()) {
@@ -142,7 +143,7 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 								labelControllerPackage.setText(basePackage + ".controller");
 							}
 						}
-
+	
 					}
 				} catch (JavaModelException e1) {
 					e1.printStackTrace();
@@ -165,7 +166,15 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		labelControllerPackage = new Label(container, SWT.NONE);
 		labelControllerPackage.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		new Label(container, SWT.NONE);
-
+		new Label(container, SWT.NONE);
+		
+		btnUseSrcmainjavaStructure = new Button(container, SWT.CHECK);
+		btnUseSrcmainjavaStructure.setSelection(true);
+		btnUseSrcmainjavaStructure.setText("use src/main/java structure");
+		new Label(container, SWT.NONE);
+		
+		initModel();
+		
 		tableViewer = new TableViewer(container, SWT.BORDER | SWT.FULL_SELECTION);
 		tableViewer.addDoubleClickListener(event -> chooseModel());
 		table = tableViewer.getTable();
@@ -174,25 +183,25 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		GridData gd_table = new GridData(SWT.FILL, SWT.FILL, true, true, 3, 1);
 		gd_table.minimumHeight = 200;
 		table.setLayoutData(gd_table);
-
+		
 		TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
 		TableColumn tblclmnViewer = tableViewerColumn.getColumn();
 		tblclmnViewer.setWidth(157);
 		tblclmnViewer.setText("Viewer");
-
+		
 		TableViewerColumn tableViewerColumn_2 = new TableViewerColumn(tableViewer, SWT.NONE);
 		TableColumn tblclmnId = tableViewerColumn_2.getColumn();
 		tblclmnId.setWidth(157);
 		tblclmnId.setText("Id");
-
+		
 		TableViewerColumn tableViewerColumn_1 = new TableViewerColumn(tableViewer, SWT.NONE);
 		TableColumn tblclmnModel = tableViewerColumn_1.getColumn();
 		tblclmnModel.setWidth(225);
 		tblclmnModel.setText("Model");
-
+		
 		Menu menu = new Menu(table);
 		table.setMenu(menu);
-
+		
 		MenuItem mntmSetModel = new MenuItem(menu, SWT.NONE);
 		mntmSetModel.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -201,20 +210,20 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 			}
 		});
 		mntmSetModel.setText("Set Model");
-
+		
 		MenuItem mntmCreateNewModel = new MenuItem(menu, SWT.NONE);
 		mntmCreateNewModel.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				NewClassWizardPage fPage = new NewClassWizardPage();
 				NewClassCreationWizard wizard = new NewClassCreationWizard(fPage, false);
-				WizardDialog wd = new WizardDialog(Display.getCurrent().getActiveShell(), wizard);
-				int code = wd.open();
-				if (code == 0) {
+				 WizardDialog wd = new  WizardDialog(Display.getCurrent()
+					       .getActiveShell(), wizard);
+				 int code = wd.open();
+				 if (code==0) {
 					try {
 						IJavaElement createdElement = wizard.getCreatedElement();
-						IPackageFragment f = jp
-								.findPackageFragment(createdElement.getResource().getParent().getFullPath());
+						IPackageFragment f = jp.findPackageFragment(createdElement.getResource().getParent().getFullPath());
 						String className = createdElement.getElementName();
 						String packagePath = f.getElementName();
 						ISelection selection = tableViewer.getSelection();
@@ -222,36 +231,36 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 							IStructuredSelection ss = (IStructuredSelection) selection;
 							if (ss.getFirstElement() instanceof FXOMObject) {
 								FXOMObject obj = (FXOMObject) ss.getFirstElement();
-								obj.setFxValue(packagePath + "." + className);
+								obj.setFxValue(packagePath+"."+className);
 								tableViewer.refresh();
 							}
 						}
 					} catch (JavaModelException e1) {
 						e1.printStackTrace();
 					}
-
+					
 				}
 			}
 		});
 		mntmCreateNewModel.setText("Create new Model");
-
+		
 		tableViewer.setContentProvider(ArrayContentProvider.getInstance());
 		tableViewer.setLabelProvider(new FXOMObjectLabelProvider());
 		tableViewer.setInput(viewerElements);
-
+		
 		return area;
 	}
-
+	
 	private void chooseModel() {
-		IRunnableContext context = new BusyIndicatorRunnableContext();
-		IJavaSearchScope scope = SearchEngine.createWorkspaceScope();
-		int style = IJavaElementSearchConstants.CONSIDER_ALL_TYPES;
+		IRunnableContext context= new BusyIndicatorRunnableContext();
+		IJavaSearchScope scope= SearchEngine.createWorkspaceScope();
+		int style= IJavaElementSearchConstants.CONSIDER_ALL_TYPES;
 		try {
-			SelectionDialog dialog = JavaUI.createTypeDialog(getShell(), context, scope, style, false);
+			SelectionDialog dialog= JavaUI.createTypeDialog(getShell(), context, scope, style, false);
 			dialog.setTitle("Choose a model class");
 			dialog.setMessage("Set Model for the viewer");
 			if (dialog.open() == Window.OK) {
-				IType res = (IType) dialog.getResult()[0];
+				IType res= (IType) dialog.getResult()[0];
 				ISelection selection = tableViewer.getSelection();
 				if (selection instanceof IStructuredSelection) {
 					IStructuredSelection ss = (IStructuredSelection) selection;
@@ -260,16 +269,14 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 						obj.setFxValue(res.getFullyQualifiedName('.'));
 						tableViewer.refresh();
 					}
-
+					
 				}
 			}
 		} catch (JavaModelException e1) {
-			ExceptionHandler.handle(e1, getShell(), PreferencesMessages.NullAnnotationsConfigurationDialog_error_title,
-					PreferencesMessages.NullAnnotationsConfigurationDialog_error_message);
+			ExceptionHandler.handle(e1, getShell(), PreferencesMessages.NullAnnotationsConfigurationDialog_error_title, PreferencesMessages.NullAnnotationsConfigurationDialog_error_message);
 		}
 	}
-
-	private void initModel() {
+	private void initModel(){
 		if (model != null) {
 			return;
 		}
@@ -281,20 +288,37 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 			if (firstElement instanceof IFile) {
 				model = (IFile) firstElement;
 				IFolder parent = (IFolder) model.getParent();
-
+				
 				String fxmlText = fileToString(model.getRawLocation().toPortableString());
 				new JFXPanel();
 				EditorController editorController = new EditorController();
 				URL fxmlLocation;
 
 				IProject project = parent.getProject();
+				jp = JavaCore.create(project);
+
 				srcFolder = project.getFolder("src");
+				srcGen = project.getFolder("src-gen");
+				if (!srcGen.exists()) {
+					try {
+						srcGen.create(true, true, new NullProgressMonitor());
+						createSrcGenFolder();
+					} catch (CoreException e) {
+						e.printStackTrace();
+					}
+				}else {
+					try {
+						createSrcGenFolder();
+					} catch (CoreException e) {
+						e.printStackTrace();
+					}
+				}
+
 				IFolder mainFolder = srcFolder.getFolder("main");
 				if (mainFolder.exists()) {
 					srcFolder = mainFolder.getFolder("java");
 				}
-
-				jp = JavaCore.create(project);
+				
 				try {
 					fxmlLocation = model.getLocation().toFile().toURI().toURL();
 					editorController.setFxmlTextAndLocation(fxmlText, fxmlLocation);
@@ -314,6 +338,22 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
+			}
+		}
+	}
+
+	private void createSrcGenFolder() throws CoreException {
+		if (btnUseSrcmainjavaStructure.getSelection()) {
+			IFolder mainFolder = srcGen.getFolder("main");
+			if (!mainFolder.exists()) {
+				mainFolder.create(true, true, new NullProgressMonitor());
+				srcGen = mainFolder.getFolder("java");
+				if (!srcGen.exists()) {
+					srcGen.create(true, true, new NullProgressMonitor());
+					addIFolderToClasspath(srcGen);
+				}
+			}else {
+				srcGen = mainFolder.getFolder("java");
 			}
 		}
 	}
@@ -349,18 +389,30 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 			String textBindingName = fileName + "Binding.java";
 			String textBindingPackage = basePackage + ".model";
 
-			generateFile(controllerContent, controllerName, controllerPackage);
-			generateFile(controllerImplContent, controllerImplName, controllerPackage);
-			generateFile(baseBindingControllerContent, baseBindingControllerName, controllerPackage);
-			generateFile(baseSelectionBindingContent, baseSelectionBindingName, baseSelectionBindingPackage);
-			generateFile(baseTextBindingContent, baseTextBindingName, baseTextBindingPackage);
-			generateFile(textBindingContent, textBindingName, textBindingPackage);
+			generateFile(srcGen, controllerContent, controllerName, controllerPackage);
+			generateFile(srcFolder, controllerImplContent, controllerImplName, controllerPackage);
+			generateFile(srcGen, baseBindingControllerContent, baseBindingControllerName, controllerPackage);
+			generateFile(srcGen, baseSelectionBindingContent, baseSelectionBindingName, baseSelectionBindingPackage);
+			generateFile(srcGen, baseTextBindingContent, baseTextBindingName, baseTextBindingPackage);
+			generateFile(srcFolder, textBindingContent, textBindingName, textBindingPackage);
 		}
 		super.buttonPressed(buttonId);
 	}
 
+	private void addIFolderToClasspath(IFolder sourceFolder) {
+		try {
+			IClasspathEntry[] oldEntries = jp.getRawClasspath();
+			IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
+			System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
+			newEntries[oldEntries.length] = JavaCore.newSourceEntry(sourceFolder.getFullPath());
+			jp.setRawClasspath(newEntries, null);
+		} catch (JavaModelException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	private void initFragment() {
-		if (fragment == null) {
+		if (fragment==null) {
 			try {
 				IFolder folder = getFolder(srcFolder, textBasePackage.getText().split("\\."));
 				fragment = jp.findPackageFragment(folder.getFullPath());
@@ -370,9 +422,9 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		}
 	}
 
-	private void generateFile(String controllerContent, String baseController, String controllerPackage) {
+	private void generateFile(IFolder generatedFolder, String controllerContent, String baseController, String controllerPackage) {
 		try {
-			IFolder genFolder = getFolder(srcFolder, controllerPackage.split("\\."));
+			IFolder genFolder = getFolder(generatedFolder, controllerPackage.split("\\."));
 			if (!genFolder.exists()) {
 				genFolder.create(true, true, null);
 			}
