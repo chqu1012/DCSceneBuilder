@@ -173,9 +173,6 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		btnUseSrcmainjavaStructure.setSelection(true);
 		btnUseSrcmainjavaStructure.setText("use src/main/java structure");
 		new Label(container, SWT.NONE);
-		btnUseSrcmainjavaStructure = new Button(container, SWT.CHECK);
-		btnUseSrcmainjavaStructure.setSelection(true);
-		btnUseSrcmainjavaStructure.setText("use src/main/java structure");
 		new Label(container, SWT.NONE);
 
 		btnUseSpringAnnotation = new Button(container, SWT.CHECK);

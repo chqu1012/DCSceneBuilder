@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/de.dc.javafx.mm.feature_1.0.0.qualifier.jar" id="de.dc.javafx.mm.feature" version="1.0.0.qualifier">
+   <feature url="features/de.dc.javafx.mm.feature_1.0.0.202002192022.jar" id="de.dc.javafx.mm.feature" version="1.0.0.202002192022">
       <category name="de.dc.javafx.mm.update.category"/>
    </feature>
    <category-def name="de.dc.javafx.mm.update.category" label="Frater Anatis JavaFX Tools"/>
