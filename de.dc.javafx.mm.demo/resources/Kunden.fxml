@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@css/Main.css" xmlns="http://javafx.com/javafx/8.0.162" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dc.uhade.taumi.client.controller.KundenController">
+   <top>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="64.0" prefWidth="28.0" text="Kundenverwaltung" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.2560240963855422" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="textSearch" />
+                  <ListView fx:id="listView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0" style="-fx-background-color: whtie;">
+               <children>
+                  <HBox style="-fx-background-color: white;">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" prefHeight="25.0" prefWidth="98.0" text="Name:" />
+                        <TextField fx:id="textName" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox style="-fx-background-color: white;">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" prefHeight="25.0" prefWidth="98.0" text="Email:" />
+                        <TextField fx:id="textEmail" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox style="-fx-background-color: white;">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" prefHeight="25.0" prefWidth="98.0" text="Handy:" />
+                        <TextField fx:id="textHandy" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="tableView" maxWidth="1.7976931348623157E308" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="columnReservationDate" prefWidth="195.0" text="Reserviert am" />
+                      <TableColumn fx:id="columnLocation" prefWidth="334.0" text="Standadort" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
