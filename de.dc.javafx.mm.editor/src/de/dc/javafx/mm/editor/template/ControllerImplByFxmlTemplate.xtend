@@ -22,7 +22,12 @@ class ControllerImplByFxmlTemplate implements IGenerator<FxmlModel> {
 	«FOR imp : imports»
 	«imp»
 	«ENDFOR»
+	«IF t.useSpring»
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.stereotype.Controller;
 	
+	@Controller
+	«ENDIF»
 	public class «t.name»Controller extends BaseBinding«t.name»Controller{
 		
 		@Override

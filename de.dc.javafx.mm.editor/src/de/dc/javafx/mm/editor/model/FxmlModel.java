@@ -7,11 +7,13 @@ public class FxmlModel {
 	private String name;
 	private String basePackage;
 	private FXOMDocument document;
+	private Boolean useSpring;
 
-	public FxmlModel(String name, String basePackage, FXOMDocument document) {
+	public FxmlModel(String name, String basePackage, FXOMDocument document, Boolean useSpring) {
 		this.name = name;
 		this.basePackage = basePackage;
 		this.document = document;
+		this.setUseSpring(useSpring);
 	}
 
 	public String getName() {
@@ -36,5 +38,13 @@ public class FxmlModel {
 
 	public void setDocument(FXOMDocument document) {
 		this.document = document;
+	}
+
+	public Boolean getUseSpring() {
+		return useSpring;
+	}
+
+	public void setUseSpring(Boolean useSpring) {
+		this.useSpring = useSpring;
 	}
 }

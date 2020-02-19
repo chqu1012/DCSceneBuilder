@@ -97,6 +97,7 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 	private TableViewer tableViewer;
 	private IFolder srcGen;
 	private Button btnUseSrcmainjavaStructure;
+	private Button btnUseSpringAnnotation;
 	
 	public GenerateCodeByFxmlDialog() {
 		super(new Shell());
@@ -172,8 +173,18 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 		btnUseSrcmainjavaStructure.setSelection(true);
 		btnUseSrcmainjavaStructure.setText("use src/main/java structure");
 		new Label(container, SWT.NONE);
+		btnUseSrcmainjavaStructure = new Button(container, SWT.CHECK);
+		btnUseSrcmainjavaStructure.setSelection(true);
+		btnUseSrcmainjavaStructure.setText("use src/main/java structure");
+		new Label(container, SWT.NONE);
+
+		btnUseSpringAnnotation = new Button(container, SWT.CHECK);
+		btnUseSpringAnnotation.setSelection(true);
+		btnUseSpringAnnotation.setText("use Spring Annotation");
+		new Label(container, SWT.NONE);
 		
 		initModel();
+		new Label(container, SWT.NONE);
 		
 		tableViewer = new TableViewer(container, SWT.BORDER | SWT.FULL_SELECTION);
 		tableViewer.addDoubleClickListener(event -> chooseModel());
@@ -365,7 +376,7 @@ public class GenerateCodeByFxmlDialog extends TitleAreaDialog {
 			initFragment();
 			String fileName = model.getName().replace(".fxml", "");
 			String basePackage = fragment.getElementName();
-			FxmlModel fxmlModel = new FxmlModel(fileName, basePackage, fxomDocument);
+			FxmlModel fxmlModel = new FxmlModel(fileName, basePackage, fxomDocument, btnUseSpringAnnotation.getSelection());
 
 			String controllerContent = new ControllerByFxmlTemplate().gen(fxmlModel);
 			String controllerName = "Base" + fileName + "Controller.java";
